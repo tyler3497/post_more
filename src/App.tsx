@@ -53,12 +53,18 @@ export default function App(){
 
   useEffect(()=>{
     // Load satire - try static file first, fallback to api
-    fetch('/satire/manifest.json').then(r=>r.ok?r.json():Promise.reject()).then(d=>setSatire(d as SatirePost[])).catch(()=>{
-      fetch('/api/satire').then(r=>r.json()).then(d=>setSatire(d)).catch(()=>{})
+    fetch('/satire/manifest.json').then(r=>r.ok?r.json():Promise.reject()).then(d=>setSatire([...d as SatirePost[]].sort((a:any,b:any)=>b.ts-a.ts))).catch(()=>{
+      fetch('/api/satire').then(r=>r.json()).then(d=>setSatire([...(d as SatirePost[])].sort((a:any,b:any)=>b.ts-a.ts))).catch(()=>{})
     })
-    // Load thesis
-    fetch('/thesis/manifest.json').then(r=>r.ok?r.json():Promise.reject()).then(d=>setThesis(d as ThesisPost[])).catch(()=>{
-      fetch('/api/thesis').then(r=>r.json()).then(d=>setThesis(d)).catch(()=>{})
+    // Load thesis - always sort newest first by ts
+    fetch('/thesis/manifest.json').then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+      const sorted = [...(d as ThesisPost[])].sort((a,b)=>b.ts-a.ts)
+      setThesis(sorted)
+    }).catch(()=>{
+      fetch('/api/thesis').then(r=>r.json()).then(d=>{
+        const sorted = [...(d as ThesisPost[])].sort((a,b)=>b.ts-a.ts)
+        setThesis(sorted)
+      }).catch(()=>{})
     })
   },[])
 
@@ -212,7 +218,7 @@ export default function App(){
         </div>
       ))}</div>}
 
-      {(tab==='all' || tab==='satire') && satire.length>0 && <div style={{margin:"16px 0"}}><h2 style={{fontSize:18}}>Featured Satire (fictional — parody)</h2>{satire.slice(-10).reverse().map(p=>(
+      {(tab==='all' || tab==='satire') && satire.length>0 && <div style={{margin:"16px 0"}}><h2 style={{fontSize:18}}>Featured Satire (fictional — parody)</h2>{satire.slice(0,10).map(p=>(
         <div key={p.id} style={{background:"white",padding:12,borderRadius:8,margin:"12px 0"}}>
           <div style={{fontSize:12,color:"#777"}}>{p.anon} — {new Date(p.ts).toLocaleString()} — SATIRE/PARODY</div>
           <h3 style={{margin:"6px 0"}}>{p.title}</h3>
