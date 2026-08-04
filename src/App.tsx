@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 type Reply = { id:string, anon: string, body: string, ts: number }
 type Thread = { id:string, title:string, body:string, anon:string, ts:number, replies: Reply[] }
@@ -6,6 +8,14 @@ type SatirePost = { id:string, title:string, body:string, image:string, ts:numbe
 type Comment = { id:string, anon:string, body:string, ts:number }
 
 const DISCLAIMER = "parody board — all posts are fictional, no real users. No harassment, no slurs, no NSFW. Text only."
+
+function MD({children}:{children:string}){
+  return (
+    <div className="pm-md">
+      <ReactMarkdown remarkPlugins={[remarkGfm]}>{children}</ReactMarkdown>
+    </div>
+  )
+}
 
 const SAMPLE_TITLES = ["Pineapple on pizza — final verdict?","My corner store started putting fruit on everything","Best way to keep crust crispy with wet toppings?","Debate night: sweet vs savory"]
 const SAMPLE_BODIES = [
@@ -93,6 +103,18 @@ export default function App(){
 
   return (
     <div style={{maxWidth:900,margin:"0 auto",padding:"1rem"}}>
+      <style>{`
+        .pm-md :is(p, ul, ol, blockquote){margin:0.5rem 0; line-height:1.5}
+        .pm-md h1,.pm-md h2,.pm-md h3{margin:0.7rem 0 0.3rem; line-height:1.25}
+        .pm-md h1{font-size:1.4rem} .pm-md h2{font-size:1.2rem} .pm-md h3{font-size:1.05rem}
+        .pm-md ul{padding-left:1.3rem} .pm-md ol{padding-left:1.3rem}
+        .pm-md blockquote{border-left:3px solid #ddd; padding-left:10px; color:#555; font-style:italic; background:#fafafa; border-radius:4px}
+        .pm-md code{background:#f3f3f3; padding:2px 5px; border-radius:4px; font-size:0.92em}
+        .pm-md pre{background:#f6f6f6; padding:10px; border-radius:8px; overflow:auto}
+        .pm-md pre code{background:transparent; padding:0}
+        .pm-md a{color:#0b5fff; text-decoration:underline}
+        .pm-md hr{border:none; border-top:1px solid #e6e6e6; margin:12px 0}
+      `}</style>
       <div style={{background:"#fff3cd",padding:"12px",borderRadius:8,marginBottom:16,fontWeight:600}}>⚠️ {DISCLAIMER}</div>
       <h1 style={{margin:"0.2rem 0"}}>post_more</h1>
       <p style={{color:"#666",marginTop:0}}>anonymous text board — parody / demo. Vercel-ready with server comments & likes.</p>
@@ -102,7 +124,7 @@ export default function App(){
           <div style={{fontSize:12,color:"#777"}}>{p.anon} — {new Date(p.ts).toLocaleString()} — SATIRE/PARODY</div>
           <h3 style={{margin:"6px 0"}}>{p.title}</h3>
           {p.image && <img src={p.image} style={{maxWidth:"100%",borderRadius:6,margin:"8px 0"}} alt="satire illustration"/>}
-          <p>{p.body}</p>
+          <MD>{p.body}</MD>
           <div style={{display:"flex",gap:12,alignItems:"center",marginTop:8}}>
             <button onClick={()=>likePost(p.id)} style={{padding:"4px 10px"}}>❤️ Like {likes[p.id] ? `(${likes[p.id]})` : ""}</button>
             <span style={{fontSize:12,color:"#666"}}>{comments[p.id]?.length||0} comments</span>
@@ -112,7 +134,7 @@ export default function App(){
             <button onClick={()=>postComment(p.id)}>Post</button>
           </div>
           <div style={{marginLeft:8,borderLeft:"2px solid #eee",paddingLeft:10,marginTop:8}}>
-            {(comments[p.id]||[]).map(c=><div key={c.id} style={{margin:"6px 0"}}><b>{c.anon}</b> <span style={{color:"#777",fontSize:11}}>{new Date(c.ts).toLocaleString()}</span><div>{c.body}</div></div>)}
+            {(comments[p.id]||[]).map(c=><div key={c.id} style={{margin:"6px 0"}}><b>{c.anon}</b> <span style={{color:"#777",fontSize:11}}>{new Date(c.ts).toLocaleString()}</span><div style={{marginTop:2}}><MD>{c.body}</MD></div></div>)}
           </div>
         </div>
       ))}</div>}
@@ -128,9 +150,9 @@ export default function App(){
           <div key={t.id} style={{background:"white",padding:12,borderRadius:8,margin:"12px 0"}}>
             <div style={{fontSize:13,color:"#777"}}>{t.anon} — {new Date(t.ts).toLocaleString()}</div>
             <h3 style={{margin:"6px 0"}}>{t.title}</h3>
-            <p>{t.body}</p>
+            <MD>{t.body}</MD>
             <div style={{marginLeft:16,borderLeft:"2px solid #eee",paddingLeft:12}}>
-              {t.replies.map(r=>(<div key={r.id} style={{margin:"8px 0"}}><span style={{fontWeight:600}}>{r.anon}</span> <span style={{color:"#777",fontSize:12}}>{new Date(r.ts).toLocaleString()}</span><div>{r.body}</div></div>))}
+              {t.replies.map(r=>(<div key={r.id} style={{margin:"8px 0"}}><span style={{fontWeight:600}}>{r.anon}</span> <span style={{color:"#777",fontSize:12}}>{new Date(r.ts).toLocaleString()}</span><div style={{marginTop:2}}><MD>{r.body}</MD></div></div>))}
               <ReplyBox onSend={txt=>addReply(t.id,txt)}/>
             </div>
           </div>
