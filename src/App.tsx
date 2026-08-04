@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 type Reply = { id:string, anon: string, body: string, ts: number }
 type Thread = { id:string, title:string, body:string, anon:string, ts:number, replies: Reply[] }
 
+type SatirePost = { id:string, title:string, body:string, image:string, ts:number, anon:string }
+
 const DISCLAIMER = "parody board — all posts are fictional, no real users. No harassment, no slurs, no NSFW. Text only."
 
 const SAMPLE_USERS = ["anon#0421","anon#8832","anon#1193","anon#5520","anon#7741"]
@@ -18,11 +20,13 @@ const SAMPLE_REPLIES = ["Same, I was skeptical but the sweet-salty thing works",
 function rand<T>(a:T[]){return a[Math.floor(Math.random()*a.length)]}
 
 export default function App(){
+  const [satire, setSatire] = useState<SatirePost[]>([])
   const [threads, setThreads] = useState<Thread[]>(()=>{
     try{ return JSON.parse(localStorage.getItem('pm_threads')||'[]')}catch{return []}
   })
   const [title,setTitle]=useState(""); const [body,setBody]=useState("")
 
+  useEffect(()=>{ fetch('/satire/manifest.json').then(r=>r.json()).then(d=>setSatire(d as SatirePost[])).catch(()=>{}) },[])
   useEffect(()=>{ localStorage.setItem('pm_threads', JSON.stringify(threads)) },[threads])
 
   // seed with 2 threads if empty
@@ -64,7 +68,7 @@ export default function App(){
       <h1 style={{margin:"0.2rem 0"}}>post_more</h1>
       <p style={{color:"#666",marginTop:0}}>anonymous text board — parody / demo. No images, no accounts.</p>
 
-      <form onSubmit={addThread} style={{background:"white",padding:12,borderRadius:8,margin:"16px 0"}}>
+      {satire.length>0 && <div style={{margin:"16px 0"}}><h2 style={{fontSize:18}}>Featured Satire (fictional)</h2>{satire.slice(-5).reverse().map(p=><div key={p.id} style={{background:"white",padding:12,borderRadius:8,margin:"8px 0"}}><div style={{fontSize:12,color:"#777"}}>{p.anon} — {new Date(p.ts).toLocaleString()} — SATIRE/PARODY</div><h3>{p.title}</h3>{p.image && <img src={p.image} style={{maxWidth:"100%",borderRadius:6}}/>}<p>{p.body}</p></div>)}</div>}<form onSubmit={addThread} style={{background:"white",padding:12,borderRadius:8,margin:"16px 0"}}>
         <input value={title} onChange={e=>setTitle(e.target.value)} placeholder="Thread title (keep it kind)" style={{width:"100%",padding:8,marginBottom:8}}/>
         <textarea value={body} onChange={e=>setBody(e.target.value)} placeholder="What’s your take on pineapple pizza? Short, fictional, respectful." style={{width:"100%",padding:8,minHeight:70}}/>
         <button type="submit" style={{marginTop:8,padding:"6px 12px"}}>Post thread (anon)</button>
