@@ -21,8 +21,13 @@ export async function getKV() {
 export async function getLikes(postId) {
   const kv = await getKV()
   if (kv) {
-    const v = await kv.get(`likes:${postId}`)
-    return typeof v === 'number' ? v : (v ? parseInt(v) : 0)
+    try {
+      const v = await kv.get(`likes:${postId}`)
+      if (v === null || v === undefined) return 0
+      if (typeof v === 'number') return v
+      if (typeof v === 'string') return parseInt(v) || 0
+      return Number(v) || 0
+    } catch { return 0 }
   }
   return mem.likes.get(postId) || 0
 }
@@ -30,8 +35,10 @@ export async function getLikes(postId) {
 export async function addLike(postId) {
   const kv = await getKV()
   if (kv) {
-    const v = await kv.incr(`likes:${postId}`)
-    return v
+    try {
+      const v = await kv.incr(`likes:${postId}`)
+      return v
+    } catch { /* fallthrough to mem */ }
   }
   const cur = (mem.likes.get(postId)||0)+1
   mem.likes.set(postId, cur)
@@ -41,10 +48,12 @@ export async function addLike(postId) {
 export async function getComments(postId) {
   const kv = await getKV()
   if (kv) {
-    const list = await kv.lrange(`comments:${postId}`, 0, -1)
-    if (!list) return []
-    // lrange returns newest last if we lpush, so reverse for newest first? Keep order inserted
-    try { return list.map(s=> typeof s==='string'?JSON.parse(s):s).reverse() } catch { return list.reverse() }
+    try {
+      const list = await kv.lrange(`comments:${postId}`, 0, -1)
+      if (!list || !Array.isArray(list)) return []
+      // lrange returns newest first because we use lpush. Don't reverse twice.
+      try { return list.map(s=> typeof s==='string'?JSON.parse(s):s) } catch { return list }
+    } catch { return [] }
   }
   return (mem.comments.get(postId)||[]).slice().reverse()
 }
@@ -52,13 +61,15 @@ export async function getComments(postId) {
 export async function addComment(postId, comment) {
   const kv = await getKV()
   if (kv) {
-    await kv.lpush(`comments:${postId}`, JSON.stringify(comment))
-    await kv.ltrim(`comments:${postId}`, 0, 99) // keep last 100
-    return comment
+    try {
+      await kv.lpush(`comments:${postId}`, JSON.stringify(comment))
+      await kv.ltrim(`comments:${postId}`, 0, 199) // keep last 200
+      return comment
+    } catch { /* fallthrough */ }
   }
   const arr = mem.comments.get(postId) || []
   arr.push(comment)
-  if (arr.length>100) arr.shift()
+  if (arr.length>200) arr.shift()
   mem.comments.set(postId, arr)
   return comment
 }

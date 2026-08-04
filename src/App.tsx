@@ -93,12 +93,24 @@ export default function App(){
     const txt = (cmtTxt[id]||"").trim()
     if(!txt) return
     const tmp:Comment = {id:Math.random().toString(36).slice(2),anon:`anon#${Math.floor(1000+Math.random()*9000)}`,body:txt.slice(0,600),ts:Date.now()}
+    // optimistic
     setComments(s=>({...s,[id]:[tmp,...(s[id]||[])]}))
     setCmtTxt(s=>({...s,[id]:""}))
     try{
       const r=await fetch(`/api/comments?postId=${id}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({body:txt})})
-      if(r.ok){ const d=await r.json(); setComments(s=>({...s,[id]:[d.comment,...(s[id]||[]).filter(c=>c.id!==tmp.id)]})) }
-    }catch{}
+      if(r.ok){ 
+        // refetch from server to get true persisted list (prevents overwriting other users' comments)
+        const rr = await fetch(`/api/comments?postId=${id}`)
+        if(rr.ok){ const d=await rr.json(); setComments(s=>({...s,[id]:d.comments})) }
+        else { const d=await r.json(); setComments(s=>({...s,[id]:[d.comment,...(s[id]||[]).filter(c=>c.id!==tmp.id)]})) }
+      } else {
+        // revert on failure
+        setComments(s=>({...s,[id]:(s[id]||[]).filter(c=>c.id!==tmp.id)}))
+      }
+    }catch{
+      // keep optimistic tmp if network fails? remove to be safe
+      setComments(s=>({...s,[id]:(s[id]||[]).filter(c=>c.id!==tmp.id)}))
+    }
   }
 
   return (
