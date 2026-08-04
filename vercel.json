@@ -1,0 +1,4 @@
+{
+  "functions": { "api/*.js": { "includeFiles": "public/satire/**" } },
+  "rewrites": [{ "source": "/satire/:path*", "destination": "/api/satire" }]
+}
