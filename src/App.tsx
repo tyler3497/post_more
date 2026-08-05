@@ -48,6 +48,10 @@ export default function App(){
   const [thesisLoading, setThesisLoading] = useState(false)
   const [thesisTotal, setThesisTotal] = useState<number|null>(null)
   const thesisLoaderRef = useRef<HTMLDivElement>(null)
+  // refs to avoid observer thrashing
+  const offRef = useRef(0)
+  const hasMoreRef = useRef(true)
+  const loadingRef = useRef(false)
 
   const [threads, setThreads] = useState<Thread[]>(()=>{
     try{ return JSON.parse(localStorage.getItem('pm_threads')||'[]')}catch{return []}
@@ -68,15 +72,15 @@ export default function App(){
   },[])
 
   const loadThesis = useCallback(async (reset=false)=>{
-    if (thesisLoading) return
-    if (!reset && !thesisHasMore) return
+    if (loadingRef.current) return
+    if (!reset && !hasMoreRef.current) return
+    loadingRef.current = true
     setThesisLoading(true)
-    const off = reset ? 0 : thesisOffset
+    const off = reset ? 0 : offRef.current
     try {
       const r = await fetch(`/api/thesis?offset=${off}&limit=${THESIS_PAGE_SIZE}`)
       if (!r.ok) throw new Error('fetch failed')
       const data = await r.json()
-      // API returns {posts, total, hasMore, nextOffset} or legacy array
       let posts: ThesisPost[] = []
       let hasMore = false
       let total: number | null = null
@@ -97,18 +101,18 @@ export default function App(){
       if (reset) {
         setThesis(posts)
       } else {
-        // dedup by id to avoid double append on fast scroll
         setThesis(prev=>{
           const seen = new Set(prev.map(p=>p.id))
           const fresh = posts.filter(p=>!seen.has(p.id))
           return [...prev, ...fresh]
         })
       }
+      offRef.current = nextOffset
+      hasMoreRef.current = hasMore
       setThesisOffset(nextOffset)
       setThesisHasMore(hasMore)
       if (total!==null) setThesisTotal(total)
     } catch {
-      // silent fallback: try static manifest full load once
       if (reset) {
         try {
           const r2 = await fetch('/thesis/manifest.json')
@@ -116,6 +120,8 @@ export default function App(){
             const arr = await r2.json()
             const sorted = [...arr].sort((a:any,b:any)=>b.ts-a.ts).slice(0, THESIS_PAGE_SIZE)
             setThesis(sorted)
+            offRef.current = sorted.length
+            hasMoreRef.current = arr.length > sorted.length
             setThesisOffset(sorted.length)
             setThesisHasMore(arr.length > sorted.length)
             setThesisTotal(arr.length)
@@ -123,34 +129,38 @@ export default function App(){
         } catch {}
       }
     } finally {
+      loadingRef.current = false
       setThesisLoading(false)
     }
-  }, [thesisLoading, thesisHasMore, thesisOffset])
+  }, []) // stable — uses refs only
 
-  // Initial load
+  // Initial load once
   useEffect(()=>{ loadThesis(true) }, [])
 
-  // Infinite scroll observer
+  // Infinite scroll — only when thesis tab visible, tiny margin so user must scroll
   useEffect(()=>{
     const el = thesisLoaderRef.current
     if (!el) return
     if (tab!=='thesis' && tab!=='all') return
+    let timeout: any = null
     const obs = new IntersectionObserver((entries)=>{
       const e = entries[0]
-      if (e.isIntersecting && thesisHasMore && !thesisLoading) {
+      if (!e.isIntersecting) return
+      if (loadingRef.current) return
+      if (!hasMoreRef.current) return
+      // throttle — must scroll to trigger, not instant loop
+      if (timeout) return
+      timeout = setTimeout(()=>{
+        timeout = null
         loadThesis(false)
-      }
-    }, { rootMargin: '600px' })
+      }, 250)
+    }, { rootMargin: '200px', threshold: 0 })
     obs.observe(el)
-    return ()=>obs.disconnect()
-  }, [tab, thesisHasMore, thesisLoading, thesisOffset, loadThesis])
-
-  // Also reload when switching to thesis tab first time empty
-  useEffect(()=>{
-    if ((tab==='thesis' || tab==='all') && thesis.length===0 && !thesisLoading) {
-      loadThesis(true)
+    return ()=>{
+      obs.disconnect()
+      if (timeout) clearTimeout(timeout)
     }
-  }, [tab])
+  }, [tab, loadThesis])
 
   useEffect(()=>{ localStorage.setItem('pm_threads', JSON.stringify(threads)) },[threads])
 
