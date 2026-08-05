@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef, useCallback } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
@@ -11,7 +11,7 @@ type ThesisPost = {
   abstract?:string,
   body:string,
   images?:string[],
-  image?:string, // legacy fallback
+  image?:string,
   sources?: {title:string, url:string, authors?:string, year?:number}[],
   topic?:string,
   ts:number,
@@ -21,6 +21,7 @@ type ThesisPost = {
 type Comment = { id:string, anon:string, body:string, ts:number }
 
 const DISCLAIMER = "parody board — all posts are fictional, no real users. No harassment, no slurs, no NSFW. Text only."
+const THESIS_PAGE_SIZE = 12
 
 function MD({children}:{children:string}){
   return (
@@ -42,6 +43,12 @@ const SAMPLE_REPLIES = ["Same, I was skeptical but the sweet-salty thing works",
 export default function App(){
   const [satire, setSatire] = useState<SatirePost[]>([])
   const [thesis, setThesis] = useState<ThesisPost[]>([])
+  const [thesisOffset, setThesisOffset] = useState(0)
+  const [thesisHasMore, setThesisHasMore] = useState(true)
+  const [thesisLoading, setThesisLoading] = useState(false)
+  const [thesisTotal, setThesisTotal] = useState<number|null>(null)
+  const thesisLoaderRef = useRef<HTMLDivElement>(null)
+
   const [threads, setThreads] = useState<Thread[]>(()=>{
     try{ return JSON.parse(localStorage.getItem('pm_threads')||'[]')}catch{return []}
   })
@@ -51,22 +58,99 @@ export default function App(){
   const [cmtTxt, setCmtTxt] = useState<Record<string,string>>({})
   const [tab, setTab] = useState<'all'|'satire'|'thesis'|'threads'>('all')
 
+  // Load satire (still file -> newest first)
   useEffect(()=>{
-    // Load satire - try static file first, fallback to api
-    fetch('/satire/manifest.json').then(r=>r.ok?r.json():Promise.reject()).then(d=>setSatire([...d as SatirePost[]].sort((a:any,b:any)=>b.ts-a.ts))).catch(()=>{
+    fetch('/satire/manifest.json').then(r=>r.ok?r.json():Promise.reject()).then(d=>{
+      setSatire([...(d as SatirePost[])].sort((a:any,b:any)=>b.ts-a.ts))
+    }).catch(()=>{
       fetch('/api/satire').then(r=>r.json()).then(d=>setSatire([...(d as SatirePost[])].sort((a:any,b:any)=>b.ts-a.ts))).catch(()=>{})
     })
-    // Load thesis - always sort newest first by ts
-    fetch('/thesis/manifest.json').then(r=>r.ok?r.json():Promise.reject()).then(d=>{
-      const sorted = [...(d as ThesisPost[])].sort((a,b)=>b.ts-a.ts)
-      setThesis(sorted)
-    }).catch(()=>{
-      fetch('/api/thesis').then(r=>r.json()).then(d=>{
-        const sorted = [...(d as ThesisPost[])].sort((a,b)=>b.ts-a.ts)
-        setThesis(sorted)
-      }).catch(()=>{})
-    })
   },[])
+
+  const loadThesis = useCallback(async (reset=false)=>{
+    if (thesisLoading) return
+    if (!reset && !thesisHasMore) return
+    setThesisLoading(true)
+    const off = reset ? 0 : thesisOffset
+    try {
+      const r = await fetch(`/api/thesis?offset=${off}&limit=${THESIS_PAGE_SIZE}`)
+      if (!r.ok) throw new Error('fetch failed')
+      const data = await r.json()
+      // API returns {posts, total, hasMore, nextOffset} or legacy array
+      let posts: ThesisPost[] = []
+      let hasMore = false
+      let total: number | null = null
+      let nextOffset = off
+
+      if (Array.isArray(data)) {
+        posts = data
+        hasMore = false
+        total = data.length
+        nextOffset = off + data.length
+      } else {
+        posts = data.posts || []
+        hasMore = !!data.hasMore
+        total = typeof data.total === 'number' ? data.total : null
+        nextOffset = typeof data.nextOffset === 'number' ? data.nextOffset : off + posts.length
+      }
+
+      if (reset) {
+        setThesis(posts)
+      } else {
+        // dedup by id to avoid double append on fast scroll
+        setThesis(prev=>{
+          const seen = new Set(prev.map(p=>p.id))
+          const fresh = posts.filter(p=>!seen.has(p.id))
+          return [...prev, ...fresh]
+        })
+      }
+      setThesisOffset(nextOffset)
+      setThesisHasMore(hasMore)
+      if (total!==null) setThesisTotal(total)
+    } catch {
+      // silent fallback: try static manifest full load once
+      if (reset) {
+        try {
+          const r2 = await fetch('/thesis/manifest.json')
+          if (r2.ok) {
+            const arr = await r2.json()
+            const sorted = [...arr].sort((a:any,b:any)=>b.ts-a.ts).slice(0, THESIS_PAGE_SIZE)
+            setThesis(sorted)
+            setThesisOffset(sorted.length)
+            setThesisHasMore(arr.length > sorted.length)
+            setThesisTotal(arr.length)
+          }
+        } catch {}
+      }
+    } finally {
+      setThesisLoading(false)
+    }
+  }, [thesisLoading, thesisHasMore, thesisOffset])
+
+  // Initial load
+  useEffect(()=>{ loadThesis(true) }, [])
+
+  // Infinite scroll observer
+  useEffect(()=>{
+    const el = thesisLoaderRef.current
+    if (!el) return
+    if (tab!=='thesis' && tab!=='all') return
+    const obs = new IntersectionObserver((entries)=>{
+      const e = entries[0]
+      if (e.isIntersecting && thesisHasMore && !thesisLoading) {
+        loadThesis(false)
+      }
+    }, { rootMargin: '600px' })
+    obs.observe(el)
+    return ()=>obs.disconnect()
+  }, [tab, thesisHasMore, thesisLoading, thesisOffset, loadThesis])
+
+  // Also reload when switching to thesis tab first time empty
+  useEffect(()=>{
+    if ((tab==='thesis' || tab==='all') && thesis.length===0 && !thesisLoading) {
+      loadThesis(true)
+    }
+  }, [tab])
 
   useEffect(()=>{ localStorage.setItem('pm_threads', JSON.stringify(threads)) },[threads])
 
@@ -82,7 +166,6 @@ export default function App(){
     }
   },[])
 
-  // Load likes/comments for visible satire posts
   useEffect(()=>{
     satire.forEach(async p=>{
       try{
@@ -94,7 +177,6 @@ export default function App(){
         if(cr.ok){ const d=await cr.json(); setComments(s=>({...s,[p.id]:d.comments})) }
       }catch{}
     })
-    // also for thesis
     thesis.forEach(async p=>{
       try{
         const lr = await fetch(`/api/likes?postId=${p.id}`)
@@ -166,57 +248,71 @@ export default function App(){
       `}</style>
       <div style={{background:"#fff3cd",padding:"12px",borderRadius:8,marginBottom:16,fontWeight:600}}>⚠️ {DISCLAIMER}</div>
       <h1 style={{margin:"0.2rem 0"}}>post_more</h1>
-      <p style={{color:"#666",marginTop:0}}>anonymous text board — parody + PhD thesis + threads. Markdown-enabled, Vercel KV persistent.</p>
+      <p style={{color:"#666",marginTop:0}}>anonymous text board — parody + PhD thesis + threads. {thesisTotal!==null ? `${thesisTotal} theses in DB — ` : ''}Markdown-enabled, KV persistent, infinite scroll.</p>
 
       <div style={{display:"flex", gap:8, margin:"14px 0", flexWrap:"wrap"}}>
         {(['all','thesis','satire','threads'] as const).map(k=>(
-          <button key={k} className={`pm-tab ${tab===k?'active':''}`} onClick={()=>setTab(k)}>{k==='all'?'All':k==='thesis'?'Thesis 🎓':k==='satire'?'Satire': 'Threads'} {(k==='thesis' && thesis.length)?`(${thesis.length})`:''} {(k==='satire' && satire.length)?`(${satire.length})`:''}</button>
+          <button key={k} className={`pm-tab ${tab===k?'active':''}`} onClick={()=>setTab(k)}>{k==='all'?'All':k==='thesis'?'Thesis 🎓':k==='satire'?'Satire': 'Threads'} {(k==='thesis' && thesisTotal!==null)?`(${thesisTotal})`: (k==='thesis' && thesis.length)?`(${thesis.length})`:''} {(k==='satire' && satire.length)?`(${satire.length})`:''}</button>
         ))}
       </div>
 
-      {(tab==='all' || tab==='thesis') && thesis.length>0 && <div style={{margin:"18px 0"}}>
-        <h2 style={{fontSize:19, marginBottom:8}}>📚 Thesis Board — PhD-level deep dives</h2>
-        {thesis.slice(0,20).map(p=>(
-        <div key={p.id} style={{background:"white",padding:16,borderRadius:12,margin:"14px 0", border:"1px solid #e6e9f2", boxShadow:"0 2px 10px rgba(0,0,0,0.03)"}}>
-          <div style={{fontSize:12,color:"#6b7280", display:"flex", gap:8, flexWrap:"wrap", alignItems:"center"}}>
-            <span style={{background:"#eef2ff", color:"#4338ca", padding:"3px 8px", borderRadius:999, fontWeight:700, fontSize:11}}>THESIS • {p.topic||'research'} • EDUCATIONAL</span>
-            <span>{p.anon} — {new Date(p.ts).toLocaleString()}</span>
+      {(tab==='all' || tab==='thesis') && (
+        <div style={{margin:"18px 0"}}>
+          <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:8}}>
+            <h2 style={{fontSize:19, margin:0}}>📚 Thesis Board — PhD-level deep dives</h2>
+            <button onClick={()=>loadThesis(true)} style={{fontSize:12, padding:"4px 10px", borderRadius:6, border:"1px solid #ddd", background:"white"}}>↻ Refresh</button>
           </div>
-          <h2 style={{margin:"10px 0 6px", lineHeight:1.2}}>{p.title}</h2>
-          {p.abstract && <div style={{background:"#f8fafc", border:"1px solid #eef2f7", padding:"10px 12px", borderRadius:8, marginBottom:10, color:"#334155", fontSize:13}}><b>Abstract —</b> {p.abstract}</div>}
+          <div style={{fontSize:12, color:"#888", margin:"6px 0 10px"}}>{thesis.length}{thesisTotal!==null?` / ${thesisTotal}`:''} loaded • newest first • scroll down for more</div>
 
-          {(p.images && p.images.length>0) ? (
-            <div className="pm-thesis-grid">
-              {p.images.slice(0,4).map((img:string,i:number)=>(
-                <img key={i} src={img} style={{width:"100%", borderRadius:8, border:"1px solid #eef"}} alt={`thesis diagram ${i+1}`}/>
-              ))}
+          {thesis.length===0 && thesisLoading && <div style={{padding:20, textAlign:"center", color:"#666"}}>Loading theses…</div>}
+
+          {thesis.map(p=>(
+          <div key={p.id} style={{background:"white",padding:16,borderRadius:12,margin:"14px 0", border:"1px solid #e6e9f2", boxShadow:"0 2px 10px rgba(0,0,0,0.03)"}}>
+            <div style={{fontSize:12,color:"#6b7280", display:"flex", gap:8, flexWrap:"wrap", alignItems:"center"}}>
+              <span style={{background:"#eef2ff", color:"#4338ca", padding:"3px 8px", borderRadius:999, fontWeight:700, fontSize:11}}>THESIS • {p.topic||'research'} • EDUCATIONAL</span>
+              <span>{p.anon} — {new Date(p.ts).toLocaleString()}</span>
             </div>
-          ) : p.image ? <img src={p.image} style={{maxWidth:"100%",borderRadius:8,margin:"10px 0"}} alt="thesis illustration"/> : null}
+            <h2 style={{margin:"10px 0 6px", lineHeight:1.2}}>{p.title}</h2>
+            {p.abstract && <div style={{background:"#f8fafc", border:"1px solid #eef2f7", padding:"10px 12px", borderRadius:8, marginBottom:10, color:"#334155", fontSize:13}}><b>Abstract —</b> {p.abstract}</div>}
 
-          <MD>{p.body}</MD>
+            {(p.images && p.images.length>0) ? (
+              <div className="pm-thesis-grid">
+                {p.images.slice(0,4).map((img:string,i:number)=>(
+                  <img key={i} src={img} style={{width:"100%", borderRadius:8, border:"1px solid #eef"}} alt={`thesis diagram ${i+1}`}/>
+                ))}
+              </div>
+            ) : p.image ? <img src={p.image} style={{maxWidth:"100%",borderRadius:8,margin:"10px 0"}} alt="thesis illustration"/> : null}
 
-          {p.sources && p.sources.length>0 && (
-            <div style={{marginTop:12, paddingTop:10, borderTop:"1px dashed #dde", fontSize:12, color:"#475569"}}>
-              <b>References & Sources</b>
-              <ul style={{margin:"6px 0 0", paddingLeft:18}}>
-                {p.sources.map((s:any,i:number)=>(<li key={i}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a>{s.authors ? ` — ${s.authors}` : ''}{s.year ? ` (${s.year})` : ''}</li>))}
-              </ul>
+            <MD>{p.body}</MD>
+
+            {p.sources && p.sources.length>0 && (
+              <div style={{marginTop:12, paddingTop:10, borderTop:"1px dashed #dde", fontSize:12, color:"#475569"}}>
+                <b>References & Sources</b>
+                <ul style={{margin:"6px 0 0", paddingLeft:18}}>
+                  {p.sources.map((s:any,i:number)=>(<li key={i}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a>{s.authors ? ` — ${s.authors}` : ''}{s.year ? ` (${s.year})` : ''}</li>))}
+                </ul>
+              </div>
+            )}
+
+            <div style={{display:"flex",gap:12,alignItems:"center",marginTop:12}}>
+              <button onClick={()=>likePost(p.id)} style={{padding:"5px 12px", borderRadius:6, border:"1px solid #ddd", background:"white"}}>❤️ Like {likes[p.id] ? `(${likes[p.id]})` : ""}</button>
+              <span style={{fontSize:12,color:"#666"}}>{comments[p.id]?.length||0} comments</span>
             </div>
-          )}
+            <div style={{marginTop:8,display:"flex",gap:6}}>
+              <input value={cmtTxt[p.id]||""} onChange={e=>setCmtTxt(s=>({...s,[p.id]:e.target.value}))} placeholder="Discuss this thesis (markdown OK)" style={{flex:1,padding:8, borderRadius:6, border:"1px solid #ddd"}}/>
+              <button onClick={()=>postComment(p.id)} style={{padding:"6px 12px", borderRadius:6}}>Post</button>
+            </div>
+            <div style={{marginLeft:8,borderLeft:"2px solid #eef2ff",paddingLeft:10,marginTop:8}}>
+              {(comments[p.id]||[]).map(c=><div key={c.id} style={{margin:"8px 0"}}><b>{c.anon}</b> <span style={{color:"#777",fontSize:11}}>{new Date(c.ts).toLocaleString()}</span><div style={{marginTop:2}}><MD>{c.body}</MD></div></div>)}
+            </div>
+          </div>
+          ))}
 
-          <div style={{display:"flex",gap:12,alignItems:"center",marginTop:12}}>
-            <button onClick={()=>likePost(p.id)} style={{padding:"5px 12px", borderRadius:6, border:"1px solid #ddd", background:"white"}}>❤️ Like {likes[p.id] ? `(${likes[p.id]})` : ""}</button>
-            <span style={{fontSize:12,color:"#666"}}>{comments[p.id]?.length||0} comments</span>
-          </div>
-          <div style={{marginTop:8,display:"flex",gap:6}}>
-            <input value={cmtTxt[p.id]||""} onChange={e=>setCmtTxt(s=>({...s,[p.id]:e.target.value}))} placeholder="Discuss this thesis (markdown OK)" style={{flex:1,padding:8, borderRadius:6, border:"1px solid #ddd"}}/>
-            <button onClick={()=>postComment(p.id)} style={{padding:"6px 12px", borderRadius:6}}>Post</button>
-          </div>
-          <div style={{marginLeft:8,borderLeft:"2px solid #eef2ff",paddingLeft:10,marginTop:8}}>
-            {(comments[p.id]||[]).map(c=><div key={c.id} style={{margin:"8px 0"}}><b>{c.anon}</b> <span style={{color:"#777",fontSize:11}}>{new Date(c.ts).toLocaleString()}</span><div style={{marginTop:2}}><MD>{c.body}</MD></div></div>)}
+          <div ref={thesisLoaderRef} style={{padding:"18px 0", textAlign:"center"}}>
+            {thesisLoading ? <span style={{color:"#666", fontSize:13}}>Loading more theses…</span> : thesisHasMore ? <span style={{color:"#999", fontSize:12}}>Scroll to load more • {thesis.length} / {thesisTotal ?? '...' }</span> : <span style={{color:"#888", fontSize:12}}>— End of theses ({thesisTotal ?? thesis.length}) —</span>}
           </div>
         </div>
-      ))}</div>}
+      )}
 
       {(tab==='all' || tab==='satire') && satire.length>0 && <div style={{margin:"16px 0"}}><h2 style={{fontSize:18}}>Featured Satire (fictional — parody)</h2>{satire.slice(0,10).map(p=>(
         <div key={p.id} style={{background:"white",padding:12,borderRadius:8,margin:"12px 0"}}>
@@ -262,7 +358,7 @@ export default function App(){
         </>
       )}
 
-      <footer style={{marginTop:32,color:"#888",fontSize:12}}>Parody/demo + educational thesis. Thesis posts are educational, heavily sourced, markdown-stunning, very long form. Server-side likes/comments use Vercel KV persistent.</footer>
+      <footer style={{marginTop:32,color:"#888",fontSize:12}}>Parody/demo + educational thesis. Thesis posts are stored in KV persistent, paginated infinite scroll. Server-side likes/comments use Vercel KV persistent.</footer>
     </div>
   )
 }

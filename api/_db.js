@@ -4,9 +4,10 @@
 
 let mem = globalThis.__pm_mem
 if (!mem) {
-  mem = { likes: new Map(), comments: new Map() }
+  mem = { likes: new Map(), comments: new Map(), thesis: new Map() }
   globalThis.__pm_mem = mem
 }
+if (!mem.thesis) mem.thesis = new Map()
 
 export async function getKV() {
   try {
@@ -72,4 +73,143 @@ export async function addComment(postId, comment) {
   if (arr.length>200) arr.shift()
   mem.comments.set(postId, arr)
   return comment
+}
+
+// ---- Thesis persistent store ----
+const THESIS_INDEX = 'thesis:index'
+const THESIS_PREFIX = 'thesis:post:'
+
+export async function saveThesisPost(post) {
+  const kv = await getKV()
+  if (!kv) {
+    mem.thesis.set(post.id, post)
+    return true
+  }
+  try {
+    await kv.set(`${THESIS_PREFIX}${post.id}`, JSON.stringify(post))
+  } catch {}
+  try {
+    try {
+      await kv.zadd(THESIS_INDEX, { score: post.ts, member: post.id })
+    } catch {
+      try {
+        // alternate signature (score, member)
+        await kv.zadd(THESIS_INDEX, post.ts, post.id)
+      } catch {}
+    }
+  } catch {}
+  return true
+}
+
+export async function getThesisPostById(id) {
+  const kv = await getKV()
+  if (kv) {
+    try {
+      const raw = await kv.get(`${THESIS_PREFIX}${id}`)
+      if (!raw) return null
+      if (typeof raw === 'string') { try { return JSON.parse(raw) } catch { return raw } }
+      return raw
+    } catch { return null }
+  }
+  return mem.thesis.get(id) || null
+}
+
+export async function getThesisTotal() {
+  const kv = await getKV()
+  if (!kv) {
+    // fallback to mem + file? file handled in API
+    return mem.thesis.size
+  }
+  try {
+    const c = await kv.zcard(THESIS_INDEX)
+    return typeof c === 'number' ? c : 0
+  } catch {
+    try {
+      const count = await kv.zcount(THESIS_INDEX, '-inf', '+inf')
+      return typeof count === 'number' ? count : 0
+    } catch { return 0 }
+  }
+}
+
+export async function getThesisIdsPage(offset, limit) {
+  const kv = await getKV()
+  if (!kv) return []
+  let ids = []
+  try {
+    try {
+      ids = await kv.zrange(THESIS_INDEX, offset, offset+limit-1, { rev: true })
+    } catch {
+      try {
+        ids = await kv.zrange(THESIS_INDEX, offset, offset+limit-1, { rev: true, byScore: false } )
+      } catch {
+        try {
+          if (kv.zrevrange) {
+            ids = await kv.zrevrange(THESIS_INDEX, offset, offset+limit-1)
+          } else throw new Error('no rev')
+        } catch {
+          const all = await kv.zrange(THESIS_INDEX, 0, -1)
+          if (Array.isArray(all)) {
+            const rev = [...all].reverse()
+            ids = rev.slice(offset, offset+limit)
+          } else ids = []
+        }
+      }
+    }
+  } catch { ids = [] }
+  // upstash may return withScores interleaved? ensure only strings
+  if (Array.isArray(ids) && ids.length>0 && typeof ids[0]!=='string') {
+    // if objects? filter
+    ids = ids.filter((x,i)=> typeof x==='string')
+  }
+  return Array.isArray(ids) ? ids : []
+}
+
+export async function getThesisPageFromKV(offset, limit) {
+  const kv = await getKV()
+  if (!kv) return []
+  const ids = await getThesisIdsPage(offset, limit)
+  if (!ids || ids.length===0) return []
+  const posts = []
+  // Try mget if available
+  try {
+    if (kv.mget) {
+      const keys = ids.map(id=>`${THESIS_PREFIX}${id}`)
+      const raw = await kv.mget(...keys)
+      if (Array.isArray(raw)) {
+        for (let r of raw) {
+          if (!r) continue
+          if (typeof r==='string') { try { posts.push(JSON.parse(r)) } catch { } }
+          else posts.push(r)
+        }
+        return posts
+      }
+    }
+  } catch {}
+  // fallback sequential get
+  for (let id of ids) {
+    const p = await getThesisPostById(id)
+    if (p) posts.push(p)
+  }
+  return posts
+}
+
+export async function syncFileThesesToKV(filePosts) {
+  const kv = await getKV()
+  if (!kv || !Array.isArray(filePosts) || filePosts.length===0) return 0
+  let added = 0
+  try {
+    // get existing ids to avoid dup
+    let existing = []
+    try {
+      existing = await kv.zrange(THESIS_INDEX, 0, -1)
+    } catch { existing = [] }
+    const set = new Set(Array.isArray(existing)?existing:[])
+    for (let p of filePosts) {
+      if (!p || !p.id) continue
+      if (set.has(p.id)) continue
+      await saveThesisPost(p)
+      added++
+    }
+  } catch { /* ignore */ }
+  return added
 }
