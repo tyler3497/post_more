@@ -5522,7 +5522,12 @@
     "topic": "systems memory",
     "thesis": true,
     "wordCount": 2476,
-    "images": [],
+    "images": [
+      "/thesis/ths_1785954600000_a1b2-0.webp",
+      "/thesis/ths_1785954600000_a1b2-1.webp",
+      "/thesis/ths_1785954600000_a1b2-2.webp",
+      "/thesis/ths_1785954600000_a1b2-3.webp"
+    ],
     "image_concepts": [
       "technical diagram NUMA CXL switches pooling",
       "MOESI state machine",
@@ -5578,7 +5583,12 @@
     "topic": "wasm compilers",
     "thesis": true,
     "wordCount": 2805,
-    "images": [],
+    "images": [
+      "/thesis/ths_1785954601000_b2c3-0.webp",
+      "/thesis/ths_1785954601000_b2c3-1.webp",
+      "/thesis/ths_1785954601000_b2c3-2.webp",
+      "/thesis/ths_1785954601000_b2c3-3.webp"
+    ],
     "image_concepts": [
       "Wasm GC heap type hierarchy diagram showing eqref, struct, array, i31ref subtyping with Wasmtime collector scanning",
       "Component Model WIT world linking diagram with lifting/lowering Canonical ABI between Rust and Python components via resource handles",
@@ -5658,7 +5668,12 @@
     "topic": "cryptography vdf",
     "thesis": true,
     "wordCount": 2477,
-    "images": [],
+    "images": [
+      "/thesis/ths_1785954602000_c3d4-0.webp",
+      "/thesis/ths_1785954602000_c3d4-1.webp",
+      "/thesis/ths_1785954602000_c3d4-2.webp",
+      "/thesis/ths_1785954602000_c3d4-3.webp"
+    ],
     "image_concepts": [
       "Wesolowski VDF flow",
       "Pietrzak recursive tree",
@@ -5714,7 +5729,11 @@
     "topic": "databases learned indexes",
     "thesis": true,
     "wordCount": 2458,
-    "images": [],
+    "images": [
+      "/thesis/ths_1785954603000_d4e5-1.webp",
+      "/thesis/ths_1785954603000_d4e5-2.webp",
+      "/thesis/ths_1785954603000_d4e5-3.webp"
+    ],
     "image_concepts": [
       "RMI hierarchy",
       "PGM PLA epsilon",
@@ -5826,7 +5845,12 @@
     "topic": "ml diffusion",
     "thesis": true,
     "wordCount": 2456,
-    "images": [],
+    "images": [
+      "/thesis/ths_1785954605000_f6a7-0.webp",
+      "/thesis/ths_1785954605000_f6a7-1.webp",
+      "/thesis/ths_1785954605000_f6a7-2.webp",
+      "/thesis/ths_1785954605000_f6a7-3.webp"
+    ],
     "image_concepts": [
       "DiT AdaLN block",
       "Flow ODE vs SDE",
@@ -5882,7 +5906,12 @@
     "topic": "distributed byzantine",
     "thesis": true,
     "wordCount": 2459,
-    "images": [],
+    "images": [
+      "/thesis/ths_1785954606000_a7b8-0.webp",
+      "/thesis/ths_1785954606000_a7b8-1.webp",
+      "/thesis/ths_1785954606000_a7b8-2.webp",
+      "/thesis/ths_1785954606000_a7b8-3.webp"
+    ],
     "image_concepts": [
       "Bracha 3-phase",
       "signed VC DAG",
@@ -5938,7 +5967,12 @@
     "topic": "program synthesis",
     "thesis": true,
     "wordCount": 2451,
-    "images": [],
+    "images": [
+      "/thesis/ths_1785954607000_b8c9-0.webp",
+      "/thesis/ths_1785954607000_b8c9-1.webp",
+      "/thesis/ths_1785954607000_b8c9-2.webp",
+      "/thesis/ths_1785954607000_b8c9-3.webp"
+    ],
     "image_concepts": [
       "CEGIS loop",
       "SyGuS grammar",
