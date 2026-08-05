@@ -6028,7 +6028,12 @@
     "topic": "os scheduling",
     "thesis": true,
     "wordCount": 2780,
-    "images": [],
+    "images": [
+      "/thesis/ths_1785954608000_c9d0-0.webp",
+      "/thesis/ths_1785954608000_c9d0-1.webp",
+      "/thesis/ths_1785954608000_c9d0-2.webp",
+      "/thesis/ths_1785954608000_c9d0-3.webp"
+    ],
     "image_concepts": [],
     "sources": [
       {
@@ -6079,7 +6084,11 @@
     "topic": "cryptography mpc",
     "thesis": true,
     "wordCount": 2465,
-    "images": [],
+    "images": [
+      "/thesis/ths_1785954609000_d0e1-0.webp",
+      "/thesis/ths_1785954609000_d0e1-1.webp",
+      "/thesis/ths_1785954609000_d0e1-2.webp"
+    ],
     "image_concepts": [
       "SPDZ MACs",
       "Beaver triple",
