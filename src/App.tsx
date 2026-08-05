@@ -21,7 +21,7 @@ type ThesisPost = {
 type Comment = { id:string, anon:string, body:string, ts:number }
 
 const DISCLAIMER = "parody board — all posts are fictional, no real users. No harassment, no slurs, no NSFW. Text only."
-const THESIS_PAGE_SIZE = 12
+const THESIS_PAGE_SIZE = 5
 
 function MD({children}:{children:string}){
   return (
@@ -52,6 +52,8 @@ export default function App(){
   const offRef = useRef(0)
   const hasMoreRef = useRef(true)
   const loadingRef = useRef(false)
+  // collapse state — thesis collapsed by default to title-only
+  const [collapsedThesis, setCollapsedThesis] = useState<Record<string, boolean>>({})
 
   const [threads, setThreads] = useState<Thread[]>(()=>{
     try{ return JSON.parse(localStorage.getItem('pm_threads')||'[]')}catch{return []}
@@ -70,6 +72,10 @@ export default function App(){
       fetch('/api/satire').then(r=>r.json()).then(d=>setSatire([...(d as SatirePost[])].sort((a:any,b:any)=>b.ts-a.ts))).catch(()=>{})
     })
   },[])
+
+  const toggleThesisCollapse = useCallback((id:string)=>{
+    setCollapsedThesis(s=>({...s, [id]: !(s[id] ?? true)})) // default collapsed = true
+  }, [])
 
   const loadThesis = useCallback(async (reset=false)=>{
     if (loadingRef.current) return
@@ -276,47 +282,62 @@ export default function App(){
 
           {thesis.length===0 && thesisLoading && <div style={{padding:20, textAlign:"center", color:"#666"}}>Loading theses…</div>}
 
-          {thesis.map(p=>(
-          <div key={p.id} style={{background:"white",padding:16,borderRadius:12,margin:"14px 0", border:"1px solid #e6e9f2", boxShadow:"0 2px 10px rgba(0,0,0,0.03)"}}>
-            <div style={{fontSize:12,color:"#6b7280", display:"flex", gap:8, flexWrap:"wrap", alignItems:"center"}}>
-              <span style={{background:"#eef2ff", color:"#4338ca", padding:"3px 8px", borderRadius:999, fontWeight:700, fontSize:11}}>THESIS • {p.topic||'research'} • EDUCATIONAL</span>
-              <span>{p.anon} — {new Date(p.ts).toLocaleString()}</span>
-            </div>
-            <h2 style={{margin:"10px 0 6px", lineHeight:1.2}}>{p.title}</h2>
-            {p.abstract && <div style={{background:"#f8fafc", border:"1px solid #eef2f7", padding:"10px 12px", borderRadius:8, marginBottom:10, color:"#334155", fontSize:13}}><b>Abstract —</b> {p.abstract}</div>}
-
-            {(p.images && p.images.length>0) ? (
-              <div className="pm-thesis-grid">
-                {p.images.slice(0,4).map((img:string,i:number)=>(
-                  <img key={i} src={img} style={{width:"100%", borderRadius:8, border:"1px solid #eef"}} alt={`thesis diagram ${i+1}`}/>
-                ))}
+          {thesis.map(p=>{
+            const isCollapsed = collapsedThesis[p.id] ?? true
+            return (
+            <div key={p.id} style={{background:"white",padding: isCollapsed ? "12px 14px" : "16px",borderRadius:12,margin:"10px 0", border:"1px solid #e6e9f2", boxShadow:"0 2px 10px rgba(0,0,0,0.03)"}}>
+              <div style={{display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:12}}>
+                <div style={{flex:1, minWidth:0}}>
+                  <div style={{fontSize:11,color:"#6b7280", display:"flex", gap:8, flexWrap:"wrap", alignItems:"center", marginBottom:4}}>
+                    <span style={{background:"#eef2ff", color:"#4338ca", padding:"2px 7px", borderRadius:999, fontWeight:700, fontSize:10}}>THESIS • {p.topic||'research'}</span>
+                    <span style={{fontSize:11}}>{p.anon} — {new Date(p.ts).toLocaleDateString()}</span>
+                  </div>
+                  <h2 style={{margin:"4px 0 0", lineHeight:1.25, fontSize: isCollapsed ? "15px" : "18px", cursor:"pointer"}} onClick={()=>toggleThesisCollapse(p.id)}>{p.title}</h2>
+                </div>
+                <button onClick={()=>toggleThesisCollapse(p.id)} title={isCollapsed ? "Expand" : "Collapse"} style={{flexShrink:0, padding:"4px 9px", borderRadius:6, border:"1px solid #ddd", background: isCollapsed ? "#111" : "white", color: isCollapsed ? "white" : "#111", fontSize:12, cursor:"pointer"}}>
+                  {isCollapsed ? "▶ Show" : "▼ Hide"}
+                </button>
               </div>
-            ) : p.image ? <img src={p.image} style={{maxWidth:"100%",borderRadius:8,margin:"10px 0"}} alt="thesis illustration"/> : null}
 
-            <MD>{p.body}</MD>
+              {!isCollapsed && (
+                <>
+                  {p.abstract && <div style={{background:"#f8fafc", border:"1px solid #eef2f7", padding:"10px 12px", borderRadius:8, marginTop:10, marginBottom:10, color:"#334155", fontSize:13}}><b>Abstract —</b> {p.abstract}</div>}
 
-            {p.sources && p.sources.length>0 && (
-              <div style={{marginTop:12, paddingTop:10, borderTop:"1px dashed #dde", fontSize:12, color:"#475569"}}>
-                <b>References & Sources</b>
-                <ul style={{margin:"6px 0 0", paddingLeft:18}}>
-                  {p.sources.map((s:any,i:number)=>(<li key={i}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a>{s.authors ? ` — ${s.authors}` : ''}{s.year ? ` (${s.year})` : ''}</li>))}
-                </ul>
-              </div>
-            )}
+                  {(p.images && p.images.length>0) ? (
+                    <div className="pm-thesis-grid">
+                      {p.images.slice(0,4).map((img:string,i:number)=>(
+                        <img key={i} src={img} style={{width:"100%", borderRadius:8, border:"1px solid #eef"}} alt={`thesis diagram ${i+1}`}/>
+                      ))}
+                    </div>
+                  ) : p.image ? <img src={p.image} style={{maxWidth:"100%",borderRadius:8,margin:"10px 0"}} alt="thesis illustration"/> : null}
 
-            <div style={{display:"flex",gap:12,alignItems:"center",marginTop:12}}>
-              <button onClick={()=>likePost(p.id)} style={{padding:"5px 12px", borderRadius:6, border:"1px solid #ddd", background:"white"}}>❤️ Like {likes[p.id] ? `(${likes[p.id]})` : ""}</button>
-              <span style={{fontSize:12,color:"#666"}}>{comments[p.id]?.length||0} comments</span>
+                  <MD>{p.body}</MD>
+
+                  {p.sources && p.sources.length>0 && (
+                    <div style={{marginTop:12, paddingTop:10, borderTop:"1px dashed #dde", fontSize:12, color:"#475569"}}>
+                      <b>References & Sources</b>
+                      <ul style={{margin:"6px 0 0", paddingLeft:18}}>
+                        {p.sources.map((s:any,i:number)=>(<li key={i}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a>{s.authors ? ` — ${s.authors}` : ''}{s.year ? ` (${s.year})` : ''}</li>))}
+                      </ul>
+                    </div>
+                  )}
+
+                  <div style={{display:"flex",gap:12,alignItems:"center",marginTop:12}}>
+                    <button onClick={()=>likePost(p.id)} style={{padding:"5px 12px", borderRadius:6, border:"1px solid #ddd", background:"white"}}>❤️ Like {likes[p.id] ? `(${likes[p.id]})` : ""}</button>
+                    <span style={{fontSize:12,color:"#666"}}>{comments[p.id]?.length||0} comments</span>
+                  </div>
+                  <div style={{marginTop:8,display:"flex",gap:6}}>
+                    <input value={cmtTxt[p.id]||""} onChange={e=>setCmtTxt(s=>({...s,[p.id]:e.target.value}))} placeholder="Discuss this thesis (markdown OK)" style={{flex:1,padding:8, borderRadius:6, border:"1px solid #ddd"}}/>
+                    <button onClick={()=>postComment(p.id)} style={{padding:"6px 12px", borderRadius:6}}>Post</button>
+                  </div>
+                  <div style={{marginLeft:8,borderLeft:"2px solid #eef2ff",paddingLeft:10,marginTop:8}}>
+                    {(comments[p.id]||[]).map(c=><div key={c.id} style={{margin:"8px 0"}}><b>{c.anon}</b> <span style={{color:"#777",fontSize:11}}>{new Date(c.ts).toLocaleString()}</span><div style={{marginTop:2}}><MD>{c.body}</MD></div></div>)}
+                  </div>
+                </>
+              )}
             </div>
-            <div style={{marginTop:8,display:"flex",gap:6}}>
-              <input value={cmtTxt[p.id]||""} onChange={e=>setCmtTxt(s=>({...s,[p.id]:e.target.value}))} placeholder="Discuss this thesis (markdown OK)" style={{flex:1,padding:8, borderRadius:6, border:"1px solid #ddd"}}/>
-              <button onClick={()=>postComment(p.id)} style={{padding:"6px 12px", borderRadius:6}}>Post</button>
-            </div>
-            <div style={{marginLeft:8,borderLeft:"2px solid #eef2ff",paddingLeft:10,marginTop:8}}>
-              {(comments[p.id]||[]).map(c=><div key={c.id} style={{margin:"8px 0"}}><b>{c.anon}</b> <span style={{color:"#777",fontSize:11}}>{new Date(c.ts).toLocaleString()}</span><div style={{marginTop:2}}><MD>{c.body}</MD></div></div>)}
-            </div>
-          </div>
-          ))}
+            )
+          })}
 
           <div ref={thesisLoaderRef} style={{padding:"18px 0", textAlign:"center"}}>
             {thesisLoading ? <span style={{color:"#666", fontSize:13}}>Loading more theses…</span> : thesisHasMore ? <span style={{color:"#999", fontSize:12}}>Scroll to load more • {thesis.length} / {thesisTotal ?? '...' }</span> : <span style={{color:"#888", fontSize:12}}>— End of theses ({thesisTotal ?? thesis.length}) —</span>}
