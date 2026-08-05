@@ -62,6 +62,7 @@ export default function App(){
   // Unified server posts — one list, one DB, filtered by `type`
   const [posts, setPosts] = useState<UnifiedPost[]>([])
   const [total, setTotal] = useState<number|null>(null)
+  const [typeCounts, setTypeCounts] = useState<Record<string, number|null>>({})
   const [hasMore, setHasMore] = useState(true)
   const [loading, setLoading] = useState(false)
   const [filter, setFilter] = useState<FilterType>('all')
@@ -85,6 +86,46 @@ export default function App(){
 
   const isServerFilter = (SERVER_FILTERS as string[]).includes(filter as string)
   const activeServerType = filter === 'all' ? null : filter as string
+
+  // fetch accurate counts for every type (unlimited DB, no cap)
+  const refreshCounts = useCallback(async ()=>{
+    try {
+      // fetch all types in parallel — each /api/posts?type=X returns its true KV total (no 100 cap)
+      const typeResults = await Promise.all(POST_TYPES.map(async t=>{
+        try {
+          const r = await fetch(`/api/posts?offset=0&limit=1&type=${encodeURIComponent(t.id)}`)
+          if (!r.ok) return [t.id, null] as const
+          const d = await r.json()
+          return [t.id, typeof d.total === 'number' ? d.total : null] as const
+        } catch { return [t.id, null] as const }
+      }))
+      let allTotal: number|null = null
+      try {
+        const r = await fetch(`/api/posts?offset=0&limit=1`)
+        if (r.ok) {
+          const d = await r.json()
+          if (typeof d.total === 'number') allTotal = d.total
+        }
+      } catch {}
+      setTypeCounts(prev=>{
+        const n: Record<string, number|null> = {...prev}
+        if (allTotal !== null) n['all'] = allTotal
+        for (const [id, v] of typeResults) if (v !== null) n[id] = v
+        return n
+      })
+      // keep total in sync with active filter
+      if (filter === 'all' && allTotal !== null) setTotal(allTotal)
+      const cur = typeResults.find(([id])=> id===activeServerType)
+      if (cur && cur[1] !== null) setTotal(cur[1])
+    } catch {}
+  }, [filter, activeServerType])
+
+  useEffect(()=>{ refreshCounts() }, [refreshCounts])
+  // refresh counts periodically as hourly batches land (KV grows unlimited)
+  useEffect(()=>{
+    const id = setInterval(()=> refreshCounts(), 60_000)
+    return ()=> clearInterval(id)
+  }, [refreshCounts])
 
   const loadPosts = useCallback(async (reset=false)=>{
     if (!isServerFilter) return
@@ -115,7 +156,12 @@ export default function App(){
       offRef.current = nextOff
       hasMoreRef.current = more
       setHasMore(more)
-      if (tot!==null) setTotal(tot)
+      if (tot!==null) {
+        setTotal(tot)
+        // keep per-type tab counts accurate — unlimited DB, no 100 cap
+        const key = activeServerType || 'all'
+        setTypeCounts(prev=>({...prev, [key]: tot}))
+      }
     } catch {
       if (reset) {
         // fallback to static manifests merged (for local dev without KV)
@@ -255,13 +301,13 @@ export default function App(){
       `}</style>
       <div style={{background:"#fff3cd",padding:"12px",borderRadius:8,marginBottom:16,fontWeight:600}}>⚠️ {DISCLAIMER}</div>
       <h1 style={{margin:"0.2rem 0"}}>post_more</h1>
-      <p style={{color:"#666",marginTop:0}}>one list • filterable • {total!==null ? `${total} posts in DB • ` : ''}collapsible title-only • 5 first load • same DB with <code>type</code></p>
+      <p style={{color:"#666",marginTop:0}}>one list • filterable • {typeCounts['all'] ?? total ?? '…'} total in DB (unlimited) • collapsible title-only • 5 first load • same DB with <code>type</code></p>
 
       <div style={{display:"flex", gap:8, margin:"14px 0", flexWrap:"wrap"}}>
-        {/* All tab + dynamic type tabs + threads */}
-        <button className={`pm-tab ${filter==='all'?'active':''}`} onClick={()=>setFilter('all')}>All ({total ?? '…'})</button>
+        {/* All tab + dynamic type tabs + threads — counts from true KV totals, no 100 cap */}
+        <button className={`pm-tab ${filter==='all'?'active':''}`} onClick={()=>setFilter('all')}>All ({typeCounts['all'] ?? total ?? '…'})</button>
         {POST_TYPES.map(t=>(
-          <button key={t.id} className={`pm-tab ${filter===t.id?'active':''}`} onClick={()=>setFilter(t.id as any)}>{t.label}</button>
+          <button key={t.id} className={`pm-tab ${filter===t.id?'active':''}`} onClick={()=>setFilter(t.id as any)}>{t.label} ({typeCounts[t.id] ?? '…'})</button>
         ))}
         <button className={`pm-tab ${filter==='threads'?'active':''}`} onClick={()=>setFilter('threads')}>Threads</button>
       </div>
