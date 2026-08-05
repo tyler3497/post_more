@@ -2,33 +2,45 @@ import { useEffect, useState, useRef, useCallback } from 'react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
-type Reply = { id:string, anon: string, body: string, ts: number }
+type Reply = { id:string, anon:string, body:string, ts:number }
 type Thread = { id:string, title:string, body:string, anon:string, ts:number, replies: Reply[] }
-type SatirePost = { id:string, title:string, body:string, image:string, ts:number, anon:string }
-type ThesisPost = {
-  id:string,
-  title:string,
-  abstract?:string,
-  body:string,
-  images?:string[],
-  image?:string,
-  sources?: {title:string, url:string, authors?:string, year?:number}[],
-  topic?:string,
-  ts:number,
-  anon:string,
-  thesis?:boolean
-}
 type Comment = { id:string, anon:string, body:string, ts:number }
 
+// Unified post — all server posts share this shape, differentiated by `type`
+// Adding a new type is just adding a new string here and in POST_TYPES, no schema change.
+export type UnifiedPost = {
+  id:string
+  type: string // 'thesis' | 'satire' | future types like 'news', 'research', etc.
+  title:string
+  body:string
+  ts:number
+  anon:string
+  // thesis extras
+  abstract?:string
+  images?:string[]
+  image?:string
+  sources?: {title:string, url:string, authors?:string, year?:number}[]
+  topic?:string
+  thesis?:boolean
+  // satire extras use same image field
+  satire?:boolean
+}
+
 const DISCLAIMER = "parody board — all posts are fictional, no real users. No harassment, no slurs, no NSFW. Text only."
-const THESIS_PAGE_SIZE = 5
+const PAGE_SIZE = 5
+
+// Registry of post types — add a new type here and it automatically gets a tab, badge, and filtering.
+// Example future: { id:'news', label:'News', badge:'NEWS', fg:'#0e7490', bg:'#cffafe' }
+export const POST_TYPES = [
+  { id:'thesis', label:'Thesis 🎓', badge:'THESIS', fg:'#4338ca', bg:'#eef2ff' },
+  { id:'satire', label:'Satire', badge:'SATIRE/PARODY', fg:'#a16207', bg:'#fef3c7' },
+] as const
+
+type FilterType = 'all' | typeof POST_TYPES[number]['id'] | 'threads'
+const SERVER_FILTERS = ['all', ...POST_TYPES.map(t=>t.id)] as FilterType[]
 
 function MD({children}:{children:string}){
-  return (
-    <div className="pm-md">
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{children}</ReactMarkdown>
-    </div>
-  )
+  return <div className="pm-md"><ReactMarkdown remarkPlugins={[remarkGfm]}>{children}</ReactMarkdown></div>
 }
 
 const SAMPLE_TITLES = ["Pineapple on pizza — final verdict?","My corner store started putting fruit on everything","Best way to keep crust crispy with wet toppings?","Debate night: sweet vs savory"]
@@ -40,20 +52,28 @@ const SAMPLE_BODIES = [
 ]
 const SAMPLE_REPLIES = ["Same, I was skeptical but the sweet-salty thing works","Texture is what gets me, I keep it classic","Good tip on drying it first"]
 
+function badgeFor(type:string){
+  const found = POST_TYPES.find(t=>t.id===type)
+  if (!found) return { badge: type.toUpperCase(), fg:'#444', bg:'#eee' }
+  return { badge: found.badge, fg: found.fg, bg: found.bg }
+}
+
 export default function App(){
-  const [satire, setSatire] = useState<SatirePost[]>([])
-  const [thesis, setThesis] = useState<ThesisPost[]>([])
-  const [thesisOffset, setThesisOffset] = useState(0)
-  const [thesisHasMore, setThesisHasMore] = useState(true)
-  const [thesisLoading, setThesisLoading] = useState(false)
-  const [thesisTotal, setThesisTotal] = useState<number|null>(null)
-  const thesisLoaderRef = useRef<HTMLDivElement>(null)
-  // refs to avoid observer thrashing
+  // Unified server posts — one list, one DB, filtered by `type`
+  const [posts, setPosts] = useState<UnifiedPost[]>([])
+  const [total, setTotal] = useState<number|null>(null)
+  const [hasMore, setHasMore] = useState(true)
+  const [loading, setLoading] = useState(false)
+  const [filter, setFilter] = useState<FilterType>('all')
+  const filterRef = useRef<FilterType>('all')
   const offRef = useRef(0)
   const hasMoreRef = useRef(true)
   const loadingRef = useRef(false)
-  // collapse state — thesis collapsed by default to title-only
-  const [collapsedThesis, setCollapsedThesis] = useState<Record<string, boolean>>({})
+  const loaderRef = useRef<HTMLDivElement>(null)
+
+  // Collapse — all posts collapsed to title-only by default
+  const [collapsed, setCollapsed] = useState<Record<string, boolean>>({})
+  const toggleCollapse = (id:string)=> setCollapsed(s=>({...s, [id]: !(s[id] ?? true)}))
 
   const [threads, setThreads] = useState<Thread[]>(()=>{
     try{ return JSON.parse(localStorage.getItem('pm_threads')||'[]')}catch{return []}
@@ -62,114 +82,109 @@ export default function App(){
   const [likes, setLikes] = useState<Record<string,number>>({})
   const [comments, setComments] = useState<Record<string, Comment[]>>({})
   const [cmtTxt, setCmtTxt] = useState<Record<string,string>>({})
-  const [tab, setTab] = useState<'all'|'satire'|'thesis'|'threads'>('all')
 
-  // Load satire (still file -> newest first)
-  useEffect(()=>{
-    fetch('/satire/manifest.json').then(r=>r.ok?r.json():Promise.reject()).then(d=>{
-      setSatire([...(d as SatirePost[])].sort((a:any,b:any)=>b.ts-a.ts))
-    }).catch(()=>{
-      fetch('/api/satire').then(r=>r.json()).then(d=>setSatire([...(d as SatirePost[])].sort((a:any,b:any)=>b.ts-a.ts))).catch(()=>{})
-    })
-  },[])
+  const isServerFilter = (SERVER_FILTERS as string[]).includes(filter as string)
+  const activeServerType = filter === 'all' ? null : filter as string
 
-  const toggleThesisCollapse = useCallback((id:string)=>{
-    setCollapsedThesis(s=>({...s, [id]: !(s[id] ?? true)})) // default collapsed = true
-  }, [])
-
-  const loadThesis = useCallback(async (reset=false)=>{
+  const loadPosts = useCallback(async (reset=false)=>{
+    if (!isServerFilter) return
     if (loadingRef.current) return
     if (!reset && !hasMoreRef.current) return
     loadingRef.current = true
-    setThesisLoading(true)
+    setLoading(true)
     const off = reset ? 0 : offRef.current
     try {
-      const r = await fetch(`/api/thesis?offset=${off}&limit=${THESIS_PAGE_SIZE}`)
+      const typeParam = activeServerType ? `&type=${encodeURIComponent(activeServerType)}` : ''
+      const r = await fetch(`/api/posts?offset=${off}&limit=${PAGE_SIZE}${typeParam}`)
       if (!r.ok) throw new Error('fetch failed')
       const data = await r.json()
-      let posts: ThesisPost[] = []
-      let hasMore = false
-      let total: number | null = null
-      let nextOffset = off
-
-      if (Array.isArray(data)) {
-        posts = data
-        hasMore = false
-        total = data.length
-        nextOffset = off + data.length
-      } else {
-        posts = data.posts || []
-        hasMore = !!data.hasMore
-        total = typeof data.total === 'number' ? data.total : null
-        nextOffset = typeof data.nextOffset === 'number' ? data.nextOffset : off + posts.length
-      }
+      let page: UnifiedPost[] = data.posts || data
+      const more = data.hasMore ?? false
+      const tot = typeof data.total === 'number' ? data.total : null
+      const nextOff = typeof data.nextOffset === 'number' ? data.nextOffset : off + page.length
 
       if (reset) {
-        setThesis(posts)
+        setPosts(page)
       } else {
-        setThesis(prev=>{
+        setPosts(prev=>{
           const seen = new Set(prev.map(p=>p.id))
-          const fresh = posts.filter(p=>!seen.has(p.id))
+          const fresh = page.filter(p=>!seen.has(p.id))
           return [...prev, ...fresh]
         })
       }
-      offRef.current = nextOffset
-      hasMoreRef.current = hasMore
-      setThesisOffset(nextOffset)
-      setThesisHasMore(hasMore)
-      if (total!==null) setThesisTotal(total)
+      offRef.current = nextOff
+      hasMoreRef.current = more
+      setHasMore(more)
+      if (tot!==null) setTotal(tot)
     } catch {
       if (reset) {
+        // fallback to static manifests merged (for local dev without KV)
         try {
-          const r2 = await fetch('/thesis/manifest.json')
-          if (r2.ok) {
-            const arr = await r2.json()
-            const sorted = [...arr].sort((a:any,b:any)=>b.ts-a.ts).slice(0, THESIS_PAGE_SIZE)
-            setThesis(sorted)
-            offRef.current = sorted.length
-            hasMoreRef.current = arr.length > sorted.length
-            setThesisOffset(sorted.length)
-            setThesisHasMore(arr.length > sorted.length)
-            setThesisTotal(arr.length)
+          let merged: UnifiedPost[]=[]
+          if (!activeServerType || activeServerType==='satire') {
+            const rs = await fetch('/satire/manifest.json')
+            if (rs.ok) {
+              const arr = await rs.json()
+              merged = merged.concat(arr.map((p:any)=>({...p, type:'satire'})))
+            }
           }
+          if (!activeServerType || activeServerType==='thesis') {
+            const rt = await fetch('/thesis/manifest.json')
+            if (rt.ok) {
+              const arr = await rt.json()
+              merged = merged.concat(arr.map((p:any)=>({...p, type:'thesis'})))
+            }
+          }
+          merged.sort((a,b)=>b.ts-a.ts)
+          const slice = merged.slice(off, off+PAGE_SIZE)
+          if (reset) setPosts(slice)
+          else setPosts(prev=>[...prev, ...slice])
+          offRef.current = off+slice.length
+          hasMoreRef.current = merged.length > off+slice.length
+          setHasMore(merged.length > off+slice.length)
+          setTotal(merged.length)
         } catch {}
       }
     } finally {
       loadingRef.current = false
-      setThesisLoading(false)
+      setLoading(false)
     }
-  }, []) // stable — uses refs only
+  }, [isServerFilter, activeServerType])
 
-  // Initial load once
-  useEffect(()=>{ loadThesis(true) }, [])
-
-  // Infinite scroll — only when thesis tab visible, tiny margin so user must scroll
+  // initial + when filter changes — reset to first 5
   useEffect(()=>{
-    const el = thesisLoaderRef.current
+    filterRef.current = filter
+    if (!isServerFilter) return
+    offRef.current = 0
+    hasMoreRef.current = true
+    setHasMore(true)
+    setTotal(null)
+    setPosts([])
+    loadPosts(true)
+  }, [filter])
+
+  // infinite scroll for unified list — 5 at a time, user never sees >5 viewport worth at once
+  useEffect(()=>{
+    const el = loaderRef.current
     if (!el) return
-    if (tab!=='thesis' && tab!=='all') return
-    let timeout: any = null
+    if (!isServerFilter) return
+    let t:any=null
     const obs = new IntersectionObserver((entries)=>{
       const e = entries[0]
       if (!e.isIntersecting) return
       if (loadingRef.current) return
       if (!hasMoreRef.current) return
-      // throttle — must scroll to trigger, not instant loop
-      if (timeout) return
-      timeout = setTimeout(()=>{
-        timeout = null
-        loadThesis(false)
+      if (t) return
+      t = setTimeout(()=>{
+        t=null
+        loadPosts(false)
       }, 250)
-    }, { rootMargin: '200px', threshold: 0 })
+    }, { rootMargin:'200px', threshold:0 })
     obs.observe(el)
-    return ()=>{
-      obs.disconnect()
-      if (timeout) clearTimeout(timeout)
-    }
-  }, [tab, loadThesis])
+    return ()=>{ obs.disconnect(); if(t) clearTimeout(t) }
+  }, [filter, loadPosts, isServerFilter])
 
   useEffect(()=>{ localStorage.setItem('pm_threads', JSON.stringify(threads)) },[threads])
-
   useEffect(()=>{
     if(threads.length===0){
       const now=Date.now()
@@ -177,33 +192,18 @@ export default function App(){
         {id:"t1",title:SAMPLE_TITLES[0],body:SAMPLE_BODIES[0],anon:"anon#0421",ts:now-1000000,replies:[
           {id:"r1",anon:"anon#8832",body:SAMPLE_REPLIES[0],ts:now-900000}
         ]},
-        {id:"t2",title:SAMPLE_TITLES[1],body:SAMPLE_BODIES[1],anon:"anon#5520",ts:now-500000,replies:[]}
+        {id:"t2",title:SAMPLE_TITLES[1],body:SAMPLE_BODIES[1],anon:"anon#5519",ts:now-800000,replies:[]}
       ])
     }
   },[])
 
+  // likes/comments hydration — generic by post id (works for any type)
   useEffect(()=>{
-    satire.forEach(async p=>{
-      try{
-        const lr = await fetch(`/api/likes?postId=${p.id}`)
-        if(lr.ok){ const d=await lr.json(); setLikes(s=>({...s,[p.id]:d.likes})) }
-      }catch{}
-      try{
-        const cr = await fetch(`/api/comments?postId=${p.id}`)
-        if(cr.ok){ const d=await cr.json(); setComments(s=>({...s,[p.id]:d.comments})) }
-      }catch{}
+    posts.forEach(async p=>{
+      try{ const lr=await fetch(`/api/likes?postId=${p.id}`); if(lr.ok){ const d=await lr.json(); setLikes(s=>({...s,[p.id]:d.likes})) } }catch{}
+      try{ const cr=await fetch(`/api/comments?postId=${p.id}`); if(cr.ok){ const d=await cr.json(); setComments(s=>({...s,[p.id]:d.comments})) } }catch{}
     })
-    thesis.forEach(async p=>{
-      try{
-        const lr = await fetch(`/api/likes?postId=${p.id}`)
-        if(lr.ok){ const d=await lr.json(); setLikes(s=>({...s,[p.id]:d.likes})) }
-      }catch{}
-      try{
-        const cr = await fetch(`/api/comments?postId=${p.id}`)
-        if(cr.ok){ const d=await cr.json(); setComments(s=>({...s,[p.id]:d.comments})) }
-      }catch{}
-    })
-  },[satire, thesis])
+  },[posts])
 
   function addThread(e:React.FormEvent){
     e.preventDefault()
@@ -216,29 +216,20 @@ export default function App(){
     if(!txt.trim()) return
     setThreads(threads.map(t=> t.id===tid ? {...t,replies:[...t.replies,{id:Math.random().toString(36).slice(2),anon:`anon#${Math.floor(1000+Math.random()*9000)}`,body:txt.slice(0,600),ts:Date.now()}].slice(-20)} : t))
   }
-
   async function likePost(id:string){
     setLikes(s=>({...s,[id]:(s[id]||0)+1}))
-    try{ const r=await fetch(`/api/likes?postId=${id}`,{method:'POST'}); if(r.ok){ const d=await r.json(); setLikes(s=>({...s,[id]:d.likes})) } }catch{ }
+    try{ const r=await fetch(`/api/likes?postId=${id}`,{method:'POST'}); if(r.ok){ const d=await r.json(); setLikes(s=>({...s,[id]:d.likes})) } }catch{}
   }
   async function postComment(id:string){
-    const txt = (cmtTxt[id]||"").trim()
-    if(!txt) return
-    const tmp:Comment = {id:Math.random().toString(36).slice(2),anon:`anon#${Math.floor(1000+Math.random()*9000)}`,body:txt.slice(0,600),ts:Date.now()}
+    const txt=(cmtTxt[id]||"").trim(); if(!txt) return
+    const tmp:Comment={id:Math.random().toString(36).slice(2),anon:`anon#${Math.floor(1000+Math.random()*9000)}`,body:txt.slice(0,600),ts:Date.now()}
     setComments(s=>({...s,[id]:[tmp,...(s[id]||[])]}))
     setCmtTxt(s=>({...s,[id]:""}))
     try{
       const r=await fetch(`/api/comments?postId=${id}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({body:txt})})
-      if(r.ok){ 
-        const rr = await fetch(`/api/comments?postId=${id}`)
-        if(rr.ok){ const d=await rr.json(); setComments(s=>({...s,[id]:d.comments})) }
-        else { const d=await r.json(); setComments(s=>({...s,[id]:[d.comment,...(s[id]||[]).filter(c=>c.id!==tmp.id)]})) }
-      } else {
-        setComments(s=>({...s,[id]:(s[id]||[]).filter(c=>c.id!==tmp.id)}))
-      }
-    }catch{
-      setComments(s=>({...s,[id]:(s[id]||[]).filter(c=>c.id!==tmp.id)}))
-    }
+      if(r.ok){ const rr=await fetch(`/api/comments?postId=${id}`); if(rr.ok){ const d=await rr.json(); setComments(s=>({...s,[id]:d.comments})) } }
+      else setComments(s=>({...s,[id]:(s[id]||[]).filter(c=>c.id!==tmp.id)}))
+    }catch{ setComments(s=>({...s,[id]:(s[id]||[]).filter(c=>c.id!==tmp.id)})) }
   }
 
   return (
@@ -264,132 +255,108 @@ export default function App(){
       `}</style>
       <div style={{background:"#fff3cd",padding:"12px",borderRadius:8,marginBottom:16,fontWeight:600}}>⚠️ {DISCLAIMER}</div>
       <h1 style={{margin:"0.2rem 0"}}>post_more</h1>
-      <p style={{color:"#666",marginTop:0}}>anonymous text board — parody + PhD thesis + threads. {thesisTotal!==null ? `${thesisTotal} theses in DB — ` : ''}Markdown-enabled, KV persistent, infinite scroll.</p>
+      <p style={{color:"#666",marginTop:0}}>one list • filterable • {total!==null ? `${total} posts in DB • ` : ''}collapsible title-only • 5 first load • same DB with <code>type</code></p>
 
       <div style={{display:"flex", gap:8, margin:"14px 0", flexWrap:"wrap"}}>
-        {(['all','thesis','satire','threads'] as const).map(k=>(
-          <button key={k} className={`pm-tab ${tab===k?'active':''}`} onClick={()=>setTab(k)}>{k==='all'?'All':k==='thesis'?'Thesis 🎓':k==='satire'?'Satire': 'Threads'} {(k==='thesis' && thesisTotal!==null)?`(${thesisTotal})`: (k==='thesis' && thesis.length)?`(${thesis.length})`:''} {(k==='satire' && satire.length)?`(${satire.length})`:''}</button>
+        {/* All tab + dynamic type tabs + threads */}
+        <button className={`pm-tab ${filter==='all'?'active':''}`} onClick={()=>setFilter('all')}>All ({total ?? '…'})</button>
+        {POST_TYPES.map(t=>(
+          <button key={t.id} className={`pm-tab ${filter===t.id?'active':''}`} onClick={()=>setFilter(t.id as any)}>{t.label}</button>
         ))}
+        <button className={`pm-tab ${filter==='threads'?'active':''}`} onClick={()=>setFilter('threads')}>Threads</button>
       </div>
 
-      {(tab==='all' || tab==='thesis') && (
+      {isServerFilter && (
         <div style={{margin:"18px 0"}}>
           <div style={{display:"flex", justifyContent:"space-between", alignItems:"center", flexWrap:"wrap", gap:8}}>
-            <h2 style={{fontSize:19, margin:0}}>📚 Thesis Board — PhD-level deep dives</h2>
-            <button onClick={()=>loadThesis(true)} style={{fontSize:12, padding:"4px 10px", borderRadius:6, border:"1px solid #ddd", background:"white"}}>↻ Refresh</button>
+            <h2 style={{fontSize:18, margin:0}}>{filter==='all'?'📦 All Posts — unified feed': filter==='thesis'?'📚 Thesis — PhD deep dives': filter==='satire'?'😏 Satire — parody': `📄 ${filter}`}</h2>
+            <button onClick={()=>{ offRef.current=0; hasMoreRef.current=true; setHasMore(true); setPosts([]); loadPosts(true) }} style={{fontSize:12, padding:"4px 10px", borderRadius:6, border:"1px solid #ddd", background:"white"}}>↻ Refresh</button>
           </div>
-          <div style={{fontSize:12, color:"#888", margin:"6px 0 10px"}}>{thesis.length}{thesisTotal!==null?` / ${thesisTotal}`:''} loaded • newest first • scroll down for more</div>
+          <div style={{fontSize:12, color:"#888", margin:"6px 0 10px"}}>{posts.length}{total!==null?` / ${total}`:''} loaded • newest first • 5 per scroll • collapsed by default</div>
 
-          {thesis.length===0 && thesisLoading && <div style={{padding:20, textAlign:"center", color:"#666"}}>Loading theses…</div>}
+          {posts.length===0 && loading && <div style={{padding:20, textAlign:"center", color:"#666"}}>Loading…</div>}
 
-          {thesis.map(p=>{
-            const isCollapsed = collapsedThesis[p.id] ?? true
+          {posts.map(p=>{
+            const isCollapsed = collapsed[p.id] ?? true
+            const {badge, fg, bg} = badgeFor(p.type)
+            const isThesis = p.type==='thesis'
             return (
-            <div key={p.id} style={{background:"white",padding: isCollapsed ? "12px 14px" : "16px",borderRadius:12,margin:"10px 0", border:"1px solid #e6e9f2", boxShadow:"0 2px 10px rgba(0,0,0,0.03)"}}>
-              <div style={{display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:12}}>
-                <div style={{flex:1, minWidth:0}}>
-                  <div style={{fontSize:11,color:"#6b7280", display:"flex", gap:8, flexWrap:"wrap", alignItems:"center", marginBottom:4}}>
-                    <span style={{background:"#eef2ff", color:"#4338ca", padding:"2px 7px", borderRadius:999, fontWeight:700, fontSize:10}}>THESIS • {p.topic||'research'}</span>
-                    <span style={{fontSize:11}}>{p.anon} — {new Date(p.ts).toLocaleDateString()}</span>
+              <div key={p.id} style={{background:"white",padding: isCollapsed?"12px 14px":"16px",borderRadius:12,margin:"10px 0",border:"1px solid #e6e9f2",boxShadow:"0 2px 10px rgba(0,0,0,0.03)"}}>
+                <div style={{display:"flex", justifyContent:"space-between", alignItems:"flex-start", gap:12}}>
+                  <div style={{flex:1, minWidth:0}}>
+                    <div style={{fontSize:11,color:"#6b7280",display:"flex",gap:8,flexWrap:"wrap",alignItems:"center",marginBottom:4}}>
+                      <span style={{background:bg, color:fg, padding:"2px 7px", borderRadius:999, fontWeight:700, fontSize:10}}>{badge} • {p.type}</span>
+                      <span style={{fontSize:11}}>{p.anon} — {new Date(p.ts).toLocaleDateString()}</span>
+                    </div>
+                    <h2 style={{margin:"4px 0 0", lineHeight:1.25, fontSize: isCollapsed?"15px":"18px", cursor:"pointer"}} onClick={()=>toggleCollapse(p.id)}>{p.title}</h2>
                   </div>
-                  <h2 style={{margin:"4px 0 0", lineHeight:1.25, fontSize: isCollapsed ? "15px" : "18px", cursor:"pointer"}} onClick={()=>toggleThesisCollapse(p.id)}>{p.title}</h2>
+                  <button onClick={()=>toggleCollapse(p.id)} style={{flexShrink:0, padding:"4px 9px", borderRadius:6, border:"1px solid #ddd", background: isCollapsed?"#111":"white", color: isCollapsed?"white":"#111", fontSize:12, cursor:"pointer"}}>
+                    {isCollapsed ? "▶ Show" : "▼ Hide"}
+                  </button>
                 </div>
-                <button onClick={()=>toggleThesisCollapse(p.id)} title={isCollapsed ? "Expand" : "Collapse"} style={{flexShrink:0, padding:"4px 9px", borderRadius:6, border:"1px solid #ddd", background: isCollapsed ? "#111" : "white", color: isCollapsed ? "white" : "#111", fontSize:12, cursor:"pointer"}}>
-                  {isCollapsed ? "▶ Show" : "▼ Hide"}
-                </button>
+
+                {!isCollapsed && (
+                  <>
+                    {isThesis && p.abstract && <div style={{background:"#f8fafc", border:"1px solid #eef2f7", padding:"10px 12px", borderRadius:8, marginTop:10, marginBottom:10, color:"#334155", fontSize:13}}><b>Abstract —</b> {p.abstract}</div>}
+
+                    {(p as any).images && (p as any).images.length>0 ? (
+                      <div className="pm-thesis-grid">{(p as any).images.slice(0,4).map((img:string,i:number)=>(<img key={i} src={img} style={{width:"100%", borderRadius:8, border:"1px solid #eef"}} alt={`${p.type} img ${i+1}`}/>))}</div>
+                    ) : (p as any).image ? <img src={(p as any).image} style={{maxWidth:"100%",borderRadius:8,margin:"10px 0"}} alt={`${p.type} illustration`}/> : null}
+
+                    <MD>{p.body}</MD>
+
+                    {isThesis && (p as any).sources && (p as any).sources.length>0 && (
+                      <div style={{marginTop:12, paddingTop:10, borderTop:"1px dashed #dde", fontSize:12, color:"#475569"}}>
+                        <b>References</b>
+                        <ul style={{margin:"6px 0 0", paddingLeft:18}}>{(p as any).sources.map((s:any,i:number)=>(<li key={i}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a>{s.authors?` — ${s.authors}`:''}{s.year?` (${s.year})`:''}</li>))}</ul>
+                      </div>
+                    )}
+
+                    <div style={{display:"flex",gap:12,alignItems:"center",marginTop:12}}>
+                      <button onClick={()=>likePost(p.id)} style={{padding:"5px 12px", borderRadius:6, border:"1px solid #ddd", background:"white"}}>❤️ Like {likes[p.id]?`(${likes[p.id]})`:''}</button>
+                      <span style={{fontSize:12,color:"#666"}}>{comments[p.id]?.length||0} comments</span>
+                    </div>
+                    <div style={{marginTop:8,display:"flex",gap:6}}>
+                      <input value={cmtTxt[p.id]||""} onChange={e=>setCmtTxt(s=>({...s,[p.id]:e.target.value}))} placeholder={`Discuss this ${p.type} (markdown OK)`} style={{flex:1,padding:8, borderRadius:6, border:"1px solid #ddd"}}/>
+                      <button onClick={()=>postComment(p.id)} style={{padding:"6px 12px", borderRadius:6}}>Post</button>
+                    </div>
+                    <div style={{marginLeft:8,borderLeft:"2px solid #eef2ff",paddingLeft:10,marginTop:8}}>
+                      {(comments[p.id]||[]).map(c=><div key={c.id} style={{margin:"8px 0"}}><b>{c.anon}</b> <span style={{color:"#777",fontSize:11}}>{new Date(c.ts).toLocaleString()}</span><div style={{marginTop:2}}><MD>{c.body}</MD></div></div>)}
+                    </div>
+                  </>
+                )}
               </div>
-
-              {!isCollapsed && (
-                <>
-                  {p.abstract && <div style={{background:"#f8fafc", border:"1px solid #eef2f7", padding:"10px 12px", borderRadius:8, marginTop:10, marginBottom:10, color:"#334155", fontSize:13}}><b>Abstract —</b> {p.abstract}</div>}
-
-                  {(p.images && p.images.length>0) ? (
-                    <div className="pm-thesis-grid">
-                      {p.images.slice(0,4).map((img:string,i:number)=>(
-                        <img key={i} src={img} style={{width:"100%", borderRadius:8, border:"1px solid #eef"}} alt={`thesis diagram ${i+1}`}/>
-                      ))}
-                    </div>
-                  ) : p.image ? <img src={p.image} style={{maxWidth:"100%",borderRadius:8,margin:"10px 0"}} alt="thesis illustration"/> : null}
-
-                  <MD>{p.body}</MD>
-
-                  {p.sources && p.sources.length>0 && (
-                    <div style={{marginTop:12, paddingTop:10, borderTop:"1px dashed #dde", fontSize:12, color:"#475569"}}>
-                      <b>References & Sources</b>
-                      <ul style={{margin:"6px 0 0", paddingLeft:18}}>
-                        {p.sources.map((s:any,i:number)=>(<li key={i}><a href={s.url} target="_blank" rel="noreferrer">{s.title}</a>{s.authors ? ` — ${s.authors}` : ''}{s.year ? ` (${s.year})` : ''}</li>))}
-                      </ul>
-                    </div>
-                  )}
-
-                  <div style={{display:"flex",gap:12,alignItems:"center",marginTop:12}}>
-                    <button onClick={()=>likePost(p.id)} style={{padding:"5px 12px", borderRadius:6, border:"1px solid #ddd", background:"white"}}>❤️ Like {likes[p.id] ? `(${likes[p.id]})` : ""}</button>
-                    <span style={{fontSize:12,color:"#666"}}>{comments[p.id]?.length||0} comments</span>
-                  </div>
-                  <div style={{marginTop:8,display:"flex",gap:6}}>
-                    <input value={cmtTxt[p.id]||""} onChange={e=>setCmtTxt(s=>({...s,[p.id]:e.target.value}))} placeholder="Discuss this thesis (markdown OK)" style={{flex:1,padding:8, borderRadius:6, border:"1px solid #ddd"}}/>
-                    <button onClick={()=>postComment(p.id)} style={{padding:"6px 12px", borderRadius:6}}>Post</button>
-                  </div>
-                  <div style={{marginLeft:8,borderLeft:"2px solid #eef2ff",paddingLeft:10,marginTop:8}}>
-                    {(comments[p.id]||[]).map(c=><div key={c.id} style={{margin:"8px 0"}}><b>{c.anon}</b> <span style={{color:"#777",fontSize:11}}>{new Date(c.ts).toLocaleString()}</span><div style={{marginTop:2}}><MD>{c.body}</MD></div></div>)}
-                  </div>
-                </>
-              )}
-            </div>
             )
           })}
 
-          <div ref={thesisLoaderRef} style={{padding:"18px 0", textAlign:"center"}}>
-            {thesisLoading ? <span style={{color:"#666", fontSize:13}}>Loading more theses…</span> : thesisHasMore ? <span style={{color:"#999", fontSize:12}}>Scroll to load more • {thesis.length} / {thesisTotal ?? '...' }</span> : <span style={{color:"#888", fontSize:12}}>— End of theses ({thesisTotal ?? thesis.length}) —</span>}
+          <div ref={loaderRef} style={{padding:"18px 0", textAlign:"center"}}>
+            {loading ? <span style={{color:"#666", fontSize:13}}>Loading more…</span> : hasMore ? <span style={{color:"#999", fontSize:12}}>Scroll to load more • {posts.length} / {total ?? '...'}</span> : <span style={{color:"#888", fontSize:12}}>— End ({total ?? posts.length}) —</span>}
           </div>
         </div>
       )}
 
-      {(tab==='all' || tab==='satire') && satire.length>0 && <div style={{margin:"16px 0"}}><h2 style={{fontSize:18}}>Featured Satire (fictional — parody)</h2>{satire.slice(0,10).map(p=>(
-        <div key={p.id} style={{background:"white",padding:12,borderRadius:8,margin:"12px 0"}}>
-          <div style={{fontSize:12,color:"#777"}}>{p.anon} — {new Date(p.ts).toLocaleString()} — SATIRE/PARODY</div>
-          <h3 style={{margin:"6px 0"}}>{p.title}</h3>
-          {p.image && <img src={p.image} style={{maxWidth:"100%",borderRadius:6,margin:"8px 0"}} alt="satire illustration"/>}
-          <MD>{p.body}</MD>
-          <div style={{display:"flex",gap:12,alignItems:"center",marginTop:8}}>
-            <button onClick={()=>likePost(p.id)} style={{padding:"4px 10px"}}>❤️ Like {likes[p.id] ? `(${likes[p.id]})` : ""}</button>
-            <span style={{fontSize:12,color:"#666"}}>{comments[p.id]?.length||0} comments</span>
-          </div>
-          <div style={{marginTop:8,display:"flex",gap:6}}>
-            <input value={cmtTxt[p.id]||""} onChange={e=>setCmtTxt(s=>({...s,[p.id]:e.target.value}))} placeholder="Add a comment (kept kind)" style={{flex:1,padding:6}}/>
-            <button onClick={()=>postComment(p.id)}>Post</button>
-          </div>
-          <div style={{marginLeft:8,borderLeft:"2px solid #eee",paddingLeft:10,marginTop:8}}>
-            {(comments[p.id]||[]).map(c=><div key={c.id} style={{margin:"6px 0"}}><b>{c.anon}</b> <span style={{color:"#777",fontSize:11}}>{new Date(c.ts).toLocaleString()}</span><div style={{marginTop:2}}><MD>{c.body}</MD></div></div>)}
-          </div>
-        </div>
-      ))}</div>}
-
-      {(tab==='all' || tab==='threads') && (
+      {filter==='threads' && (
         <>
-      <form onSubmit={addThread} style={{background:"white",padding:12,borderRadius:8,margin:"16px 0"}}>
-        <input value={title} onChange={e=>setTitle(e.target.value)} placeholder="Thread title (keep it kind)" style={{width:"100%",padding:8,marginBottom:8}}/>
-        <textarea value={body} onChange={e=>setBody(e.target.value)} placeholder="What’s your take? Markdown supported — **bold**, *italic*, lists, >quote, code" style={{width:"100%",padding:8,minHeight:70}}/>
-        <button type="submit" style={{marginTop:8,padding:"6px 12px"}}>Post thread (anon)</button>
-      </form>
-
-      <div>
-        {threads.map(t=>(
-          <div key={t.id} style={{background:"white",padding:12,borderRadius:8,margin:"12px 0"}}>
-            <div style={{fontSize:13,color:"#777"}}>{t.anon} — {new Date(t.ts).toLocaleString()}</div>
-            <h3 style={{margin:"6px 0"}}>{t.title}</h3>
-            <MD>{t.body}</MD>
-            <div style={{marginLeft:16,borderLeft:"2px solid #eee",paddingLeft:12}}>
-              {t.replies.map(r=>(<div key={r.id} style={{margin:"8px 0"}}><span style={{fontWeight:600}}>{r.anon}</span> <span style={{color:"#777",fontSize:12}}>{new Date(r.ts).toLocaleString()}</span><div style={{marginTop:2}}><MD>{r.body}</MD></div></div>))}
-              <ReplyBox onSend={txt=>addReply(t.id,txt)}/>
+          <form onSubmit={addThread} style={{background:"white",padding:12,borderRadius:8,margin:"16px 0"}}>
+            <input value={title} onChange={e=>setTitle(e.target.value)} placeholder="Thread title (keep it kind)" style={{width:"100%",padding:8,marginBottom:8}}/>
+            <textarea value={body} onChange={e=>setBody(e.target.value)} placeholder="What’s your take? Markdown supported — **bold**, *italic*, lists, >quote, code" style={{width:"100%",padding:8,minHeight:70}}/>
+            <button type="submit" style={{marginTop:8,padding:"6px 12px"}}>Post thread (anon)</button>
+          </form>
+          <div>{threads.map(t=>(
+            <div key={t.id} style={{background:"white",padding:12,borderRadius:8,margin:"12px 0"}}>
+              <div style={{fontSize:13,color:"#777"}}>{t.anon} — {new Date(t.ts).toLocaleString()}</div>
+              <h3 style={{margin:"6px 0"}}>{t.title}</h3>
+              <MD>{t.body}</MD>
+              <div style={{marginLeft:16,borderLeft:"2px solid #eee",paddingLeft:12}}>
+                {t.replies.map(r=>(<div key={r.id} style={{margin:"8px 0"}}><span style={{fontWeight:600}}>{r.anon}</span> <span style={{color:"#777",fontSize:12}}>{new Date(r.ts).toLocaleString()}</span><div style={{marginTop:2}}><MD>{r.body}</MD></div></div>))}
+                <ReplyBox onSend={txt=>addReply(t.id,txt)}/>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}</div>
         </>
       )}
 
-      <footer style={{marginTop:32,color:"#888",fontSize:12}}>Parody/demo + educational thesis. Thesis posts are stored in KV persistent, paginated infinite scroll. Server-side likes/comments use Vercel KV persistent.</footer>
+      <footer style={{marginTop:32,color:"#888",fontSize:12}}>One DB <code>post:index</code> + <code>post:post:&lt;id&gt;</code> with <code>type</code> field. Add new type by adding entry to POST_TYPES in <code>src/App.tsx</code> and saving posts with that type to same KV. Infinite scroll 5/page, collapsible title-only default.</footer>
     </div>
   )
 }

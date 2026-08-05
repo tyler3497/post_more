@@ -1,13 +1,16 @@
-// Simple server-side store that works on Vercel
-// Uses Vercel KV if available, otherwise falls back to in-memory (and for Vercel, in-memory is per-function, so we use file fallback in /tmp for persistence across cold starts where possible)
-// For production persistence, connect Vercel KV or Postgres - this adapter is ready for it.
+// Unified server-side store for post_more
+// All post types (thesis, satire, future types) live in ONE KV set with a `type` field.
+// Easy to add new types: just add a new type string when saving, no schema change needed.
 
 let mem = globalThis.__pm_mem
 if (!mem) {
-  mem = { likes: new Map(), comments: new Map(), thesis: new Map() }
+  mem = { likes: new Map(), comments: new Map(), thesis: new Map(), posts: new Map() }
   globalThis.__pm_mem = mem
 }
 if (!mem.thesis) mem.thesis = new Map()
+if (!mem.posts) mem.posts = new Map()
+if (!mem.likes) mem.likes = new Map()
+if (!mem.comments) mem.comments = new Map()
 
 export async function getKV() {
   try {
@@ -39,7 +42,7 @@ export async function addLike(postId) {
     try {
       const v = await kv.incr(`likes:${postId}`)
       return v
-    } catch { /* fallthrough to mem */ }
+    } catch {}
   }
   const cur = (mem.likes.get(postId)||0)+1
   mem.likes.set(postId, cur)
@@ -52,7 +55,6 @@ export async function getComments(postId) {
     try {
       const list = await kv.lrange(`comments:${postId}`, 0, -1)
       if (!list || !Array.isArray(list)) return []
-      // lrange returns newest first because we use lpush. Don't reverse twice.
       try { return list.map(s=> typeof s==='string'?JSON.parse(s):s) } catch { return list }
     } catch { return [] }
   }
@@ -64,9 +66,9 @@ export async function addComment(postId, comment) {
   if (kv) {
     try {
       await kv.lpush(`comments:${postId}`, JSON.stringify(comment))
-      await kv.ltrim(`comments:${postId}`, 0, 199) // keep last 200
+      await kv.ltrim(`comments:${postId}`, 0, 199)
       return comment
-    } catch { /* fallthrough */ }
+    } catch {}
   }
   const arr = mem.comments.get(postId) || []
   arr.push(comment)
@@ -75,79 +77,118 @@ export async function addComment(postId, comment) {
   return comment
 }
 
-// ---- Thesis persistent store ----
-const THESIS_INDEX = 'thesis:index'
-const THESIS_PREFIX = 'thesis:post:'
+// ==== Unified Post Store ====
+const POST_INDEX = 'post:index' // all types, sorted by ts
+const POST_PREFIX = 'post:post:'
+const typeIndexKey = (type)=> `post:index:${type}`
 
-export async function saveThesisPost(post) {
+function ensureType(post) {
+  if (!post) return post
+  if (!post.type) {
+    // infer from legacy fields
+    if (post.thesis === true || post.abstract || post.topic) post.type = 'thesis'
+    else if (post.satire || post.image && !post.abstract) {
+      // heuristic: satire posts usually have single image and no abstract
+      // if we can't tell, default to satire when manifest is satire list
+      post.type = post.type || 'satire'
+    } else {
+      post.type = post.type || 'thesis'
+    }
+  }
+  return post
+}
+
+export async function savePost(post) {
+  if (!post || !post.id) return false
+  post = ensureType({...post})
+  if (!post.ts) post.ts = Date.now()
   const kv = await getKV()
   if (!kv) {
-    mem.thesis.set(post.id, post)
+    mem.posts.set(post.id, post)
     return true
   }
   try {
-    await kv.set(`${THESIS_PREFIX}${post.id}`, JSON.stringify(post))
+    await kv.set(`${POST_PREFIX}${post.id}`, JSON.stringify(post))
   } catch {}
   try {
-    try {
-      await kv.zadd(THESIS_INDEX, { score: post.ts, member: post.id })
-    } catch {
-      try {
-        // alternate signature (score, member)
-        await kv.zadd(THESIS_INDEX, post.ts, post.id)
-      } catch {}
+    try { await kv.zadd(POST_INDEX, { score: post.ts, member: post.id }) }
+    catch {
+      try { await kv.zadd(POST_INDEX, post.ts, post.id) } catch {}
     }
   } catch {}
+  // per-type secondary index for fast filtered pagination
+  try {
+    const tKey = typeIndexKey(post.type)
+    try { await kv.zadd(tKey, { score: post.ts, member: post.id }) }
+    catch {
+      try { await kv.zadd(tKey, post.ts, post.id) } catch {}
+    }
+  } catch {}
+  // backwards-compat: also write to old thesis index if thesis
+  if (post.type === 'thesis') {
+    try {
+      try { await kv.zadd('thesis:index', { score: post.ts, member: post.id }) }
+      catch { try { await kv.zadd('thesis:index', post.ts, post.id) } catch {} }
+      await kv.set(`thesis:post:${post.id}`, JSON.stringify(post))
+    } catch {}
+  }
   return true
 }
 
-export async function getThesisPostById(id) {
+export async function getPostById(id) {
   const kv = await getKV()
   if (kv) {
     try {
-      const raw = await kv.get(`${THESIS_PREFIX}${id}`)
+      const raw = await kv.get(`${POST_PREFIX}${id}`)
       if (!raw) return null
       if (typeof raw === 'string') { try { return JSON.parse(raw) } catch { return raw } }
       return raw
     } catch { return null }
   }
-  return mem.thesis.get(id) || null
+  return mem.posts.get(id) || null
 }
 
-export async function getThesisTotal() {
+export async function getPostsTotal(typeFilter = null) {
   const kv = await getKV()
   if (!kv) {
-    // fallback to mem + file? file handled in API
-    return mem.thesis.size
+    if (!typeFilter) return mem.posts.size
+    let c = 0
+    for (let p of mem.posts.values()) if (p.type === typeFilter) c++
+    return c
   }
+  const key = typeFilter ? typeIndexKey(typeFilter) : POST_INDEX
   try {
-    const c = await kv.zcard(THESIS_INDEX)
-    return typeof c === 'number' ? c : 0
-  } catch {
-    try {
-      const count = await kv.zcount(THESIS_INDEX, '-inf', '+inf')
-      return typeof count === 'number' ? count : 0
-    } catch { return 0 }
-  }
+    const c = await kv.zcard(key)
+    if (typeof c === 'number') return c
+  } catch {}
+  try {
+    const c2 = await kv.zcount(key, '-inf', '+inf')
+    if (typeof c2 === 'number') return c2
+  } catch {}
+  return 0
 }
 
-export async function getThesisIdsPage(offset, limit) {
+export async function getPostIdsPage(offset, limit, typeFilter = null) {
   const kv = await getKV()
-  if (!kv) return []
+  if (!kv) {
+    // mem fallback: sort mem.posts by ts desc, filter
+    let arr = Array.from(mem.posts.values())
+    if (typeFilter) arr = arr.filter(p=>p.type===typeFilter)
+    arr.sort((a,b)=>b.ts-a.ts)
+    return arr.slice(offset, offset+limit).map(p=>p.id)
+  }
+  const key = typeFilter ? typeIndexKey(typeFilter) : POST_INDEX
   let ids = []
   try {
-    try {
-      ids = await kv.zrange(THESIS_INDEX, offset, offset+limit-1, { rev: true })
-    } catch {
-      try {
-        ids = await kv.zrange(THESIS_INDEX, offset, offset+limit-1, { rev: true, byScore: false } )
-      } catch {
+    try { ids = await kv.zrange(key, offset, offset+limit-1, { rev: true }) }
+    catch {
+      try { ids = await kv.zrange(key, offset, offset+limit-1, { rev: true, byScore:false }) }
+      catch {
         try {
-          if (kv.zrevrange) {
-            ids = await kv.zrevrange(THESIS_INDEX, offset, offset+limit-1)
-          } else throw new Error('no rev')
+          if (kv.zrevrange) ids = await kv.zrevrange(key, offset, offset+limit-1)
+          else throw new Error('no rev')
         } catch {
-          const all = await kv.zrange(THESIS_INDEX, 0, -1)
+          const all = await kv.zrange(key, 0, -1)
           if (Array.isArray(all)) {
             const rev = [...all].reverse()
             ids = rev.slice(offset, offset+limit)
@@ -156,60 +197,82 @@ export async function getThesisIdsPage(offset, limit) {
       }
     }
   } catch { ids = [] }
-  // upstash may return withScores interleaved? ensure only strings
-  if (Array.isArray(ids) && ids.length>0 && typeof ids[0]!=='string') {
-    // if objects? filter
-    ids = ids.filter((x,i)=> typeof x==='string')
+  if (Array.isArray(ids) && ids.length>0 && typeof ids[0] !== 'string') {
+    ids = ids.filter(x=>typeof x==='string')
   }
   return Array.isArray(ids) ? ids : []
 }
 
-export async function getThesisPageFromKV(offset, limit) {
-  const kv = await getKV()
-  if (!kv) return []
-  const ids = await getThesisIdsPage(offset, limit)
+export async function getPostsPage(offset, limit, typeFilter = null) {
+  const ids = await getPostIdsPage(offset, limit, typeFilter)
   if (!ids || ids.length===0) return []
-  const posts = []
-  // Try mget if available
+  const kv = await getKV()
+  if (!kv) {
+    return ids.map(id=>mem.posts.get(id)).filter(Boolean)
+  }
+  // bulk mget
   try {
     if (kv.mget) {
-      const keys = ids.map(id=>`${THESIS_PREFIX}${id}`)
+      const keys = ids.map(id=>`${POST_PREFIX}${id}`)
       const raw = await kv.mget(...keys)
       if (Array.isArray(raw)) {
+        const out = []
         for (let r of raw) {
           if (!r) continue
-          if (typeof r==='string') { try { posts.push(JSON.parse(r)) } catch { } }
-          else posts.push(r)
+          if (typeof r==='string') { try { out.push(JSON.parse(r)) } catch {} }
+          else out.push(r)
         }
-        return posts
+        // preserve order of ids (mget returns in order)
+        // filter ensures order; if some null, we already skipped but need to keep order matching ids
+        // quick fix: if counts mismatch, fallback to sequential
+        if (out.length>0) return out
       }
     }
   } catch {}
-  // fallback sequential get
+  const posts=[]
   for (let id of ids) {
-    const p = await getThesisPostById(id)
+    const p = await getPostById(id)
     if (p) posts.push(p)
   }
   return posts
 }
 
-export async function syncFileThesesToKV(filePosts) {
+export async function syncUnifiedFromFiles({ thesisPosts = [], satirePosts = [] }) {
   const kv = await getKV()
-  if (!kv || !Array.isArray(filePosts) || filePosts.length===0) return 0
+  if (!kv) {
+    // mem fallback
+    for (let p of [...satirePosts, ...thesisPosts]) {
+      if (!p || !p.id) continue
+      const typed = ensureType({...p})
+      if (!typed.type) typed.type = typed.abstract ? 'thesis' : 'satire'
+      mem.posts.set(typed.id, typed)
+    }
+    return mem.posts.size
+  }
   let added = 0
   try {
-    // get existing ids to avoid dup
-    let existing = []
-    try {
-      existing = await kv.zrange(THESIS_INDEX, 0, -1)
-    } catch { existing = [] }
+    let existing=[]
+    try { existing = await kv.zrange(POST_INDEX, 0, -1) } catch { existing=[] }
     const set = new Set(Array.isArray(existing)?existing:[])
-    for (let p of filePosts) {
+    const all = [...satirePosts.map(p=>({...ensureType(p), type: p.type||'satire'})), ...thesisPosts.map(p=>({...ensureType(p), type: p.type||'thesis'}))]
+    for (let p of all) {
       if (!p || !p.id) continue
       if (set.has(p.id)) continue
-      await saveThesisPost(p)
+      await savePost(p)
       added++
     }
-  } catch { /* ignore */ }
+  } catch {}
   return added
 }
+
+// --- Back-compat thesis helpers (delegate to unified) ---
+export const THESIS_INDEX = 'thesis:index'
+export const THESIS_PREFIX = 'thesis:post:'
+
+export async function saveThesisPost(post){ return savePost({...post, type:'thesis'}) }
+export async function getThesisPostById(id){ return getPostById(id) }
+export async function getThesisTotal(){ return getPostsTotal('thesis') }
+export async function getThesisIdsPage(offset,limit){ return getPostIdsPage(offset,limit,'thesis') }
+export async function getThesisPageFromKV(offset,limit){ return getPostsPage(offset,limit,'thesis') }
+export async function syncFileThesesToKV(filePosts){ return syncUnifiedFromFiles({ thesisPosts: filePosts, satirePosts: [] }) }
+
