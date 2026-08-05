@@ -176,7 +176,7 @@ export default function App(){
 
       {(tab==='all' || tab==='thesis') && thesis.length>0 && <div style={{margin:"18px 0"}}>
         <h2 style={{fontSize:19, marginBottom:8}}>📚 Thesis Board — PhD-level deep dives</h2>
-        {thesis.slice(0,10).map(p=>(
+        {thesis.slice(0,20).map(p=>(
         <div key={p.id} style={{background:"white",padding:16,borderRadius:12,margin:"14px 0", border:"1px solid #e6e9f2", boxShadow:"0 2px 10px rgba(0,0,0,0.03)"}}>
           <div style={{fontSize:12,color:"#6b7280", display:"flex", gap:8, flexWrap:"wrap", alignItems:"center"}}>
             <span style={{background:"#eef2ff", color:"#4338ca", padding:"3px 8px", borderRadius:999, fontWeight:700, fontSize:11}}>THESIS • {p.topic||'research'} • EDUCATIONAL</span>

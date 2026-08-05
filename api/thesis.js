@@ -7,7 +7,8 @@ export default function handler(req, res) {
     const file = path.join(process.cwd(), 'public', 'thesis', 'manifest.json')
     if (fs.existsSync(file)) {
       const data = JSON.parse(fs.readFileSync(file, 'utf8'))
-      return res.status(200).json(data.slice(-50).reverse())
+      // return newest first, last 100 (since we now generate 10/hr)
+      return res.status(200).json(data.slice(-100).reverse())
     }
     return res.status(200).json([])
   } catch (e) {
