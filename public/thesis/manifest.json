@@ -21,12 +21,7 @@
       "technical academic diagram, white background, clean vector style, showing Concurrent Separation Logic Evolved: Iris Ghost State, Later Modalities, and Mechanized Linearizability Proofs of Michael-Scott Queue and Harris List performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Concurrent Separation Logic Evolved: Iris Ghost State, Later Modalities, and Mechanized Linearizability Proofs of Michael-Scott Queue and Harris List limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1785980217298_f3b2-0.webp",
-      "ths_1785980217298_f3b2-1.webp",
-      "ths_1785980217298_f3b2-2.webp",
-      "ths_1785980217298_f3b2-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -76,7 +71,8 @@
         "url": "https://lucah.pancut.workers.dev/read-http-www.cs.cornell.edu/andru/cs711/2002fa/reading/linearizability.pdf",
         "authors": ""
       }
-    ]
+    ],
+    "image_count": 0
   },
   {
     "id": "ths_1785980216298_7cab",
@@ -100,12 +96,7 @@
       "bitfield diagram of CXL 3.0 256B Flit, segmented blocks: 2-byte header blue, 240-byte payload green split into 15x16-byte slots for TLP, 8-byte CRC yellow, 6-byte FEC orange, plus inset of 68B Flit showing ARB/MUX 2B",
       "log-log plot chart of FIT vs raw BER for 100 Tb/s UCIe link, raw line steep, corrected line with 137,128 SEC-DED dropping to 3.6e-4 FIT at 1e-12 BER, second subplot bar chart latency vs hops for memory pooling, minimalist IEEE style"
     ],
-    "images": [
-      "ths_1785980216298_7cab-0.webp",
-      "ths_1785980216298_7cab-1.webp",
-      "ths_1785980216298_7cab-2.webp",
-      "ths_1785980216298_7cab-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -179,7 +170,8 @@
         "url": "https://arxiv.org/pdf/2303.06153v2",
         "authors": ""
       }
-    ]
+    ],
+    "image_count": 0
   },
   {
     "id": "ths_1785980215298_83f1",
@@ -203,12 +195,7 @@
       "rectified flow straightening process, three stage diagram showing iterative reflow: stage 0 messy crossing lines, stage 1 partially straight, stage 2 straight parallel lines, Euler 1-step vs 10-step error annotation, flow field arrows, ICLR figure style",
       "consistency model self-consistency, PF-ODE trajectory spiral in latent space, all intermediate points projecting to same origin x0 via f_theta, annotated skipping k-step from t_{n+k} to t_n, boundary condition graph c_skip(t) decreasing, pure white background, vector illustration"
     ],
-    "images": [
-      "ths_1785980215298_83f1-0.webp",
-      "ths_1785980215298_83f1-1.webp",
-      "ths_1785980215298_83f1-2.webp",
-      "ths_1785980215298_83f1-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -252,7 +239,8 @@
         "url": "https://arxiv.org/abs/2310.14189",
         "authors": "Yang Song, Prafulla Dhariwal"
       }
-    ]
+    ],
+    "image_count": 0
   },
   {
     "id": "ths_1785980214298_aaad",
@@ -275,12 +263,7 @@
       "CPU scheduler extensibility figure: Linux kernel scheduler core box middle, sched_ext class box, BPF virtual machine box with verifier and JIT, ops callbacks table select_cpu enqueue dispatch, userspace Rust scheduler crate scx_rustland ringbuf communication, fallback arrow to EEVDF, cgroup sub-scheduler tree for tenant isolation",
       "Multi-tenant isolation graph: two tenants noisy neighbor vs latency-sensitive, p99 latency y-axis vs offered load x-axis, comparison curves CFS, sched_ext with isolation, io_uring buffered vs sync syscalls, annotations for epsilon isolation bound, quantum Q marker"
     ],
-    "images": [
-      "ths_1785980214298_aaad-0.webp",
-      "ths_1785980214298_aaad-1.webp",
-      "ths_1785980214298_aaad-2.webp",
-      "ths_1785980214298_aaad-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -337,7 +320,8 @@
         "title": "https://www.researchgate.net/publication/329259885_The_eXpress_data_path_fast_programmable_packet_processing_in_the_operating_system_kernel",
         "url": ""
       }
-    ]
+    ],
+    "image_count": 0
   },
   {
     "id": "ths_1785980213298_8dd5",
@@ -361,12 +345,7 @@
       "Memory hierarchy diagram comparing van Emde Boas B-Tree layout in cache lines vs contiguous array with learned model prediction pointer, arrows showing 4 cache misses vs 1 model eval + 1 range binary search, block size B annotation, side-by-side cache-oblivious analysis",
       "Scatter plot Pareto frontier, x-axis index size log bytes, y-axis query latency ns, points labeled B+Tree cache-optimized, RMI, PGM, PGM compressed, ALEX, multicriteria tuned PGM frontier curve, academic paper quality matplotlib style"
     ],
-    "images": [
-      "ths_1785980213298_8dd5-0.webp",
-      "ths_1785980213298_8dd5-1.webp",
-      "ths_1785980213298_8dd5-2.webp",
-      "ths_1785980213298_8dd5-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -428,7 +407,8 @@
         "url": "https://learn.microsoft.com/en-us/archive/blogs/devdev/cache-oblivious-data-structures",
         "authors": ""
       }
-    ]
+    ],
+    "image_count": 0
   },
   {
     "id": "ths_1785980212298_9e99",
@@ -450,11 +430,7 @@
       "Isometric dataflow of Chia PoSpace tables, 7 stacked layers labeled f1 to f7, each 2^k entries, edges colored showing matching prefix from BLAKE3/CHACHA8, a spotlight challenge scanning with arrows to 7 proofs and Merkle root inclusion, dark mode tech illustration",
       "Sequenced timeline infographic: 1996 RSW repeated squaring icon, 2018 Boneh VDF formalization, 2019 Wesolowski and Pietrzak fork, 2020 Chia timelord tower infusing VDF blocks, 2019-2025 drand League of Entropy network of 16 nodes aggregating BLS signatures into beacon round, arrows showing r_{i+1}=H(VDF(r_i)), minimal flat design"
     ],
-    "images": [
-      "ths_1785980212298_9e99-0.webp",
-      "ths_1785980212298_9e99-1.webp",
-      "ths_1785980212298_9e99-2.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -516,7 +492,8 @@
         "url": "https://drand.love",
         "authors": ""
       }
-    ]
+    ],
+    "image_count": 0
   },
   {
     "id": "ths_1785980211298_570f",
@@ -540,12 +517,7 @@
       "Illustration of optimal extraction as integer linear programming over e-graph: e-graph as layered DAG, binary decision variables x_n highlighted per e-node, ILP constraints listed on side, selected optimal sub-DAG highlighted in bold green edges, with LP relaxation fractional values fading and rounding arrow",
       "Architecture diagram of egglog: left Datalog rules feeding into relational tables, middle union-find component merging equivalence classes labeled with \u2261, right lattice join operation merging analyses (interval lattice), all feeding into fixed-point loop with semi-naive delta tables, modern systems paper figure style"
     ],
-    "images": [
-      "ths_1785980211298_570f-0.webp",
-      "ths_1785980211298_570f-1.webp",
-      "ths_1785980211298_570f-2.webp",
-      "ths_1785980211298_570f-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -616,7 +588,8 @@
           "Yang et al."
         ]
       }
-    ]
+    ],
+    "image_count": 0
   },
   {
     "id": "ths_1785980210298_3cb3",
@@ -640,12 +613,7 @@
       "Cutaway of Multicore OCaml runtime fiber: show heap-allocated fiber with OCaml stack, C stack, exception handler frame, effect handler frame, continuation header with CONT_MARK, arrows for perform bubbling to parent fiber, annotated with 1% overhead label, systems diagram",
       "Compilation pipeline infographic: lambda-eff source -> lambda^p multi-prompt markers -> lambda^ev evidence vectors -> System F monadic translation -> C with Perceus ref-counting, highlight tail-resumptive loop optimization where resume becomes direct loop, use arrows and boxes, research poster aesthetic"
     ],
-    "images": [
-      "ths_1785980210298_3cb3-0.webp",
-      "ths_1785980210298_3cb3-1.webp",
-      "ths_1785980210298_3cb3-2.webp",
-      "ths_1785980210298_3cb3-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -719,7 +687,8 @@
         "url": "https://arxiv.org/abs/2404.00338",
         "authors": ""
       }
-    ]
+    ],
+    "image_count": 0
   },
   {
     "id": "ths_1785980209298_a5ee",
@@ -786,7 +755,8 @@
         "url": "https://arxiv.org/abs/1812.01238",
         "authors": ""
       }
-    ]
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1785980208298_dfcd",
@@ -859,7 +829,8 @@
         "url": "https://dl.acm.org/doi/10.14778/3342263.3342647",
         "authors": "Kun Ren, Dennis Li, Daniel J. Abadi"
       }
-    ]
+    ],
+    "image_count": 4
   },
   {
     "abstract": "Learning-augmented online algorithms integrate machine-learned predictions into classical competitive analysis to circumvent worst-case lower bounds while retaining robust guarantees. This thesis unifies consistency-robustness tradeoffs, advice complexity, and algorithms with predictions through ski rental and online caching\u2014two canonical rent-or-buy and paging problems. We formalize consistency, robustness, and smoothness under prediction error \u03b7, showing how trust parameter \u03bb parametrizes Pareto-optimal tradeoffs. We prove that advice complexity interpolates between deterministic and randomized competitiveness via O(log k) bits, and that naive prediction following fails catastrophically. We analyze deterministic and randomized ski-rental algorithms achieving (1+\u03bb, 1+1/\u03bb) and near-optimal randomized tradeoffs, and Marker-based caching achieving O(1+\u03b7/OPT) consistency with O(log k) robustness. We contribute a black-box combination framework, lower-bound constructions via Yao's minimax, and a critique of parsimonious predictions.",
