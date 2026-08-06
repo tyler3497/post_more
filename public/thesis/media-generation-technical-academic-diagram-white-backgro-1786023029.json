@@ -1,9 +1,0 @@
-{
-  "text": "{\"file_path\":\"\\/mnt\\/data\\/sel4_capability_derivation_tree_access_control.webp\",\"snapshot_handle\":\"GKMmxCoObeWQxWZiAO_k25A_w-sebg1iAQBj\",\"sources\":\"1. seL4 Reference Manual Version 12.0.0-dev\\n   Citation ID: d0c8\\n   URL: https:\\/\\/www.cse.unsw.edu.au\\/~cs9242\\/21\\/project\\/sel4-manual.pdf\\n\\n2. (PDF) Verified Protection Model of the seL4 Microkernel\\n   Citation ID: e037\\n   URL: https:\\/\\/www.researchgate.net\\/publication\\/221160526_Verified_Protection_Model_of_the_seL4_Microkernel\\n\\n3. PPT - From L3 to seL4 What Have We Learnt in 20 Years of L4 Microkernels? PowerPoint Presentation - ID:2605555\\n   Citation ID: 6110\\n   URL: https:\\/\\/www.slideserve.com\\/karis\\/from-l3-to-sel4-what-have-we-learnt-in-20-years-of-l4-microkernels\\n\\n4. Lec24\\n   Citation ID: 76fd\\n   URL: https:\\/\\/lass.cs.umass.edu\\/~shenoy\\/courses\\/fall12\\/lectures\\/Lec24.pdf\",\"status\":\"Generated 1 image(s)\",\"tools_called_tag\":\"\\n[tools_called: search, generate_image]\",\"media_context_handle\":\"aqgqnm\"}",
-  "attachments": [
-    {
-      "url": "https://scontent.xx.fbcdn.net/v/t39.105495-1/765929637_2293801591373382_5838545727950349321_n.webp?_nc_ht=scontent.xx.fbcdn.net&_nc_cat=106&_nc_ohc=QutuwNc64FsQ7kNvwHJBoBX&sdl=0&ccb=14-4&oh=00_AQF3Qma4piQ63dM6gaBIOdDb9B5liFgSckJmVjuWRLPyoA&oe=6A7A7332&_nc_sid=a21977",
-      "media_handle": ""
-    }
-  ]
-}
