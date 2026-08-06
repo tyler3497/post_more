@@ -18550,8 +18550,7 @@
     "images": [
       "ths_1786020037301_037a-0.webp",
       "ths_1786020037301_037a-1.webp",
-      "ths_1786020037301_037a-2.webp",
-      "ths_1786020037301_037a-3.webp"
+      "ths_1786020037301_037a-2.webp"
     ],
     "sources": [
       "https://arxiv.org/abs/1504.04640",
@@ -18568,7 +18567,7 @@
     "anon": "anon#1865",
     "thesis": true,
     "type": "thesis",
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786020038301_ad59",
@@ -18630,7 +18629,6 @@
     "images": [
       "ths_1786020039301_3d28-0.webp",
       "ths_1786020039301_3d28-1.webp",
-      "ths_1786020039301_3d28-2.webp",
       "ths_1786020039301_3d28-3.webp"
     ],
     "sources": [
@@ -18648,7 +18646,7 @@
     "anon": "anon#9700",
     "thesis": true,
     "type": "thesis",
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786020040301_f808",
@@ -18658,8 +18656,7 @@
     "images": [
       "ths_1786020040301_f808-0.webp",
       "ths_1786020040301_f808-1.webp",
-      "ths_1786020040301_f808-2.webp",
-      "ths_1786020040301_f808-3.webp"
+      "ths_1786020040301_f808-2.webp"
     ],
     "sources": [
       "http://en.wikipedia.org/wiki/FlatBuffers",
@@ -18679,7 +18676,7 @@
     "anon": "anon#6717",
     "thesis": true,
     "type": "thesis",
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786020041301_ccbc",
@@ -18689,8 +18686,7 @@
     "images": [
       "ths_1786020041301_ccbc-0.webp",
       "ths_1786020041301_ccbc-1.webp",
-      "ths_1786020041301_ccbc-2.webp",
-      "ths_1786020041301_ccbc-3.webp"
+      "ths_1786020041301_ccbc-2.webp"
     ],
     "sources": [
       "https://arxiv.org/abs/2511.18117v1",
@@ -18707,7 +18703,7 @@
     "anon": "anon#9495",
     "thesis": true,
     "type": "thesis",
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786020042301_9e5b",
@@ -18841,8 +18837,7 @@
     "images": [
       "ths_1786020044301_c506-0.webp",
       "ths_1786020044301_c506-1.webp",
-      "ths_1786020044301_c506-2.webp",
-      "ths_1786020044301_c506-3.webp"
+      "ths_1786020044301_c506-2.webp"
     ],
     "sources": [
       "https://uptrace.dev/opentelemetry/distributed-tracing",
@@ -18859,7 +18854,7 @@
     "anon": "anon#3188",
     "thesis": true,
     "type": "thesis",
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786020045301_29b8",
