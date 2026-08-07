@@ -110,10 +110,10 @@
     "thesis": true,
     "wordCount": 2920,
     "images": [
-      "ths_1786076952853_c9d9-0.webp",
-      "ths_1786076952853_c9d9-1.webp",
-      "ths_1786076952853_c9d9-2.webp",
-      "ths_1786076952853_c9d9-3.webp"
+      "/thesis/ths_1786076952853_c9d9-0.webp",
+      "/thesis/ths_1786076952853_c9d9-1.webp",
+      "/thesis/ths_1786076952853_c9d9-2.webp",
+      "/thesis/ths_1786076952853_c9d9-3.webp"
     ],
     "image_concepts": [
       "e-graph congruence closure with e-classes, e-nodes, rebuilding deferred invariant, hashcons, union merging showing (a*2) equivalent to (a<<1)",
@@ -365,7 +365,12 @@
     "topic": "postquantum-threshold-sigs",
     "thesis": true,
     "wordCount": 3374,
-    "images": [],
+    "images": [
+      "/thesis/ths_1786076949553_f6a6-0.webp",
+      "/thesis/ths_1786076949553_f6a6-1.webp",
+      "/thesis/ths_1786076949553_f6a6-2.webp",
+      "/thesis/ths_1786076949553_f6a6-3.webp"
+    ],
     "image_concepts": [
       "lattice trapdoor NTRU basis Fast Fourier sampling diagram with f g F G Gram matrix tree nodes Gaussian sampling arrows",
       "SPHINCS+ SLH-DSA hypertree diagram showing 7 layers XMSS WOTS+ FORS leaf Merkle authentication path from leaf signature to root",
@@ -446,7 +451,7 @@
         "year": 2024
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "type": "thesis"
   },
   {
@@ -492,10 +497,10 @@
     ],
     "image_count": 4,
     "images": [
-      "ths_1786076948453_e5f5-0.webp",
-      "ths_1786076948453_e5f5-1.webp",
-      "ths_1786076948453_e5f5-2.webp",
-      "ths_1786076948453_e5f5-3.webp"
+      "/thesis/ths_1786076948453_e5f5-0.webp",
+      "/thesis/ths_1786076948453_e5f5-1.webp",
+      "/thesis/ths_1786076948453_e5f5-2.webp",
+      "/thesis/ths_1786076948453_e5f5-3.webp"
     ],
     "markdown_stunning": true,
     "slug": "cot-faithfulness-interp",
@@ -584,7 +589,10 @@
     "thesis": true,
     "wordCount": 4990,
     "images": [
-      "ths_1786076947353_d4e4-0.webp"
+      "/thesis/ths_1786076947353_d4e4-0.webp",
+      "/thesis/ths_1786076947353_d4e4-1.webp",
+      "/thesis/ths_1786076947353_d4e4-2.webp",
+      "/thesis/ths_1786076947353_d4e4-3.webp"
     ],
     "image_concepts": [
       "BBRv3 state machine diagram: Startup\u2192Drain\u2192ProbeBW (8-phase sinusoidal pacing_gain 1.25/0.75 cycles, ProbeRTT 200ms cap, three operating points bw/inflight lo/hi/current, ECN CE 50% threshold) white background vector",
@@ -690,7 +698,7 @@
         "year": 2024
       }
     ],
-    "image_count": 1
+    "image_count": 4
   },
   {
     "id": "ths_1786076946253_c3d3",
@@ -703,10 +711,10 @@
     "thesis": true,
     "wordCount": 3696,
     "images": [
-      "ths_1786076946253_c3d3-0.webp",
-      "ths_1786076946253_c3d3-1.webp",
-      "ths_1786076946253_c3d3-2.webp",
-      "ths_1786076946253_c3d3-3.webp"
+      "/thesis/ths_1786076946253_c3d3-0.webp",
+      "/thesis/ths_1786076946253_c3d3-1.webp",
+      "/thesis/ths_1786076946253_c3d3-2.webp",
+      "/thesis/ths_1786076946253_c3d3-3.webp"
     ],
     "image_concepts": [
       "Path ORAM tree with L+1 levels, bucket Z=4, leaf-to-root path read/write, stash and position map remapping, clean vector diagram with mathematical notation",
@@ -765,10 +773,10 @@
     "thesis": true,
     "wordCount": 4461,
     "images": [
-      "ths_1786076945153_b2c2-0.webp",
-      "ths_1786076945153_b2c2-1.webp",
-      "ths_1786076945153_b2c2-2.webp",
-      "ths_1786076945153_b2c2-3.webp"
+      "/thesis/ths_1786076945153_b2c2-0.webp",
+      "/thesis/ths_1786076945153_b2c2-1.webp",
+      "/thesis/ths_1786076945153_b2c2-2.webp",
+      "/thesis/ths_1786076945153_b2c2-3.webp"
     ],
     "image_concepts": [
       "Syndrome space-time detector graph with vertices as stabilizer measurement flips, weighted edges encoding depolarizing probability, matched pairs highlighted for d=7 rotated surface code, white background, clean vector style, labeled boundary",
@@ -869,9 +877,9 @@
     "thesis": true,
     "wordCount": 4449,
     "images": [
-      "ths_1786076944053_a1b1-0.webp",
-      "ths_1786076944053_a1b1-1.webp",
-      "ths_1786076944053_a1b1-2.webp"
+      "/thesis/ths_1786076944053_a1b1-0.webp",
+      "/thesis/ths_1786076944053_a1b1-1.webp",
+      "/thesis/ths_1786076944053_a1b1-2.webp"
     ],
     "image_concepts": [
       "technical diagram: stacked borrows state machine per-location stack with tags Unique, SharedReadOnly, SharedReadWrite, protector barrier, retag flow, white background clean vector",
