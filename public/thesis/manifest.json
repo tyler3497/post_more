@@ -366,10 +366,10 @@
     "anon": "anon#bdda",
     "ts": 1786152017600,
     "images": [
-      "ths_1786152017600_quic4_6433-0.webp",
       "ths_1786152017600_quic4_6433-1.webp",
       "ths_1786152017600_quic4_6433-2.webp",
-      "ths_1786152017600_quic4_6433-3.webp"
+      "ths_1786152017600_quic4_6433-3.webp",
+      "ths_1786152017600_quic4_6433-0.webp"
     ],
     "topic": "networking",
     "thesis": true,
@@ -413,10 +413,10 @@
       }
     ],
     "image_concepts": [
-      "QUICv2 handshake, version negotiation and DATAGRAM frame negotiation sequence diagram for edge workers with 0-RTT",
       "BBRv2 state machine diagram showing Startup, Drain, ProbeBW Cruise/Up/Down/Refill, ProbeRTT with inflight_hi/lo bounds and ECN 50 percent threshold",
       "Dual-Queue Coupled AQM architecture for L4S vs Classic traffic showing ECT(1) marking, CE coupling, sub-ms L4S queue isolation",
-      "Copa target rate derivation Markov model with delta parameter AIMD adaptation under buffer-filling cross traffic, queue delay measurement"
+      "Copa target rate derivation Markov model with delta parameter AIMD adaptation under buffer-filling cross traffic, queue delay measurement",
+      "QUICv2 handshake, version negotiation and DATAGRAM frame negotiation sequence diagram for edge workers with 0-RTT"
     ]
   },
   {
