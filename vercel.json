@@ -1,6 +1,1 @@
-{
-  "rewrites": [
-    {"source": "/satire/:path*", "destination": "/api/satire"},
-    {"source": "/thesis/:path*", "destination": "/api/thesis"}
-  ]
-}
+{}
