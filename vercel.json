@@ -1,1 +1,6 @@
-{"functions":{"api/*.js":{"includeFiles":"public/satire/**,public/thesis/**"}},"rewrites":[{"destination":"/api/satire","source":"/satire/:path*"},{"destination":"/api/thesis","source":"/thesis/:path*"}]}
+{
+  "rewrites": [
+    {"source": "/satire/:path*", "destination": "/api/satire"},
+    {"source": "/thesis/:path*", "destination": "/api/thesis"}
+  ]
+}
