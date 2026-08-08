@@ -23143,7 +23143,8 @@
     ],
     "images": [
       "ths_1786160001000_pqlwe2-0.webp",
-      "ths_1786160001000_pqlwe2-1.webp"
+      "ths_1786160001000_pqlwe2-1.webp",
+      "ths_1786160001000_pqlwe2-2.webp"
     ],
     "sources": [
       {
@@ -23194,7 +23195,7 @@
         "url": "https://eprint.iacr.org/2022/859"
       }
     ],
-    "image_count": 2
+    "image_count": 3
   },
   {
     "id": "ths_1786160002000_pmem3",
@@ -23620,7 +23621,9 @@
       "technical academic diagram, white background, clean vector style, showing Neuromorphic Event-Driven Spiking Neural Networks on Intel Loihi 2: Surrogate Gradient Learning, Dendritic Compartments, and Sparse Temporal Coding under 1pJ per Spike Energy Budget concept 0, highly detailed, educational"
     ],
     "images": [
-      "ths_1786160008000_loihi9-0.webp"
+      "ths_1786160008000_loihi9-0.webp",
+      "ths_1786160008000_loihi9-1.webp",
+      "ths_1786160008000_loihi9-2.webp"
     ],
     "sources": [
       {
@@ -23672,7 +23675,7 @@
         "authors": "Stockl et al. 2023"
       }
     ],
-    "image_count": 1
+    "image_count": 3
   },
   {
     "id": "ths_1786160009000_ebpf10",
