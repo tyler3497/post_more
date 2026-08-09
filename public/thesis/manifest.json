@@ -18054,7 +18054,14 @@
         "year": 2024
       }
     ],
-    "topic": "VDF randomness beacon"
+    "topic": "VDF randomness beacon",
+    "images": [
+      "public/thesis/ths_1786307483375_b6d2-0.webp",
+      "public/thesis/ths_1786307483375_b6d2-1.webp",
+      "public/thesis/ths_1786307483375_b6d2-2.webp",
+      "public/thesis/ths_1786307483375_b6d2-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1786307484375_3a78",
@@ -18113,7 +18120,14 @@
         "year": 2019
       }
     ],
-    "topic": "PMDK B+Tree"
+    "topic": "PMDK B+Tree",
+    "images": [
+      "public/thesis/ths_1786307484375_3a78-0.webp",
+      "public/thesis/ths_1786307484375_3a78-1.webp",
+      "public/thesis/ths_1786307484375_3a78-2.webp",
+      "public/thesis/ths_1786307484375_3a78-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1786307485375_cfbb",
@@ -18172,7 +18186,14 @@
         "year": 2025
       }
     ],
-    "topic": "HSS FSS PIR"
+    "topic": "HSS FSS PIR",
+    "images": [
+      "public/thesis/ths_1786307485375_cfbb-0.webp",
+      "public/thesis/ths_1786307485375_cfbb-1.webp",
+      "public/thesis/ths_1786307485375_cfbb-2.webp",
+      "public/thesis/ths_1786307485375_cfbb-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1786307486375_a09b",
@@ -18231,7 +18252,14 @@
         "year": 2021
       }
     ],
-    "topic": "DARTS"
+    "topic": "DARTS",
+    "images": [
+      "public/thesis/ths_1786307486375_a09b-0.webp",
+      "public/thesis/ths_1786307486375_a09b-1.webp",
+      "public/thesis/ths_1786307486375_a09b-2.webp",
+      "public/thesis/ths_1786307486375_a09b-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1786307487375_ca00",
@@ -18290,7 +18318,14 @@
         "year": 2023
       }
     ],
-    "topic": "eBPF verifier"
+    "topic": "eBPF verifier",
+    "images": [
+      "public/thesis/ths_1786307487375_ca00-0.webp",
+      "public/thesis/ths_1786307487375_ca00-1.webp",
+      "public/thesis/ths_1786307487375_ca00-2.webp",
+      "public/thesis/ths_1786307487375_ca00-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1786307488375_f65c",
@@ -18349,7 +18384,14 @@
         "year": 2022
       }
     ],
-    "topic": "ColBERTv2 RAG multimodal"
+    "topic": "ColBERTv2 RAG multimodal",
+    "images": [
+      "public/thesis/ths_1786307488375_f65c-0.webp",
+      "public/thesis/ths_1786307488375_f65c-1.webp",
+      "public/thesis/ths_1786307488375_f65c-2.webp",
+      "public/thesis/ths_1786307488375_f65c-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1786307489375_1c06",
@@ -18414,7 +18456,14 @@
         "year": 2023
       }
     ],
-    "topic": "deadlock WFG"
+    "topic": "deadlock WFG",
+    "images": [
+      "public/thesis/ths_1786307489375_1c06-0.webp",
+      "public/thesis/ths_1786307489375_1c06-1.webp",
+      "public/thesis/ths_1786307489375_1c06-2.webp",
+      "public/thesis/ths_1786307489375_1c06-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1786307490375_6208",
@@ -18473,7 +18522,14 @@
         "year": 2026
       }
     ],
-    "topic": "3D chiplet thermal"
+    "topic": "3D chiplet thermal",
+    "images": [
+      "public/thesis/ths_1786307490375_6208-0.webp",
+      "public/thesis/ths_1786307490375_6208-1.webp",
+      "public/thesis/ths_1786307490375_6208-2.webp",
+      "public/thesis/ths_1786307490375_6208-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1786307491375_f5ac",
@@ -18532,7 +18588,14 @@
         "year": 2026
       }
     ],
-    "topic": "SAE interpretability"
+    "topic": "SAE interpretability",
+    "images": [
+      "public/thesis/ths_1786307491375_f5ac-0.webp",
+      "public/thesis/ths_1786307491375_f5ac-1.webp",
+      "public/thesis/ths_1786307491375_f5ac-2.webp",
+      "public/thesis/ths_1786307491375_f5ac-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1786307492375_ed4d",
@@ -18597,6 +18660,13 @@
         "year": 2022
       }
     ],
-    "topic": "quantum lattice surgery"
+    "topic": "quantum lattice surgery",
+    "images": [
+      "public/thesis/ths_1786307492375_ed4d-0.webp",
+      "public/thesis/ths_1786307492375_ed4d-1.webp",
+      "public/thesis/ths_1786307492375_ed4d-2.webp",
+      "public/thesis/ths_1786307492375_ed4d-3.webp"
+    ],
+    "image_count": 4
   }
 ]
