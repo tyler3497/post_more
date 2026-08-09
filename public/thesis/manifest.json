@@ -101,13 +101,10 @@
       "Links tierless compilation with effect-annotated RPC and session type safety"
     ],
     "images": [
-      "ths_1786315298388_ece0-0.webp",
-      "ths_1786315298388_ece0-1.webp",
-      "ths_1786315298388_ece0-2.webp",
       "ths_1786315298388_ece0-3.webp"
     ],
     "word_count": 3069,
-    "image_count": 4
+    "image_count": 1
   },
   {
     "id": "ths_1786316157623_8c44",
@@ -155,14 +152,9 @@
       "Thin bootstrapping with ModRaise slot switching and precision-aware EvalMod",
       "GPU NTT acceleration with 32-bit primes, double-CRT, and kernel fusion"
     ],
-    "images": [
-      "ths_1786316157623_8c44-0.webp",
-      "ths_1786316157623_8c44-1.webp",
-      "ths_1786316157623_8c44-2.webp",
-      "ths_1786316157623_8c44-3.webp"
-    ],
+    "images": [],
     "word_count": 3107,
-    "image_count": 4
+    "image_count": 0
   },
   {
     "id": "ths_1786315288452_90ac",
@@ -210,14 +202,9 @@
       "EPaxos dependency graph invariant and fast-path quorum safety under interference",
       "TLC model checking scale with symmetry reduction and IC3PO hierarchical strengthening"
     ],
-    "images": [
-      "ths_1786315288452_90ac-0.webp",
-      "ths_1786315288452_90ac-1.webp",
-      "ths_1786315288452_90ac-2.webp",
-      "ths_1786315288452_90ac-3.webp"
-    ],
+    "images": [],
     "word_count": 3122,
-    "image_count": 4
+    "image_count": 0
   },
   {
     "id": "ths_1786315398033_7d50",
@@ -268,11 +255,10 @@
     "images": [
       "ths_1786315398033_7d50-0.webp",
       "ths_1786315398033_7d50-1.webp",
-      "ths_1786315398033_7d50-2.webp",
-      "ths_1786315398033_7d50-3.webp"
+      "ths_1786315398033_7d50-2.webp"
     ],
     "word_count": 3107,
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786315332254_7401",
