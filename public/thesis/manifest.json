@@ -28299,7 +28299,11 @@
     "anon": "M. Sylas Preethan",
     "ts": 1786368604928,
     "type": "thesis",
-    "images": []
+    "images": [
+      "/thesis/thesis-causal-do-dml-20260810-7b2c-0.webp",
+      "/thesis/thesis-causal-do-dml-20260810-7b2c-1.webp",
+      "/thesis/thesis-causal-do-dml-20260810-7b2c-2.webp"
+    ]
   },
   {
     "id": "thesis-spiking-transformer-loihi-20260810-7e2b",
@@ -28309,7 +28313,11 @@
     "anon": "anon#7391",
     "ts": 1786368605928,
     "type": "thesis",
-    "images": []
+    "images": [
+      "/thesis/thesis-spiking-transformer-loihi-20260810-7e2b-loihi-mapping.webp",
+      "/thesis/thesis-spiking-transformer-loihi-20260810-7e2b-spiking-timesformer.webp",
+      "/thesis/thesis-spiking-transformer-loihi-20260810-7e2b-surrogate.webp"
+    ]
   },
   {
     "id": "thesis-grokking-mechinterp-20260810-a3f1",
@@ -28319,7 +28327,9 @@
     "anon": "anon#3008",
     "ts": 1786368606928,
     "type": "thesis",
-    "images": []
+    "images": [
+      "/thesis/media-generation-diagram-of-grokking-training-d-0-0366048f-c745-4a85-b5f4-12853431ad49.webp"
+    ]
   },
   {
     "id": "thesis-moe-distributed-expert-20260810-9c4a",
@@ -28343,7 +28353,9 @@
     "anon": "anon#7284",
     "ts": 1786368608928,
     "type": "thesis",
-    "images": []
+    "images": [
+      "/thesis/media-generation-formal-model-of-rust-unsafe-ve-0-bb851176-1d0e-46f7-b92d-2c1757eb2e7a.webp"
+    ]
   },
   {
     "id": "thesis-p4-ebpf-innetwork-ml-20260810-add3",
@@ -28353,6 +28365,10 @@
     "anon": "anon#4f2a",
     "ts": 1786368610928,
     "type": "thesis",
-    "images": []
+    "images": [
+      "/thesis/thesis-p4-ebpf-innetwork-ml-20260810-add3-0.webp",
+      "/thesis/thesis-p4-ebpf-innetwork-ml-20260810-add3-1.webp",
+      "/thesis/thesis-p4-ebpf-innetwork-ml-20260810-add3-2.webp"
+    ]
   }
 ]
