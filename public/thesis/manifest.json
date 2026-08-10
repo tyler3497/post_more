@@ -29289,8 +29289,13 @@
       "https://eprint.iacr.org/2023/1462"
     ],
     "topic": "homomorphic encryption, CKKS bootstrapping",
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "thesis-he-ckks-bootstrap-20260810-a1b2-0.webp",
+      "thesis-he-ckks-bootstrap-20260810-a1b2-1.webp",
+      "thesis-he-ckks-bootstrap-20260810-a1b2-2.webp",
+      "thesis-he-ckks-bootstrap-20260810-a1b2-3.webp"
+    ],
+    "image_count": 4,
     "type": "thesis",
     "thesis": true
   },
@@ -29417,9 +29422,12 @@
     ],
     "topic": "eBPF XDP Maglev",
     "images": [
-      "thesis-xdp-maglev-20260810-f6a7-0.webp"
+      "thesis-xdp-maglev-20260810-f6a7-0.webp",
+      "thesis-xdp-maglev-20260810-f6a7-1.webp",
+      "thesis-xdp-maglev-20260810-f6a7-2.webp",
+      "thesis-xdp-maglev-20260810-f6a7-3.webp"
     ],
-    "image_count": 1,
+    "image_count": 4,
     "type": "thesis",
     "thesis": true
   },
@@ -29538,8 +29546,13 @@
       "https://arxiv.org/abs/2603.10081"
     ],
     "topic": "category theory CQL",
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "thesis-cat-cql-20260810-d0e1-0.webp",
+      "thesis-cat-cql-20260810-d0e1-1.webp",
+      "thesis-cat-cql-20260810-d0e1-2.webp",
+      "thesis-cat-cql-20260810-d0e1-3.webp"
+    ],
+    "image_count": 4,
     "type": "thesis",
     "thesis": true
   }
