@@ -23134,9 +23134,14 @@
         "url": "https://arxiv.org/abs/1804.00227v1"
       }
     ],
-    "images": [],
+    "images": [
+      "ths_1786332664958_d5c3-0.webp",
+      "ths_1786332664958_d5c3-1.webp",
+      "ths_1786332664958_d5c3-2.webp",
+      "ths_1786332664958_d5c3-3.webp"
+    ],
     "word_count": 3041,
-    "image_count": 0
+    "image_count": 4
   },
   {
     "id": "ths_1786333035467_e89ec98f",
@@ -23458,9 +23463,10 @@
     ],
     "images": [
       "ths_1786333020266_41cc1e-0.webp",
-      "ths_1786333020266_41cc1e-1.webp"
+      "ths_1786333020266_41cc1e-1.webp",
+      "ths_1786333020266_41cc1e-2.webp"
     ],
-    "image_count": 2,
+    "image_count": 3,
     "word_count": 2658,
     "image_prompts": [
       "Technical academic diagram white background vector style: Bipartite variable-constraint graph encoding of MIP with message passing for presolve decisions, clean labels, minimal colors blue and black, academic paper figure, high resolution",
