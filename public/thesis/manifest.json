@@ -27484,9 +27484,10 @@
     "images": [
       "/thesis/ths_1786365000007_077c-0.webp",
       "/thesis/ths_1786365000007_077c-1.webp",
-      "/thesis/ths_1786365000007_077c-2.webp"
+      "/thesis/ths_1786365000007_077c-2.webp",
+      "/thesis/ths_1786365000007_077c-3.webp"
     ],
-    "image_count": 3
+    "image_count": 4
   },
   {
     "id": "ths_1786365001007_0d2b",
@@ -27515,8 +27516,13 @@
     "word_count": 1828,
     "thesis": true,
     "type": "thesis",
-    "images": [],
-    "image_count": 0
+    "images": [
+      "/thesis/ths_1786365001007_0d2b-0.webp",
+      "/thesis/ths_1786365001007_0d2b-1.webp",
+      "/thesis/ths_1786365001007_0d2b-2.webp",
+      "/thesis/ths_1786365001007_0d2b-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1786365002007_58e9",
@@ -27653,9 +27659,10 @@
     "images": [
       "/thesis/ths_1786365005007_f1b3-0.webp",
       "/thesis/ths_1786365005007_f1b3-1.webp",
-      "/thesis/ths_1786365005007_f1b3-2.webp"
+      "/thesis/ths_1786365005007_f1b3-2.webp",
+      "/thesis/ths_1786365005007_f1b3-3.webp"
     ],
-    "image_count": 3
+    "image_count": 4
   },
   {
     "id": "ths_1786365006007_a819",
@@ -27754,8 +27761,13 @@
     "word_count": 1842,
     "thesis": true,
     "type": "thesis",
-    "images": [],
-    "image_count": 0
+    "images": [
+      "/thesis/ths_1786365008007_0be2-0.webp",
+      "/thesis/ths_1786365008007_0be2-1.webp",
+      "/thesis/ths_1786365008007_0be2-2.webp",
+      "/thesis/ths_1786365008007_0be2-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1786365009007_18cf",
@@ -27784,7 +27796,12 @@
     "word_count": 1838,
     "thesis": true,
     "type": "thesis",
-    "images": [],
-    "image_count": 0
+    "images": [
+      "/thesis/ths_1786365009007_18cf-0.webp",
+      "/thesis/ths_1786365009007_18cf-1.webp",
+      "/thesis/ths_1786365009007_18cf-2.webp",
+      "/thesis/ths_1786365009007_18cf-3.webp"
+    ],
+    "image_count": 4
   }
 ]
