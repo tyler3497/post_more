@@ -2,7 +2,7 @@
 id: thesis-he-accel-ntt-boot-20260810-5d34
 title: "Accelerating Homomorphic Encryption: NTT-Friendly Lattice Parameters, Bootstrapping in CKKS and BFV, and RNS Decomposition Strategies"
 ts: 1786397404000
-anon: Sage Kowalski
+anon: anon#7011
 type: thesis
 thesis: true
 topic: thesis

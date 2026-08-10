@@ -2,7 +2,7 @@
 id: thesis-pq-tls-hybrid-xwing-20260810-11b1
 title: "Provably Secure Post-Quantum TLS 1.3 Hybrid Key Exchange with ML-KEM and X-Wing: Downgrade Protection Proofs and Compositional Security"
 ts: 1786397406000
-anon: aerad-7f3c-xchsl0
+anon: anon#7562
 type: thesis
 thesis: true
 topic: thesis

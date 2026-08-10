@@ -2,7 +2,7 @@
 id: thesis-gpu-vecdb-rag-20260810-5f9c
 title: "GPU-Accelerated Vector Databases for Retrieval-Augmented Generation: Faiss IVFPQ, ScaNN Anisotropic Quantization, DiskANN SSD Resilience, and SPANN Hybrid Indexing"
 ts: 1786397405000
-anon: Riley Okafor
+anon: anon#1990
 type: thesis
 thesis: true
 topic: thesis
