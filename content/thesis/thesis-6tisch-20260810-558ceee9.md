@@ -1,13 +1,13 @@
 ---
 id: thesis-6tisch-20260810-558ceee9
 title: "6TiSCH over IEEE 802.15.4 TSCH: Deterministic Scheduling Functions, Channel Distribution Matrix Orchestration, and Industrial IoT Reliability in Harsh Environments"
-ts: 1786372994230
+ts: 1786372211668
 anon: anon#3782
 type: thesis
 thesis: true
 topic: 6tisch-tsch-scheduling
-abstract: "The Industrial IoT demands ultra-high reliability deterministic latency scalability under harsh interference. Time-Slotted Channel Hopping (TSCH) mode of IEEE 802.15.4e combines TDMA with frequency hopping mitigating multipath fading narrowband interference saving energy via collision reduction. Yet IEEE 802.15.4e defines only link-layer mechanisms leaving schedule construction—when (timeslot) and where (channel offset) nodes communicate—to upper layers. IETF 6TiSCH architecture over TSCH formal"
-images: ['/thesis/thesis-6tisch-20260810-558ceee9-0.webp', '/thesis/thesis-6tisch-20260810-558ceee9-1.webp', '/thesis/thesis-6tisch-20260810-558ceee9-2.webp', '/thesis/thesis-6tisch-20260810-558ceee9-3.webp']
+abstract: "The Industrial IoT demands ultra-high reliability deterministic latency scalability under harsh interference. Time-Slotted Channel Hopping (TSCH) mode of IEEE 802.15.4e combines TDMA with frequency hopping mitigating multipath fading narrowband interference saving energy via collision reduction. Yet IEEE 802.15.4e defines only link-layer mechanisms leaving schedule construction—when (timeslot) and where (channel offset) nodes communicate—to upper layers. IETF 6TiSCH architecture over TSCH formalized RFC 9030 adds IPv6 capability centralized PCE route computation distributed RPL routing negotiation schedule adjustments via 6top sublayer. This thesis dissects scheduling functions (SF) as first-class determinism engines: SF dictates allocation relocation deallocation cells Channel Distribution/Usage (CDU) TDM/FDM matrix impacting end-to-end latency PDR radio duty cycle. We evaluate YSF minimizing latency data gathering vs MSF state-of-art standardized. Using Latin rectangles distributed channel ranking dense industrial networks we quantify harsh environment robustness—heavy machinery interference catastrophic failure avoidance—achieving <1s latency few-hundred-meter coverage. We provide determinism proofs analogous TSN slotframe collision analysis DetNet backbone integration."
+images: []
 ---
 
 # 6TiSCH over IEEE 802.15.4 TSCH: Deterministic Scheduling Functions, Channel Distribution Matrix Orchestration, and Industrial IoT Reliability in Harsh Environments

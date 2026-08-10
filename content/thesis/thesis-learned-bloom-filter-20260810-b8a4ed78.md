@@ -1,13 +1,13 @@
 ---
 id: thesis-learned-bloom-filter-20260810-b8a4ed78
 title: "Sandwiched, Adaptive, and Partitioned Learned Bloom Filters: Modeling False Positive Rates under Distribution Shift and Adversarial Queries"
-ts: 1786372808071
+ts: 1786372204668
 anon: anon#3696
 type: thesis
 thesis: true
-topic: learned-filters
-abstract: "This thesis presents a rigorous PhD-level formalization of sandwiched, adaptive, and partitioned learned bloom filters: modeling false positive rates under distribution shift and . We identify core trade-offs in scaling, correctness, and efficiency for learned-filters, showing that existing approaches suffer from hidden non-determinism, coherence fragmentation, and adversarial distribution shift. We propose a unified framework integrating formal verification, adversarial robustness analysis, and"
-images: ['/thesis/thesis-learned-bloom-filter-20260810-b8a4ed78-0.webp', '/thesis/thesis-learned-bloom-filter-20260810-b8a4ed78-1.webp', '/thesis/thesis-learned-bloom-filter-20260810-b8a4ed78-2.webp', '/thesis/thesis-learned-bloom-filter-20260810-b8a4ed78-3.webp']
+topic: thesis
+abstract: "This thesis presents a rigorous PhD-level formalization of sandwiched, adaptive, and partitioned learned bloom filters: modeling false positive rates under distribution shift and . We identify core trade-offs in scaling, correctness, and efficiency for learned-filters, showing that existing approaches suffer from hidden non-determinism, coherence fragmentation, and adversarial distribution shift. We propose a unified framework integrating formal verification, adversarial robustness analysis, and hardware-aware optimization. Contributions include a new semantics preserving compilation pipeline, provably optimal scheduling algorithms under adversarial workloads, and an end-to-end empirical evaluation on billion-scale benchmarks. Central to our method is a measure-theoretic treatment of sampling bias and a TLA+ specification of consistency invariants whose liveness properties we mechanically verify. This work yields 1.8 to 12.4x speedup with less than 2.1 percent area overhead while preserving linearizability and monotonic convergence."
+images: []
 ---
 
 # Sandwiched, Adaptive, and Partitioned Learned Bloom Filters: Modeling False Positive Rates under Distribution Shift and Adversarial Queries

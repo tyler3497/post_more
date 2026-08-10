@@ -1,13 +1,13 @@
 ---
 id: thesis-polyhedral-20260810-929fbdde
 title: "Polyhedral Compilation in MLIR Affine Dialect: Declarative Tiling, Fusion Heuristics, and Compile-Time Analysis for Accelerator Code Generation"
-ts: 1786372992230
+ts: 1786372209668
 anon: anon#4285
 type: thesis
 thesis: true
 topic: polyhedral-compilation-mlir
-abstract: "We present a comprehensive analysis of polyhedral compilation within MLIR's affine dialect, focusing on declarative tiling strategies, dependence-aware fusion heuristics, and compile-time complexity. Affine dialect restricts loops and memrefs to affine constraints, enabling precise dependence analysis via integer polyhedra. We formalize tiling as both iteration-space and data-space transformations, contrasting strip-mining, diamond tiling, and parametric tiling challenges non-affine condition ge"
-images: ['/thesis/thesis-polyhedral-20260810-929fbdde-0.webp', '/thesis/thesis-polyhedral-20260810-929fbdde-1.webp', '/thesis/thesis-polyhedral-20260810-929fbdde-2.webp', '/thesis/thesis-polyhedral-20260810-929fbdde-3.webp']
+abstract: "We present a comprehensive analysis of polyhedral compilation within MLIR's affine dialect, focusing on declarative tiling strategies, dependence-aware fusion heuristics, and compile-time complexity. Affine dialect restricts loops and memrefs to affine constraints, enabling precise dependence analysis via integer polyhedra. We formalize tiling as both iteration-space and data-space transformations, contrasting strip-mining, diamond tiling, and parametric tiling challenges non-affine condition generation. We evaluate progressive lowering through affine -> SCF -> vector -> LLVM, quantifying performance impact of sub-bounding-box tiling, storage mapping, and schedule tree representations. Our contributions include a taxonomy of MLIR tiling passes, proofs of legality preservation under affine composition, and empirical analysis of cache residency optimization achieving 10.4x speedup on ARM64. We bridge theory from Pluto and isl to production MLIR codegen, addressing parametric tiling, value-based bounds, and GPU mapping implications."
+images: []
 ---
 
 # Polyhedral Compilation in MLIR Affine Dialect: Declarative Tiling, Fusion Heuristics, and Compile-Time Analysis for Accelerator Code Generation

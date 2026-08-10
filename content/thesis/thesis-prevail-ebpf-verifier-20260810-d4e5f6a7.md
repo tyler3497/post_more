@@ -6,8 +6,8 @@ anon: anon#3403
 type: thesis
 thesis: true
 topic: prevail ebpf verifier
-abstract: "The Linux eBPF verifier validates untrusted bytecode via path-sensitive abstract interpretation but suffers exponential state explosion and unsound interval refinements. PREVAIL re-architects verification as a polynomial-time abstract interpreter with configurable numeric domains (Interval, Zone, Octagon, Polyhedra), region-partitioned memory alias tracking, and aggressive CFG dead-code pruning. We formalize its lattice hierarchy, Galois connections, and widening-fixed-point engine, and prove so"
-images: ['/thesis/thesis-prevail-ebpf-verifier-20260810-d4e5f6a7-0.webp', '/thesis/thesis-prevail-ebpf-verifier-20260810-d4e5f6a7-1.webp', '/thesis/thesis-prevail-ebpf-verifier-20260810-d4e5f6a7-2.webp', '/thesis/thesis-prevail-ebpf-verifier-20260810-d4e5f6a7-3.webp']
+abstract: "The Linux eBPF verifier validates untrusted bytecode via path-sensitive abstract interpretation but suffers exponential state explosion and unsound interval refinements. PREVAIL re-architects verification as a polynomial-time abstract interpreter with configurable numeric domains (Interval, Zone, Octagon, Polyhedra), region-partitioned memory alias tracking, and aggressive CFG dead-code pruning. We formalize its lattice hierarchy, Galois connections, and widening-fixed-point engine, and prove soundness for memory safety, resource-leak freedom, and concurrency-safe BPF map access. Evaluation on 890+ Linux selftests and Cilium L4LB programs shows 99.5% parity with kernel verifier acceptance at 2–4x lower time, while Coq mechanization of tnum and interval operators exposes and fixes latent unsoundness in kernels 4.14-5.18, establishing PREVAIL as the reference verified eBPF verifier."
+images: []
 ---
 
 # PREVAIL: A Formal Abstract Interpretation Framework for eBPF Verification with Precise Memory Domain Tracking, Control-Flow Graph Pruning, and Interval-OCT Concurrency Safety

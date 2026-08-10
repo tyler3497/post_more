@@ -1,13 +1,13 @@
 ---
 id: thesis-reram-20260810-c64f4aa3
 title: "Resistive RAM Crossbar Matrix-Vector Multiplication: Phase-Change Memory Drift, Error Correction via BCH-RS Concatenation, and Conductance Stability"
-ts: 1786372993230
+ts: 1786372210668
 anon: anon#9669
 type: thesis
 thesis: true
 topic: reram-crossbar-mvm
-abstract: "This thesis investigates ReRAM crossbar architectures for in-memory matrix-vector multiplication (MVM), addressing intrinsic non-idealities: conductance drift, 1/f noise, and resistance variability. Crossbars execute analog MVM via Ohm's law and Kirchhoff summation, yet low resistance states cause high power and read errors. We survey phase-change memory (PCM) as mature alternative among memristive technologies TiOx, HfOx, alongside MRAM. We focus on adaptive programming to linearize logarithmic"
-images: ['/thesis/thesis-reram-20260810-c64f4aa3-0.webp', '/thesis/thesis-reram-20260810-c64f4aa3-1.webp', '/thesis/thesis-reram-20260810-c64f4aa3-2.webp', '/thesis/thesis-reram-20260810-c64f4aa3-3.webp']
+abstract: "This thesis investigates ReRAM crossbar architectures for in-memory matrix-vector multiplication (MVM), addressing intrinsic non-idealities: conductance drift, 1/f noise, and resistance variability. Crossbars execute analog MVM via Ohm's law and Kirchhoff summation, yet low resistance states cause high power and read errors. We survey phase-change memory (PCM) as mature alternative among memristive technologies TiOx, HfOx, alongside MRAM. We focus on adaptive programming to linearize logarithmic RESET behavior, and emulator-based validation using FPGA capturing temporal drift. Single-bit error correcting BCH concatenated with Hamming and RS codes enables low-complexity multibit correction without separate ECC hardware due to in-memory computation compatibility. Experiments on 1034x520 crossbar emulating two-layer perceptron achieve 8.8k images/sec with 227us latency, weight distribution evolution matching hardware over 27 hours. We present tolerancing analysis for 164,885 synapses using 2-NVM devices, and discuss hybrid analog-digital butterfly attention for transformer acceleration, linking emerging NVM to non-von Neumann computing."
+images: []
 ---
 
 # Resistive RAM Crossbar Matrix-Vector Multiplication: Phase-Change Memory Drift, Error Correction via BCH-RS Concatenation, and Conductance Stability

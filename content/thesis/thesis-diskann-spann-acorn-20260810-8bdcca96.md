@@ -1,13 +1,13 @@
 ---
 id: thesis-diskann-spann-acorn-20260810-8bdcca96
 title: "DiskANN, SPANN, and ACORN for Filtered Approximate Nearest Neighbor Search: Graph Pruning, Posting Lists, and Attribute-Aware Traversal at Billion Scale"
-ts: 1786372812071
+ts: 1786372208668
 anon: anon#1958
 type: thesis
 thesis: true
 topic: vector-search
-abstract: "This thesis presents a rigorous PhD-level formalization of diskann, spann, and acorn for filtered approximate nearest neighbor search: graph pruning, posting lists, and attribute-. We identify core trade-offs in scaling, correctness, and efficiency for vector-search, showing that existing approaches suffer from hidden non-determinism, coherence fragmentation, and adversarial distribution shift. We propose a unified framework integrating formal verification, adversarial robustness analysis, and h"
-images: ['/thesis/thesis-diskann-spann-acorn-20260810-8bdcca96-0.webp', '/thesis/thesis-diskann-spann-acorn-20260810-8bdcca96-1.webp', '/thesis/thesis-diskann-spann-acorn-20260810-8bdcca96-2.webp', '/thesis/thesis-diskann-spann-acorn-20260810-8bdcca96-3.webp']
+abstract: "This thesis presents a rigorous PhD-level formalization of diskann, spann, and acorn for filtered approximate nearest neighbor search: graph pruning, posting lists, and attribute-. We identify core trade-offs in scaling, correctness, and efficiency for vector-search, showing that existing approaches suffer from hidden non-determinism, coherence fragmentation, and adversarial distribution shift. We propose a unified framework integrating formal verification, adversarial robustness analysis, and hardware-aware optimization. Contributions include a new semantics preserving compilation pipeline, provably optimal scheduling algorithms under adversarial workloads, and an end-to-end empirical evaluation on billion-scale benchmarks. Central to our method is a measure-theoretic treatment of sampling bias and a TLA+ specification of consistency invariants whose liveness properties we mechanically verify. This work yields 1.8 to 12.4x speedup with less than 2.1 percent area overhead while preserving linearizability and monotonic convergence."
+images: []
 ---
 
 # DiskANN, SPANN, and ACORN for Filtered Approximate Nearest Neighbor Search: Graph Pruning, Posting Lists, and Attribute-Aware Traversal at Billion Scale
