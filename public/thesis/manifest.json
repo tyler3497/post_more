@@ -39722,22 +39722,13 @@
     "thesis": true,
     "type": "thesis",
     "image_concepts": [
-      "arch Discrete Diffusion Models for Combinator",
-      "deep dive 4",
-      "perf 4",
-      "limits roadmap 4"
+      "arch Discrete Diffusion Models for Combinator"
     ],
     "image_prompts": [
-      "technical academic diagram, white background, clean vector style, showing Discrete Diffusion Models for Combinatorial Optimization: Score-Entropic Search for TSP and Graph Coloring with Gumbel-S architecture overview, nodes arrows mathematical notation highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Discrete Diffusion Models for Combinatorial Optimization: Score-Entropic Search for TSP and Graph Coloring with Gumbel-S core algorithm innovation layers formal semantics highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Discrete Diffusion Models for Combinatorial Optimization: Score-Entropic Search for TSP and Graph Coloring with Gumbel-S performance proof structure graphs tables complexity bounds highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Discrete Diffusion Models for Combinatorial Optimization: Score-Entropic Search for TSP and Graph Coloring with Gumbel-S limitation future work roadmap tradeoffs design space highly detailed educational high resolution"
+      "technical academic diagram, white background, clean vector style, showing Discrete Diffusion Models for Combinatorial Optimization: Score-Entropic Search for TSP and Graph Coloring with Gumbel-S architecture overview, nodes arrows mathematical notation highly detailed educational high resolution"
     ],
     "images": [
-      "ths_1786448219597_3144_2f5c-0.webp",
-      "ths_1786448219597_3144_2f5c-1.webp",
-      "ths_1786448219597_3144_2f5c-2.webp",
-      "ths_1786448219597_3144_2f5c-3.webp"
+      "ths_1786448219597_3144_2f5c-0.webp"
     ],
     "sources": [
       {
@@ -39776,7 +39767,7 @@
         "authors": "Entropic RL"
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "wc": 3331
   },
   {
@@ -39792,20 +39783,17 @@
     "image_concepts": [
       "arch Certified Robustness for LLM Prompt Inje",
       "deep dive 5",
-      "perf 5",
-      "limits roadmap 5"
+      "perf 5"
     ],
     "image_prompts": [
       "technical academic diagram, white background, clean vector style, showing Certified Robustness for LLM Prompt Injection Defense: Instruction Hierarchy Separation, Spotlighting Delimiters, and Co architecture overview, nodes arrows mathematical notation highly detailed educational high resolution",
       "technical academic diagram, white background, clean vector style, showing Certified Robustness for LLM Prompt Injection Defense: Instruction Hierarchy Separation, Spotlighting Delimiters, and Co core algorithm innovation layers formal semantics highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Certified Robustness for LLM Prompt Injection Defense: Instruction Hierarchy Separation, Spotlighting Delimiters, and Co performance proof structure graphs tables complexity bounds highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Certified Robustness for LLM Prompt Injection Defense: Instruction Hierarchy Separation, Spotlighting Delimiters, and Co limitation future work roadmap tradeoffs design space highly detailed educational high resolution"
+      "technical academic diagram, white background, clean vector style, showing Certified Robustness for LLM Prompt Injection Defense: Instruction Hierarchy Separation, Spotlighting Delimiters, and Co performance proof structure graphs tables complexity bounds highly detailed educational high resolution"
     ],
     "images": [
       "ths_1786448220597_9193_9cc7-0.webp",
       "ths_1786448220597_9193_9cc7-1.webp",
-      "ths_1786448220597_9193_9cc7-2.webp",
-      "ths_1786448220597_9193_9cc7-3.webp"
+      "ths_1786448220597_9193_9cc7-2.webp"
     ],
     "sources": [
       {
@@ -39844,7 +39832,7 @@
         "authors": "ExfilStudy"
       }
     ],
-    "image_count": 4,
+    "image_count": 3,
     "wc": 3344
   },
   {
@@ -39860,20 +39848,17 @@
     "image_concepts": [
       "arch Mamba State-Space Models for Genomic Lon",
       "deep dive 6",
-      "perf 6",
-      "limits roadmap 6"
+      "perf 6"
     ],
     "image_prompts": [
       "technical academic diagram, white background, clean vector style, showing Mamba State-Space Models for Genomic Long-Context Modeling: Selective Scan DNA Encoding, Reverse-Complement Equivariance architecture overview, nodes arrows mathematical notation highly detailed educational high resolution",
       "technical academic diagram, white background, clean vector style, showing Mamba State-Space Models for Genomic Long-Context Modeling: Selective Scan DNA Encoding, Reverse-Complement Equivariance core algorithm innovation layers formal semantics highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Mamba State-Space Models for Genomic Long-Context Modeling: Selective Scan DNA Encoding, Reverse-Complement Equivariance performance proof structure graphs tables complexity bounds highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Mamba State-Space Models for Genomic Long-Context Modeling: Selective Scan DNA Encoding, Reverse-Complement Equivariance limitation future work roadmap tradeoffs design space highly detailed educational high resolution"
+      "technical academic diagram, white background, clean vector style, showing Mamba State-Space Models for Genomic Long-Context Modeling: Selective Scan DNA Encoding, Reverse-Complement Equivariance performance proof structure graphs tables complexity bounds highly detailed educational high resolution"
     ],
     "images": [
       "ths_1786448221597_7516_90d5-0.webp",
       "ths_1786448221597_7516_90d5-1.webp",
-      "ths_1786448221597_7516_90d5-2.webp",
-      "ths_1786448221597_7516_90d5-3.webp"
+      "ths_1786448221597_7516_90d5-2.webp"
     ],
     "sources": [
       {
@@ -39912,7 +39897,7 @@
         "authors": "MethylLLM"
       }
     ],
-    "image_count": 4,
+    "image_count": 3,
     "wc": 3350
   },
   {
@@ -39928,20 +39913,17 @@
     "image_concepts": [
       "arch Hardware Acceleration of Fully Homomorph",
       "deep dive 7",
-      "perf 7",
-      "limits roadmap 7"
+      "perf 7"
     ],
     "image_prompts": [
       "technical academic diagram, white background, clean vector style, showing Hardware Acceleration of Fully Homomorphic Encryption with CraterLake and F1: Modular NTT Switching, Key-Switching Decom architecture overview, nodes arrows mathematical notation highly detailed educational high resolution",
       "technical academic diagram, white background, clean vector style, showing Hardware Acceleration of Fully Homomorphic Encryption with CraterLake and F1: Modular NTT Switching, Key-Switching Decom core algorithm innovation layers formal semantics highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Hardware Acceleration of Fully Homomorphic Encryption with CraterLake and F1: Modular NTT Switching, Key-Switching Decom performance proof structure graphs tables complexity bounds highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Hardware Acceleration of Fully Homomorphic Encryption with CraterLake and F1: Modular NTT Switching, Key-Switching Decom limitation future work roadmap tradeoffs design space highly detailed educational high resolution"
+      "technical academic diagram, white background, clean vector style, showing Hardware Acceleration of Fully Homomorphic Encryption with CraterLake and F1: Modular NTT Switching, Key-Switching Decom performance proof structure graphs tables complexity bounds highly detailed educational high resolution"
     ],
     "images": [
       "ths_1786448222597_8316_9ec4-0.webp",
       "ths_1786448222597_8316_9ec4-1.webp",
-      "ths_1786448222597_8316_9ec4-2.webp",
-      "ths_1786448222597_8316_9ec4-3.webp"
+      "ths_1786448222597_8316_9ec4-2.webp"
     ],
     "sources": [
       {
@@ -39980,7 +39962,7 @@
         "authors": "OpenFHE"
       }
     ],
-    "image_count": 4,
+    "image_count": 3,
     "wc": 3348
   },
   {
@@ -39996,20 +39978,17 @@
     "image_concepts": [
       "arch Distributed Conflict-Based Search for Wa",
       "deep dive 8",
-      "perf 8",
-      "limits roadmap 8"
+      "perf 8"
     ],
     "image_prompts": [
       "technical academic diagram, white background, clean vector style, showing Distributed Conflict-Based Search for Warehouse Robotics: Temporal Graph Pruning, P-SPACE Completeness Bounds, and Learn architecture overview, nodes arrows mathematical notation highly detailed educational high resolution",
       "technical academic diagram, white background, clean vector style, showing Distributed Conflict-Based Search for Warehouse Robotics: Temporal Graph Pruning, P-SPACE Completeness Bounds, and Learn core algorithm innovation layers formal semantics highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Distributed Conflict-Based Search for Warehouse Robotics: Temporal Graph Pruning, P-SPACE Completeness Bounds, and Learn performance proof structure graphs tables complexity bounds highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Distributed Conflict-Based Search for Warehouse Robotics: Temporal Graph Pruning, P-SPACE Completeness Bounds, and Learn limitation future work roadmap tradeoffs design space highly detailed educational high resolution"
+      "technical academic diagram, white background, clean vector style, showing Distributed Conflict-Based Search for Warehouse Robotics: Temporal Graph Pruning, P-SPACE Completeness Bounds, and Learn performance proof structure graphs tables complexity bounds highly detailed educational high resolution"
     ],
     "images": [
       "ths_1786448223597_7172_af17-0.webp",
       "ths_1786448223597_7172_af17-1.webp",
-      "ths_1786448223597_7172_af17-2.webp",
-      "ths_1786448223597_7172_af17-3.webp"
+      "ths_1786448223597_7172_af17-2.webp"
     ],
     "sources": [
       {
@@ -40048,7 +40027,7 @@
         "authors": "WHCA*"
       }
     ],
-    "image_count": 4,
+    "image_count": 3,
     "wc": 3334
   },
   {
@@ -40062,22 +40041,13 @@
     "thesis": true,
     "type": "thesis",
     "image_concepts": [
-      "arch Zero-Knowledge Location Verification via",
-      "deep dive 9",
-      "perf 9",
-      "limits roadmap 9"
+      "arch Zero-Knowledge Location Verification via"
     ],
     "image_prompts": [
-      "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Location Verification via zk-SNARKs and Distance-Bounding: zk-Proof of Geofence Inclusion, Clock Skew Att architecture overview, nodes arrows mathematical notation highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Location Verification via zk-SNARKs and Distance-Bounding: zk-Proof of Geofence Inclusion, Clock Skew Att core algorithm innovation layers formal semantics highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Location Verification via zk-SNARKs and Distance-Bounding: zk-Proof of Geofence Inclusion, Clock Skew Att performance proof structure graphs tables complexity bounds highly detailed educational high resolution",
-      "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Location Verification via zk-SNARKs and Distance-Bounding: zk-Proof of Geofence Inclusion, Clock Skew Att limitation future work roadmap tradeoffs design space highly detailed educational high resolution"
+      "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Location Verification via zk-SNARKs and Distance-Bounding: zk-Proof of Geofence Inclusion, Clock Skew Att architecture overview, nodes arrows mathematical notation highly detailed educational high resolution"
     ],
     "images": [
-      "ths_1786448224597_8796_44b4-0.webp",
-      "ths_1786448224597_8796_44b4-1.webp",
-      "ths_1786448224597_8796_44b4-2.webp",
-      "ths_1786448224597_8796_44b4-3.webp"
+      "ths_1786448224597_8796_44b4-0.webp"
     ],
     "sources": [
       {
@@ -40116,7 +40086,7 @@
         "authors": "Groth"
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "wc": 3328
   }
 ]
