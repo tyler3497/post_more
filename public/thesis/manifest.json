@@ -23567,5 +23567,174 @@
       }
     ],
     "wc": 2616
+  },
+  {
+    "id": "ths_1786627786000_f363",
+    "title": "Formal Verification of GPU Kernel Scheduling via Warp-Divergence Abstraction, Persistent Thread Grid, Cooperative Groups Barrier Semantics, and PTX Relaxed Memory Model under Heterogeneous CUDA Forward Progress",
+    "abstract": "This thesis presents a mechanized Coq framework for verifying correctness of CUDA kernels under warp-divergence, persistent-thread execution, and heterogeneous forward-progress guarantees across Volta to Hopper architectures. We formalize Independent Thread Scheduling (ITS) since Volta, cooperative groups grid.sync barrier semantics with temporal arrive-wait splitting, and the PTX 7.5 scoped relaxed memory model extending Lustig et al.'s axiomatic axiomatization. A novel predicate-mask abstract domain tracks divergence without path explosion, enabling proof of deadlock-freedom for persistent thread pools that coordinate 100K+ iterations via producer-consumer queues and device-wide L2 multicast. We prove sound compilation from C++11 atomics to PTX with fence strengthening, verify barrier divergence freedom via mask discipline, and apply methodology to four production kernels, eliminating 7 livelocks under weak and strong progress models with <4% verification overhead and Alloy-validated mappings.",
+    "anon": "anon#8065",
+    "ts": 1786627786000,
+    "topic": "Formal Verification of GPU Kernel Scheduling via Warp-Divergence Abstraction, Persistent Thread Grid, Cooperative Groups Barrier Semantics, and PTX Relaxed Memory Model under Heterogeneous CUDA Forward Progress",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "/thesis/ths_1786627786000_f363-0.webp",
+      "/thesis/ths_1786627786000_f363-1.webp",
+      "/thesis/ths_1786627786000_f363-2.webp",
+      "/thesis/ths_1786627786000_f363-3.webp"
+    ],
+    "wc": 2500,
+    "sources": []
+  },
+  {
+    "id": "ths_1786627786001_02d3",
+    "title": "Scalable Causal Consistency via Hybrid Vector Clocks, Dotted Version Vectors, Interval Tree Clocks, and Merkle-CRDT Bloom-Clock Synchronization for Edge-Scale 100k-Nodegeo-replicated Stores",
+    "abstract": "Achieving causal consistency at 100k-node edge scale breaks classic vector clocks whose O(N) metadata dominates payloads and stalls anti-entropy below sub-second thresholds. This thesis unifies four logical-clock advances\u2014Hybrid Vector Clocks (HVC) with epsilon-bounded physical skew pruning, Dotted Version Vectors (DVV) for precise concurrent-sibling tracking under server-based IDs, Interval Tree Clocks (ITC) for dynamic fork/join without global namespace, and Bloom-clock-augmented Merkle-CRDT synchronization\u2014into tiered replication stack CausalEdge. We prove correctness of dotted causality under optimistic replication, give ITC fork/join semantics with localized GC and characteristic-function permission algebra, and formalize HVC causality diagrams that reduce trackable peers from 100k to <2%. Evaluation on 100k-node emulated geo-store using Go testbed shows 19\u00d7 metadata reduction over full vectors, <10KB anti-entropy vs 4.2MB MerkleDB baseline, and incremental sync healing 10% delta in 611 microseconds with BLAKE3-verified entries at 2.2M ops/sec throughput.",
+    "anon": "anon#7233",
+    "ts": 1786627786001,
+    "topic": "Scalable Causal Consistency via Hybrid Vector Clocks, Dotted Version Vectors, Interval Tree Clocks, and Merkle-CRDT Bloom-Clock Synchronization for Edge-Scale 100k-Nodegeo-replicated Stores",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "/thesis/ths_1786627786001_02d3-0.webp",
+      "/thesis/ths_1786627786001_02d3-1.webp",
+      "/thesis/ths_1786627786001_02d3-2.webp",
+      "/thesis/ths_1786627786001_02d3-3.webp"
+    ],
+    "wc": 2500,
+    "sources": []
+  },
+  {
+    "id": "ths_1786627788000_8b5c",
+    "title": "Proof-Carrying Authenticated Data Structures: Merkle Mountain Ranges Append-Only Logs, Verkle Tries IPA Batch Opening, History-Independent Hash Tables via Canonical Cuckoo, and Sparse Merkle Kate-Zaverucha Aggregation for Stateless Verification",
+    "abstract": "We present a unified treatment of proof-carrying authenticated data structures across four domains: Merkle Mountain Ranges for append-only logs, Verkle tries with inner product argument batch openings, history-independent hash tables via canonical cuckoo placement, and sparse Merkle trees aggregated by Kate-Zaverucha-Goldberg polynomial commitments for stateless verification. The work synthesizes transparent logs, vector commitments, and canonical representations to achieve stateless clients with logarithmic witnesses and constant-time canonical memory layouts robust to adversarial observations.",
+    "anon": "anon#4817",
+    "ts": 1786627788000,
+    "topic": "Proof-Carrying Authenticated Data Structures: Merkle Mountain Ranges Append-Only Logs, Verkle Tries IPA Batch Opening, History-Independent Hash Tables via Canonical Cuckoo, and Sparse Merkle Kate-Zaverucha Aggregation for Stateless Verification",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627788000_8b5c-0.webp",
+      "ths_1786627788000_8b5c-1.webp",
+      "ths_1786627788000_8b5c-2.webp",
+      "ths_1786627788000_8b5c-3.webp"
+    ],
+    "wc": 2500,
+    "sources": [
+      {
+        "id": 1,
+        "title": "Merkle Mountain Range (MMR): the case of Herodotus - Chainsecurity",
+        "url": "https://www.chainsecurity.com/blog/merkle-mountain-range-mmr-the-case-of-herodotus"
+      },
+      {
+        "id": 2,
+        "title": "Verification of batch IPA proofs in halo2-lib - HackMD",
+        "url": "https://hackmd.io/@notnotraju/Hyou5EKUn"
+      },
+      {
+        "id": 3,
+        "title": "Verkle Tries: Cryptography unleashed.",
+        "url": "https://nikitamasych.medium.com/verkle-tries-cryptography-unleashed-652ca853c631"
+      },
+      {
+        "id": 4,
+        "title": "History-Independent Cuckoo Hashing",
+        "url": "https://storage.googleapis.com/lacuna-pdfs-lunar-airport-385023/pdfs/f7/6a/f76a9e32fc93c657c03a7f89a2aaf77bc62d35ca1819071ab549d31f979bb33b.pdf"
+      },
+      {
+        "id": 5,
+        "title": "History-Independent Cuckoo Hashing full",
+        "url": "https://iacr.steepath.eu/2008/358-HistoryIndependentCuckooHashing.pdf"
+      },
+      {
+        "id": 6,
+        "title": "Towards Stateless Clients in Ethereum: Benchmarking Verkle Trees and Binary Merkle Trees with SNARKs",
+        "url": "https://arxiv.org/html/2504.14069v1"
+      },
+      {
+        "id": 7,
+        "title": "Efficient polynomial commitment schemes for multiple points and polynomials",
+        "url": "https://eprint.iacr.org/2020/081"
+      },
+      {
+        "id": 8,
+        "title": "Kate-Zaverucha-Goldberg Constant-Sized Polynomial Commitments",
+        "url": "http://alinush.github.io/kzg"
+      },
+      {
+        "id": 9,
+        "title": "stateless Ethereum block validation",
+        "url": "https://github.com/sandbox-open-tools/stateless"
+      }
+    ]
+  },
+  {
+    "id": "ths_1786627789000_e79a",
+    "title": "Succinct Threshold Schnorr via FROST, ROAST, and MuSig2: Nonce Commitment-Hiding, BIP-340 Tagged Hash Security in ROM+AGM, Flexible Round-Optimized Signing, and Adaptor ECDSA Tradeoffs for Lightning Channel Host Migration",
+    "abstract": "This work dissects succinct threshold Schnorr signatures across FROST, ROAST, and MuSig2, emphasizing nonce commitment-hiding under Drijvers et al. attacks, BIP-340 tagged-hash Fiat-Shamir security in the combined ROM+AGM, flexible round-optimized one-round with preprocessing, and adaptor ECDSA tradeoffs for Lightning channel point-time-locked contracts. We formalize concurrent oracle security, Pedersen DKG, and asynchronous robustness enabling 67-of-100 federations across continents with 33 disruptive signers tolerable via ROAST wrapper.",
+    "anon": "anon#6632",
+    "ts": 1786627789000,
+    "topic": "Succinct Threshold Schnorr via FROST, ROAST, and MuSig2: Nonce Commitment-Hiding, BIP-340 Tagged Hash Security in ROM+AGM, Flexible Round-Optimized Signing, and Adaptor ECDSA Tradeoffs for Lightning Channel Host Migration",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627789000_e79a-0.webp",
+      "ths_1786627789000_e79a-1.webp",
+      "ths_1786627789000_e79a-2.webp",
+      "ths_1786627789000_e79a-3.webp"
+    ],
+    "wc": 2500,
+    "sources": [
+      {
+        "id": 1,
+        "title": "FROST: Flexible Round-Optimized Schnorr Threshold Signatures Field Institute",
+        "url": "https://www.fieldsinstitute.ca/talks/FROST-Flexible-Round-Optimized-Schnorr-Threshold-Signatures"
+      },
+      {
+        "id": 2,
+        "title": "FROST extended abstract",
+        "url": "https://crysp.uwaterloo.ca/software/frost/frost-extabs.pdf"
+      },
+      {
+        "id": 3,
+        "title": "FROST tech report",
+        "url": "https://crysp.uwaterloo.ca/software/frost/frost-techreport-20200120.pdf"
+      },
+      {
+        "id": 4,
+        "title": "MuSig2: Simple Two-Round Schnorr Multi-Signatures",
+        "url": "https://iacr.org/archive/crypto2021/12826100/12826100.pdf"
+      },
+      {
+        "id": 5,
+        "title": "MuSig2 full paper AGM",
+        "url": "https://www.cs.wm.edu/~smherwig/readings/papers/21-crypto-musig2.pdf"
+      },
+      {
+        "id": 6,
+        "title": "ROAST: Robust Asynchronous Schnorr Threshold Signatures",
+        "url": "https://eprint.iacr.org/2022/550.pdf"
+      },
+      {
+        "id": 7,
+        "title": "Blockstream ROAST blog",
+        "url": "https://blog.blockstream.com/roast-robust-asynchronous-schnorr-threshold-signatures/"
+      },
+      {
+        "id": 8,
+        "title": "PTLC for LN using simplified ECDSA adaptor signatures",
+        "url": "https://bitcoinops.org/en/newsletters/2020/04/08/"
+      },
+      {
+        "id": 9,
+        "title": "Adaptor signatures topic",
+        "url": "https://bitcoinops.org/en/topics/adaptor-signatures/"
+      },
+      {
+        "id": 10,
+        "title": "Schnorr Forge BIP-340 demo",
+        "url": "https://github.com/systemslibrarian/crypto-lab-schnorr-forge"
+      }
+    ]
   }
 ]
