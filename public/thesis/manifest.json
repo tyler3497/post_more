@@ -18648,7 +18648,9 @@
     "thesis": true,
     "type": "thesis",
     "images": [
-      "ths_1786657518528_9d5f_cb70-0.webp"
+      "ths_1786657518528_9d5f_cb70-0.webp",
+      "ths_1786657518528_9d5f_cb70-1.webp",
+      "ths_1786657518528_9d5f_cb70-2.webp"
     ],
     "image_concepts": [
       "Exascale I/O forwarding hierarchy compute nodes burst buffer nodes PFS Lustre bandwidth bottleneck multi-stage aggregation",
@@ -18710,7 +18712,11 @@
     "topic": "CRIU live migration eBPF checkpoint TCP_REPAIR",
     "thesis": true,
     "type": "thesis",
-    "images": [],
+    "images": [
+      "ths_1786657519449_a1c4_9761-0.webp",
+      "ths_1786657519449_a1c4_9761-1.webp",
+      "ths_1786657519449_a1c4_9761-2.webp"
+    ],
     "image_concepts": [
       "CRIU checkpoint restore workflow dump memory maps /proc files OpenED namespaces CGroups parasitical seizing code injection",
       "Pre-copy vs Post-copy dirty page tracking iterative synchronization vs demand paging userfaultfd remote",
