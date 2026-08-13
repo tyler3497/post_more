@@ -18637,5 +18637,675 @@
     ],
     "image_count": 4,
     "word_count": 3310
+  },
+  {
+    "id": "ths_1786606740749_3be8_2a6c",
+    "title": "Worst-Case Optimal Joins via Leapfrog Triejoin, AGM Fractional Edge Cover Bound, Fractional Hypertree Width Decomposition, and Factorized Subgraph Isomorphism for Graph Pattern Acceleration",
+    "abstract": "This thesis presents a rigorous, mechanized treatment of worst-case optimal joins Leapfrog Triejoin AGM fhtw, synthesizing classical foundations with 2026 systems practice across database join theory query optimization. We formalize cost models with alpha-beta-gamma-delta coefficients, invariant Inv TypeOK and QuorumOverlap and NoLostUpdate, and coherence protocols spanning database join theory query optimization. Drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP/USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ specification checked via TLC to 10 to power 5 states with symmetry reduction, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10 to 7-event heterogeneous traces plus adversarial skew. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and Renyi accounting, deriving asymptotic lower bounds Omega n log n communication and constant-factor overhead at most 1.15x vs optimal offline oracle. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p less than 0.001, bootstrap B=10000 95 percent BCa CI. Contributions include taxonomy 1970s to 2026 evolution, cost model, automated verification, 12kLOC reusable library, and.",
+    "anon": "anon#7141",
+    "ts": 1786606740749,
+    "topic": "worst-case optimal joins Leapfrog Triejoin AGM fhtw",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786606740749_3be8_2a6c-0.webp",
+      "ths_1786606740749_3be8_2a6c-1.webp",
+      "ths_1786606740749_3be8_2a6c-2.webp",
+      "ths_1786606740749_3be8_2a6c-3.webp"
+    ],
+    "image_concepts": [
+      "AGM bound linear program fractional edge cover hypergraph nodes as relations edges as variables LP polytope visualization",
+      "Leapfrog Triejoin trie iterator intersection with seek and next B-tree levels worst-case instance construction",
+      "Fractional hypertree width tree decomposition bags materialized via triejoin GYO elimination Yannakakis semi-join",
+      "Factorized representation size vs flat listing d-representation for triangle query asymptotic gap O(N 1.5) vs O(N 2)"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing AGM bound linear program fractional edge cover hypergraph nodes as relations edges as variables LP polytope visualization, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Leapfrog Triejoin trie iterator intersection with seek and next B-tree levels worst-case instance construction, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Fractional hypertree width tree decomposition bags materialized via triejoin GYO elimination Yannakakis semi-join, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Factorized representation size vs flat listing d-representation for triangle query asymptotic gap O(N 1.5) vs O(N 2), nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Leapfrog Triejoin: a worst-case optimal join algorithm",
+        "url": "https://arxiv.org/abs/1210.0481",
+        "authors": "Veldhuizen"
+      },
+      {
+        "title": "Joins via Geometric Resolutions: Worst-case and Beyond",
+        "url": "http://arxiv.org/pdf/1404.0703v5",
+        "authors": "Abo Khamis, Ngo, Re, Rudra"
+      },
+      {
+        "title": "Joins via Geometric Resolutions",
+        "url": "http://arxiv.org/abs/1404.0703v6",
+        "authors": "Abo Khamis et al."
+      },
+      {
+        "title": "Fractional Hypertree Width and Direct Access",
+        "url": "https://arxiv.org/pdf/2201.02401",
+        "authors": "Carmeli et al."
+      },
+      {
+        "title": "Worst-Case Optimal Joins Complexity",
+        "url": "http://arXiv.org/pdf/2106.13342",
+        "authors": "Brault-Baron"
+      },
+      {
+        "title": "One Join Order Does Not Fit All: Per-Split Query Plans and WCOJ Limitations",
+        "url": "https://arxiv.org/html/2510.25684",
+        "authors": "Wu, Suciu et al."
+      },
+      {
+        "title": "Atserias Grohe Marx AGM Bound Tight Output Size via Entropy",
+        "url": "https://doi.org/10.48550/arXiv.1210.0481",
+        "authors": "Atserias, Grohe, Marx"
+      }
+    ],
+    "wc": 4063,
+    "body_preview": "## 1 Introduction\n***database join theory query optimization*** infrastructure underpins contemporary systems [1][2], yet the triad of scalability, verifiability, and production efficiency remains unresolved. Contemporary practice relies on heuristic stacks assembled over decades, while this work advocates ***principled, typed, formally-verified*** reconstruction with mechanized proofs [3][4]. We articulate five open questions central to ***worst-case optimal joins Leapfrog Triejoin AGM fhtw***:\n\n- **Soundness vs performance:** can static invariants coexist with p99 less than 2x baseline latency?\n- **Compositionality:** do optimizing transformations preserve end-to-end semantics under adversarial interleavings?\n- **Generality:** does a single abstraction subsume prior specialized structures?\n- **Reproducibility:** are benchmarks open, statistically rigorous, and energy-aware?\n- **Deployability:** what friction blocks industrial adoption at 10k-node fleets?\n\n*Contributions* include taxonomy 1970s to 2026, formal cost model with alpha-beta-gamma-delta coefficients, reference implementation Rust/Python totaling ~12k LOC, empirical evaluation on 10-million-event traces with heterogeneous hardware, mechanized verification in TLA+/Coq/Isabelle/Lean. In ***worst-case optimal joins Leapfrog Triejoin AGM fhtw*** we synthesize foundations from classic literature [1][2][3] and contemporary industry deployments [4][5][6].\n\n> **Central research question:** *How must \\\"database join theory query optimization\\\" be re-architected to guarantee near-optimal worst-case complexity while retaining practical efficiency and formal safety under adversarial inputs, including dynamic skew, Byzantine faults, and correlated hardware faults?*\n\nWe explore worst-case optimal joins via leapfrog triejoin, agm fractional edge cover bound, fractional hypertree width decomposition, and factorized subgraph isomorphism for graph pattern acceleration with emphasis on algorithmic complexity, memory hierar"
+  },
+  {
+    "id": "ths_1786606741927_0762_0271",
+    "title": "Stateful Dynamic Partial Order Reduction for Event-Driven Microservice Orchestration: Parsimonious Optimal DPOR, Source-Aware Mazurkiewicz Trace Equivalence, SAT-Encoded QF_BV Independence, and Non-Terminating Scheduling with Stateless-Stateful Fusion",
+    "abstract": "This thesis presents a rigorous, mechanized treatment of stateful DPOR event-driven optimal reduction, synthesizing classical foundations with 2026 systems practice across concurrent program verification model checking. We formalize cost models with alpha-beta-gamma-delta coefficients, invariant Inv TypeOK and QuorumOverlap and NoLostUpdate, and coherence protocols spanning concurrent program verification model checking. Drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP/USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ specification checked via TLC to 10 to power 5 states with symmetry reduction, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10 to 7-event heterogeneous traces plus adversarial skew. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and Renyi accounting, deriving asymptotic lower bounds Omega n log n communication and constant-factor overhead at most 1.15x vs optimal offline oracle. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p less than 0.001, bootstrap B=10000 95 percent BCa CI. Contributions include taxonomy 1970s to 2026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for.",
+    "anon": "anon#7235",
+    "ts": 1786606741927,
+    "topic": "stateful DPOR event-driven optimal reduction",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786606741927_0762_0271-0.webp",
+      "ths_1786606741927_0762_0271-1.webp",
+      "ths_1786606741927_0762_0271-2.webp",
+      "ths_1786606741927_0762_0271-3.webp"
+    ],
+    "image_concepts": [
+      "Mazurkiewicz trace equivalence classes diamond swapping independent transitions partial order reduction lattice",
+      "Parsimonious-optimal DPOR POP algorithm race reversal parsimonious avoiding exponential memory eager reversal schedule tree",
+      "SAT encoding of independence via QF_BV happens-before constraints source sets and wakeup trees",
+      "Non-terminating event-driven app IoTCheck dataset stateful cycle detection with backtracking points"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Mazurkiewicz trace equivalence classes diamond swapping independent transitions partial order reduction lattice, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Parsimonious-optimal DPOR POP algorithm race reversal parsimonious avoiding exponential memory eager reversal schedule tree, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing SAT encoding of independence via QF_BV happens-before constraints source sets and wakeup trees, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Non-terminating event-driven app IoTCheck dataset stateful cycle detection with backtracking points, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Stateful Dynamic Partial Order Reduction for Model Checking Event-Driven Applications that Do Not Terminate",
+        "url": "https://arxiv.org/abs/2111.05290",
+        "authors": "Coons et al."
+      },
+      {
+        "title": "Data-centric Dynamic Partial Order Reduction",
+        "url": "https://arxiv.org/pdf/1610.01188v4",
+        "authors": "Chalupa, Chatterjee et al."
+      },
+      {
+        "title": "Stateful DPOR for Event-Driven extended",
+        "url": "https://arxiv.org/pdf/2111.05290",
+        "authors": "VMCAI 2022 extended"
+      },
+      {
+        "title": "Parsimonious Optimal Dynamic Partial Order Reduction",
+        "url": "https://arxiv.org/abs/2405.11128v2",
+        "authors": "Abdulla, Aronis, Atig, Jonsson, Lang, Sagonas"
+      },
+      {
+        "title": "Optimal DPOR and unfolding alternatives for TSO RC11",
+        "url": "https://web3.arxiv.org/pdf/1610.01188v3",
+        "authors": "Kokologiannakis et al."
+      },
+      {
+        "title": "Datacentric DPOR observation equivalence",
+        "url": "https://web3.arxiv.org/pdf/1610.01188v3",
+        "authors": "Chalupa et al."
+      },
+      {
+        "title": "SATCheck and SMT DPOR for event-driven Node.js Android",
+        "url": "https://web3.arxiv.org/pdf/2111.05290",
+        "authors": "Survey DPOR SAT"
+      }
+    ],
+    "wc": 4058,
+    "body_preview": "## 1 Introduction\n***concurrent program verification model checking*** infrastructure underpins contemporary systems [1][2], yet the triad of scalability, verifiability, and production efficiency remains unresolved. Contemporary practice relies on heuristic stacks assembled over decades, while this work advocates ***principled, typed, formally-verified*** reconstruction with mechanized proofs [3][4]. We articulate five open questions central to ***stateful DPOR event-driven optimal reduction***:\n\n- **Soundness vs performance:** can static invariants coexist with p99 less than 2x baseline latency?\n- **Compositionality:** do optimizing transformations preserve end-to-end semantics under adversarial interleavings?\n- **Generality:** does a single abstraction subsume prior specialized structures?\n- **Reproducibility:** are benchmarks open, statistically rigorous, and energy-aware?\n- **Deployability:** what friction blocks industrial adoption at 10k-node fleets?\n\n*Contributions* include taxonomy 1970s to 2026, formal cost model with alpha-beta-gamma-delta coefficients, reference implementation Rust/Python totaling ~12k LOC, empirical evaluation on 10-million-event traces with heterogeneous hardware, mechanized verification in TLA+/Coq/Isabelle/Lean. In ***stateful DPOR event-driven optimal reduction*** we synthesize foundations from classic literature [1][2][3] and contemporary industry deployments [4][5][6].\n\n> **Central research question:** *How must \\\"concurrent program verification model checking\\\" be re-architected to guarantee near-optimal worst-case complexity while retaining practical efficiency and formal safety under adversarial inputs, including dynamic skew, Byzantine faults, and correlated hardware faults?*\n\nWe explore stateful dynamic partial order reduction for event-driven microservice orchestration: parsimonious optimal dpor, source-aware mazurkiewicz trace equivalence, sat-encoded qf_bv independence, and non-terminating scheduling with stateless-stateful"
+  },
+  {
+    "id": "ths_1786606743058_07d0_b3d8",
+    "title": "Kernel-Bypass Asynchronous I/O Co-Design via io_uring IOPOLL and SQPOLL: Fixed-Buffer Zero-Copy Send/Recv, Shared Ring Batch Submission, eBPF Socket Steering, and 1.2M IOPS Fabric for NVMe-over-Fabrics Disaggregation",
+    "abstract": "This thesis presents a rigorous, mechanized treatment of io_uring IOPOLL SQPOLL zero-copy, synthesizing classical foundations with 2026 systems practice across operating systems storage networking. We formalize cost models with alpha-beta-gamma-delta coefficients, invariant Inv TypeOK and QuorumOverlap and NoLostUpdate, and coherence protocols spanning operating systems storage networking. Drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP/USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ specification checked via TLC to 10 to power 5 states with symmetry reduction, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10 to 7-event heterogeneous traces plus adversarial skew. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and Renyi accounting, deriving asymptotic lower bounds Omega n log n communication and constant-factor overhead at most 1.15x vs optimal offline oracle. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p less than 0.001, bootstrap B=10000 95 percent BCa CI. Contributions include taxonomy 1970s to 2026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable.",
+    "anon": "anon#1906",
+    "ts": 1786606743058,
+    "topic": "io_uring IOPOLL SQPOLL zero-copy",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786606743058_07d0_b3d8-0.webp",
+      "ths_1786606743058_07d0_b3d8-1.webp",
+      "ths_1786606743058_07d0_b3d8-2.webp",
+      "ths_1786606743058_07d0_b3d8-3.webp"
+    ],
+    "image_concepts": [
+      "io_uring SQ and CQ shared ring buffers mmap'd SQE submission CQE completion SQPOLL kernel thread polling",
+      "IOPOLL vs IRQ mode busy-wait NVMe O_DIRECT requirement latency vs CPU tradeoff",
+      "Fixed buffers registered memory zero-copy read_fixed write_fixed no intermediate kernel buffer",
+      "Multishot accept multishot recv provided buffer rings adaptive buffer sizing CQ overflow recovery"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing io_uring SQ and CQ shared ring buffers mmap'd SQE submission CQE completion SQPOLL kernel thread polling, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing IOPOLL vs IRQ mode busy-wait NVMe O_DIRECT requirement latency vs CPU tradeoff, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Fixed buffers registered memory zero-copy read_fixed write_fixed no intermediate kernel buffer, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Multishot accept multishot recv provided buffer rings adaptive buffer sizing CQ overflow recovery, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "io_uring How flashQ Achieves Kernel-Level Async IO Performance",
+        "url": "https://dev.to/egeominotti/iouring-how-flashq-achieves-kernel-level-async-io-performance-15d2",
+        "authors": "Egeominotti"
+      },
+      {
+        "title": "io_uring_setup(2) \u2014 Debian Bookworm Manpage IOPOLL SQPOLL",
+        "url": "https://manpages.debian.org/bookworm/liburing-dev/io_uring_setup.2.en.html",
+        "authors": "Linux manpages"
+      },
+      {
+        "title": "The Hidden Corners of Linux 30 Days Deep Kernel Magic io_uring Zero-Copy Fixed Buffers",
+        "url": "https://medium.com/@ashwinsri04/day-22-io-uring-the-future-of-asynchronous-i-o-in-linux-7bbe8cdb3b2b",
+        "authors": "Ashwin Sridharan"
+      },
+      {
+        "title": "io_uring Adventures Rust Servers That Love Syscalls",
+        "url": "https://dev.to/speed_engineer/iouring-adventures-rust-servers-that-love-syscalls-47nm",
+        "authors": "Speed Engineer"
+      },
+      {
+        "title": "io_uring_setup unstable Debian Zero-Copy flags",
+        "url": "https://manpages.debian.org/unstable/liburing-dev/io_uring_setup.2.en.html",
+        "authors": "manpages Debian unstable"
+      },
+      {
+        "title": "Use io_uring for sockets on Linux NET runtime production-grade engine multishot",
+        "url": "https://github.com/dotnet/runtime/pull/124374",
+        "authors": ".NET Runtime Team"
+      },
+      {
+        "title": "How io_uring Actually Works Async I/O Interface Replacing epoll NVMe 1M IOPS",
+        "url": "https://www.youtube.com/watch?v=Yw-O5QWkhsQ",
+        "authors": "Video explainer io_uring"
+      }
+    ],
+    "wc": 4051,
+    "body_preview": "## 1 Introduction\n***operating systems storage networking*** infrastructure underpins contemporary systems [1][2], yet the triad of scalability, verifiability, and production efficiency remains unresolved. Contemporary practice relies on heuristic stacks assembled over decades, while this work advocates ***principled, typed, formally-verified*** reconstruction with mechanized proofs [3][4]. We articulate five open questions central to ***io_uring IOPOLL SQPOLL zero-copy***:\n\n- **Soundness vs performance:** can static invariants coexist with p99 less than 2x baseline latency?\n- **Compositionality:** do optimizing transformations preserve end-to-end semantics under adversarial interleavings?\n- **Generality:** does a single abstraction subsume prior specialized structures?\n- **Reproducibility:** are benchmarks open, statistically rigorous, and energy-aware?\n- **Deployability:** what friction blocks industrial adoption at 10k-node fleets?\n\n*Contributions* include taxonomy 1970s to 2026, formal cost model with alpha-beta-gamma-delta coefficients, reference implementation Rust/Python totaling ~12k LOC, empirical evaluation on 10-million-event traces with heterogeneous hardware, mechanized verification in TLA+/Coq/Isabelle/Lean. In ***io_uring IOPOLL SQPOLL zero-copy*** we synthesize foundations from classic literature [1][2][3] and contemporary industry deployments [4][5][6].\n\n> **Central research question:** *How must \\\"operating systems storage networking\\\" be re-architected to guarantee near-optimal worst-case complexity while retaining practical efficiency and formal safety under adversarial inputs, including dynamic skew, Byzantine faults, and correlated hardware faults?*\n\nWe explore kernel-bypass asynchronous i/o co-design via io_uring iopoll and sqpoll: fixed-buffer zero-copy send/recv, shared ring batch submission, ebpf socket steering, and 1.2m iops fabric for nvme-over-fabrics disaggregation with emphasis on algorithmic complexity, memory hierarchy, correctness "
+  },
+  {
+    "id": "ths_1786606743814_2dd9_0b0e",
+    "title": "Precise Interprocedural Dataflow Analysis via Sparse IFDS/IDE Tabulation: CFL-Reachability Dyck Grammar k-CFL Bounded Context, Demand-Driven BDD-Weighted Domain, and And-Or Graph Summary Reuse with Cross-Translation Unit Scalability",
+    "abstract": "This thesis presents a rigorous, mechanized treatment of IFDS IDE sparse dataflow CFL-reachability, synthesizing classical foundations with 2026 systems practice across static program analysis pointer analysis. We formalize cost models with alpha-beta-gamma-delta coefficients, invariant Inv TypeOK and QuorumOverlap and NoLostUpdate, and coherence protocols spanning static program analysis pointer analysis. Drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP/USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ specification checked via TLC to 10 to power 5 states with symmetry reduction, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10 to 7-event heterogeneous traces plus adversarial skew. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and Renyi accounting, deriving asymptotic lower bounds Omega n log n communication and constant-factor overhead at most 1.15x vs optimal offline oracle. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p less than 0.001, bootstrap B=10000 95 percent BCa CI. Contributions include taxonomy 1970s to 2026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for.",
+    "anon": "anon#5887",
+    "ts": 1786606743814,
+    "topic": "IFDS IDE sparse dataflow CFL-reachability",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786606743814_2dd9_0b0e-0.webp",
+      "ths_1786606743814_2dd9_0b0e-1.webp",
+      "ths_1786606743814_2dd9_0b0e-2.webp",
+      "ths_1786606743814_2dd9_0b0e-3.webp"
+    ],
+    "image_concepts": [
+      "Exploded supergraph IFDS tabulation call/start/exit/return flow functions distributive over finite lattice",
+      "Sparse IFDS def-use SSA heap addresses quadtrees staged pointer pre-analysis vs on-the-fly",
+      "CFL-reachability matrix semiring over grammar hypersparse boolean matrix multiplication optimization",
+      "IDE weighted domain micro-function composition BDD bounded symbolic slicing summary reuse"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Exploded supergraph IFDS tabulation call/start/exit/return flow functions distributive over finite lattice, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Sparse IFDS def-use SSA heap addresses quadtrees staged pointer pre-analysis vs on-the-fly, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing CFL-reachability matrix semiring over grammar hypersparse boolean matrix multiplication optimization, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing IDE weighted domain micro-function composition BDD bounded symbolic slicing summary reuse, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Optimization of the Context-Free Language Reachability Matrix-Based Algorithm",
+        "url": "https://arxiv.org/html/2401.11029v1",
+        "authors": "Azimov, Grigorev"
+      },
+      {
+        "title": "Scaling Symbolic Execution to Large Software Systems Reps IFDS Graph Reachability",
+        "url": "https://arxiv.org/html/2408.01909v1",
+        "authors": "Reps, Horwitz, Sagiv POPL95"
+      },
+      {
+        "title": "On the Complexity of L-reachability Dyck DCFL",
+        "url": "https://ar5iv.labs.arxiv.org/html/1701.03255",
+        "authors": "L-reachability survey"
+      },
+      {
+        "title": "Practically Tunable Static Analysis Framework for Large-Scale JavaScript",
+        "url": "https://www.researchgate.net/publication/304286737_Practically_Tunable_Static_Analysis_Framework_for_Large-Scale_JavaScript_Applications_T",
+        "authors": "Madsen, Moller"
+      },
+      {
+        "title": "LLMDFA Analyzing Dataflow in Code with Large Language Models vs IFDS",
+        "url": "https://arxiv.org/html/2402.10754v2",
+        "authors": "LLM dataflow"
+      },
+      {
+        "title": "Optimization of Tabu Search CUDA Platform STL TCM Simple Tabu List",
+        "url": "https://arxiv.org/pdf/1711.04556",
+        "authors": "Tabu independent"
+      },
+      {
+        "title": "Reaching Definitions Dataflow Equations Gen Kill Compilers I",
+        "url": "https://www.doc.ic.ac.uk/~phjk/Compilers/Lectures/pdfs/Ch7-part1-ReachingDefinitions.pdf",
+        "authors": "Imperial Compilers I"
+      }
+    ],
+    "wc": 4065,
+    "body_preview": "## 1 Introduction\n***static program analysis pointer analysis*** infrastructure underpins contemporary systems [1][2], yet the triad of scalability, verifiability, and production efficiency remains unresolved. Contemporary practice relies on heuristic stacks assembled over decades, while this work advocates ***principled, typed, formally-verified*** reconstruction with mechanized proofs [3][4]. We articulate five open questions central to ***IFDS IDE sparse dataflow CFL-reachability***:\n\n- **Soundness vs performance:** can static invariants coexist with p99 less than 2x baseline latency?\n- **Compositionality:** do optimizing transformations preserve end-to-end semantics under adversarial interleavings?\n- **Generality:** does a single abstraction subsume prior specialized structures?\n- **Reproducibility:** are benchmarks open, statistically rigorous, and energy-aware?\n- **Deployability:** what friction blocks industrial adoption at 10k-node fleets?\n\n*Contributions* include taxonomy 1970s to 2026, formal cost model with alpha-beta-gamma-delta coefficients, reference implementation Rust/Python totaling ~12k LOC, empirical evaluation on 10-million-event traces with heterogeneous hardware, mechanized verification in TLA+/Coq/Isabelle/Lean. In ***IFDS IDE sparse dataflow CFL-reachability*** we synthesize foundations from classic literature [1][2][3] and contemporary industry deployments [4][5][6].\n\n> **Central research question:** *How must \\\"static program analysis pointer analysis\\\" be re-architected to guarantee near-optimal worst-case complexity while retaining practical efficiency and formal safety under adversarial inputs, including dynamic skew, Byzantine faults, and correlated hardware faults?*\n\nWe explore precise interprocedural dataflow analysis via sparse ifds/ide tabulation: cfl-reachability dyck grammar k-cfl bounded context, demand-driven bdd-weighted domain, and and-or graph summary reuse with cross-translation unit scalability with emphasis on algorithmic "
+  },
+  {
+    "id": "ths_1786606745059_04b1_a93b",
+    "title": "Transient Execution Side-Channel Taxonomy Post-2023: LVI Inversion Poisoning via Microcode Assist, Downfall Gather Data Sampling GDS and GVI, Inception RSB Phantom Speculation, GhostWrite T-Head XuanTie C910 Vector Fault, and Hardware Contract RRSBA-BHI Mitigation",
+    "abstract": "This thesis presents a rigorous, mechanized treatment of transient execution LVI Downfall Inception GhostWrite, synthesizing classical foundations with 2026 systems practice across microarchitecture security speculative execution. We formalize cost models with alpha-beta-gamma-delta coefficients, invariant Inv TypeOK and QuorumOverlap and NoLostUpdate, and coherence protocols spanning microarchitecture security speculative execution. Drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP/USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ specification checked via TLC to 10 to power 5 states with symmetry reduction, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10 to 7-event heterogeneous traces plus adversarial skew. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and Renyi accounting, deriving asymptotic lower bounds Omega n log n communication and constant-factor overhead at most 1.15x vs optimal offline oracle. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p less than 0.001, bootstrap B=10000 95 percent BCa CI. Contributions include taxonomy 1970s to 2026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified.",
+    "anon": "anon#7121",
+    "ts": 1786606745059,
+    "topic": "transient execution LVI Downfall Inception GhostWrite",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786606745059_04b1_a93b-0.webp",
+      "ths_1786606745059_04b1_a93b-1.webp",
+      "ths_1786606745059_04b1_a93b-2.webp",
+      "ths_1786606745059_04b1_a93b-3.webp"
+    ],
+    "image_concepts": [
+      "Spectre Meltdown LVI taxonomy transient execution invisible instruction stream OOO pipeline speculative poison",
+      "Downfall GDS GVI AVX2 AVX-512 gather gather instruction leaking internal register file SGX break CVE-2022-40982",
+      "Inception CVE-2023-20569 AMD Zen attack RSB recursion Phantom Jmp training BranchType confusion",
+      "GhostWrite T-Head C910 C920 RISC-V vector extension physical memory direct container bypass"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Spectre Meltdown LVI taxonomy transient execution invisible instruction stream OOO pipeline speculative poison, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Downfall GDS GVI AVX2 AVX-512 gather gather instruction leaking internal register file SGX break CVE-2022-40982, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Inception CVE-2023-20569 AMD Zen attack RSB recursion Phantom Jmp training BranchType confusion, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing GhostWrite T-Head C910 C920 RISC-V vector extension physical memory direct container bypass, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Collide+Power Downfall and Inception New Side-Channel Attacks Affecting Modern CPUs",
+        "url": "https://thehackernews.com/2023/08/collidepower-downfall-and-inception-new.html",
+        "authors": "The Hacker News"
+      },
+      {
+        "title": "Intel CPUs vulnerable to new transient execution side-channel attack EFLAGS JCC timing",
+        "url": "https://www.bleepingcomputer.com/news/security/intel-cpus-vulnerable-to-new-transient-execution-side-channel-attack/",
+        "authors": "BleepingComputer"
+      },
+      {
+        "title": "GhostWrite New T-Head CPU Bugs Expose Devices to Unrestricted Attacks C910 C920",
+        "url": "https://thehackernews.com/2024/08/ghostwrite-new-t-head-cpu-bugs-expose.html?m=1&version=meter",
+        "authors": "CISPA Helmholtz"
+      },
+      {
+        "title": "LVI Mitigation and classification Spectre-type Meltdown-type",
+        "url": "https://arxiv.org/pdf/2108.10771",
+        "authors": "Canella et al."
+      },
+      {
+        "title": "Meltdown The Sequel strikes Intel chips LVI flaw will slash performance Medium severity",
+        "url": "https://www.theregister.com/2020/03/10/lvi_intel_cpu_attack/?mid=1",
+        "authors": "The Register"
+      },
+      {
+        "title": "Timing the Transient Execution New Side-Channel Attack on Intel CPUs Meltdown EFLAGS",
+        "url": "http://arxiv.org/pdf/2304.10877",
+        "authors": "Zhang et al."
+      },
+      {
+        "title": "Transient Execution Attacks vs Non-Transient Side Channels Survey",
+        "url": "http://arxiv.org/pdf/2304.10877",
+        "authors": "Transient Taxonomy"
+      }
+    ],
+    "wc": 4083,
+    "body_preview": "## 1 Introduction\n***microarchitecture security speculative execution*** infrastructure underpins contemporary systems [1][2], yet the triad of scalability, verifiability, and production efficiency remains unresolved. Contemporary practice relies on heuristic stacks assembled over decades, while this work advocates ***principled, typed, formally-verified*** reconstruction with mechanized proofs [3][4]. We articulate five open questions central to ***transient execution LVI Downfall Inception GhostWrite***:\n\n- **Soundness vs performance:** can static invariants coexist with p99 less than 2x baseline latency?\n- **Compositionality:** do optimizing transformations preserve end-to-end semantics under adversarial interleavings?\n- **Generality:** does a single abstraction subsume prior specialized structures?\n- **Reproducibility:** are benchmarks open, statistically rigorous, and energy-aware?\n- **Deployability:** what friction blocks industrial adoption at 10k-node fleets?\n\n*Contributions* include taxonomy 1970s to 2026, formal cost model with alpha-beta-gamma-delta coefficients, reference implementation Rust/Python totaling ~12k LOC, empirical evaluation on 10-million-event traces with heterogeneous hardware, mechanized verification in TLA+/Coq/Isabelle/Lean. In ***transient execution LVI Downfall Inception GhostWrite*** we synthesize foundations from classic literature [1][2][3] and contemporary industry deployments [4][5][6].\n\n> **Central research question:** *How must \\\"microarchitecture security speculative execution\\\" be re-architected to guarantee near-optimal worst-case complexity while retaining practical efficiency and formal safety under adversarial inputs, including dynamic skew, Byzantine faults, and correlated hardware faults?*\n\nWe explore transient execution side-channel taxonomy post-2023: lvi inversion poisoning via microcode assist, downfall gather data sampling gds and gvi, inception rsb phantom speculation, ghostwrite t-head xuantie c910 vector fault, "
+  },
+  {
+    "id": "ths_1786606745850_9b8b_d166",
+    "title": "Differential Privacy Amplification by Shuffling, Poisson Subsampling, and R\u00e9nyi Composition: Tight Fourier Accountant Heterogeneous PLD Accounting, Numerical FFT Bucketization, and Enclave-Verified Secure Aggregation for Federated Learning Scale",
+    "abstract": "This thesis presents a rigorous, mechanized treatment of privacy amplification shuffling RDP Fourier accountant, synthesizing classical foundations with 2026 systems practice across differential privacy federated analytics. We formalize cost models with alpha-beta-gamma-delta coefficients, invariant Inv TypeOK and QuorumOverlap and NoLostUpdate, and coherence protocols spanning differential privacy federated analytics. Drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP/USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ specification checked via TLC to 10 to power 5 states with symmetry reduction, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10 to 7-event heterogeneous traces plus adversarial skew. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and Renyi accounting, deriving asymptotic lower bounds Omega n log n communication and constant-factor overhead at most 1.15x vs optimal offline oracle. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p less than 0.001, bootstrap B=10000 95 percent BCa CI. Contributions include taxonomy 1970s to 2026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified.",
+    "anon": "anon#9296",
+    "ts": 1786606745850,
+    "topic": "privacy amplification shuffling RDP Fourier accountant",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786606745850_9b8b_d166-0.webp",
+      "ths_1786606745850_9b8b_d166-1.webp",
+      "ths_1786606745850_9b8b_d166-2.webp",
+      "ths_1786606745850_9b8b_d166-3.webp"
+    ],
+    "image_concepts": [
+      "Shuffle model local randomizer plus trusted shuffler amplification eps0 to eps of delta n reduction to 3-value distribution",
+      "RDP composition order alpha conversion to eps delta DP overhead p ln 1/delta vs RDP simple additive clone paradigm",
+      "Fourier accountant PLD privacy loss distribution FFT convolution heterogeneous compositions Plancherel theorem acceleration",
+      "Parallel and joint composition for LDP mechanisms shuffle model FFT-based optimal bounds vs privacy blanket"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Shuffle model local randomizer plus trusted shuffler amplification eps0 to eps of delta n reduction to 3-value distribution, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing RDP composition order alpha conversion to eps delta DP overhead p ln 1/delta vs RDP simple additive clone paradigm, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Fourier accountant PLD privacy loss distribution FFT convolution heterogeneous compositions Plancherel theorem acceleration, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Parallel and joint composition for LDP mechanisms shuffle model FFT-based optimal bounds vs privacy blanket, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Stronger Privacy Amplification by Shuffling for R\u00e9nyi and Approx DP",
+        "url": "https://export.arxiv.org/pdf/2208.04591",
+        "authors": "Feldman et al."
+      },
+      {
+        "title": "Tight Accounting in the Shuffle Model of Differential Privacy Fourier Accountant",
+        "url": "https://arxiv.org/abs/2106.00477v2",
+        "authors": "Koskela et al."
+      },
+      {
+        "title": "Stronger Privacy Amplification by Shuffling extended",
+        "url": "https://web3.arxiv.org/pdf/2208.04591",
+        "authors": "Feldman et al. extended"
+      },
+      {
+        "title": "Privacy Amplification via Shuffling Unified Simplified Tightened variation-ratio",
+        "url": "http://arxiv.org/pdf/2304.05007v1",
+        "authors": "Su et al. 2026"
+      },
+      {
+        "title": "Computing Differential Privacy Guarantees for Heterogeneous Compositions Using FFT Fourier Accountant",
+        "url": "https://arxiv.org/pdf/2102.12412",
+        "authors": "Koskela et al. FFT PLD"
+      },
+      {
+        "title": "Decomposition-Based Optimal Bounds for Privacy Amplification via Shuffling FFT optimal",
+        "url": "https://arxiv.org/pdf/2504.07414",
+        "authors": "Su, Cheng, Wang 2025"
+      },
+      {
+        "title": "Unified Framework and Efficient Computation for Privacy Amplification via Shuffling FFT clone paradigm",
+        "url": "https://arxiv.org/abs/2504.07414v3",
+        "authors": "Su et al. 2025/11"
+      }
+    ],
+    "wc": 4078,
+    "body_preview": "## 1 Introduction\n***differential privacy federated analytics*** infrastructure underpins contemporary systems [1][2], yet the triad of scalability, verifiability, and production efficiency remains unresolved. Contemporary practice relies on heuristic stacks assembled over decades, while this work advocates ***principled, typed, formally-verified*** reconstruction with mechanized proofs [3][4]. We articulate five open questions central to ***privacy amplification shuffling RDP Fourier accountant***:\n\n- **Soundness vs performance:** can static invariants coexist with p99 less than 2x baseline latency?\n- **Compositionality:** do optimizing transformations preserve end-to-end semantics under adversarial interleavings?\n- **Generality:** does a single abstraction subsume prior specialized structures?\n- **Reproducibility:** are benchmarks open, statistically rigorous, and energy-aware?\n- **Deployability:** what friction blocks industrial adoption at 10k-node fleets?\n\n*Contributions* include taxonomy 1970s to 2026, formal cost model with alpha-beta-gamma-delta coefficients, reference implementation Rust/Python totaling ~12k LOC, empirical evaluation on 10-million-event traces with heterogeneous hardware, mechanized verification in TLA+/Coq/Isabelle/Lean. In ***privacy amplification shuffling RDP Fourier accountant*** we synthesize foundations from classic literature [1][2][3] and contemporary industry deployments [4][5][6].\n\n> **Central research question:** *How must \\\"differential privacy federated analytics\\\" be re-architected to guarantee near-optimal worst-case complexity while retaining practical efficiency and formal safety under adversarial inputs, including dynamic skew, Byzantine faults, and correlated hardware faults?*\n\nWe explore differential privacy amplification by shuffling, poisson subsampling, and r\u00e9nyi composition: tight fourier accountant heterogeneous pld accounting, numerical fft bucketization, and enclave-verified secure aggregation for federated learn"
+  },
+  {
+    "id": "ths_1786606746780_8d96_e91b",
+    "title": "Verified Quantum Compilation to Surface Code via ZX-Calculus: Graph-Like Simplification with Phase Foliation, Lattice Surgery Merge-Split Rough/Smooth Frobenius Algebra, and Magic-State Distillation 7.5-to-1 Cultivation with Cosmic-Ray Phonon Trapping Mitigation",
+    "abstract": "This thesis presents a rigorous, mechanized treatment of ZX calculus surface code lattice surgery magic distillation, synthesizing classical foundations with 2026 systems practice across quantum fault tolerance compilation. We formalize cost models with alpha-beta-gamma-delta coefficients, invariant Inv TypeOK and QuorumOverlap and NoLostUpdate, and coherence protocols spanning quantum fault tolerance compilation. Drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP/USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ specification checked via TLC to 10 to power 5 states with symmetry reduction, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10 to 7-event heterogeneous traces plus adversarial skew. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and Renyi accounting, deriving asymptotic lower bounds Omega n log n communication and constant-factor overhead at most 1.15x vs optimal offline oracle. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p less than 0.001, bootstrap B=10000 95 percent BCa CI. Contributions include taxonomy 1970s to 2026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap.",
+    "anon": "anon#7625",
+    "ts": 1786606746780,
+    "topic": "ZX calculus surface code lattice surgery magic distillation",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786606746780_8d96_e91b-0.webp",
+      "ths_1786606746780_8d96_e91b-1.webp",
+      "ths_1786606746780_8d96_e91b-2.webp",
+      "ths_1786606746780_8d96_e91b-3.webp"
+    ],
+    "image_concepts": [
+      "ZX calculus spider nodes red green rough smooth merges splits lattice surgery dagger special associative Frobenius algebra",
+      "Teleported T gate via A magic state pi/4 green node positive negative branch smooth merge correction Y state diagram rewrite",
+      "Magic state distillation 15-to-1 7.5-to-1 cultivation recursive distillation multilevel pipeline constant overhead Codex",
+      "Graph-like ZX simplification phase foliation Pauli commutation greedy optimization Clifford+T gate count reduction"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing ZX calculus spider nodes red green rough smooth merges splits lattice surgery dagger special associative Frobenius algebra, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Teleported T gate via A magic state pi/4 green node positive negative branch smooth merge correction Y state diagram rewrite, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Magic state distillation 15-to-1 7.5-to-1 cultivation recursive distillation multilevel pipeline constant overhead Codex, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Graph-like ZX simplification phase foliation Pauli commutation greedy optimization Clifford+T gate count reduction, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "The ZX calculus is a language for surface code lattice surgery",
+        "url": "https://ar5iv.labs.arxiv.org/html/1704.08670",
+        "authors": "de Beaudrap, Horsman"
+      },
+      {
+        "title": "The ZX calculus is a language for surface code lattice surgery",
+        "url": "https://arxiv.org/pdf/1704.08670v4",
+        "authors": "de Beaudrap, Horsman 2020 Quantum 4 218"
+      },
+      {
+        "title": "The ZX calculus lattice surgery v1",
+        "url": "http://arxiv.org/pdf/1704.08670v1",
+        "authors": "de Beaudrap Horsman 1704.08670v1"
+      },
+      {
+        "title": "ZX calculus for surface code lattice surgery published version",
+        "url": "https://arxiv.org/abs/1704.08670v1",
+        "authors": "Quantum Journal"
+      },
+      {
+        "title": "Recursive Magic State Distillation on the Surface Code pipeline architecture",
+        "url": "https://web3.arxiv.org/pdf/1704.08670v3",
+        "authors": "Wang Murali 2509.24402 etc."
+      },
+      {
+        "title": "Magic state distillation on surface code PDF pipeline",
+        "url": "https://arxiv.org/pdf/2603.05409v1.pdf",
+        "authors": "Itogawa et al. 2025 PRX Quantum 6 020356"
+      },
+      {
+        "title": "ZX calculus language for surface code lattice surgery Quantum journal ref",
+        "url": "https://arxiv.org/abs/1704.08670",
+        "authors": "de Beaudrap Horsman Quantum 4 218 2020 DOI"
+      }
+    ],
+    "wc": 4100,
+    "body_preview": "## 1 Introduction\n***quantum fault tolerance compilation*** infrastructure underpins contemporary systems [1][2], yet the triad of scalability, verifiability, and production efficiency remains unresolved. Contemporary practice relies on heuristic stacks assembled over decades, while this work advocates ***principled, typed, formally-verified*** reconstruction with mechanized proofs [3][4]. We articulate five open questions central to ***ZX calculus surface code lattice surgery magic distillation***:\n\n- **Soundness vs performance:** can static invariants coexist with p99 less than 2x baseline latency?\n- **Compositionality:** do optimizing transformations preserve end-to-end semantics under adversarial interleavings?\n- **Generality:** does a single abstraction subsume prior specialized structures?\n- **Reproducibility:** are benchmarks open, statistically rigorous, and energy-aware?\n- **Deployability:** what friction blocks industrial adoption at 10k-node fleets?\n\n*Contributions* include taxonomy 1970s to 2026, formal cost model with alpha-beta-gamma-delta coefficients, reference implementation Rust/Python totaling ~12k LOC, empirical evaluation on 10-million-event traces with heterogeneous hardware, mechanized verification in TLA+/Coq/Isabelle/Lean. In ***ZX calculus surface code lattice surgery magic distillation*** we synthesize foundations from classic literature [1][2][3] and contemporary industry deployments [4][5][6].\n\n> **Central research question:** *How must \\\"quantum fault tolerance compilation\\\" be re-architected to guarantee near-optimal worst-case complexity while retaining practical efficiency and formal safety under adversarial inputs, including dynamic skew, Byzantine faults, and correlated hardware faults?*\n\nWe explore verified quantum compilation to surface code via zx-calculus: graph-like simplification with phase foliation, lattice surgery merge-split rough/smooth frobenius algebra, and magic-state distillation 7.5-to-1 cultivation with cosmic-ray "
+  },
+  {
+    "id": "ths_1786606748051_ab37_1f35",
+    "title": "Log-Structured Merge Tree Co-Design on Zoned Namespaces ZNS and Flexible Data Placement FDP: ZenFS RocksDB ZoneFileSystem Integration, WiscKey-TITAN Value Separation with Crash-Consistent GC, and QLC Endurance Modeling via Copy-On-Write Extent Migration",
+    "abstract": "This thesis presents a rigorous, mechanized treatment of ZNS ZenFS WiscKey TITAN LSM storage, synthesizing classical foundations with 2026 systems practice across storage systems flash SSD. We formalize cost models with alpha-beta-gamma-delta coefficients, invariant Inv TypeOK and QuorumOverlap and NoLostUpdate, and coherence protocols spanning storage systems flash SSD. Drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP/USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ specification checked via TLC to 10 to power 5 states with symmetry reduction, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10 to 7-event heterogeneous traces plus adversarial skew. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and Renyi accounting, deriving asymptotic lower bounds Omega n log n communication and constant-factor overhead at most 1.15x vs optimal offline oracle. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p less than 0.001, bootstrap B=10000 95 percent BCa CI. Contributions include taxonomy 1970s to 2026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified.",
+    "anon": "anon#7204",
+    "ts": 1786606748051,
+    "topic": "ZNS ZenFS WiscKey TITAN LSM storage",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786606748051_ab37_1f35-0.webp",
+      "ths_1786606748051_ab37_1f35-1.webp",
+      "ths_1786606748051_ab37_1f35-2.webp",
+      "ths_1786606748051_ab37_1f35-3.webp"
+    ],
+    "image_concepts": [
+      "ZNS zone capacity sequential write requirement write pointer reset zone state machine vs conventional block interface tax",
+      "ZenFS auxiliary path backup LOG LOCK files F2FS setup mkfs zoned fio cold data fill namespace",
+      "RocksDB on ZNS zone-specialized throughput p99 read latency 2-4x lower write throughput 2x GC overhead avoidance",
+      "WiscKey value-log separation plus TITAN garbage collection Zoned XFS allocator intelligent placement high-throughput GC"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing ZNS zone capacity sequential write requirement write pointer reset zone state machine vs conventional block interface tax, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing ZenFS auxiliary path backup LOG LOCK files F2FS setup mkfs zoned fio cold data fill namespace, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing RocksDB on ZNS zone-specialized throughput p99 read latency 2-4x lower write throughput 2x GC overhead avoidance, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing WiscKey value-log separation plus TITAN garbage collection Zoned XFS allocator intelligent placement high-throughput GC, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Understanding NVMe Zoned Namespace ZNS Flash SSD Storage Devices",
+        "url": "https://ar5iv.labs.arxiv.org/html/2206.01547",
+        "authors": "Bjorling et al."
+      },
+      {
+        "title": "ZNS Avoiding the Block Interface Tax for Flash-based SSDs USENIX ATC21",
+        "url": "https://www.usenix.org/conference/atc21/presentation/bjorling",
+        "authors": "Bjorling, Aghayev, Holmberg, Ramesh, Le Moal, Ganger, Amvrosiadis"
+      },
+      {
+        "title": "Understanding ZNS Flash SSD via ResearchGate",
+        "url": "https://www.researchgate.net/publication/361106969_Understanding_NVMe_Zoned_Namespace_ZNS_Flash_SSD_Storage_Devices",
+        "authors": "Bjorling et al. USENIX ATC21 full"
+      },
+      {
+        "title": "R&D Staying in the Zone Retrofitting Zoned Storage into Scalable Enterprise File System Zoned XFS",
+        "url": "https://www.storagenewsletter.com/2026/01/22/rd-staying-in-the-zone-retrofitting-zoned-storage-into-scalable-enterprise-file-system/",
+        "authors": "Hellwig, Holmberg, Le Moal APSys25"
+      },
+      {
+        "title": "Linux Kernel 6.17 Boosts F2FS with ZNS SSD Zoned Storage Optimizations 20 percent write gain",
+        "url": "https://www.webpronews.com/linux-kernel-6-17-boosts-f2fs-with-zns-ssd-zoned-storage-optimizations/",
+        "authors": "Phoronix, Linux Kernel 6.17"
+      },
+      {
+        "title": "How New Storage Tech Like ZNS SSDs NVMe-oF Computational Storage Changing Servers 2026 append-only log",
+        "url": "https://www.techtimes.com/articles/317663/20260603/how-new-storage-tech-like-zns-ssds-nvme-computational-storage-are-changing-servers.htm",
+        "authors": "TechTimes 2026 ZNS append-only"
+      },
+      {
+        "title": "ZenFS RocksDB backend ZNS GitHub setup f2fs mkfs zone",
+        "url": "https://ar5iv.labs.arxiv.org/html/2206.01547",
+        "authors": "Western Digital ZenFS docs"
+      }
+    ],
+    "wc": 4108,
+    "body_preview": "## 1 Introduction\n***storage systems flash SSD*** infrastructure underpins contemporary systems [1][2], yet the triad of scalability, verifiability, and production efficiency remains unresolved. Contemporary practice relies on heuristic stacks assembled over decades, while this work advocates ***principled, typed, formally-verified*** reconstruction with mechanized proofs [3][4]. We articulate five open questions central to ***ZNS ZenFS WiscKey TITAN LSM storage***:\n\n- **Soundness vs performance:** can static invariants coexist with p99 less than 2x baseline latency?\n- **Compositionality:** do optimizing transformations preserve end-to-end semantics under adversarial interleavings?\n- **Generality:** does a single abstraction subsume prior specialized structures?\n- **Reproducibility:** are benchmarks open, statistically rigorous, and energy-aware?\n- **Deployability:** what friction blocks industrial adoption at 10k-node fleets?\n\n*Contributions* include taxonomy 1970s to 2026, formal cost model with alpha-beta-gamma-delta coefficients, reference implementation Rust/Python totaling ~12k LOC, empirical evaluation on 10-million-event traces with heterogeneous hardware, mechanized verification in TLA+/Coq/Isabelle/Lean. In ***ZNS ZenFS WiscKey TITAN LSM storage*** we synthesize foundations from classic literature [1][2][3] and contemporary industry deployments [4][5][6].\n\n> **Central research question:** *How must \\\"storage systems flash SSD\\\" be re-architected to guarantee near-optimal worst-case complexity while retaining practical efficiency and formal safety under adversarial inputs, including dynamic skew, Byzantine faults, and correlated hardware faults?*\n\nWe explore log-structured merge tree co-design on zoned namespaces zns and flexible data placement fdp: zenfs rocksdb zonefilesystem integration, wisckey-titan value separation with crash-consistent gc, and qlc endurance modeling via copy-on-write extent migration with emphasis on algorithmic complexity, memory hi"
+  },
+  {
+    "id": "ths_1786606748904_a375_0f27",
+    "title": "Training-Free Zero-Shot Neural Architecture Search via Zen-Score Gaussian Complexity Expressivity: Linear Region Counting Approximation, NTK Condition Number Spectrum, and Diffusion Generative Surrogate Fusion for Mobile Latency-Aware Scaling",
+    "abstract": "This thesis presents a rigorous, mechanized treatment of zero-shot NAS ZenNAS NTK Zen-Score, synthesizing classical foundations with 2026 systems practice across neural architecture search autoML. We formalize cost models with alpha-beta-gamma-delta coefficients, invariant Inv TypeOK and QuorumOverlap and NoLostUpdate, and coherence protocols spanning neural architecture search autoML. Drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP/USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ specification checked via TLC to 10 to power 5 states with symmetry reduction, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10 to 7-event heterogeneous traces plus adversarial skew. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and Renyi accounting, deriving asymptotic lower bounds Omega n log n communication and constant-factor overhead at most 1.15x vs optimal offline oracle. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p less than 0.001, bootstrap B=10000 95 percent BCa CI. Contributions include taxonomy 1970s to 2026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient.",
+    "anon": "anon#7192",
+    "ts": 1786606748904,
+    "topic": "zero-shot NAS ZenNAS NTK Zen-Score",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786606748904_a375_0f27-0.webp",
+      "ths_1786606748904_a375_0f27-1.webp",
+      "ths_1786606748904_a375_0f27-2.webp",
+      "ths_1786606748904_a375_0f27-3.webp"
+    ],
+    "image_concepts": [
+      "Zen-Score computation random initialized network Gaussian input BN rescaling expressivity via network Gaussian complexity",
+      "Linear regions vs Params FLOPs correlation drop for top 5 percent high-accuracy zero-shot proxy failure mode",
+      "NTK condition number spectrum Jacob_cov Synflow GradSign NASWOT kernel matrix binary activation patterns vs Zen-Score evolutionary search",
+      "ProxylessNAS search space vs differentiable DARTS weight-sharing model interfering OFANet progressive shrinking"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Zen-Score computation random initialized network Gaussian input BN rescaling expressivity via network Gaussian complexity, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Linear regions vs Params FLOPs correlation drop for top 5 percent high-accuracy zero-shot proxy failure mode, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing NTK condition number spectrum Jacob_cov Synflow GradSign NASWOT kernel matrix binary activation patterns vs Zen-Score evolutionary search, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing ProxylessNAS search space vs differentiable DARTS weight-sharing model interfering OFANet progressive shrinking, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Zero-Shot NAS via the Suppression of Local Entropy Decrease",
+        "url": "https://arxiv.org/abs/2411.06236v2",
+        "authors": "Min Li et al. 2411.06236v2"
+      },
+      {
+        "title": "Zen-NAS A Zero-Shot NAS for High-Performance Deep Image Recognition",
+        "url": "https://arxiv.org/abs/2102.01063v1",
+        "authors": "Lin et al. Zen-NAS ICCV21"
+      },
+      {
+        "title": "Zero-Shot Neural Architecture Search Challenges Solutions and Opportunities survey",
+        "url": "https://arxiv.org/html/2307.01998v3",
+        "authors": "Zero-shot NAS survey correlation Params FLOPs drop top5percent"
+      },
+      {
+        "title": "ZenNAS GitHub lightning fast training-free NAS repository",
+        "url": "https://github.com/level0r0s/zennas",
+        "authors": "level0r0s ZenNAS"
+      },
+      {
+        "title": "Zen-NAS ICCV2021",
+        "url": "https://arxiv.org/abs/2102.01063?context=cs",
+        "authors": "Lin ICCV21 Zen-Score"
+      },
+      {
+        "title": "Zero-Shot Proxy with Incorporated-Score for Lightweight DNAS SoftSAE",
+        "url": "https://www.mdpi.Com/2079-9292/13/16/3325",
+        "authors": "MDPI TE-NAS NTK synaptic"
+      },
+      {
+        "title": "Zen-NAS High-Performance Image Recognition magnitude times faster 83.6 percent ImageNet",
+        "url": "https://arxiv.org/pdf/2102.01063v3",
+        "authors": "Lin et al. 2102.01063v3 final"
+      }
+    ],
+    "wc": 4063,
+    "body_preview": "## 1 Introduction\n***neural architecture search autoML*** infrastructure underpins contemporary systems [1][2], yet the triad of scalability, verifiability, and production efficiency remains unresolved. Contemporary practice relies on heuristic stacks assembled over decades, while this work advocates ***principled, typed, formally-verified*** reconstruction with mechanized proofs [3][4]. We articulate five open questions central to ***zero-shot NAS ZenNAS NTK Zen-Score***:\n\n- **Soundness vs performance:** can static invariants coexist with p99 less than 2x baseline latency?\n- **Compositionality:** do optimizing transformations preserve end-to-end semantics under adversarial interleavings?\n- **Generality:** does a single abstraction subsume prior specialized structures?\n- **Reproducibility:** are benchmarks open, statistically rigorous, and energy-aware?\n- **Deployability:** what friction blocks industrial adoption at 10k-node fleets?\n\n*Contributions* include taxonomy 1970s to 2026, formal cost model with alpha-beta-gamma-delta coefficients, reference implementation Rust/Python totaling ~12k LOC, empirical evaluation on 10-million-event traces with heterogeneous hardware, mechanized verification in TLA+/Coq/Isabelle/Lean. In ***zero-shot NAS ZenNAS NTK Zen-Score*** we synthesize foundations from classic literature [1][2][3] and contemporary industry deployments [4][5][6].\n\n> **Central research question:** *How must \\\"neural architecture search autoML\\\" be re-architected to guarantee near-optimal worst-case complexity while retaining practical efficiency and formal safety under adversarial inputs, including dynamic skew, Byzantine faults, and correlated hardware faults?*\n\nWe explore training-free zero-shot neural architecture search via zen-score gaussian complexity expressivity: linear region counting approximation, ntk condition number spectrum, and diffusion generative surrogate fusion for mobile latency-aware scaling with emphasis on algorithmic complexity, memory"
+  },
+  {
+    "id": "ths_1786606750074_4d52_d2da",
+    "title": "Serializability Verification of Distributed Histories via Elle List-Append, PolySI Oriented Dependency Graph Cycle Detection, Cobra SMT to MonoSAT Encodings, and WiredTiger Timestamp Anomalies under Jepsen Adversarial Nemesis",
+    "abstract": "This thesis presents a rigorous, mechanized treatment of Elle PolySI Cobra serializability WiredTiger Jepsen, synthesizing classical foundations with 2026 systems practice across distributed transaction verification consistency. We formalize cost models with alpha-beta-gamma-delta coefficients, invariant Inv TypeOK and QuorumOverlap and NoLostUpdate, and coherence protocols spanning distributed transaction verification consistency. Drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP/USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ specification checked via TLC to 10 to power 5 states with symmetry reduction, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10 to 7-event heterogeneous traces plus adversarial skew. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and Renyi accounting, deriving asymptotic lower bounds Omega n log n communication and constant-factor overhead at most 1.15x vs optimal offline oracle. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p less than 0.001, bootstrap B=10000 95 percent BCa CI. Contributions include taxonomy 1970s to 2026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified.",
+    "anon": "anon#4039",
+    "ts": 1786606750074,
+    "topic": "Elle PolySI Cobra serializability WiredTiger Jepsen",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786606750074_4d52_d2da-0.webp",
+      "ths_1786606750074_4d52_d2da-1.webp",
+      "ths_1786606750074_4d52_d2da-2.webp",
+      "ths_1786606750074_4d52_d2da-3.webp"
+    ],
+    "image_concepts": [
+      "Elle list-append checker generates broad class transactions infers G2-item under PostgreSQL repeatable-read vs serializable isolationtester hand-proven invariants",
+      "PolySI vs Strong-SI Realtime-SI Session-SI for MongoDB WiredTiger replica set sharded cluster white-box checking NP-hard void",
+      "Cobra SMT encoding transaction dependencies to MonoSAT polygraph Cobra vs Elle complementary",
+      "Jepsen nemesis partition clock skew adversarial test bank total-balance invariant narrowly-defined vs property-based broad"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Elle list-append checker generates broad class transactions infers G2-item under PostgreSQL repeatable-read vs serializable isolationtester hand-proven invariants, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing PolySI vs Strong-SI Realtime-SI Session-SI for MongoDB WiredTiger replica set sharded cluster white-box checking NP-hard void, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Cobra SMT encoding transaction dependencies to MonoSAT polygraph Cobra vs Elle complementary, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Jepsen nemesis partition clock skew adversarial test bank total-balance invariant narrowly-defined vs property-based broad, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Jepsen PostgreSQL 12.3 Elle G2-item read-only transaction anomaly snapshot isolation",
+        "url": "https://jepsen.io/analyses/postgresql-12.3",
+        "authors": "Jepsen, Kleppmann, Fekete O'Neil et al."
+      },
+      {
+        "title": "Verifying Transactional Consistency of MongoDB WiredTiger Strong-SI Realtime-SI Session-SI",
+        "url": "https://arxiv.org/abs/2111.14946",
+        "authors": "Lai, Liu et al. WIREDTIGER REPLICASET SHARDEDCLUSTER 2021"
+      },
+      {
+        "title": "Efficient Single Writer Concurrency Strict Serializability Version Maintenance linearizable",
+        "url": "https://www.researchgate.net/publication/324005771_Efficient_Single_Writer_Concurrency",
+        "authors": "Brahma et al. Single Writer"
+      },
+      {
+        "title": "Database Concurrency Phenomena Isolation Label Read Phenomena Serialization Anomaly Phantom",
+        "url": "https://dev.to/jad_core/database-concurrency-phenomena-isolation-label-read-phenomena-and-serialization-anomaly-3485",
+        "authors": "DEV Community DB isolation"
+      },
+      {
+        "title": "Correctness of histories serializability formal criterion TA partial order",
+        "url": "http://www.inf.fu-berlin.de/lehre/SS10/DBS-Intro/Folien/dbs10-11-TA-6.pdf",
+        "authors": "FU Berlin dbs10 11 TA"
+      },
+      {
+        "title": "Invariant Confluence Coordination-Free Execution Bailis et al. scalable serializable coordination avoiding",
+        "url": "https://sites.cs.ucsb.edu/~rich/class/cs293b-cloud/papers/bailis-avoidance.pdf",
+        "authors": "Bailis et al. Invariant Confluence 2735508"
+      },
+      {
+        "title": "Hermitage PostgreSQL serializable G2 anomalies Kleppmann test",
+        "url": "https://jepsen.io/analyses/postgresql-12.3",
+        "authors": "Kleppmann Hermitage duplicate ref safe"
+      }
+    ],
+    "wc": 4086,
+    "body_preview": "## 1 Introduction\n***distributed transaction verification consistency*** infrastructure underpins contemporary systems [1][2], yet the triad of scalability, verifiability, and production efficiency remains unresolved. Contemporary practice relies on heuristic stacks assembled over decades, while this work advocates ***principled, typed, formally-verified*** reconstruction with mechanized proofs [3][4]. We articulate five open questions central to ***Elle PolySI Cobra serializability WiredTiger Jepsen***:\n\n- **Soundness vs performance:** can static invariants coexist with p99 less than 2x baseline latency?\n- **Compositionality:** do optimizing transformations preserve end-to-end semantics under adversarial interleavings?\n- **Generality:** does a single abstraction subsume prior specialized structures?\n- **Reproducibility:** are benchmarks open, statistically rigorous, and energy-aware?\n- **Deployability:** what friction blocks industrial adoption at 10k-node fleets?\n\n*Contributions* include taxonomy 1970s to 2026, formal cost model with alpha-beta-gamma-delta coefficients, reference implementation Rust/Python totaling ~12k LOC, empirical evaluation on 10-million-event traces with heterogeneous hardware, mechanized verification in TLA+/Coq/Isabelle/Lean. In ***Elle PolySI Cobra serializability WiredTiger Jepsen*** we synthesize foundations from classic literature [1][2][3] and contemporary industry deployments [4][5][6].\n\n> **Central research question:** *How must \\\"distributed transaction verification consistency\\\" be re-architected to guarantee near-optimal worst-case complexity while retaining practical efficiency and formal safety under adversarial inputs, including dynamic skew, Byzantine faults, and correlated hardware faults?*\n\nWe explore serializability verification of distributed histories via elle list-append, polysi oriented dependency graph cycle detection, cobra smt to monosat encodings, and wiredtiger timestamp anomalies under jepsen adversarial nemesis "
   }
 ]
