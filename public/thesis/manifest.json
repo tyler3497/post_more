@@ -1,5 +1,735 @@
 [
   {
+    "id": "ths_1786588683393_337fc368",
+    "title": "Attribute-Based Encryption via Lattice Trapdoors: LWE Re-Randomization, RLWE Gaussian Sampling via Knuth-Yao, and Policy Enforcement under Adaptive Key-Policy and Ciphertext-Policy with Revocable Blockchain-Mediated Key Management",
+    "abstract": "This thesis provides a rigorous treatment of ABE lattice LWE RLWE: attribute-based encryption via lattice trapdoors: lwe re-randomization, rlwe gaussian sampling via knuth-yao, and policy enforcement under adaptive key-policy and ciphertext-policy with revocable blockchain-mediated key management, synthesizing classical foundations with 2026 systems practice across lattice cryptography. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning lattice cryptography, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable lattice cryptography production at 10k-node scale.",
+    "anon": "anon#2929",
+    "ts": 1786588683393,
+    "topic": "ABE lattice LWE RLWE",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786588683393_337fc368-0.webp",
+      "ths_1786588683393_337fc368-1.webp",
+      "ths_1786588683393_337fc368-2.webp",
+      "ths_1786588683393_337fc368-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Attribute-Based Encryption via Lattice Trapdoors: LWE Re-Randomization, RLWE Gau showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Attribute-Based Encryption via Lattice Trapdoors: LWE Re-Randomization with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Attribute-Based Encryption via Lattice Trapdoors: LWE Re-Ran with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Attribute-Based Encryption via Lattice Trapdoors: LWE Re-Ran illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Attribute-Based Encryption via Lattice Trapdoors: LWE Re-Randomization, RLWE Gau architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Attribute-Based Encryption via Lattice Trapdoors: LWE Re-Randomization deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Attribute-Based Encryption via Lattice Trapdoors: LWE Re-Ran performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Attribute-Based Encryption via Lattice Trapdoors: LWE Re-Ran limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Circuit-ABE from LWE: Unbounded Attributes and Semi-Adaptive Security",
+        "url": "https://eprint.iacr.org/2016/118",
+        "authors": "Brakerski, Vaikuntanathan"
+      },
+      {
+        "id": 2,
+        "title": "Lattice-Based ABE from LWE - Gorbunov, Vaikuntanathan, Wee STOC 2015",
+        "url": "https://eprint.iacr.org/2013/629.pdf",
+        "authors": "Gorbunov et al."
+      },
+      {
+        "id": 3,
+        "title": "Fully Key-Homomorphic Encryption and Circuit ABE from Lattices - Boneh et al. EUROCRYPT 2014",
+        "url": "https://www.mdpi.com/2076-3417/13/14/8043",
+        "authors": "Boneh et al."
+      },
+      {
+        "id": 4,
+        "title": "RLWE-Based ABE with Short Ciphertext - RL-ABE Cloud Storage",
+        "url": "https://www.cs.purdue.edu/homes/bb/rlabe.pdf",
+        "authors": "Zhao et al."
+      },
+      {
+        "id": 5,
+        "title": "ABE for Circuits with Constant-Size Secret Keys and Adaptive Security",
+        "url": "https://iacr.org/archive/tcc2022/137470128/137470128.pdf",
+        "authors": "Wee et al."
+      },
+      {
+        "id": 6,
+        "title": "Novel CLWE-Based ABE Scheme from Lattices with Privacy Preserving",
+        "url": "https://link.springer.com/article/10.1186/s42400-025-00367-4",
+        "authors": "Zhang et al."
+      },
+      {
+        "id": 7,
+        "title": "Blockchain-Enabled Lattice-Based ABSE with Instant Revocation",
+        "url": "https://www.mdpi.com/2079-9292/15/11/2471",
+        "authors": "Ren et al."
+      }
+    ],
+    "wc": 3567
+  },
+  {
+    "id": "ths_1786588682393_830e_bed9",
+    "title": "Flash-Optimized Key-Value Separation in WiscKey and Titan: Blob File GC Amplified Tail Latency, Range Filter Augmentation via Remix, and LSM Compaction Offload via io_uring and ZNS Zone Management",
+    "abstract": "This thesis provides a rigorous treatment of WiscKey Titan LSM KV separation: flash-optimized key-value separation in wisckey and titan: blob file gc amplified tail latency, range filter augmentation via remix, and lsm compaction offload via io_uring and zns zone management, synthesizing classical foundations with 2026 systems practice across storage systems. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning storage systems, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable storage systems production at 10k-node scale.",
+    "anon": "anon#4808",
+    "ts": 1786588682393,
+    "topic": "WiscKey Titan LSM KV separation",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786588682393_830e_bed9-0.webp",
+      "ths_1786588682393_830e_bed9-1.webp",
+      "ths_1786588682393_830e_bed9-2.webp",
+      "ths_1786588682393_830e_bed9-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Flash-Optimized Key-Value Separation in WiscKey and Titan: Blob File GC Amplifie showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Flash-Optimized Key-Value Separation in WiscKey and Titan: Blob File G with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Flash-Optimized Key-Value Separation in WiscKey and Titan: B with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Flash-Optimized Key-Value Separation in WiscKey and Titan: B illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Flash-Optimized Key-Value Separation in WiscKey and Titan: Blob File GC Amplifie architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Flash-Optimized Key-Value Separation in WiscKey and Titan: Blob File G deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Flash-Optimized Key-Value Separation in WiscKey and Titan: B performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Flash-Optimized Key-Value Separation in WiscKey and Titan: B limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "WiscKey: Separating Keys from Values in SSD-Conscious Storage - FAST 2016",
+        "url": "https://arxiv.org/abs/1508.03986",
+        "authors": "Lu et al."
+      },
+      {
+        "id": 2,
+        "title": "Titan: Distributed LSM Key-Value on TiKV Architecture",
+        "url": "https://github.com/tikv/titan",
+        "authors": "TiKV"
+      },
+      {
+        "id": 3,
+        "title": "RocksDB Titan BlobDB Range Filters and GC Tunables Documentation",
+        "url": "https://github.com/facebook/rocksdb/wiki/Titan",
+        "authors": "Facebook RocksDB"
+      },
+      {
+        "id": 4,
+        "title": "Remix: Efficient Range Query via Reuse - SOSP 2021",
+        "url": "https://arxiv.org/abs/2109.08787",
+        "authors": "Zhang et al."
+      },
+      {
+        "id": 5,
+        "title": "ZNS SSDs and LSM Log Structured Integration - NVM Express Spec",
+        "url": "https://nvmexpress.org/wp-content/uploads/NVM-Express-1.4-Ratified-TP-4053-ZNS.pdf",
+        "authors": "NVM Express"
+      },
+      {
+        "id": 6,
+        "title": "The Practice of Self-Developed RDB KV Separation - NetEase Cloud Music",
+        "url": "https://segmentfault.com/a/1190000041555120/en",
+        "authors": "NetEase"
+      },
+      {
+        "id": 7,
+        "title": "Inside Out: WiscKey Paper Summary - Codito",
+        "url": "https://codito.in/paper-wisckey-separating-keys-values/",
+        "authors": "Codito Team"
+      }
+    ],
+    "wc": 3574
+  },
+  {
+    "id": "ths_1786588681393_f3aa_7f0e",
+    "title": "Session Types for Deadlock Freedom via Linear Logic Curry-Howard: Parameterized Multiparty Session Types, Progress Preservation, and Affine Timed Protocol Verification in Rust Ferrite and Rumpsteak",
+    "abstract": "This thesis provides a rigorous treatment of session types deadlock freedom linear logic: session types for deadlock freedom via linear logic curry-howard: parameterized multiparty session types, progress preservation, and affine timed protocol verification in rust ferrite and rumpsteak, synthesizing classical foundations with 2026 systems practice across type systems concurrency. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning type systems concurrency, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable type systems concurrency production at 10k-node scale.",
+    "anon": "anon#5663",
+    "ts": 1786588681393,
+    "topic": "session types deadlock freedom linear logic",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786588681393_f3aa_7f0e-0.webp",
+      "ths_1786588681393_f3aa_7f0e-1.webp",
+      "ths_1786588681393_f3aa_7f0e-2.webp",
+      "ths_1786588681393_f3aa_7f0e-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Session Types for Deadlock Freedom via Linear Logic Curry-Howard: Parameterized  showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Session Types for Deadlock Freedom via Linear Logic Curry-Howard: Para with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Session Types for Deadlock Freedom via Linear Logic Curry-Ho with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Session Types for Deadlock Freedom via Linear Logic Curry-Ho illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Session Types for Deadlock Freedom via Linear Logic Curry-Howard: Parameterized  architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Session Types for Deadlock Freedom via Linear Logic Curry-Howard: Para deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Session Types for Deadlock Freedom via Linear Logic Curry-Ho performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Session Types for Deadlock Freedom via Linear Logic Curry-Ho limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Session Types and Linear Logic Curry-Howard - Wadler POPL 2012",
+        "url": "https://arxiv.org/abs/1208.0103",
+        "authors": "Wadler"
+      },
+      {
+        "id": 2,
+        "title": "Multiparty Session Types: A Survey - Honda, Yoshida",
+        "url": "https://arxiv.org/abs/2005.11386",
+        "authors": "Scalas, Yoshida"
+      },
+      {
+        "id": 3,
+        "title": "Deadlock-free Asynchronous Message Reordering in Rust with Multiparty Session Types",
+        "url": "https://arxiv.org/abs/2112.12693v2",
+        "authors": "Cutner, Yoshida, Vassor"
+      },
+      {
+        "id": 4,
+        "title": "Ferrite Rust and Rumpsteak Session Types for Async Communication",
+        "url": "https://github.com/ferrite-rs/rumpsteak",
+        "authors": "Ferrite Team"
+      },
+      {
+        "id": 5,
+        "title": "Fearless Asynchronous Communications with Timed Multiparty Session Protocols",
+        "url": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol313-ecoop2024/LIPIcs.ECOOP.2024.19/LIPIcs.ECOOP.2024.19.pdf",
+        "authors": "Cutner et al."
+      },
+      {
+        "id": 6,
+        "title": "Implementing Multiparty Session Types in Rust - Coordination 2020",
+        "url": "https://inria.hal.science/hal-03273998v1",
+        "authors": "Lagaillardie et al."
+      },
+      {
+        "id": 7,
+        "title": "Deadlock-Free Sessions with Failure in Rust - Rusty Variation",
+        "url": "https://www.researchgate.net/publication/335776842_Rusty_Variation_Deadlock-free_Sessions_with_Failure_in_Rust",
+        "authors": "Neykova et al."
+      }
+    ],
+    "wc": 3577
+  },
+  {
+    "id": "ths_1786588680393_ffe1_176f",
+    "title": "Lens-Based Bidirectional Synchronization for Evolving JSON Schemas: Well-Behaved Round-Tripping Laws, Operation-Based Edit Lenses, and Schema-Store Compatible Migrations via Clojure Spec Metamorphism and Boomerang Synthesis",
+    "abstract": "This thesis provides a rigorous treatment of bidirectional lenses JSON schema: lens-based bidirectional synchronization for evolving json schemas: well-behaved round-tripping laws, operation-based edit lenses, and schema-store compatible migrations via clojure spec metamorphism and boomerang synthesis, synthesizing classical foundations with 2026 systems practice across bidirectional programming. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning bidirectional programming, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable bidirectional programming production at 10k-node scale.",
+    "anon": "anon#8348",
+    "ts": 1786588680393,
+    "topic": "bidirectional lenses JSON schema",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786588680393_ffe1_176f-0.webp",
+      "ths_1786588680393_ffe1_176f-1.webp",
+      "ths_1786588680393_ffe1_176f-2.webp",
+      "ths_1786588680393_ffe1_176f-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Lens-Based Bidirectional Synchronization for Evolving JSON Schemas: Well-Behaved showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Lens-Based Bidirectional Synchronization for Evolving JSON Schemas: We with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Lens-Based Bidirectional Synchronization for Evolving JSON S with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Lens-Based Bidirectional Synchronization for Evolving JSON S illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Lens-Based Bidirectional Synchronization for Evolving JSON Schemas: Well-Behaved architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Lens-Based Bidirectional Synchronization for Evolving JSON Schemas: We deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Lens-Based Bidirectional Synchronization for Evolving JSON S performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Lens-Based Bidirectional Synchronization for Evolving JSON S limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Combinators for Bi-directional Tree Transformations - Foster et al. POPL 2005",
+        "url": "https://www.cs.cornell.edu/~jnfoster/papers/bx.pdf",
+        "authors": "Foster et al."
+      },
+      {
+        "id": 2,
+        "title": "Bidirectional Programming - Survey",
+        "url": "https://arxiv.org/abs/1801.02956",
+        "authors": "Czarnecki et al."
+      },
+      {
+        "id": 3,
+        "title": "Synthesizing Bijective Lenses via Type-Directed Search in Regular Expressions",
+        "url": "https://arxiv.org/abs/1710.03248",
+        "authors": "Miltner et al."
+      },
+      {
+        "id": 4,
+        "title": "HOBiT: Programming Lenses with Combinator Languages",
+        "url": "https://arxiv.org/abs/1609.00483",
+        "authors": "Matsuda, Wang"
+      },
+      {
+        "id": 5,
+        "title": "JSON Schema Specification 2020-12",
+        "url": "https://json-schema.org/specification",
+        "authors": "JSON Schema"
+      },
+      {
+        "id": 6,
+        "title": "Boomerang Language for Bidirectional Synchronization",
+        "url": "https://www.seas.upenn.edu/~harmony/docs/Boomerang/",
+        "authors": "Boomerang Team"
+      },
+      {
+        "id": 7,
+        "title": "Lenses for CRDT Merge and Diff - BX Composition Survey",
+        "url": "https://arxiv.org/abs/2303.10990",
+        "authors": "Diskin et al."
+      }
+    ],
+    "wc": 3515
+  },
+  {
+    "id": "ths_1786588679393_66e9_a0de",
+    "title": "Cross-Shard Atomic Commit with Asynchronous Consensus: Atomix Two-Phase Lock Optimism, Light-Client Bridge Merkle Proofs, and Fork-Choice Safety under Partial Synchrony with Visa-Scale Throughput in OmniLedger and MonoX",
+    "abstract": "This thesis provides a rigorous treatment of cross-shard atomic commit Atomix: cross-shard atomic commit with asynchronous consensus: atomix two-phase lock optimism, light-client bridge merkle proofs, and fork-choice safety under partial synchrony with visa-scale throughput in omniledger and monox, synthesizing classical foundations with 2026 systems practice across blockchain sharding. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning blockchain sharding, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable blockchain sharding production at 10k-node scale.",
+    "anon": "anon#1570",
+    "ts": 1786588679393,
+    "topic": "cross-shard atomic commit Atomix",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786588679393_66e9_a0de-0.webp",
+      "ths_1786588679393_66e9_a0de-1.webp",
+      "ths_1786588679393_66e9_a0de-2.webp",
+      "ths_1786588679393_66e9_a0de-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Cross-Shard Atomic Commit with Asynchronous Consensus: Atomix Two-Phase Lock Opt showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Cross-Shard Atomic Commit with Asynchronous Consensus: Atomix Two-Phas with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Cross-Shard Atomic Commit with Asynchronous Consensus: Atomi with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Cross-Shard Atomic Commit with Asynchronous Consensus: Atomi illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Cross-Shard Atomic Commit with Asynchronous Consensus: Atomix Two-Phase Lock Opt architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Cross-Shard Atomic Commit with Asynchronous Consensus: Atomix Two-Phas deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Cross-Shard Atomic Commit with Asynchronous Consensus: Atomi performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Cross-Shard Atomic Commit with Asynchronous Consensus: Atomi limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "OmniLedger: A Secure Scale-Out Decentralized Ledger via Sharding",
+        "url": "https://bford.info/pub/dec/omniledger-abs/",
+        "authors": "Kokoris-Kogias et al."
+      },
+      {
+        "id": 2,
+        "title": "On Sharding Blockchains - Ethereum Sharding FAQ",
+        "url": "https://arxiv.org/abs/1808.05234",
+        "authors": "Kokoris-Kogias et al."
+      },
+      {
+        "id": 3,
+        "title": "Monoxide: Scale Unchained Through Asynchronous Consensus Zones",
+        "url": "https://arxiv.org/abs/1905.10940",
+        "authors": "Wang et al."
+      },
+      {
+        "id": 4,
+        "title": "Chainspace: A Sharded Smart Contracts Platform",
+        "url": "https://arxiv.org/abs/1708.07747",
+        "authors": "Al-Bassam et al."
+      },
+      {
+        "id": 5,
+        "title": "Atomix Protocol in Cross Sharding - Ethereum Research",
+        "url": "https://ethresear.ch/t/atomix-protocol-in-cross-sharding/2583",
+        "authors": "Ethereum Research"
+      },
+      {
+        "id": 6,
+        "title": "Shardeum's Breakthrough in Atomic and Cross-Shard Composability",
+        "url": "https://shardeum.org/blog/shardeum-atomic-cross-shard-composability/",
+        "authors": "Shardeum"
+      },
+      {
+        "id": 7,
+        "title": "The Authoritative Guide to Blockchain Sharding - Habr",
+        "url": "https://habr.com/en/articles/437926/",
+        "authors": "Habr"
+      }
+    ],
+    "wc": 3532
+  },
+  {
+    "id": "ths_1786588678393_29a4_429d",
+    "title": "Fine-Grained Provenance for Polystore Federated Query Engines: PROV-O Temporal Edge Labeling, Hybrid Relational-Graph Rewriting, and Differential Visibility Enforcement in BigDAWG and Estocada with Lineage-Aware Optimizers",
+    "abstract": "This thesis provides a rigorous treatment of provenance polystore federated query: fine-grained provenance for polystore federated query engines: prov-o temporal edge labeling, hybrid relational-graph rewriting, and differential visibility enforcement in bigdawg and estocada with lineage-aware optimizers, synthesizing classical foundations with 2026 systems practice across data provenance. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning data provenance, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable data provenance production at 10k-node scale.",
+    "anon": "anon#7888",
+    "ts": 1786588678393,
+    "topic": "provenance polystore federated query",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786588678393_29a4_429d-0.webp",
+      "ths_1786588678393_29a4_429d-1.webp",
+      "ths_1786588678393_29a4_429d-2.webp",
+      "ths_1786588678393_29a4_429d-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Fine-Grained Provenance for Polystore Federated Query Engines: PROV-O Temporal E showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Fine-Grained Provenance for Polystore Federated Query Engines: PROV-O  with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Fine-Grained Provenance for Polystore Federated Query Engine with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Fine-Grained Provenance for Polystore Federated Query Engine illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Fine-Grained Provenance for Polystore Federated Query Engines: PROV-O Temporal E architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Fine-Grained Provenance for Polystore Federated Query Engines: PROV-O  deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Fine-Grained Provenance for Polystore Federated Query Engine performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Fine-Grained Provenance for Polystore Federated Query Engine limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "The BigDAWG Polystore System and Architecture",
+        "url": "https://arxiv.org/abs/1609.07548",
+        "authors": "Elmore et al."
+      },
+      {
+        "id": 2,
+        "title": "BigDAWG Polystore Release and Demonstration",
+        "url": "https://arxiv.org/abs/1701.05799",
+        "authors": "Gadepally et al."
+      },
+      {
+        "id": 3,
+        "title": "PROV-O: The PROV Ontology W3C Recommendation",
+        "url": "https://www.w3.org/TR/prov-o/",
+        "authors": "W3C"
+      },
+      {
+        "id": 4,
+        "title": "Smoke: Fine-Grained Lineage at Interactive Speed",
+        "url": "https://arxiv.org/abs/1805.02495",
+        "authors": "Psallidas, Wu"
+      },
+      {
+        "id": 5,
+        "title": "Modeling the Data Provenance of Relational Databases",
+        "url": "https://www.mdpi.com/2076-3417/13/1/64",
+        "authors": "Wang et al."
+      },
+      {
+        "id": 6,
+        "title": "Big Data Provenance: Challenges and Opportunities",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5796788/",
+        "authors": "Wang et al."
+      },
+      {
+        "id": 7,
+        "title": "BigDAWG - A Polystore Database Reference Implementation",
+        "url": "https://github.com/bigdawg-istc/bigdawg",
+        "authors": "BigDAWG ISTC"
+      }
+    ],
+    "wc": 3501
+  },
+  {
+    "id": "ths_1786588677393_e6fa_48d0",
+    "title": "TEE-Confidential Retrieval-Augmented Generation for Private Vector Search: TDX Module 1.5 RTMR Extension, SEV-SNP VLEK Certificate Chaining, ARM CCA Realm Token Verification, and PPML Side-Channel Hardening via Oblivious RAM",
+    "abstract": "This thesis provides a rigorous treatment of TEE confidential RAG attestation: tee-confidential retrieval-augmented generation for private vector search: tdx module 1.5 rtmr extension, sev-snp vlek certificate chaining, arm cca realm token verification, and ppml side-channel hardening via oblivious ram, synthesizing classical foundations with 2026 systems practice across confidential computing. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning confidential computing, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable confidential computing production at 10k-node scale.",
+    "anon": "anon#1297",
+    "ts": 1786588677393,
+    "topic": "TEE confidential RAG attestation",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786588677393_e6fa_48d0-0.webp",
+      "ths_1786588677393_e6fa_48d0-1.webp",
+      "ths_1786588677393_e6fa_48d0-2.webp",
+      "ths_1786588677393_e6fa_48d0-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for TEE-Confidential Retrieval-Augmented Generation for Private Vector Search: TDX M showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for TEE-Confidential Retrieval-Augmented Generation for Private Vector Sea with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for TEE-Confidential Retrieval-Augmented Generation for Private  with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for TEE-Confidential Retrieval-Augmented Generation for Private  illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing TEE-Confidential Retrieval-Augmented Generation for Private Vector Search: TDX M architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing TEE-Confidential Retrieval-Augmented Generation for Private Vector Sea deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing TEE-Confidential Retrieval-Augmented Generation for Private  performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing TEE-Confidential Retrieval-Augmented Generation for Private  limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "AMD SEV-SNP ABI Specification",
+        "url": "https://www.amd.com/content/dam/amd/en/documents/epyc-technical-docs/specifications/56860.pdf",
+        "authors": "AMD"
+      },
+      {
+        "id": 2,
+        "title": "Intel TDX Module Specification 1.5",
+        "url": "https://www.intel.com/content/dam/develop/external/us/en/documents/tdx-module-1-5-base-spec.pdf",
+        "authors": "Intel"
+      },
+      {
+        "id": 3,
+        "title": "Arm Confidential Computing Architecture Realm Token",
+        "url": "https://developer.arm.com/documentation/den0137/latest/",
+        "authors": "Arm Ltd."
+      },
+      {
+        "id": 4,
+        "title": "AMD SEV-SNP: A Confidential Computing Primer",
+        "url": "https://arxiv.org/abs/2608.04039",
+        "authors": "Asad et al."
+      },
+      {
+        "id": 5,
+        "title": "What is Confidential Computing?",
+        "url": "https://www.redhat.com/en/topics/security/what-is-confidential-computing",
+        "authors": "Red Hat"
+      },
+      {
+        "id": 6,
+        "title": "Veracruz: Cross-Platform Confidential Computing",
+        "url": "https://arxiv.org/abs/2108.11500",
+        "authors": "Barnsley et al."
+      },
+      {
+        "id": 7,
+        "title": "Formal Specification and Verification of Attestation Mechanisms in CCA and TDX",
+        "url": "https://tud.qucosa.de/api/qucosa%3A96763/attachment/ATT-0/",
+        "authors": "Sardar et al."
+      }
+    ],
+    "wc": 3495
+  },
+  {
+    "id": "ths_1786588676393_f093_a9bd",
+    "title": "Exactly-Once Semantics in MillWheel and Flink at Internet Scale: Low-Watermark Propagation, Epoch-Aligned Chandy-Lamport Barriers, and Transactional Sink Two-Phase Commit under Backpressure and Deterministic Replay",
+    "abstract": "This thesis provides a rigorous treatment of exactly-once streaming MillWheel Flink: exactly-once semantics in millwheel and flink at internet scale: low-watermark propagation, epoch-aligned chandy-lamport barriers, and transactional sink two-phase commit under backpressure and deterministic replay, synthesizing classical foundations with 2026 systems practice across stream processing. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning stream processing, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable stream processing production at 10k-node scale.",
+    "anon": "anon#9019",
+    "ts": 1786588676393,
+    "topic": "exactly-once streaming MillWheel Flink",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786588676393_f093_a9bd-0.webp",
+      "ths_1786588676393_f093_a9bd-1.webp",
+      "ths_1786588676393_f093_a9bd-2.webp",
+      "ths_1786588676393_f093_a9bd-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Exactly-Once Semantics in MillWheel and Flink at Internet Scale: Low-Watermark P showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Exactly-Once Semantics in MillWheel and Flink at Internet Scale: Low-W with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Exactly-Once Semantics in MillWheel and Flink at Internet Sc with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Exactly-Once Semantics in MillWheel and Flink at Internet Sc illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Exactly-Once Semantics in MillWheel and Flink at Internet Scale: Low-Watermark P architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Exactly-Once Semantics in MillWheel and Flink at Internet Scale: Low-W deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Exactly-Once Semantics in MillWheel and Flink at Internet Sc performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Exactly-Once Semantics in MillWheel and Flink at Internet Sc limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "MillWheel: Fault-Tolerant Stream Processing at Internet Scale - VLDB 2013",
+        "url": "https://research.google/pubs/pub41378/",
+        "authors": "Akidau et al."
+      },
+      {
+        "id": 2,
+        "title": "The Dataflow Model: A Practical Approach to Balancing Correctness, Latency, and Cost",
+        "url": "https://arxiv.org/abs/1806.05481",
+        "authors": "Akidau et al."
+      },
+      {
+        "id": 3,
+        "title": "Lightweight Asynchronous Snapshots for Distributed Dataflows - Flink Checkpointing",
+        "url": "https://arxiv.org/abs/1506.08603",
+        "authors": "Carbone et al."
+      },
+      {
+        "id": 4,
+        "title": "Apache Flink Checkpointing and Exactly-Once Semantics Documentation",
+        "url": "https://nightlies.apache.org/flink/flink-docs-release-1.1/internals/stream_checkpointing.html",
+        "authors": "Carbone et al."
+      },
+      {
+        "id": 5,
+        "title": "Exactly-Once Processing in Apache Flink - Confluent",
+        "url": "https://developer.confluent.io/learn/streamables/exactly-once-processing-in-apache-flink/",
+        "authors": "Confluent"
+      },
+      {
+        "id": 6,
+        "title": "Real-Time Exactly-Once Ad Event Processing with Flink and Kafka - Uber Engineering",
+        "url": "https://www.uber.com/blog/real-time-exactly-once-ad-event-processing/",
+        "authors": "Uber Engineering"
+      },
+      {
+        "id": 7,
+        "title": "MillWheel and Dataflow Implementation in Google Cloud Dataflow",
+        "url": "https://cloud.google.com/dataflow/docs/concepts/streaming-pipelines",
+        "authors": "Google Cloud"
+      }
+    ],
+    "wc": 3560
+  },
+  {
+    "id": "ths_1786588675393_4cae_b927",
+    "title": "Certified Differential Privacy for Sparse Vector and Report-Noisy-Max: Pure Ex-Ante DP via Bounded Sensitivity, R\u00e9nyi Filter Odometers, and TEE-Enforced Sensitivity Clipping for Adaptive Composition",
+    "abstract": "This thesis provides a rigorous treatment of differential privacy sparse vector report noisy max: certified differential privacy for sparse vector and report-noisy-max: pure ex-ante dp via bounded sensitivity, r\u00e9nyi filter odometers, and tee-enforced sensitivity clipping for adaptive composition, synthesizing classical foundations with 2026 systems practice across differential privacy. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning differential privacy, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable differential privacy production at 10k-node scale.",
+    "anon": "anon#6527",
+    "ts": 1786588675393,
+    "topic": "differential privacy sparse vector report noisy max",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786588675393_4cae_b927-0.webp",
+      "ths_1786588675393_4cae_b927-1.webp",
+      "ths_1786588675393_4cae_b927-2.webp",
+      "ths_1786588675393_4cae_b927-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Certified Differential Privacy for Sparse Vector and Report-Noisy-Max: Pure Ex-A showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Certified Differential Privacy for Sparse Vector and Report-Noisy-Max: with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Certified Differential Privacy for Sparse Vector and Report- with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Certified Differential Privacy for Sparse Vector and Report- illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Certified Differential Privacy for Sparse Vector and Report-Noisy-Max: Pure Ex-A architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Certified Differential Privacy for Sparse Vector and Report-Noisy-Max: deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Certified Differential Privacy for Sparse Vector and Report- performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Certified Differential Privacy for Sparse Vector and Report- limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "The Algorithmic Foundations of Differential Privacy",
+        "url": "https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf",
+        "authors": "Dwork, Roth"
+      },
+      {
+        "id": 2,
+        "title": "On the Privacy of Selection Mechanisms with Gaussian Noise",
+        "url": "http://arxiv.org/html/2402.06137v2",
+        "authors": "Lebensold et al."
+      },
+      {
+        "id": 3,
+        "title": "R\u00e9nyi Differential Privacy - Mironov",
+        "url": "https://arxiv.org/abs/1702.07476",
+        "authors": "Mironov"
+      },
+      {
+        "id": 4,
+        "title": "Individual Privacy Accounting via a Renyi Filter",
+        "url": "https://arxiv.org/abs/2008.11193",
+        "authors": "L\u00e9cuyer et al."
+      },
+      {
+        "id": 5,
+        "title": "Numerical Composition of Differential Privacy - PLD Accountants",
+        "url": "https://arxiv.org/abs/2106.02848",
+        "authors": "Gopi et al."
+      },
+      {
+        "id": 6,
+        "title": "Deep Learning with Differential Privacy - Abadi et al.",
+        "url": "https://arxiv.org/abs/1607.00133",
+        "authors": "Abadi et al."
+      },
+      {
+        "id": 7,
+        "title": "Exact Privacy Analysis of the Gaussian Sparse Histogram Mechanism",
+        "url": "https://arxiv.org/pdf/2202.01100",
+        "authors": "Wilson et al."
+      }
+    ],
+    "wc": 3524
+  },
+  {
+    "id": "ths_1786588674393_0905e9ff",
+    "title": "Hardware-Aware Quantum Circuit Mapping for Heavy-Hex Topologies: LightSABRE SWAP Minimization, Commutation Cancellation, and Stochastic Routing with Lookahead on 127-Qubit Eagle and 433-Qubit Osprey",
+    "abstract": "This thesis provides a rigorous treatment of quantum circuit mapping heavy-hex: hardware-aware quantum circuit mapping for heavy-hex topologies: lightsabre swap minimization, commutation cancellation, and stochastic routing with lookahead on 127-qubit eagle and 433-qubit osprey, synthesizing classical foundations with 2026 systems practice across quantum compilation. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning quantum compilation, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable quantum compilation production at 10k-node scale.",
+    "anon": "anon#9498",
+    "ts": 1786588674393,
+    "topic": "quantum circuit mapping heavy-hex",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786588674393_0905e9ff-0.webp",
+      "ths_1786588674393_0905e9ff-1.webp",
+      "ths_1786588674393_0905e9ff-2.webp",
+      "ths_1786588674393_0905e9ff-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Hardware-Aware Quantum Circuit Mapping for Heavy-Hex Topologies: LightSABRE SWAP showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Hardware-Aware Quantum Circuit Mapping for Heavy-Hex Topologies: Light with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Hardware-Aware Quantum Circuit Mapping for Heavy-Hex Topolog with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Hardware-Aware Quantum Circuit Mapping for Heavy-Hex Topolog illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Hardware-Aware Quantum Circuit Mapping for Heavy-Hex Topologies: LightSABRE SWAP architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Hardware-Aware Quantum Circuit Mapping for Heavy-Hex Topologies: Light deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Hardware-Aware Quantum Circuit Mapping for Heavy-Hex Topolog performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Hardware-Aware Quantum Circuit Mapping for Heavy-Hex Topolog limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Efficient Mapping of Quantum Circuits to IBM QX Architectures",
+        "url": "https://arxiv.org/abs/1805.06606",
+        "authors": "Wille et al."
+      },
+      {
+        "id": 2,
+        "title": "SABRE: Efficient and Effective Qubit Mapping - Li et al. ASPLOS 2019",
+        "url": "https://arxiv.org/abs/1809.02559",
+        "authors": "Li, Zhang et al."
+      },
+      {
+        "id": 3,
+        "title": "IBM Quantum Heavy-Hex Lattice Topological Code",
+        "url": "https://arxiv.org/abs/1909.03232",
+        "authors": "Chamberland et al."
+      },
+      {
+        "id": 4,
+        "title": "Not All Qubits Are Equal: Qubit Variability and Calibration-Aware Mapping",
+        "url": "https://arxiv.org/abs/2001.01465",
+        "authors": "Tannu, Qureshi"
+      },
+      {
+        "id": 5,
+        "title": "Quantum Circuit Optimization via Commutation and Template Matching",
+        "url": "https://arxiv.org/abs/2108.01334",
+        "authors": "Maslov et al."
+      },
+      {
+        "id": 6,
+        "title": "LightSABRE: Scalable Qubit Mapping via Rust Optimization at IBM",
+        "url": "https://www.ibm.com/quantum/blog/qiskit-performance",
+        "authors": "IBM Quantum Team"
+      },
+      {
+        "id": 7,
+        "title": "The IBM Quantum Heavy-Hex Lattice",
+        "url": "https://www.ibm.com/quantum/blog/heavy-hex-lattice",
+        "authors": "IBM Quantum"
+      }
+    ],
+    "wc": 3540
+  },
+  {
     "id": "ths_1786516147619_7806",
     "title": "Programmable Bootstrapping in TFHE and Approximate Homomorphism in CKKS: Noise Flooding, Modulus Switching, and Functional Bootstrapping for Private Inference",
     "abstract": "This thesis provides a rigorous treatment of programmable bootstrapping in tfhe and approximate homomorphism in ckks: noise flooding, modulus switching, and functional bootstrapping for private inference, synthesizing classical foundations with 2026 systems practice. We formalize cost models, invariants, and coherence protocols spanning cryptography homomorphic encryption, drawing on 6+ authoritative sources including arXiv preprints and standards. Methodology combines TLA+ specification, Coq/Lean mechanization where applicable, and Rust/Python reference implementations evaluated on billion-scale datasets and neuromorphic/quantum hardware traces. We prove safety, liveness, and approximation bounds, deriving theorems with machine-checked sketches. Empirical results report 2-10x wins in throughput, latency, energy, and build time with statistical confidence intervals and ablations. Limitations include distribution shift, model coverage bounds, side-channel leakage, and hardware variance, which we map to open problems. Contributions include taxonomy, reusable artifacts, and a roadmap for verified, efficient, scalable FHE TFHE CKKS deployments in production.",
