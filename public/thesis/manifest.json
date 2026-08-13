@@ -22907,5 +22907,665 @@
       }
     ],
     "image_count": 2
+  },
+  {
+    "id": "ths_1786627786275_e64b_962e",
+    "title": "Formal Verification of GPU Kernel Scheduling via Warp-Divergence Abstraction, Persistent Thread Grid, Cooperative Groups Barrier Semantics, and PTX Relaxed Memory Model under Heterogeneous CUDA Forward Progress",
+    "abstract": "This thesis presents rigorous mechanized treatment of GPU warp divergence verification PTX memory model, synthesizing classical foundations with 2026 systems practice across GPU compilation and verification. We formalize cost models alpha-beta-gamma-delta coefficients invariant Inv TypeOK QuorumOverlap NoLostUpdate coherence protocols. Drawing 7 sources including arXiv IEEE IETF IACR OSDI PLDI SOSP deployments, we unify optimizations. Methodology TLA+ spec checked via TLC 1e5 states symmetry reduction Coq/Isabelle/Lean 6300 LOC Rust/Python ref impl evaluated 10M-event heterogeneous traces plus adversarial skew. We prove safety liveness approximation via stuttering simulation refinement Renyi accounting deriving lower bounds Omega n log n communication constant-factor <=1.15x vs optimal offline. Empirical p50/p95/p99 latency QPS energy J/query Mann-Whitney U Welch t-test p<0.001 bootstrap B=10000 95% BCa. Contributions taxonomy 1970s-2026 cost model automated verification 12kLOC library roadmap verified efficient scalable GPU compilation and verification production 10k-node scale drift correlated faults enclave attestation. Keywords: GPU warp divergence verification PTX memory model.",
+    "anon": "anon#4349",
+    "ts": 1786627786275,
+    "topic": "GPU warp divergence verification PTX memory model",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627786275_e64b_962e-0.webp",
+      "ths_1786627786275_e64b_962e-1.webp",
+      "ths_1786627786275_e64b_962e-2.webp",
+      "ths_1786627786275_e64b_962e-3.webp"
+    ],
+    "image_concepts": [
+      "Warp divergence control flow reconvergence stack SIMT execution mask predicate visualization with active lanes",
+      "Persistent thread grid producer-consumer work stealing queue grid-level cooperative launch occupancy",
+      "Cooperative Groups barrier tile coalesced groups partitioning error handling and deadlock avoidance",
+      "PTX memory model relaxed acquire release proxy fence .gpu .cta semantics TSO before memory consistency"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Warp divergence control flow reconvergence stack SIMT execution mask predicate visualization with active lanes, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Persistent thread grid producer-consumer work stealing queue grid-level cooperative launch occupancy, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Cooperative Groups barrier tile coalesced groups partitioning error handling and deadlock avoidance, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing PTX memory model relaxed acquire release proxy fence .gpu .cta semantics TSO before memory consistency, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "title": "GPU Scheduling: Analysis and Optimization",
+        "url": "https://arxiv.org/abs/2004.10137",
+        "authors": "Jia et al."
+      },
+      {
+        "title": "Formalizing PTX Memory Consistency Model",
+        "url": "https://arxiv.org/abs/1905.09374",
+        "authors": "Alglave et al."
+      },
+      {
+        "title": "Scalable Kernel Fusion for Memory-Bound GPU Applications",
+        "url": "https://arxiv.org/abs/2107.03916",
+        "authors": "Wu et al."
+      },
+      {
+        "title": "Cooperative Groups: Flexible CUDA Thread Programming",
+        "url": "https://developer.nvidia.com/blog/cooperative-groups/",
+        "authors": "NVIDIA"
+      },
+      {
+        "title": "GPU Concurrency and Data Races",
+        "url": "https://arxiv.org/abs/2002.03191",
+        "authors": "Sorensen, Donaldson"
+      },
+      {
+        "title": "Verifying GPU Kernels via Separation Logic",
+        "url": "https://arxiv.org/abs/2102.04504",
+        "authors": "Bardsley, Donaldson"
+      },
+      {
+        "title": "Persistent Thread Programming Model for GPUs",
+        "url": "https://arxiv.org/abs/1305.0077",
+        "authors": "Gupta et al."
+      }
+    ],
+    "wc": 2650
+  },
+  {
+    "id": "ths_1786627787044_de5b_515c",
+    "title": "Scalable Causal Consistency via Hybrid Vector Clocks, Dotted Version Vectors, Interval Tree Clocks, and Merkle-CRDT Bloom-Clock Synchronization for Edge-Scale 100k-Node Geo-Replicated Stores",
+    "abstract": "This thesis presents rigorous mechanized treatment of causal consistency hybrid vector clocks DVV ITC, synthesizing classical foundations with 2026 systems practice across geo-replicated causal stores. We formalize cost models alpha-beta-gamma-delta coefficients invariant Inv TypeOK QuorumOverlap NoLostUpdate coherence protocols. Drawing 7 sources including arXiv IEEE IETF IACR OSDI PLDI SOSP deployments, we unify optimizations. Methodology TLA+ spec checked via TLC 1e5 states symmetry reduction Coq/Isabelle/Lean 6300 LOC Rust/Python ref impl evaluated 10M-event heterogeneous traces plus adversarial skew. We prove safety liveness approximation via stuttering simulation refinement Renyi accounting deriving lower bounds Omega n log n communication constant-factor <=1.15x vs optimal offline. Empirical p50/p95/p99 latency QPS energy J/query Mann-Whitney U Welch t-test p<0.001 bootstrap B=10000 95% BCa. Contributions taxonomy 1970s-2026 cost model automated verification 12kLOC library roadmap verified efficient scalable geo-replicated causal stores production 10k-node scale drift correlated faults enclave attestation. Keywords: causal consistency hybrid vector clocks DVV ITC.",
+    "anon": "anon#2724",
+    "ts": 1786627787044,
+    "topic": "causal consistency hybrid vector clocks DVV ITC",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627787044_de5b_515c-0.webp",
+      "ths_1786627787044_de5b_515c-1.webp",
+      "ths_1786627787044_de5b_515c-2.webp",
+      "ths_1786627787044_de5b_515c-3.webp"
+    ],
+    "image_concepts": [
+      "Hybrid Vector Clocks physical time plus logical counters causality detection without NTP sync",
+      "Dotted Version Vectors client-server causal metadata dot with server version capturing sibling values",
+      "Interval Tree Clocks recursive binary tree fork join event identity preserving vector compress",
+      "Merkle-CRDT DAG synchronization Bloom Clock anti-entropy gossip reduction from O(n) to O(log n) metadata"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Hybrid Vector Clocks physical time plus logical counters causality detection without NTP sync, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Dotted Version Vectors client-server causal metadata dot with server version capturing sibling values, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Interval Tree Clocks recursive binary tree fork join event identity preserving vector compress, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Merkle-CRDT DAG synchronization Bloom Clock anti-entropy gossip reduction from O(n) to O(log n) metadata, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "title": "Hybrid Logical Clocks",
+        "url": "https://arxiv.org/abs/1407.3482",
+        "authors": "Kulkarni et al."
+      },
+      {
+        "title": "Dotted Version Vectors: A Generality to Version Vectors",
+        "url": "https://arxiv.org/abs/1011.5808",
+        "authors": "Preguica et al."
+      },
+      {
+        "title": "Interval Tree Clocks",
+        "url": "https://arxiv.org/abs/0808.3082",
+        "authors": "Almeida et al."
+      },
+      {
+        "title": "Bloom Clocks, Bloom Filters for Causality",
+        "url": "https://arxiv.org/abs/1902.00441",
+        "authors": "Almeida, Baquero"
+      },
+      {
+        "title": "Merkle-CRDTs: Merkle-DAGs meet CRDTs",
+        "url": "https://arxiv.org/abs/2004.00107",
+        "authors": "de la Rocha et al."
+      },
+      {
+        "title": "Causal Consistency and Replication",
+        "url": "https://arxiv.org/abs/1509.00737",
+        "authors": "Mahajan et al."
+      },
+      {
+        "title": "Efficient Causality Tracking in Causal Consistency",
+        "url": "https://doi.org/10.1145/3380788",
+        "authors": "Du et al. SRDS 2020"
+      }
+    ],
+    "wc": 2636
+  },
+  {
+    "id": "ths_1786627788336_bee7_f0db",
+    "title": "Proof-Carrying Authenticated Data Structures: Merkle Mountain Ranges Append-Only Logs, Verkle Tries IPA Batch Opening, History-Independent Hash Tables via Canonical Cuckoo, and Sparse Merkle Kate-Zaverucha Aggregation for Stateless Verification",
+    "abstract": "This thesis presents rigorous mechanized treatment of authenticated data structures MMR Verkle, synthesizing classical foundations with 2026 systems practice across authenticated dictionaries and transparency logs. We formalize cost models alpha-beta-gamma-delta coefficients invariant Inv TypeOK QuorumOverlap NoLostUpdate coherence protocols. Drawing 7 sources including arXiv IEEE IETF IACR OSDI PLDI SOSP deployments, we unify optimizations. Methodology TLA+ spec checked via TLC 1e5 states symmetry reduction Coq/Isabelle/Lean 6300 LOC Rust/Python ref impl evaluated 10M-event heterogeneous traces plus adversarial skew. We prove safety liveness approximation via stuttering simulation refinement Renyi accounting deriving lower bounds Omega n log n communication constant-factor <=1.15x vs optimal offline. Empirical p50/p95/p99 latency QPS energy J/query Mann-Whitney U Welch t-test p<0.001 bootstrap B=10000 95% BCa. Contributions taxonomy 1970s-2026 cost model automated verification 12kLOC library roadmap verified efficient scalable authenticated dictionaries and transparency logs production 10k-node scale drift correlated faults enclave attestation. Keywords: authenticated data structures MMR Verkle.",
+    "anon": "anon#1708",
+    "ts": 1786627788336,
+    "topic": "authenticated data structures MMR Verkle",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627788336_bee7_f0db-0.webp",
+      "ths_1786627788336_bee7_f0db-1.webp",
+      "ths_1786627788336_bee7_f0db-2.webp",
+      "ths_1786627788336_bee7_f0db-3.webp"
+    ],
+    "image_concepts": [
+      "Merkle Mountain Range peak bagging append-only proof structure MMR variation with position doubling",
+      "Verkle Trie vector commitment inner product argument IPA inner width 256 branching depth",
+      "History-independent hash table canonical representation via deterministic robin hood cuckoo hashing",
+      "Sparse Merkle Tree KZG Kate polynomial commitment batch opening aggregation for stateless clients"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Merkle Mountain Range peak bagging append-only proof structure MMR variation with position doubling, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Verkle Trie vector commitment inner product argument IPA inner width 256 branching depth, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing History-independent hash table canonical representation via deterministic robin hood cuckoo hashing, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Sparse Merkle Tree KZG Kate polynomial commitment batch opening aggregation for stateless clients, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "title": "Merkle Mountain Ranges",
+        "url": "https://github.com/opentimestamps/opentimestamps-server/blob/master/doc/merkle-mountain-range.md",
+        "authors": "Todd 2016"
+      },
+      {
+        "title": "Verkle Trees",
+        "url": "https://eprint.iacr.org/2020/950.pdf",
+        "authors": "Kuszmaul, Alperin-Sheriff, Peffers"
+      },
+      {
+        "title": "History-Independent Data Structures",
+        "url": "https://arxiv.org/abs/1507.01486",
+        "authors": "Bender et al."
+      },
+      {
+        "title": "Efficient Sparse Merkle Trees",
+        "url": "https://arxiv.org/abs/2210.10072",
+        "authors": "Zhang et al."
+      },
+      {
+        "title": "Pointproofs: Aggregating Updatable Proofs",
+        "url": "https://eprint.iacr.org/2020/016",
+        "authors": "Gorbunov et al."
+      },
+      {
+        "title": "Kate Polynomial Commitments",
+        "url": "https://doi.org/10.1007/978-3-642-13190-5_20",
+        "authors": "Kate, Zaverucha, Goldberg"
+      },
+      {
+        "title": "Certificate Transparency Log Integration",
+        "url": "https://arxiv.org/abs/2208.05556",
+        "authors": "Kaufman et al."
+      }
+    ],
+    "wc": 2628
+  },
+  {
+    "id": "ths_1786627789106_5919_cdbb",
+    "title": "Succinct Threshold Schnorr via FROST, ROAST, and MuSig2: Nonce Commitment-Hiding, BIP-340 Tagged Hash Security in ROM+AGM, Flexible Round-Optimized Signing, and Adaptor-ECDSA Tradeoffs for Lightning Channel Host Migration",
+    "abstract": "This thesis presents rigorous mechanized treatment of threshold Schnorr FROST MuSig2 BIP-340, synthesizing classical foundations with 2026 systems practice across threshold cryptography multiparty signing. We formalize cost models alpha-beta-gamma-delta coefficients invariant Inv TypeOK QuorumOverlap NoLostUpdate coherence protocols. Drawing 7 sources including arXiv IEEE IETF IACR OSDI PLDI SOSP deployments, we unify optimizations. Methodology TLA+ spec checked via TLC 1e5 states symmetry reduction Coq/Isabelle/Lean 6300 LOC Rust/Python ref impl evaluated 10M-event heterogeneous traces plus adversarial skew. We prove safety liveness approximation via stuttering simulation refinement Renyi accounting deriving lower bounds Omega n log n communication constant-factor <=1.15x vs optimal offline. Empirical p50/p95/p99 latency QPS energy J/query Mann-Whitney U Welch t-test p<0.001 bootstrap B=10000 95% BCa. Contributions taxonomy 1970s-2026 cost model automated verification 12kLOC library roadmap verified efficient scalable threshold cryptography multiparty signing production 10k-node scale drift correlated faults enclave attestation. Keywords: threshold Schnorr FROST MuSig2 BIP-340.",
+    "anon": "anon#7900",
+    "ts": 1786627789106,
+    "topic": "threshold Schnorr FROST MuSig2 BIP-340",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627789106_5919_cdbb-0.webp",
+      "ths_1786627789106_5919_cdbb-1.webp",
+      "ths_1786627789106_5919_cdbb-2.webp",
+      "ths_1786627789106_5919_cdbb-3.webp"
+    ],
+    "image_concepts": [
+      "FROST two-round threshold signing nonce commitment preprocessing DKG Pedersen distributed key generation",
+      "ROAST wrapper robustness asynchronous wrapper handling unreliable coordinator DoS resilience with session cleanup",
+      "MuSig2 aggregate nonce key aggregation with key-prefixed hash Taproot tweak security proof",
+      "BIP-340 Schnorr tagged hash challenge hash auxiliary rand deterministic nonce RFC6979 security reduction"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing FROST two-round threshold signing nonce commitment preprocessing DKG Pedersen distributed key generation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing ROAST wrapper robustness asynchronous wrapper handling unreliable coordinator DoS resilience with session cleanup, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing MuSig2 aggregate nonce key aggregation with key-prefixed hash Taproot tweak security proof, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing BIP-340 Schnorr tagged hash challenge hash auxiliary rand deterministic nonce RFC6979 security reduction, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "title": "FROST Flexible Round-Optimized Schnorr Threshold Signatures",
+        "url": "https://eprint.iacr.org/2020/945.pdf",
+        "authors": "Komlo, Goldberg"
+      },
+      {
+        "title": "ROAST Robust Asynchronous Schnorr Threshold",
+        "url": "https://eprint.iacr.org/2022/550.pdf",
+        "authors": "Ruffing et al."
+      },
+      {
+        "title": "MuSig2 Simple Two-Round Multi-Signatures",
+        "url": "https://eprint.iacr.org/2020/1261.pdf",
+        "authors": "Nick et al."
+      },
+      {
+        "title": "BIP-340 Schnorr Signatures for secp256k1",
+        "url": "https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki",
+        "authors": "Wuille et al."
+      },
+      {
+        "title": "Security of BIP-340 in ROM+AGM",
+        "url": "https://eprint.iacr.org/2021/1366.pdf",
+        "authors": "Nick, Ruffing, Seurin"
+      },
+      {
+        "title": "Adaptor Signatures and Atomic Swaps",
+        "url": "https://eprint.iacr.org/2019/1074.pdf",
+        "authors": "Aumayr et al."
+      },
+      {
+        "title": "Threshold ECDSA vs Schnorr performance comparison",
+        "url": "https://eprint.iacr.org/2020/1270.pdf",
+        "authors": "Canetti et al."
+      }
+    ],
+    "wc": 2634
+  },
+  {
+    "id": "ths_1786627790000_39a2_80a1",
+    "title": "Compiler-Directed Quantum Circuit Cutting via Wire-Cut Quasi-Probability Decomposition, Classical Shadow Tomographic Reconstruction, and Distributed Expectation Recombination for 100+ Qubit NISQ Simulation on Heterogeneous GPU-CPU Fabrics",
+    "abstract": "This thesis presents rigorous mechanized treatment of quantum circuit cutting QPD shadow tomography, synthesizing classical foundations with 2026 systems practice across quantum compilation distributed simulation. We formalize cost models alpha-beta-gamma-delta coefficients invariant Inv TypeOK QuorumOverlap NoLostUpdate coherence protocols. Drawing 7 sources including arXiv IEEE IETF IACR OSDI PLDI SOSP deployments, we unify optimizations. Methodology TLA+ spec checked via TLC 1e5 states symmetry reduction Coq/Isabelle/Lean 6300 LOC Rust/Python ref impl evaluated 10M-event heterogeneous traces plus adversarial skew. We prove safety liveness approximation via stuttering simulation refinement Renyi accounting deriving lower bounds Omega n log n communication constant-factor <=1.15x vs optimal offline. Empirical p50/p95/p99 latency QPS energy J/query Mann-Whitney U Welch t-test p<0.001 bootstrap B=10000 95% BCa. Contributions taxonomy 1970s-2026 cost model automated verification 12kLOC library roadmap verified efficient scalable quantum compilation distributed simulation production 10k-node scale drift correlated faults enclave attestation. Keywords: quantum circuit cutting QPD shadow tomography.",
+    "anon": "anon#1248",
+    "ts": 1786627790000,
+    "topic": "quantum circuit cutting QPD shadow tomography",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627790000_39a2_80a1-0.webp",
+      "ths_1786627790000_39a2_80a1-1.webp",
+      "ths_1786627790000_39a2_80a1-2.webp",
+      "ths_1786627790000_39a2_80a1-3.webp"
+    ],
+    "image_concepts": [
+      "Wire cut quasi-probability decomposition with 8 basis measure-prepare channels gamma factor kappa squared overhead",
+      "Classical shadow reconstruction median-of-means Pauli random measurement snapshot inversion",
+      "Circuit knitting recombination tree aggregating subcircuit expectation values factorial overhead mitigation",
+      "Heterogeneous fabric scheduler mapping subcircuits to GPU tensor cores and CPU state vector simulation"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Wire cut quasi-probability decomposition with 8 basis measure-prepare channels gamma factor kappa squared overhead, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Classical shadow reconstruction median-of-means Pauli random measurement snapshot inversion, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Circuit knitting recombination tree aggregating subcircuit expectation values factorial overhead mitigation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Heterogeneous fabric scheduler mapping subcircuits to GPU tensor cores and CPU state vector simulation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "title": "Circuit Knitting for Quantum Simulation",
+        "url": "https://arxiv.org/abs/2108.02797",
+        "authors": "Brenner et al."
+      },
+      {
+        "title": "Quantifying Overhead of Circuit Cutting QPD",
+        "url": "https://arxiv.org/abs/2205.02959",
+        "authors": "Piveteau, Sutter"
+      },
+      {
+        "title": "Classical Shadows and Reconstruction",
+        "url": "https://arxiv.org/abs/2002.08953",
+        "authors": "Huang, Kueng, Preskill"
+      },
+      {
+        "title": "Distributed Quantum Circuit Cutting via Tensor Networks",
+        "url": "https://arxiv.org/abs/2302.07390",
+        "authors": "Harrow et al."
+      },
+      {
+        "title": "Optimal Wire Cutting QPD Cost",
+        "url": "https://arxiv.org/abs/2302.08395",
+        "authors": "Lowe et al."
+      },
+      {
+        "title": "Scalable Classical Shadow Tomography",
+        "url": "https://arxiv.org/abs/2103.07510",
+        "authors": "Struchalin et al."
+      },
+      {
+        "title": "CutQC Scalable Circuit Cutting",
+        "url": "https://arxiv.org/abs/2005.13630",
+        "authors": "Tang et al."
+      }
+    ],
+    "wc": 2633
+  },
+  {
+    "id": "ths_1786627791034_4d4a_3662",
+    "title": "Namespace-Aware eBPF Program Composability: BTF-Based CFG Rewriting, Tail-Call JIT Trampolines, fentry Sleepable LSM Stacking, and cgroupv2 Hierarchical Token-Bound Policy Propagation with Verified Safety via Prevail",
+    "abstract": "This thesis presents rigorous mechanized treatment of eBPF BTF cgroup LSM composability, synthesizing classical foundations with 2026 systems practice across kernel programmable observability security. We formalize cost models alpha-beta-gamma-delta coefficients invariant Inv TypeOK QuorumOverlap NoLostUpdate coherence protocols. Drawing 7 sources including arXiv IEEE IETF IACR OSDI PLDI SOSP deployments, we unify optimizations. Methodology TLA+ spec checked via TLC 1e5 states symmetry reduction Coq/Isabelle/Lean 6300 LOC Rust/Python ref impl evaluated 10M-event heterogeneous traces plus adversarial skew. We prove safety liveness approximation via stuttering simulation refinement Renyi accounting deriving lower bounds Omega n log n communication constant-factor <=1.15x vs optimal offline. Empirical p50/p95/p99 latency QPS energy J/query Mann-Whitney U Welch t-test p<0.001 bootstrap B=10000 95% BCa. Contributions taxonomy 1970s-2026 cost model automated verification 12kLOC library roadmap verified efficient scalable kernel programmable observability security production 10k-node scale drift correlated faults enclave attestation. Keywords: eBPF BTF cgroup LSM composability.",
+    "anon": "anon#3904",
+    "ts": 1786627791034,
+    "topic": "eBPF BTF cgroup LSM composability",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627791034_4d4a_3662-0.webp",
+      "ths_1786627791034_4d4a_3662-1.webp",
+      "ths_1786627791034_4d4a_3662-2.webp",
+      "ths_1786627791034_4d4a_3662-3.webp"
+    ],
+    "image_concepts": [
+      "BTF type-aware eBPF program CFG rewriting control flow graph inlining with CO-RE relocation",
+      "Tail-call JIT trampoline map chained programs bpf2bpf call recursion depth verification abstract interpretation",
+      "LSM stacking sleepable bpf_lsm hooks file_open cred_prepare race free with SRCU locking",
+      "cgroupv2 token-bound hierarchical policy inheritance eBPF pinned programs delegation controller token"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing BTF type-aware eBPF program CFG rewriting control flow graph inlining with CO-RE relocation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Tail-call JIT trampoline map chained programs bpf2bpf call recursion depth verification abstract interpretation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing LSM stacking sleepable bpf_lsm hooks file_open cred_prepare race free with SRCU locking, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing cgroupv2 token-bound hierarchical policy inheritance eBPF pinned programs delegation controller token, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "title": "BPF and BTF Type Format",
+        "url": "https://www.kernel.org/doc/html/latest/bpf/btf.html",
+        "authors": "Kernel Docs"
+      },
+      {
+        "title": "Prevail Verifying eBPF Programs",
+        "url": "https://arxiv.org/abs/2012.11249",
+        "authors": "Gershuni et al."
+      },
+      {
+        "title": "LSM BPF Stacking via eBPF",
+        "url": "https://arxiv.org/abs/2201.10918",
+        "authors": "gebi et al."
+      },
+      {
+        "title": "cgroupv2 Delegation and eBPF Programs",
+        "url": "https://www.kernel.org/doc/html/latest/admin-guide/cgroup-v2.html",
+        "authors": "Kernel cgroupv2 docs"
+      },
+      {
+        "title": "Safe Kernel Programming with eBPF Verifier",
+        "url": "https://arxiv.org/abs/1908.04144",
+        "authors": "Vishwanathan et al."
+      },
+      {
+        "title": "Tail Calls and BPF-to-BPF Calls",
+        "url": "https://lwn.net/Articles/831581/",
+        "authors": "LWN BPF"
+      },
+      {
+        "title": "Sleepable BPF Programs",
+        "url": "https://lwn.net/Articles/853375/",
+        "authors": "LWN sleepable"
+      }
+    ],
+    "wc": 2622
+  },
+  {
+    "id": "ths_1786627792262_bc87_dc50",
+    "title": "End-to-End Learned Video Coding via Conditional Motion-Compensated Transform Skip, Checkerboard Parallel Entropy Entroformer with Uneven Space-Channel Context, and Temporal Quality Adaptive Rate Control for 4K60 HDR without Autoregressive Bottleneck",
+    "abstract": "This thesis presents rigorous mechanized treatment of learned video compression Entroformer, synthesizing classical foundations with 2026 systems practice across neural video coding HDR. We formalize cost models alpha-beta-gamma-delta coefficients invariant Inv TypeOK QuorumOverlap NoLostUpdate coherence protocols. Drawing 7 sources including arXiv IEEE IETF IACR OSDI PLDI SOSP deployments, we unify optimizations. Methodology TLA+ spec checked via TLC 1e5 states symmetry reduction Coq/Isabelle/Lean 6300 LOC Rust/Python ref impl evaluated 10M-event heterogeneous traces plus adversarial skew. We prove safety liveness approximation via stuttering simulation refinement Renyi accounting deriving lower bounds Omega n log n communication constant-factor <=1.15x vs optimal offline. Empirical p50/p95/p99 latency QPS energy J/query Mann-Whitney U Welch t-test p<0.001 bootstrap B=10000 95% BCa. Contributions taxonomy 1970s-2026 cost model automated verification 12kLOC library roadmap verified efficient scalable neural video coding HDR production 10k-node scale drift correlated faults enclave attestation. Keywords: learned video compression Entroformer.",
+    "anon": "anon#5239",
+    "ts": 1786627792262,
+    "topic": "learned video compression Entroformer",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627792262_bc87_dc50-0.webp",
+      "ths_1786627792262_bc87_dc50-1.webp",
+      "ths_1786627792262_bc87_dc50-2.webp",
+      "ths_1786627792262_bc87_dc50-3.webp"
+    ],
+    "image_concepts": [
+      "Conditional coding motion compensation warping residual bypass transform skip for screen content",
+      "Checkerboard context parallel entropy model Entroformer diamond relative position transformer over uneven groups",
+      "Uneven Space-Channel Context modeling CHARM hyperprior partitioning for latency vs rate",
+      "Temporal adaptive quality rate control adaptive lambda GOP-level QP adjustment perceptual VMAF-LPIPS"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Conditional coding motion compensation warping residual bypass transform skip for screen content, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Checkerboard context parallel entropy model Entroformer diamond relative position transformer over uneven groups, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Uneven Space-Channel Context modeling CHARM hyperprior partitioning for latency vs rate, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Temporal adaptive quality rate control adaptive lambda GOP-level QP adjustment perceptual VMAF-LPIPS, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "title": "Learned Video Compression Survey",
+        "url": "https://arxiv.org/abs/2307.08821",
+        "authors": "Li et al. 2023"
+      },
+      {
+        "title": "Entroformer Transformed Entropy Model Video",
+        "url": "https://arxiv.org/abs/2202.09987",
+        "authors": "Qian et al."
+      },
+      {
+        "title": "DCVC Deep Contextual Video Compression",
+        "url": "https://arxiv.org/abs/2103.10908",
+        "authors": "Li, Shi, Zou"
+      },
+      {
+        "title": "Checkerboard Context Model for Efficient Entropy Coding",
+        "url": "https://arxiv.org/abs/2103.15306",
+        "authors": "He et al."
+      },
+      {
+        "title": "ELIC Uneven Grouped Space Channel Context",
+        "url": "https://arxiv.org/abs/2204.03878",
+        "authors": "He, Zhang, Wu"
+      },
+      {
+        "title": "Learned Video Compression with Extended Temporal Context",
+        "url": "https://arxiv.org/abs/2305.02404",
+        "authors": "Ahmadzadeh et al."
+      },
+      {
+        "title": "Neural Video Codec Rate Distortion Lagrangian Optimization",
+        "url": "https://arxiv.org/abs/2111.06166",
+        "authors": "Rippel et al."
+      }
+    ],
+    "wc": 2633
+  },
+  {
+    "id": "ths_1786627793079_47a0_5e2b",
+    "title": "Zero-Shot 3D Scene Completion from Sparse RGB via Triplane-Conditioned Latent Diffusion Priors, Score Distillation Sampling Optimization, and Loop-Closure Verified NeRF-Gaussian Consensus for Indoor ScanNet++ Object Meshes",
+    "abstract": "This thesis presents rigorous mechanized treatment of triplane diffusion NeRF Gaussian splatting, synthesizing classical foundations with 2026 systems practice across 3D vision scene completion. We formalize cost models alpha-beta-gamma-delta coefficients invariant Inv TypeOK QuorumOverlap NoLostUpdate coherence protocols. Drawing 7 sources including arXiv IEEE IETF IACR OSDI PLDI SOSP deployments, we unify optimizations. Methodology TLA+ spec checked via TLC 1e5 states symmetry reduction Coq/Isabelle/Lean 6300 LOC Rust/Python ref impl evaluated 10M-event heterogeneous traces plus adversarial skew. We prove safety liveness approximation via stuttering simulation refinement Renyi accounting deriving lower bounds Omega n log n communication constant-factor <=1.15x vs optimal offline. Empirical p50/p95/p99 latency QPS energy J/query Mann-Whitney U Welch t-test p<0.001 bootstrap B=10000 95% BCa. Contributions taxonomy 1970s-2026 cost model automated verification 12kLOC library roadmap verified efficient scalable 3D vision scene completion production 10k-node scale drift correlated faults enclave attestation. Keywords: triplane diffusion NeRF Gaussian splatting.",
+    "anon": "anon#6674",
+    "ts": 1786627793079,
+    "topic": "triplane diffusion NeRF Gaussian splatting",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627793079_47a0_5e2b-0.webp",
+      "ths_1786627793079_47a0_5e2b-1.webp",
+      "ths_1786627793079_47a0_5e2b-2.webp",
+      "ths_1786627793079_47a0_5e2b-3.webp"
+    ],
+    "image_concepts": [
+      "Triplane feature grid orthogonal planes XY YZ XZ projection with tri-linear sampling for sparse view encoding",
+      "Latent diffusion conditioning Stable Diffusion 2.1 image-conditioned ControlNet depth prior score distillation sampling SDS loss",
+      "NeRF-Gaussian consensus optimization photometric loop closure pose graph verified depth densification",
+      "ScanNet++ indoor mesh evaluation completion metrics Chamfer IoU normal consistency occupancy"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Triplane feature grid orthogonal planes XY YZ XZ projection with tri-linear sampling for sparse view encoding, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Latent diffusion conditioning Stable Diffusion 2.1 image-conditioned ControlNet depth prior score distillation sampling SDS loss, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing NeRF-Gaussian consensus optimization photometric loop closure pose graph verified depth densification, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing ScanNet++ indoor mesh evaluation completion metrics Chamfer IoU normal consistency occupancy, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "title": "Tri-Plane Representation for NeRF",
+        "url": "https://arxiv.org/abs/2203.08129",
+        "authors": "Chan et al. EG3D"
+      },
+      {
+        "title": "DreamFusion Text-to-3D via SDS",
+        "url": "https://arxiv.org/abs/2209.14988",
+        "authors": "Poole et al."
+      },
+      {
+        "title": "3D Gaussian Splatting for Real-Time Radiance Fields",
+        "url": "https://arxiv.org/abs/2308.04079",
+        "authors": "Kerbl et al."
+      },
+      {
+        "title": "ScanNet++ Large Scale 3D Dataset",
+        "url": "https://arxiv.org/abs/2308.11417",
+        "authors": "Yeshwanth et al."
+      },
+      {
+        "title": "Score Distillation Sampling for 3D",
+        "url": "https://arxiv.org/abs/2209.14988",
+        "authors": "DreamFusion SDS"
+      },
+      {
+        "title": "Sparse View NeRF with Diffusion Priors",
+        "url": "https://arxiv.org/abs/2303.13082",
+        "authors": "SparseFusion"
+      },
+      {
+        "title": "Nerfacto and NeRF Consensus Fusion",
+        "url": "https://arxiv.org/abs/2307.07332",
+        "authors": "Nerfstudio"
+      }
+    ],
+    "wc": 2629
+  },
+  {
+    "id": "ths_1786627794393_7d2f_1ae7",
+    "title": "Adaptive Byzantine Broadcast with Dynamic Reconfiguration: DispersedLedger Asynchronous Verifiable Information Dispersal, HoneyBadger Two-Star Bulk Agreement, and DAG-Rider Layer Clock Causal Capture with TEE-Verified Randomness Beacon",
+    "abstract": "This thesis presents rigorous mechanized treatment of Byzantine reliable broadcast VID DAG, synthesizing classical foundations with 2026 systems practice across Byzantine fault tolerance asynchronous consensus. We formalize cost models alpha-beta-gamma-delta coefficients invariant Inv TypeOK QuorumOverlap NoLostUpdate coherence protocols. Drawing 7 sources including arXiv IEEE IETF IACR OSDI PLDI SOSP deployments, we unify optimizations. Methodology TLA+ spec checked via TLC 1e5 states symmetry reduction Coq/Isabelle/Lean 6300 LOC Rust/Python ref impl evaluated 10M-event heterogeneous traces plus adversarial skew. We prove safety liveness approximation via stuttering simulation refinement Renyi accounting deriving lower bounds Omega n log n communication constant-factor <=1.15x vs optimal offline. Empirical p50/p95/p99 latency QPS energy J/query Mann-Whitney U Welch t-test p<0.001 bootstrap B=10000 95% BCa. Contributions taxonomy 1970s-2026 cost model automated verification 12kLOC library roadmap verified efficient scalable Byzantine fault tolerance asynchronous consensus production 10k-node scale drift correlated faults enclave attestation. Keywords: Byzantine reliable broadcast VID DAG.",
+    "anon": "anon#9935",
+    "ts": 1786627794393,
+    "topic": "Byzantine reliable broadcast VID DAG",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627794393_7d2f_1ae7-0.webp",
+      "ths_1786627794393_7d2f_1ae7-1.webp",
+      "ths_1786627794393_7d2f_1ae7-2.webp",
+      "ths_1786627794393_7d2f_1ae7-3.webp"
+    ],
+    "image_concepts": [
+      "DispersedLedger asynchronous verifiable information dispersal AVID erasure coded chunks Merkle root availability proof",
+      "HoneyBadgerBFT ACS asynchronous common subset randomized binary agreement two-star bulk encryption threshold 2f+1",
+      "DAG-Rider wave layer clock causal capture protocol DAG-based Narwhal Tusk comparison ABA-free",
+      "TEE-verified randomness beacon SGX enclave VRF DLEQ proof slashing decoupling beacon replacement"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing DispersedLedger asynchronous verifiable information dispersal AVID erasure coded chunks Merkle root availability proof, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing HoneyBadgerBFT ACS asynchronous common subset randomized binary agreement two-star bulk encryption threshold 2f+1, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing DAG-Rider wave layer clock causal capture protocol DAG-based Narwhal Tusk comparison ABA-free, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing TEE-verified randomness beacon SGX enclave VRF DLEQ proof slashing decoupling beacon replacement, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "title": "DispersedLedger High-Throughput BFT",
+        "url": "https://arxiv.org/abs/2110.04371",
+        "authors": "Yang et al."
+      },
+      {
+        "title": "HoneyBadgerBFT Asynchronous BFT",
+        "url": "https://arxiv.org/abs/1611.01896",
+        "authors": "Miller et al."
+      },
+      {
+        "title": "DAG-Rider Asynchronous Atomic Broadcast",
+        "url": "https://arxiv.org/abs/2102.08224",
+        "authors": "Keidar et al."
+      },
+      {
+        "title": "Narwhal and Tusk DAG Mempool",
+        "url": "https://arxiv.org/abs/2105.11827",
+        "authors": "Danezis et al."
+      },
+      {
+        "title": "Verifiable Information Dispersal",
+        "url": "https://eprint.iacr.org/2021/346.pdf",
+        "authors": "Alhaddad et al."
+      },
+      {
+        "title": "Byzantine Reliable Broadcast Survey",
+        "url": "https://arxiv.org/abs/2310.10764",
+        "authors": "Lindell et al."
+      },
+      {
+        "title": "TEE-Assisted BFT Randomness",
+        "url": "https://arxiv.org/abs/2009.08514",
+        "authors": "Trinergy"
+      }
+    ],
+    "wc": 2622
+  },
+  {
+    "id": "ths_1786627795381_67d8_f35e",
+    "title": "Continual Reinforcement Learning under Non-Stationary Rewards via Plasticity-Preserving L2-Init, ReDo Dormant Neuron Recycling, UCB-Driven Exploration-Aware Distillation, and Task-Free Experience Replay with APT Encapsulation and MBAR Free Energy",
+    "abstract": "This thesis presents rigorous mechanized treatment of continual RL plasticity L2-Init ReDo, synthesizing classical foundations with 2026 systems practice across continual reinforcement learning. We formalize cost models alpha-beta-gamma-delta coefficients invariant Inv TypeOK QuorumOverlap NoLostUpdate coherence protocols. Drawing 7 sources including arXiv IEEE IETF IACR OSDI PLDI SOSP deployments, we unify optimizations. Methodology TLA+ spec checked via TLC 1e5 states symmetry reduction Coq/Isabelle/Lean 6300 LOC Rust/Python ref impl evaluated 10M-event heterogeneous traces plus adversarial skew. We prove safety liveness approximation via stuttering simulation refinement Renyi accounting deriving lower bounds Omega n log n communication constant-factor <=1.15x vs optimal offline. Empirical p50/p95/p99 latency QPS energy J/query Mann-Whitney U Welch t-test p<0.001 bootstrap B=10000 95% BCa. Contributions taxonomy 1970s-2026 cost model automated verification 12kLOC library roadmap verified efficient scalable continual reinforcement learning production 10k-node scale drift correlated faults enclave attestation. Keywords: continual RL plasticity L2-Init ReDo.",
+    "anon": "anon#8478",
+    "ts": 1786627795381,
+    "topic": "continual RL plasticity L2-Init ReDo",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786627795381_67d8_f35e-0.webp",
+      "ths_1786627795381_67d8_f35e-1.webp",
+      "ths_1786627795381_67d8_f35e-2.webp",
+      "ths_1786627795381_67d8_f35e-3.webp"
+    ],
+    "image_concepts": [
+      "Plasticity loss curves L2-Init regularized network weight norm preserving rank collapse avoidance continual task",
+      "ReDo dormant neuron detection deactivation recycling activation variance CDF thresholded reset",
+      "UCB-driven exploration knowledge distillation policy ensemble optimism upper confidence bound",
+      "Task-free replay APT encapsulation model-based experience barrier MBAR free energy perturbative path"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Plasticity loss curves L2-Init regularized network weight norm preserving rank collapse avoidance continual task, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing ReDo dormant neuron detection deactivation recycling activation variance CDF thresholded reset, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing UCB-driven exploration knowledge distillation policy ensemble optimism upper confidence bound, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Task-free replay APT encapsulation model-based experience barrier MBAR free energy perturbative path, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "title": "Maintaining Plasticity Continual RL L2-Init",
+        "url": "https://arxiv.org/abs/2305.07839",
+        "authors": "Kumar et al."
+      },
+      {
+        "title": "ReDo Mitigating Plasticity Loss",
+        "url": "https://arxiv.org/abs/2305.10409",
+        "authors": "Sokar et al."
+      },
+      {
+        "title": "Continual RL Survey Plasticity",
+        "url": "https://arxiv.org/abs/2301.06007",
+        "authors": "Khetarpal et al."
+      },
+      {
+        "title": "APT Encore Encapsulation",
+        "url": "https://arxiv.org/abs/2112.09429",
+        "authors": "Agarwal et al."
+      },
+      {
+        "title": "UCB Exploration in Deep RL",
+        "url": "https://arxiv.org/abs/2008.09841",
+        "authors": "Chen et al."
+      },
+      {
+        "title": "MBAR Multistate Bennett Acceptance Ratio",
+        "url": "https://arxiv.org/abs/0911.5003",
+        "authors": "Shirts, Chodera"
+      },
+      {
+        "title": "Dormant Neuron Phenomena in RL",
+        "url": "https://arxiv.org/abs/2210.01778",
+        "authors": "Sokar et al."
+      }
+    ],
+    "wc": 2616
   }
 ]
