@@ -21,12 +21,7 @@
       "technical academic diagram, white background, clean vector style, showing Serverless Cold-Start Mitigation via WebAssembly Component Model Prewarming, Firecracker S performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Serverless Cold-Start Mitigation via WebAssembly Component Model Prewarming, Firecracker S limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786642844742_5002_64decf7e-0.webp",
-      "ths_1786642844742_5002_64decf7e-1.webp",
-      "ths_1786642844742_5002_64decf7e-2.webp",
-      "ths_1786642844742_5002_64decf7e-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -71,7 +66,7 @@
         "authors": "Wang et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 3666
   },
   {
@@ -96,12 +91,7 @@
       "technical academic diagram, white background, clean vector style, showing Mechanistic Interpretability of Sparse Autoencoders in Large Language Models: Feature Spli performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Mechanistic Interpretability of Sparse Autoencoders in Large Language Models: Feature Spli limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786642843742_4641_ddcdd07d-0.webp",
-      "ths_1786642843742_4641_ddcdd07d-1.webp",
-      "ths_1786642843742_4641_ddcdd07d-2.webp",
-      "ths_1786642843742_4641_ddcdd07d-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -146,7 +136,7 @@
         "authors": "Nanda et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 3670
   },
   {
@@ -246,12 +236,7 @@
       "technical academic diagram, white background, clean vector style, showing Differentiable Physics Simulation for Deformable Object Manipulation: Material Point Metho performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Differentiable Physics Simulation for Deformable Object Manipulation: Material Point Metho limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786642841742_2297_1310fdf2-0.webp",
-      "ths_1786642841742_2297_1310fdf2-1.webp",
-      "ths_1786642841742_2297_1310fdf2-2.webp",
-      "ths_1786642841742_2297_1310fdf2-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -296,7 +281,7 @@
         "authors": "Macklin"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 3676
   },
   {
@@ -323,9 +308,7 @@
     ],
     "images": [
       "ths_1786642840742_8813_ba5d01ae-0.webp",
-      "ths_1786642840742_8813_ba5d01ae-1.webp",
-      "ths_1786642840742_8813_ba5d01ae-2.webp",
-      "ths_1786642840742_8813_ba5d01ae-3.webp"
+      "ths_1786642840742_8813_ba5d01ae-1.webp"
     ],
     "sources": [
       {
@@ -371,7 +354,7 @@
         "authors": "Li et al. Pond"
       }
     ],
-    "image_count": 4,
+    "image_count": 2,
     "word_count": 3688
   },
   {
@@ -471,12 +454,7 @@
       "technical academic diagram, white background, clean vector style, showing Byzantine-Robust Secure Aggregation for Federated Learning with Double-Masking, Adaptive C performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Byzantine-Robust Secure Aggregation for Federated Learning with Double-Masking, Adaptive C limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786642838742_3926_60e675f7-0.webp",
-      "ths_1786642838742_3926_60e675f7-1.webp",
-      "ths_1786642838742_3926_60e675f7-2.webp",
-      "ths_1786642838742_3926_60e675f7-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -521,7 +499,7 @@
         "authors": "SAFER"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 3639
   },
   {
@@ -548,9 +526,7 @@
     ],
     "images": [
       "ths_1786642837742_4694_90bb7144-0.webp",
-      "ths_1786642837742_4694_90bb7144-1.webp",
-      "ths_1786642837742_4694_90bb7144-2.webp",
-      "ths_1786642837742_4694_90bb7144-3.webp"
+      "ths_1786642837742_4694_90bb7144-1.webp"
     ],
     "sources": [
       {
@@ -596,7 +572,7 @@
         "authors": "Chen et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 2,
     "word_count": 3707
   },
   {
