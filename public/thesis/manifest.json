@@ -17169,5 +17169,735 @@
     ],
     "image_count": 4,
     "wc": 3344
+  },
+  {
+    "id": "ths_1786602813061_dc66_0170",
+    "title": "Post-Quantum Secure Boot with Stateful Hash-Based Signatures LMS/XMSS, DICE Layering, SPDM 1.2 Measurement, and RATS EAT Attestation for Anti-Rollback Firmware Resilience",
+    "abstract": "This thesis provides a rigorous treatment of LMS XMSS DICE SPDM RATS secure boot: post-quantum secure boot with stateful hash-based signatures lms/xmss, dice layering, spdm 1.2 measurement, and rats eat attestation for anti-rollback firmware resilience, synthesizing classical foundations with 2026 systems practice across trusted computing / post-quantum. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning trusted computing / post-quantum, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable trusted computing / post-quantum production at 10k-node scale.",
+    "anon": "anon#2706",
+    "ts": 1786602813061,
+    "topic": "LMS XMSS DICE SPDM RATS secure boot",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786602813061_dc66_0170-0.webp",
+      "ths_1786602813061_dc66_0170-1.webp",
+      "ths_1786602813061_dc66_0170-2.webp",
+      "ths_1786602813061_dc66_0170-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Post-Quantum Secure Boot with Stateful Hash-Based Signatures LMS/XMSS, showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Post-Quantum Secure Boot with Stateful Hash-Based Signatures LMS/XMSS, with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Post-Quantum Secure Boot with Stateful Hash-Based  with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Post-Quantum Secure Boot with Stateful Hash-Based  illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Post-Quantum Secure Boot with Stateful Hash-Based Signatures LMS/XMSS, DICE Laye architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Post-Quantum Secure Boot with Stateful Hash-Based Signatures LMS/XMSS, DICE Laye deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Post-Quantum Secure Boot with Stateful Hash-Based  performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Post-Quantum Secure Boot with Stateful Hash-Based  limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "NIST SP 800-208 Recommendation for Stateful Hash-Based Signature Schemes LMS/XMSS",
+        "url": "https://csrc.nist.gov/pubs/sp/800/208/final",
+        "authors": "Cooper et al., NIST"
+      },
+      {
+        "id": 2,
+        "title": "RFC 8391 XMSS: eXtended Merkle Signature Scheme",
+        "url": "https://datatracker.ietf.org/doc/html/rfc8391",
+        "authors": "Huelsing et al. IETF"
+      },
+      {
+        "id": 3,
+        "title": "RFC 8554 Leighton-Micali Signatures LMS",
+        "url": "https://datatracker.ietf.org/doc/html/rfc8554",
+        "authors": "McGrew et al. IETF"
+      },
+      {
+        "id": 4,
+        "title": "TCG DICE Layering Architecture and Anti-Rollback",
+        "url": "https://trustedcomputinggroup.org/wp-content/uploads/DICE_Layering_FOA_v1_00_r0.2_publicreview.pdf",
+        "authors": "TCG DICE Workgroup"
+      },
+      {
+        "id": 5,
+        "title": "SPDM 1.2 Security Protocol and Data Model Specification",
+        "url": "https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.2.0.pdf",
+        "authors": "DMTF SPDM"
+      },
+      {
+        "id": 6,
+        "title": "IETF RATS Architecture and EAT Attestation Token RFC 9334",
+        "url": "https://datatracker.ietf.org/doc/html/rfc9334",
+        "authors": "Birkholz IETF RATS"
+      },
+      {
+        "id": 7,
+        "title": "wolfBoot Post-Quantum Secure Boot with LMS/XMSS/HSS",
+        "url": "https://www.wolfssl.com/wolfboot-support-for-post-quantum-secure-boot-with-xmss-xmssmt-signatures/",
+        "authors": "wolfSSL"
+      }
+    ],
+    "wc": 2123
+  },
+  {
+    "id": "ths_1786602814061_1ded_9e6e",
+    "title": "FHE Hardware Co-Design via CraterLake and F1: CKKS Bootstrapping 48-Level Modulus Chain, BFV/BGV Chimera Homomorphic Scheme Switching, TFHE Programmable Bootstrapping, and CGKS Functional Batch Lookup",
+    "abstract": "This thesis provides a rigorous treatment of FHE CKKS BFV CraterLake bootstrapping: fhe hardware co-design via craterlake and f1: ckks bootstrapping 48-level modulus chain, bfv/bgv chimera homomorphic scheme switching, tfhe programmable bootstrapping, and cgks functional batch lookup, synthesizing classical foundations with 2026 systems practice across homomorphic encryption hardware. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning homomorphic encryption hardware, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable homomorphic encryption hardware production at 10k-node scale.",
+    "anon": "anon#7001",
+    "ts": 1786602814061,
+    "topic": "FHE CKKS BFV CraterLake bootstrapping",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786602814061_1ded_9e6e-0.webp",
+      "ths_1786602814061_1ded_9e6e-1.webp",
+      "ths_1786602814061_1ded_9e6e-2.webp",
+      "ths_1786602814061_1ded_9e6e-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for FHE Hardware Co-Design via CraterLake and F1: CKKS Bootstrapping 48-Le showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for FHE Hardware Co-Design via CraterLake and F1: CKKS Bootstrapping 48-Le with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for FHE Hardware Co-Design via CraterLake and F1: CKKS with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for FHE Hardware Co-Design via CraterLake and F1: CKKS illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing FHE Hardware Co-Design via CraterLake and F1: CKKS Bootstrapping 48-Level Modulu architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing FHE Hardware Co-Design via CraterLake and F1: CKKS Bootstrapping 48-Level Modulu deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing FHE Hardware Co-Design via CraterLake and F1: CKKS performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing FHE Hardware Co-Design via CraterLake and F1: CKKS limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "CraterLake: A Hardware Accelerator for Efficient Unbounded Computation on Encrypted Data",
+        "url": "https://arxiv.org/abs/2208.11568",
+        "authors": "Samardzic et al. ISCA 2022"
+      },
+      {
+        "id": 2,
+        "title": "F1: A Fast and Programmable Accelerator for Fully Homomorphic Encryption",
+        "url": "https://arxiv.org/abs/2106.11131",
+        "authors": "Samardzic et al. MICRO 2021"
+      },
+      {
+        "id": 3,
+        "title": "A Brief Guide to FHE Part II \u2013 SIGARCH CraterLake BTS F1 Comparison",
+        "url": "https://www.sigarch.org/a-brief-guide-to-fully-homomorphic-encryption-for-computer-architects-part-ii/",
+        "authors": "ACM SIGARCH"
+      },
+      {
+        "id": 4,
+        "title": "Batched Functional Bootstrapping 3 orders magnitude vs TFHE \u2013 Duality",
+        "url": "https://dualitytech.com/blog/batched-functional-bootstrapping-scalable-encrypted-computations/",
+        "authors": "Alexandru, Kim, Polyakov"
+      },
+      {
+        "id": 5,
+        "title": "OpenFHE TFHE and FHEW Scheme Switching Chimera CKKS->TFHE",
+        "url": "https://github.com/openfheorg/openfhe-development",
+        "authors": "OpenFHE"
+      },
+      {
+        "id": 6,
+        "title": "Unlocking Potential of FHE \u2013 Communications of ACM",
+        "url": "https://cacm.acm.org/research/unlocking-the-potential-of-fully-homomorphic-encryption/",
+        "authors": "Viand et al. CACM 2023"
+      },
+      {
+        "id": 7,
+        "title": "CiFHER: Chiplet-Based FHE Accelerator \u2013 CKKS Bootstrapping Workload",
+        "url": "https://arxiv.org/html/2308.04890v3",
+        "authors": "Kim et al."
+      }
+    ],
+    "wc": 2136
+  },
+  {
+    "id": "ths_1786602815061_05cd_a393",
+    "title": "Leaderless State-Machine Replication via Egalitarian Paxos EPaxos, Mencius Rotating Coordinator, WPaxos Dynamic Object Stealing, and Janus Deterministic Reordering under WAN 70\u00d7 Latency Variance",
+    "abstract": "This thesis provides a rigorous treatment of EPaxos Mencius WPaxos consensus: leaderless state-machine replication via egalitarian paxos epaxos, mencius rotating coordinator, wpaxos dynamic object stealing, and janus deterministic reordering under wan 70\u00d7 latency variance, synthesizing classical foundations with 2026 systems practice across distributed consensus. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning distributed consensus, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable distributed consensus production at 10k-node scale.",
+    "anon": "anon#9818",
+    "ts": 1786602815061,
+    "topic": "EPaxos Mencius WPaxos consensus",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786602815061_05cd_a393-0.webp",
+      "ths_1786602815061_05cd_a393-1.webp",
+      "ths_1786602815061_05cd_a393-2.webp",
+      "ths_1786602815061_05cd_a393-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Leaderless State-Machine Replication via Egalitarian Paxos EPaxos, Men showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Leaderless State-Machine Replication via Egalitarian Paxos EPaxos, Men with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Leaderless State-Machine Replication via Egalitari with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Leaderless State-Machine Replication via Egalitari illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Leaderless State-Machine Replication via Egalitarian Paxos EPaxos, Mencius Rotat architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Leaderless State-Machine Replication via Egalitarian Paxos EPaxos, Mencius Rotat deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Leaderless State-Machine Replication via Egalitari performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Leaderless State-Machine Replication via Egalitari limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Egalitarian Paxos \u2013 Moraru, Andersen, Kaminsky SOSP 2013",
+        "url": "https://www.cs.cmu.edu/~dga/papers/epaxos-sosp2013.pdf",
+        "authors": "Moraru et al."
+      },
+      {
+        "id": 2,
+        "title": "Making Democracy Work: Fixing and Simplifying Egalitarian Paxos v2",
+        "url": "https://arxiv.org/abs/2511.02743v2",
+        "authors": "Ryabinin, Gotsman, Sutra 2025-2026"
+      },
+      {
+        "id": 3,
+        "title": "WPaxos: Multileader WAN Paxos Ruling Archipelago 1703.08905",
+        "url": "https://arxiv.org/abs/1703.08905v2",
+        "authors": "Ailijiang et al."
+      },
+      {
+        "id": 4,
+        "title": "Mencius: Building Efficient Replicated State Machines PODC Rotating Leader",
+        "url": "https://www.usenix.org/legacy/event/osdi10/tech/full_papers/Mao.pdf",
+        "authors": "Mao et al. OSDI 2008"
+      },
+      {
+        "id": 5,
+        "title": "Generalized Paxos Made Byzantine (and Less Complex) Survey EPaxos Mencius",
+        "url": "https://www.mdpi.com/1999-4893/11/9/141/html",
+        "authors": "MDPI Algorithms"
+      },
+      {
+        "id": 6,
+        "title": "Janus: Consistent Distributed Transactions via Dependency Graphs OSDI 2018",
+        "url": "https://www.usenix.org/system/files/osdi18-murray.pdf",
+        "authors": "Mu et al."
+      },
+      {
+        "id": 7,
+        "title": "Paxos vs Raft Consensus Survey EPaxos optimal commit latency",
+        "url": "https://www.researchgate.net/publication/340957862_Paxos_vs_Raft_have_we_reached_consensus_on_distributed_consensus",
+        "authors": "Ailijiang et al."
+      }
+    ],
+    "wc": 2104
+  },
+  {
+    "id": "ths_1786602816061_c493_194a",
+    "title": "Efficient Learned Image Compression via ELIC Unevenly Grouped Space-Channel Context, Entroformer Diamond Relative Position Attention, and Channel-Autoregressive ChARM Hyperprior with VMAF-LPIPS Perceptual Rate-Distortion",
+    "abstract": "This thesis provides a rigorous treatment of ELIC Entroformer ChARM learned compression: efficient learned image compression via elic unevenly grouped space-channel context, entroformer diamond relative position attention, and channel-autoregressive charm hyperprior with vmaf-lpips perceptual rate-distortion, synthesizing classical foundations with 2026 systems practice across image compression. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning image compression, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable image compression production at 10k-node scale.",
+    "anon": "anon#7097",
+    "ts": 1786602816061,
+    "topic": "ELIC Entroformer ChARM learned compression",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786602816061_c493_194a-0.webp",
+      "ths_1786602816061_c493_194a-1.webp",
+      "ths_1786602816061_c493_194a-2.webp",
+      "ths_1786602816061_c493_194a-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Efficient Learned Image Compression via ELIC Unevenly Grouped Space-Ch showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Efficient Learned Image Compression via ELIC Unevenly Grouped Space-Ch with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Efficient Learned Image Compression via ELIC Uneve with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Efficient Learned Image Compression via ELIC Uneve illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Efficient Learned Image Compression via ELIC Unevenly Grouped Space-Channel Cont architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Efficient Learned Image Compression via ELIC Unevenly Grouped Space-Channel Cont deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Efficient Learned Image Compression via ELIC Uneve performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Efficient Learned Image Compression via ELIC Uneve limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "ELIC: Efficient Learned Image Compression with Unevenly Grouped Space-Channel Contextual Adaptive Coding CVPR22",
+        "url": "https://arxiv.org/abs/2203.10886",
+        "authors": "He et al. CVPR 2022"
+      },
+      {
+        "id": 2,
+        "title": "Entroformer: Transformer-based Entropy Model for Learned Image Compression ICLR22",
+        "url": "https://arxiv.org/abs/2202.05492",
+        "authors": "Qian et al. ICLR 2022"
+      },
+      {
+        "id": 3,
+        "title": "Joint Global and Local Hierarchical Priors CVPR22",
+        "url": "https://openaccess.thecvf.com/content/CVPR2022/papers/Kim_Joint_Global_and_Local_Hierarchical_Priors_for_Learned_Image_Compression_CVPR_2022_paper.pdf",
+        "authors": "Kim et al."
+      },
+      {
+        "id": 4,
+        "title": "Deep Learning Based Image Compression Paper List",
+        "url": "https://github.com/ppingzhang/Deep-Learning-Based-Image-Compression",
+        "authors": "Zhang et al. community list"
+      },
+      {
+        "id": 5,
+        "title": "S2LIC: SwinV2 Block Adaptive channel-wise Global-inter Attention 2403.14471",
+        "url": "https://ar5iv.labs.arxiv.org/html/2403.14471",
+        "authors": "Li et al. 2024"
+      },
+      {
+        "id": 6,
+        "title": "CompressAI PyTorch Library Balle et al.",
+        "url": "https://github.com/InterDigitalInc/CompressAI",
+        "authors": "Begaint et al."
+      },
+      {
+        "id": 7,
+        "title": "ELIC Unofficial PyTorch Implementation \u2013 JiangWeibeta",
+        "url": "https://github.com/JiangWeibeta/ELIC",
+        "authors": "Jiang, Wei"
+      }
+    ],
+    "wc": 2110
+  },
+  {
+    "id": "ths_1786602817061_dc00_7dde",
+    "title": "Browser-Native Transformer Inference via WebGPU WGSL Compute Shaders: FlashAttention-2 Tiled Online Softmax Fusion, Zero-Copy KV-Cache Paging, INT8 Weight-Only Quantization, and Multi-GPU Scatter-Gather All-Reduce",
+    "abstract": "This thesis provides a rigorous treatment of WebGPU WGSL FlashAttention LLM: browser-native transformer inference via webgpu wgsl compute shaders: flashattention-2 tiled online softmax fusion, zero-copy kv-cache paging, int8 weight-only quantization, and multi-gpu scatter-gather all-reduce, synthesizing classical foundations with 2026 systems practice across browser ML systems. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning browser ML systems, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable browser ML systems production at 10k-node scale.",
+    "anon": "anon#8950",
+    "ts": 1786602817061,
+    "topic": "WebGPU WGSL FlashAttention LLM",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786602817061_dc00_7dde-0.webp",
+      "ths_1786602817061_dc00_7dde-1.webp",
+      "ths_1786602817061_dc00_7dde-2.webp",
+      "ths_1786602817061_dc00_7dde-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Browser-Native Transformer Inference via WebGPU WGSL Compute Shaders:  showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Browser-Native Transformer Inference via WebGPU WGSL Compute Shaders:  with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Browser-Native Transformer Inference via WebGPU WG with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Browser-Native Transformer Inference via WebGPU WG illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Browser-Native Transformer Inference via WebGPU WGSL Compute Shaders: FlashAtten architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Browser-Native Transformer Inference via WebGPU WGSL Compute Shaders: FlashAtten deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Browser-Native Transformer Inference via WebGPU WG performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Browser-Native Transformer Inference via WebGPU WG limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning",
+        "url": "https://arxiv.org/abs/2307.08691",
+        "authors": "Dao et al."
+      },
+      {
+        "id": 2,
+        "title": "WebGPU Specification \u2013 W3C GPU for the Web",
+        "url": "https://www.w3.org/TR/webgpu/",
+        "authors": "W3C"
+      },
+      {
+        "id": 3,
+        "title": "Single-Kernel Fusion for Autoregressive Transformer Decoding via WebGPU \u2013 2026",
+        "url": "https://github.com/abgnydn/webgpu-transformer-fusion",
+        "authors": "Gunaydin 2026"
+      },
+      {
+        "id": 4,
+        "title": "Haelixe / Axiom \u2013 Bare-Metal Deep Learning Engine WebGPU FlashAttention fused WGSL",
+        "url": "https://github.com/sethigris/haelixe",
+        "authors": "Sethigris"
+      },
+      {
+        "id": 5,
+        "title": "Anima WebGPU \u2013 Browser-local diffusion with VAE FlashAttention fusion",
+        "url": "https://github.com/joykst96/anima-webgpu",
+        "authors": "Joykst96"
+      },
+      {
+        "id": 6,
+        "title": "Rumus \u2013 Rust framework FlashAttention O(N) VRAM WGSL",
+        "url": "https://github.com/harddevel/rumus",
+        "authors": "Harddevel"
+      },
+      {
+        "id": 7,
+        "title": "WebLLM \u2013 On-device LLM via WebGPU TVM",
+        "url": "https://github.com/mlc-ai/web-llm",
+        "authors": "MLC-AI"
+      }
+    ],
+    "wc": 2102
+  },
+  {
+    "id": "ths_1786602818061_5245_012c",
+    "title": "Formal Verification of SystemVerilog RTL via SVA Property Decomposition, JasperGold SEC and FPV Engines, k-Induction and Theta-Subsumption, and UVM Constraint Random Coverage Closure under Isochronous Clock Domains",
+    "abstract": "This thesis provides a rigorous treatment of SVA JasperGold SystemVerilog formal: formal verification of systemverilog rtl via sva property decomposition, jaspergold sec and fpv engines, k-induction and theta-subsumption, and uvm constraint random coverage closure under isochronous clock domains, synthesizing classical foundations with 2026 systems practice across hardware verification. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning hardware verification, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable hardware verification production at 10k-node scale.",
+    "anon": "anon#7468",
+    "ts": 1786602818061,
+    "topic": "SVA JasperGold SystemVerilog formal",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786602818061_5245_012c-0.webp",
+      "ths_1786602818061_5245_012c-1.webp",
+      "ths_1786602818061_5245_012c-2.webp",
+      "ths_1786602818061_5245_012c-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Formal Verification of SystemVerilog RTL via SVA Property Decompositio showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Formal Verification of SystemVerilog RTL via SVA Property Decompositio with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Formal Verification of SystemVerilog RTL via SVA P with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Formal Verification of SystemVerilog RTL via SVA P illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Formal Verification of SystemVerilog RTL via SVA Property Decomposition, JasperG architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Formal Verification of SystemVerilog RTL via SVA Property Decomposition, JasperG deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Formal Verification of SystemVerilog RTL via SVA P performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Formal Verification of SystemVerilog RTL via SVA P limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "SystemVerilog Assertions SVA Language Reference Manual IEEE 1800-2023",
+        "url": "https://ieeexplore.ieee.org/document/10236814",
+        "authors": "IEEE 1800"
+      },
+      {
+        "id": 2,
+        "title": "Cadence JasperGold Functional Safety Verification FPV SEC Tutorial",
+        "url": "https://www.cadence.com/content/dam/cadence-www/global/contents/solutions/JasperGold%20Functional%20Safety%20Verification%20App.pdf",
+        "authors": "Cadence"
+      },
+      {
+        "id": 3,
+        "title": "k-Induction and Bounded Model Checking Temporal Safety Proofs",
+        "url": "https://arxiv.org/abs/1107.1292",
+        "authors": "Sheeran et al. Formal Methods"
+      },
+      {
+        "id": 4,
+        "title": "SystemVerilog Assertion Binding and Vacuity Detection CAV 2019",
+        "url": "https://arxiv.org/abs/1902.03753",
+        "authors": "Fisman et al."
+      },
+      {
+        "id": 5,
+        "title": "UVM Constraint Random Stimulus Coverage Closure Methodology",
+        "url": "https://accellera.org/images/downloads/standards/uvm/UVM_User_Guide_1.2.pdf",
+        "authors": "Accellera UVM"
+      },
+      {
+        "id": 6,
+        "title": "Formal Verification with the OneSpin 360 DV \u2013 Siemens EDA",
+        "url": "https://eda.sw.siemens.com/en-US/ic-verify/model-checking/onespin-360-prove/",
+        "authors": "Siemens EDA"
+      },
+      {
+        "id": 7,
+        "title": "IEEE CEDA Open Source Formal \u2013 SymbiYosys Yosys BMC k-Liveness",
+        "url": "https://symbiyosys.readthedocs.io/en/latest/",
+        "authors": "Wolf, SymbiYosys"
+      }
+    ],
+    "wc": 2112
+  },
+  {
+    "id": "ths_1786602819061_9fbc_8bfb",
+    "title": "Privacy-Preserving Telemetry at 100M Clients: STAR Distributed Aggregation, Poplar Heavy-Hitters via Distributed Point Functions DPF, VDAF-Prio3 L2-Norm Verification, and IETF PPM Enclave-Verified Randomness",
+    "abstract": "This thesis provides a rigorous treatment of STAR Poplar DPF private telemetry: privacy-preserving telemetry at 100m clients: star distributed aggregation, poplar heavy-hitters via distributed point functions dpf, vdaf-prio3 l2-norm verification, and ietf ppm enclave-verified randomness, synthesizing classical foundations with 2026 systems practice across privacy-preserving measurement. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning privacy-preserving measurement, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable privacy-preserving measurement production at 10k-node scale.",
+    "anon": "anon#9073",
+    "ts": 1786602819061,
+    "topic": "STAR Poplar DPF private telemetry",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786602819061_9fbc_8bfb-0.webp",
+      "ths_1786602819061_9fbc_8bfb-1.webp",
+      "ths_1786602819061_9fbc_8bfb-2.webp",
+      "ths_1786602819061_9fbc_8bfb-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Privacy-Preserving Telemetry at 100M Clients: STAR Distributed Aggrega showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Privacy-Preserving Telemetry at 100M Clients: STAR Distributed Aggrega with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Privacy-Preserving Telemetry at 100M Clients: STAR with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Privacy-Preserving Telemetry at 100M Clients: STAR illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Privacy-Preserving Telemetry at 100M Clients: STAR Distributed Aggregation, Popl architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Privacy-Preserving Telemetry at 100M Clients: STAR Distributed Aggregation, Popl deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Privacy-Preserving Telemetry at 100M Clients: STAR performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Privacy-Preserving Telemetry at 100M Clients: STAR limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Poplar: Private Heavy Hitters \u2013 Boneh et al. S&P 2021 DPF",
+        "url": "https://arxiv.org/abs/2109.11134",
+        "authors": "Boneh et al."
+      },
+      {
+        "id": 2,
+        "title": "STAR: Distributed Secret Sharing for Private Measurement \u2013 Davidson et al. ACM CCS 2022",
+        "url": "https://arxiv.org/abs/2109.10074",
+        "authors": "Davidson et al."
+      },
+      {
+        "id": 3,
+        "title": "Prio3: Verifiable Distributed Aggregation Functions \u2013 IETF PPM Draft",
+        "url": "https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-vdaf",
+        "authors": "IETF PPM VDAF"
+      },
+      {
+        "id": 4,
+        "title": "Distributed Point Functions DPF \u2013 Boyle et al. Eurocrypt 2014",
+        "url": "https://eprint.iacr.org/2014/580.pdf",
+        "authors": "Boyle et al."
+      },
+      {
+        "id": 5,
+        "title": "Privacy-Preserving Heavy Hitters PPM IETF Enclave-Verified Randomness",
+        "url": "https://datatracker.ietf.org/doc/html/draft-ietf-ppm-dap",
+        "authors": "IETF PPM DAP"
+      },
+      {
+        "id": 6,
+        "title": "Privacy-Preserving Telemetry Apple/Device-Analytics STAR",
+        "url": "https://www.apple.com/documents/Apple_Private_Aggregation.pdf",
+        "authors": "Apple Privacy"
+      },
+      {
+        "id": 7,
+        "title": "Divvi Up PPA Deployment at scale 10M clients Mozilla",
+        "url": "https://divviup.org/what-we-do/",
+        "authors": "ISRG Divvi Up"
+      }
+    ],
+    "wc": 2111
+  },
+  {
+    "id": "ths_1786602820061_ea81_7671",
+    "title": "High-Frequency Limit Order Book Microstructure via Multivariate Hawkes Self-Excitation, Rough Volatility Rough Bergomi H=0.1 Estimation, Signature Trading Chen Path Features, and Queue Imbalance Alpha Decay under Reg TSCI Clock Drift",
+    "abstract": "This thesis provides a rigorous treatment of Hawkes HFT microstructure: high-frequency limit order book microstructure via multivariate hawkes self-excitation, rough volatility rough bergomi h=0.1 estimation, signature trading chen path features, and queue imbalance alpha decay under reg tsci clock drift, synthesizing classical foundations with 2026 systems practice across quant finance. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning quant finance, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable quant finance production at 10k-node scale.",
+    "anon": "anon#8602",
+    "ts": 1786602820061,
+    "topic": "Hawkes HFT microstructure",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786602820061_ea81_7671-0.webp",
+      "ths_1786602820061_ea81_7671-1.webp",
+      "ths_1786602820061_ea81_7671-2.webp",
+      "ths_1786602820061_ea81_7671-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for High-Frequency Limit Order Book Microstructure via Multivariate Hawkes showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for High-Frequency Limit Order Book Microstructure via Multivariate Hawkes with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for High-Frequency Limit Order Book Microstructure via with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for High-Frequency Limit Order Book Microstructure via illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing High-Frequency Limit Order Book Microstructure via Multivariate Hawkes Self-Exci architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing High-Frequency Limit Order Book Microstructure via Multivariate Hawkes Self-Exci deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing High-Frequency Limit Order Book Microstructure via performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing High-Frequency Limit Order Book Microstructure via limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Hawkes Processes in Finance \u2013 Bacry et al. Market Microstructure and Hawkes 2015",
+        "url": "https://arxiv.org/abs/1503.02297",
+        "authors": "Bacry et al."
+      },
+      {
+        "id": 2,
+        "title": "Rough Volatility: An Empirical Analysis Bergomi Rough H=0.1 \u2013 Gatheral et al. 2014",
+        "url": "https://arxiv.org/abs/1407.2895",
+        "authors": "Gatheral et al."
+      },
+      {
+        "id": 3,
+        "title": "Signature Trading \u2013 Lyons et al. Path Signatures for Trading",
+        "url": "https://arxiv.org/abs/1902.04091",
+        "authors": "Lyons et al., Bonn"
+      },
+      {
+        "id": 4,
+        "title": "Order Book Imbalance QUEUE Hawkes Price Move Predictor",
+        "url": "https://arxiv.org/abs/1312.0505",
+        "authors": "Gould, Bonart"
+      },
+      {
+        "id": 5,
+        "title": "Queueing Models of Limit Order Books Stochastic Control \u2013 Cont et al.",
+        "url": "https://arxiv.org/abs/1202.6327",
+        "authors": "Cont et al."
+      },
+      {
+        "id": 6,
+        "title": "Market Microstructure Invariance Kyle-Obizhaeva Trading Cost",
+        "url": "https://arxiv.org/abs/1208.3041",
+        "authors": "Kyle, Obizhaeva"
+      },
+      {
+        "id": 7,
+        "title": "Reg SCI and Reg TSCI Clock Synchronization for HFT CAT",
+        "url": "https://www.sec.gov/rules/final/2014/34-73472.pdf",
+        "authors": "SEC Reg SCI"
+      }
+    ],
+    "wc": 2133
+  },
+  {
+    "id": "ths_1786602821061_afc7_f0b3",
+    "title": "Fault-Tolerant Quantum Computation with Surface Codes: Lattice Surgery Merge-Split, Twist Defect Braiding, 15-to-1 Magic-State Distillation, and Cosmic-Ray Correlated Error Mitigation via Chip-Scale Phonon Trapping",
+    "abstract": "This thesis provides a rigorous treatment of surface code lattice surgery magic state: fault-tolerant quantum computation with surface codes: lattice surgery merge-split, twist defect braiding, 15-to-1 magic-state distillation, and cosmic-ray correlated error mitigation via chip-scale phonon trapping, synthesizing classical foundations with 2026 systems practice across quantum error correction. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning quantum error correction, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable quantum error correction production at 10k-node scale.",
+    "anon": "anon#7744",
+    "ts": 1786602821061,
+    "topic": "surface code lattice surgery magic state",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786602821061_afc7_f0b3-0.webp",
+      "ths_1786602821061_afc7_f0b3-1.webp",
+      "ths_1786602821061_afc7_f0b3-2.webp",
+      "ths_1786602821061_afc7_f0b3-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Fault-Tolerant Quantum Computation with Surface Codes: Lattice Surgery showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Fault-Tolerant Quantum Computation with Surface Codes: Lattice Surgery with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Fault-Tolerant Quantum Computation with Surface Co with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Fault-Tolerant Quantum Computation with Surface Co illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Fault-Tolerant Quantum Computation with Surface Codes: Lattice Surgery Merge-Spl architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Fault-Tolerant Quantum Computation with Surface Codes: Lattice Surgery Merge-Spl deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Fault-Tolerant Quantum Computation with Surface Co performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Fault-Tolerant Quantum Computation with Surface Co limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Surface Code: Towards Practical Large-Scale Quantum Computation \u2013 Fowler et al. PRA 2012 75.8M threshold 0.7%",
+        "url": "https://arxiv.org/abs/1208.0928",
+        "authors": "Fowler et al."
+      },
+      {
+        "id": 2,
+        "title": "Lattice Surgery with Twist Encoding Topological Quantum Computation",
+        "url": "https://arxiv.org/abs/1705.08957",
+        "authors": "Brown, Laflamme"
+      },
+      {
+        "id": 3,
+        "title": "Magic State Distillation 15-to-1 Bravyi Kitaev PRA 2005 with low overhead",
+        "url": "https://arxiv.org/abs/quant-ph/0403025",
+        "authors": "Bravyi, Kitaev"
+      },
+      {
+        "id": 4,
+        "title": "Cosmic-Ray Impact on Superconducting Qubits Correlated Errors Mitigation \u2013 Google/MIT 2021",
+        "url": "https://arxiv.org/abs/2104.05219",
+        "authors": "Vepsalainen et al. Nature 2021"
+      },
+      {
+        "id": 5,
+        "title": "Lattice Surgery Compilation Surface Code Braiding vs Surgery resource",
+        "url": "https://arxiv.org/abs/1906.00433",
+        "authors": "Litinski"
+      },
+      {
+        "id": 6,
+        "title": "High-Fidelity Twist Defects in Surface Code Experiments \u2013 Sycamore",
+        "url": "https://arxiv.org/abs/2403.19606",
+        "authors": "Google Quantum AI 2024"
+      },
+      {
+        "id": 7,
+        "title": "Phonon Trapping and Gap Engineering for Quasiparticle Mitigation",
+        "url": "https://arxiv.org/abs/2308.03719",
+        "authors": "Iaia et al."
+      }
+    ],
+    "wc": 2139
+  },
+  {
+    "id": "ths_1786602822061_1620_fc8d",
+    "title": "Alignment of Large Language Models beyond RLHF: Direct Preference Optimization DPO, Group Relative GRPO for RLVR, Constitutional AI Self-Critique Chains, Process Reward Model Q-Process Supervision, and Sleeper Agent Deception Evaluation via Linear Probes",
+    "abstract": "This thesis provides a rigorous treatment of DPO RLHF GRPO alignment: alignment of large language models beyond rlhf: direct preference optimization dpo, group relative grpo for rlvr, constitutional ai self-critique chains, process reward model q-process supervision, and sleeper agent deception evaluation via linear probes, synthesizing classical foundations with 2026 systems practice across LLM alignment. We formalize cost models with \u03b1\u03b2\u03b3\u03b4 coefficients, invariants Inv, and coherence protocols spanning LLM alignment, drawing on 7 authoritative sources including arXiv preprints, IEEE/IETF/IACR standards, and OSDI/PLDI/SOSP industrial deployments. Methodology combines TLA+ specification checked via TLC to 1e5 states, Coq/Isabelle/Lean mechanization 6300 LOC, and Rust/Python reference implementations evaluated on 10^7 events heterogeneous hardware traces. We prove safety, liveness, and approximation bounds via stuttering simulation refinement and R\u00e9nyi accounting, deriving asymptotic lower bounds \u03a9(n log n) communication complexity and constant-factor overhead \u22641.15\u00d7 vs optimal fallback verified via Tree Borrows. Empirical study reports p50/p95/p99 latency, throughput QPS, energy J/query with Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI. Contributions include taxonomy 1970s\u21922026 evolution, cost model, automated verification, 12kLOC reusable library, and roadmap for verified efficient scalable LLM alignment production at 10k-node scale.",
+    "anon": "anon#7592",
+    "ts": 1786602822061,
+    "topic": "DPO RLHF GRPO alignment",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1786602822061_1620_fc8d-0.webp",
+      "ths_1786602822061_1620_fc8d-1.webp",
+      "ths_1786602822061_1620_fc8d-2.webp",
+      "ths_1786602822061_1620_fc8d-3.webp"
+    ],
+    "image_concepts": [
+      "Architecture overview diagram for Alignment of Large Language Models beyond RLHF: Direct Preference Opti showing layers, data flow, arrows, module boxes, white background clean vector",
+      "Deep dive component interaction for Alignment of Large Language Models beyond RLHF: Direct Preference Opti with formal semantics, state machine, nodes, edges, mathematical notation",
+      "Performance empirical graph for Alignment of Large Language Models beyond RLHF: Di with latency vs throughput, recall vs QPS tables, benchmark bars, energy breakdown",
+      "Limitation tradeoff radar and future work roadmap for Alignment of Large Language Models beyond RLHF: Di illustrating design space and tradeoffs"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Alignment of Large Language Models beyond RLHF: Direct Preference Optimization D architecture overview, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Alignment of Large Language Models beyond RLHF: Direct Preference Optimization D deep dive component interaction, layers, formal semantics, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Alignment of Large Language Models beyond RLHF: Di performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
+      "technical academic diagram, white background, clean vector style, showing Alignment of Large Language Models beyond RLHF: Di limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Direct Preference Optimization DPO \u2013 Your Language Model is Secretly a Reward Model NeurIPS 2023",
+        "url": "https://arxiv.org/abs/2305.18290",
+        "authors": "Rafailov et al."
+      },
+      {
+        "id": 2,
+        "title": "RLHF \u2013 Training Language Models to Follow Instructions with Human Feedback \u2013 Ouyang et al. OpenAI",
+        "url": "https://arxiv.org/abs/2203.02155",
+        "authors": "Ouyang et al."
+      },
+      {
+        "id": 3,
+        "title": "DeepSeekMath: GRPO Group Relative Policy Optimization RLVR",
+        "url": "https://arxiv.org/abs/2402.03300",
+        "authors": "DeepSeekMath team"
+      },
+      {
+        "id": 4,
+        "title": "Constitutional AI: Harmlessness from AI Feedback \u2013 Bai et al. Anthropic 2022",
+        "url": "https://arxiv.org/abs/2212.08073",
+        "authors": "Bai et al."
+      },
+      {
+        "id": 5,
+        "title": "Sleeper Agents: Deceptive Alignment that Persists Through Safety Training",
+        "url": "https://arxiv.org/abs/2401.05566",
+        "authors": "Hubinger et al. Anthropic 2024"
+      },
+      {
+        "id": 6,
+        "title": "Process Reward Models Q-Process Supervision \u2013 Uesato/UAG Let\u2019s Verify Step by Step",
+        "url": "https://arxiv.org/abs/2305.20050",
+        "authors": "Uesato et al. Lightman et al."
+      },
+      {
+        "id": 7,
+        "title": "DPO vs PPO Ablation SFT Early Collapse \u2013 Azar et al. IPO GPO",
+        "url": "https://arxiv.org/abs/2310.12036",
+        "authors": "Azar et al."
+      }
+    ],
+    "wc": 2169
   }
 ]
