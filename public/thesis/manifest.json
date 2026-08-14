@@ -21467,7 +21467,12 @@
       "technical academic diagram, white background, clean vector style, showing Spiking Neural P Systems and Membrane Computing: Universality, Energy Complexity performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Spiking Neural P Systems and Membrane Computing: Universality, Energy Complexity limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786671559382_9bb0_8beb-0.webp",
+      "ths_1786671559382_9bb0_8beb-1.webp",
+      "ths_1786671559382_9bb0_8beb-2.webp",
+      "ths_1786671559382_9bb0_8beb-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -21512,7 +21517,7 @@
         "authors": "MDPI Processes"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3758
   },
   {
@@ -21537,7 +21542,12 @@
       "technical academic diagram, white background, clean vector style, showing Formal Verification of eBPF Programs: Tnum Abstract Domains, Branchless Constant performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Formal Verification of eBPF Programs: Tnum Abstract Domains, Branchless Constant limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786671560382_0c6f_49e3-0.webp",
+      "ths_1786671560382_0c6f_49e3-1.webp",
+      "ths_1786671560382_0c6f_49e3-2.webp",
+      "ths_1786671560382_0c6f_49e3-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -21582,7 +21592,7 @@
         "authors": "INRIA Bromberger et al. LPAR 2024"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3751
   },
   {
@@ -21607,7 +21617,12 @@
       "technical academic diagram, white background, clean vector style, showing WebAssembly GC and Component Model Interoperability: Reftype Hierarchies, Resour performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing WebAssembly GC and Component Model Interoperability: Reftype Hierarchies, Resour limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786671561382_80cd_4557-0.webp",
+      "ths_1786671561382_80cd_4557-1.webp",
+      "ths_1786671561382_80cd_4557-2.webp",
+      "ths_1786671561382_80cd_4557-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -21652,7 +21667,7 @@
         "authors": "Node.js"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3736
   },
   {
@@ -21677,7 +21692,12 @@
       "technical academic diagram, white background, clean vector style, showing Computational Storage Devices for Near-Data Analytics: NVMe ZNS Append Semantics performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Computational Storage Devices for Near-Data Analytics: NVMe ZNS Append Semantics limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786671562382_647e_d371-0.webp",
+      "ths_1786671562382_647e_d371-1.webp",
+      "ths_1786671562382_647e_d371-2.webp",
+      "ths_1786671562382_647e_d371-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -21722,7 +21742,7 @@
         "authors": "NVMe NVM 1.0b"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3767
   },
   {
@@ -21747,7 +21767,12 @@
       "technical academic diagram, white background, clean vector style, showing Differential Obliviousness and Path ORAM Optimizations: Stash Overflow Bounds, C performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Differential Obliviousness and Path ORAM Optimizations: Stash Overflow Bounds, C limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786671563382_1b04_fc82-0.webp",
+      "ths_1786671563382_1b04_fc82-1.webp",
+      "ths_1786671563382_1b04_fc82-2.webp",
+      "ths_1786671563382_1b04_fc82-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -21792,7 +21817,7 @@
         "authors": "Chakravarty Panda DetWoORAM"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3755
   },
   {
@@ -21817,7 +21842,12 @@
       "technical academic diagram, white background, clean vector style, showing Multi-Modal Foundation Models for Embodied AI: Vision-Language-Action Tokenizati performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Multi-Modal Foundation Models for Embodied AI: Vision-Language-Action Tokenizati limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786671564382_0335_3682-0.webp",
+      "ths_1786671564382_0335_3682-1.webp",
+      "ths_1786671564382_0335_3682-2.webp",
+      "ths_1786671564382_0335_3682-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -21856,7 +21886,7 @@
         "authors": "VLA-Thinker 2603.14523"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3741
   },
   {
@@ -21881,7 +21911,12 @@
       "technical academic diagram, white background, clean vector style, showing Birth-Death MCMC and Reversible-Jump for Bayesian Nonparametrics: Dirichlet Proc performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Birth-Death MCMC and Reversible-Jump for Bayesian Nonparametrics: Dirichlet Proc limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786671565382_04fa_f5e0-0.webp",
+      "ths_1786671565382_04fa_f5e0-1.webp",
+      "ths_1786671565382_04fa_f5e0-2.webp",
+      "ths_1786671565382_04fa_f5e0-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -21926,7 +21961,7 @@
         "authors": "Bierkens Fearnhead Roberts Zig-Zag"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3796
   },
   {
@@ -21951,7 +21986,12 @@
       "technical academic diagram, white background, clean vector style, showing High-Assurance seL4 Device Driver Framework: Capability-Derived MMIO Isolation,  performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing High-Assurance seL4 Device Driver Framework: Capability-Derived MMIO Isolation,  limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786671566382_3db6_f033-0.webp",
+      "ths_1786671566382_3db6_f033-1.webp",
+      "ths_1786671566382_3db6_f033-2.webp",
+      "ths_1786671566382_3db6_f033-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -21990,7 +22030,7 @@
         "authors": "HN L4 microkernels"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3765
   },
   {
@@ -22015,7 +22055,12 @@
       "technical academic diagram, white background, clean vector style, showing Learned Video Compression with Neural Fields: Implicit Neural Representations vs performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Learned Video Compression with Neural Fields: Implicit Neural Representations vs limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786671567382_535f_d9dc-0.webp",
+      "ths_1786671567382_535f_d9dc-1.webp",
+      "ths_1786671567382_535f_d9dc-2.webp",
+      "ths_1786671567382_535f_d9dc-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -22060,7 +22105,7 @@
         "authors": "INR Param Latency 2410.01654v2"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3804
   },
   {
@@ -22085,7 +22130,12 @@
       "technical academic diagram, white background, clean vector style, showing Quantum Internet Protocol Stack: Entanglement Swapping Repeater Chains, Purifica performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Quantum Internet Protocol Stack: Entanglement Swapping Repeater Chains, Purifica limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786671568382_bfb1_3b64-0.webp",
+      "ths_1786671568382_bfb1_3b64-1.webp",
+      "ths_1786671568382_bfb1_3b64-2.webp",
+      "ths_1786671568382_bfb1_3b64-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -22124,7 +22174,7 @@
         "authors": "postquantum.com repeaters"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3783
   }
 ]
