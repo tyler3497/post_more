@@ -21,7 +21,12 @@
       "technical academic diagram, white background, clean vector style, showing semantic loop closure detection DBoW3 bag-of-words with dynamic car pedestrian masking via segmentation network, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing urban canyon multipath GNSS degradation and LiDAR point cloud with adverse weather rain fog attenuation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786736357742_4153_e15d2511-0.webp",
+      "ths_1786736357742_4153_e15d2511-1.webp",
+      "ths_1786736357742_4153_e15d2511-2.webp",
+      "ths_1786736357742_4153_e15d2511-3.webp"
+    ],
     "sources": [
       {
         "title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
@@ -66,8 +71,9 @@
         "year": 2022
       }
     ],
-    "image_count": 0,
-    "word_count": 4041
+    "image_count": 4,
+    "word_count": 4041,
+    "words": 4041
   },
   {
     "id": "ths_1786736356742_8972_1d716782",
@@ -91,7 +97,12 @@
       "technical academic diagram, white background, clean vector style, showing MWPM decoder graph matching defects syndrome graph edges weighted by error chain probability, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Twist defect Y-basis injection via lattice disclination and corner movement overhead reduction vs standard, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786736356742_8972_1d716782-0.webp",
+      "ths_1786736356742_8972_1d716782-1.webp",
+      "ths_1786736356742_8972_1d716782-2.webp",
+      "ths_1786736356742_8972_1d716782-3.webp"
+    ],
     "sources": [
       {
         "title": "Surface Code: Towards Practical Large-Scale Quantum Computation",
@@ -136,8 +147,9 @@
         "year": 2018
       }
     ],
-    "image_count": 0,
-    "word_count": 4043
+    "image_count": 4,
+    "word_count": 4043,
+    "words": 4043
   },
   {
     "id": "ths_1786736355742_1225_649cdcc3",
@@ -162,6 +174,8 @@
       "technical academic diagram, white background, clean vector style, showing Ethereum stateless client witness verification pipeline with Verkle proof 2.3KB vs Merkle 10KB, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
+      "ths_1786736355742_1225_649cdcc3-0.webp",
+      "ths_1786736355742_1225_649cdcc3-1.webp",
       "ths_1786736355742_1225_649cdcc3-2.webp",
       "ths_1786736355742_1225_649cdcc3-3.webp"
     ],
@@ -209,8 +223,9 @@
         "year": 2022
       }
     ],
-    "image_count": 2,
-    "word_count": 4017
+    "image_count": 4,
+    "word_count": 4017,
+    "words": 4017
   },
   {
     "id": "ths_1786736354742_4509_ed60dfca",
@@ -285,7 +300,8 @@
       }
     ],
     "image_count": 4,
-    "word_count": 4036
+    "word_count": 4036,
+    "words": 4036
   },
   {
     "id": "ths_1786736353742_1477_e8204c34",
@@ -310,6 +326,8 @@
       "technical academic diagram, white background, clean vector style, showing SQPOLL kernel thread CPU affinity timeline showing submission batching and completion eventfd notification, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
+      "ths_1786736353742_1477_e8204c34-0.webp",
+      "ths_1786736353742_1477_e8204c34-1.webp",
       "ths_1786736353742_1477_e8204c34-2.webp",
       "ths_1786736353742_1477_e8204c34-3.webp"
     ],
@@ -357,8 +375,9 @@
         "year": 2022
       }
     ],
-    "image_count": 2,
-    "word_count": 3966
+    "image_count": 4,
+    "word_count": 3966,
+    "words": 3966
   },
   {
     "id": "ths_1786736352742_4871_65effbb0",
@@ -383,6 +402,8 @@
       "technical academic diagram, white background, clean vector style, showing LSM merge compaction concurrent latching timeline with skewed Zipf 0.99 workload hotkey contention, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
+      "ths_1786736352742_4871_65effbb0-0.webp",
+      "ths_1786736352742_4871_65effbb0-1.webp",
       "ths_1786736352742_4871_65effbb0-2.webp",
       "ths_1786736352742_4871_65effbb0-3.webp"
     ],
@@ -430,8 +451,9 @@
         "year": 2019
       }
     ],
-    "image_count": 2,
-    "word_count": 4004
+    "image_count": 4,
+    "word_count": 4004,
+    "words": 4004
   },
   {
     "id": "ths_1786736351742_8408_65a06a35",
@@ -505,7 +527,8 @@
       }
     ],
     "image_count": 4,
-    "word_count": 4022
+    "word_count": 4022,
+    "words": 4022
   },
   {
     "id": "ths_1786736350742_8542_10f5f734",
@@ -530,6 +553,8 @@
       "technical academic diagram, white background, clean vector style, showing PHY training state machine with link width negotiation, BER eye diagram and redundancy repair, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
+      "ths_1786736350742_8542_10f5f734-0.webp",
+      "ths_1786736350742_8542_10f5f734-1.webp",
       "ths_1786736350742_8542_10f5f734-2.webp",
       "ths_1786736350742_8542_10f5f734-3.webp"
     ],
@@ -577,8 +602,9 @@
         "year": 2023
       }
     ],
-    "image_count": 2,
-    "word_count": 4016
+    "image_count": 4,
+    "word_count": 4016,
+    "words": 4016
   },
   {
     "id": "ths_1786736349742_2500_d51b1fdb",
@@ -603,6 +629,8 @@
       "technical academic diagram, white background, clean vector style, showing consistency distillation student-teacher mapping from multi-step teacher to one-step student, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
+      "ths_1786736349742_2500_d51b1fdb-0.webp",
+      "ths_1786736349742_2500_d51b1fdb-1.webp",
       "ths_1786736349742_2500_d51b1fdb-2.webp",
       "ths_1786736349742_2500_d51b1fdb-3.webp"
     ],
@@ -650,8 +678,9 @@
         "year": 2021
       }
     ],
-    "image_count": 2,
-    "word_count": 4000
+    "image_count": 4,
+    "word_count": 4000,
+    "words": 4000
   },
   {
     "id": "ths_1786736348742_4601_ea7a04c8",
@@ -723,7 +752,8 @@
       }
     ],
     "image_count": 4,
-    "word_count": 4035
+    "word_count": 4035,
+    "words": 4035
   },
   {
     "id": "ths_1786732158360_1b99_442f",
