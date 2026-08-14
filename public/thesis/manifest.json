@@ -24190,7 +24190,12 @@
       "technical academic diagram, white background, clean vector style, showing private information retrieval RLWE SealPIR Spiral performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing private information retrieval RLWE SealPIR Spiral limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786685831176_7820_b54c-0.webp",
+      "ths_1786685831176_7820_b54c-1.webp",
+      "ths_1786685831176_7820_b54c-2.webp",
+      "ths_1786685831176_7820_b54c-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -24235,7 +24240,7 @@
         "authors": "Coding PIR rings 2023"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3828
   },
   {
@@ -24260,7 +24265,11 @@
       "technical academic diagram, white background, clean vector style, showing differentiable rendering Mitsuba3 Dr.Jit path replay performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing differentiable rendering Mitsuba3 Dr.Jit path replay limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786685832176_e8f5_91b3-0.webp",
+      "ths_1786685832176_e8f5_91b3-1.webp",
+      "ths_1786685832176_e8f5_91b3-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -24305,7 +24314,7 @@
         "authors": "DPI 2023 Mitsuba3"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 3793
   },
   {
