@@ -1,12 +1,9 @@
 ---
+id: ths_rust_async_20260814_002_cef6c5
 title: "High-Performance Rust Async Runtime Design: io_uring Submission Queue Ring Buffering, Work-Stealing Scheduler Synthesis, and Pin-Projected Future State Machine Verification"
-thesis: true
-topic: "rust async runtime io_uring"
-anon: "anon#4831"
-ts: 1786748002000
-id: "ths_rust_async_20260814_002_cef6c5"
-images: ["/thesis/ths_rust_async_20260814_002_cef6c5-0.webp", "/thesis/ths_rust_async_20260814_002_cef6c5-1.webp", "/thesis/ths_rust_async_20260814_002_cef6c5-2.webp", "/thesis/ths_rust_async_20260814_002_cef6c5-3.webp"]
-sources: [{"id": 1, "title": "io_uring Adventures: Rust Servers That Love Syscalls", "url": "https://dev.to/speed_engineer/iouring-adventures-rust-servers-that-love-syscalls-47nm", "authors": "speed_engineer", "year": 2024}, {"id": 2, "title": "io_uring(7) — Asynchronous I/O facility", "url": "https://manpages.debian.org/bookworm/liburing-dev/io_uring.7.en.html", "authors": "Linux man-pages project", "year": 2023}, {"id": 3, "title": "Tokio (software)", "url": "https://en.wikipedia.org/wiki/Tokio_(software)", "authors": "Wikipedia", "year": 2024}, {"id": 4, "title": "Tokio scheduler — work-stealing runtime documentation", "url": "https://github.com/tokio-rs/tokio", "authors": "Tokio Developers", "year": 2025}, {"id": 5, "title": "Async Rust: Pinning demystified", "url": "https://thenewstack.io/async-rust-pinning-demystified/", "authors": "The New Stack", "year": 2025}, {"id": 6, "title": "Pin Safety: Understanding Pinning in Rust Futures", "url": "https://hackernoon.com/lite/pin-safety-understanding-pinning-in-rust-futures?ref=hackernoon", "authors": "HackerNoon", "year": 2025}, {"id": 7, "title": "St³ — the Stealing Static Stack — Tokio work-stealing queue analysis", "url": "https://github.com/kvark/st3", "authors": "kvark, asynchronics", "year": 2024}]
+ts: 1786775741181
+anon: anon#4831
+type: thesis
 ---
 
 # High-Performance Rust Async Runtime Design: io_uring Submission Queue Ring Buffering, Work-Stealing Scheduler Synthesis, and Pin-Projected Future State Machine Verification

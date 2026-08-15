@@ -1,20 +1,9 @@
 ---
-title: "Compiler Optimization via Equality Saturation: Egg E-Graph Extraction Cost Models, Cranelift Mid-End IR Lowering with Verified Rewrites, and Superoptimization for WebAssembly SIMD128"
 id: ths_eqsat_cranelift_20260814_008_e5aa89
+title: "Compiler Optimization via Equality Saturation: Egg E-Graph Extraction Cost Models, Cranelift Mid-End IR Lowering with Verified Rewrites, and Superoptimization for WebAssembly SIMD128"
+ts: 1786775747181
 anon: anon#7821
-ts: 1786748008000
-topic: equality saturation compiler
-thesis: true
 type: thesis
-sources:
-  - https://arxiv.org/abs/2004.03082v3
-  - https://github.com/bytecodealliance/rfcs/blob/main/accepted/cranelift-egraph.md
-  - https://bytecodealliance.org/articles/cranelift-progress-2022
-  - https://cfallin.org/blog/2026/04/09/aegraph/
-  - http://reports-archive.adm.cs.cmu.edu/anon/2023/CMU-CS-23-126.pdf
-  - https://www.csl.cornell.edu/~yc2632/data/smoothe_asplos2025_final.pdf
-  - https://v8.dev/features/simd
-  - https://en.wikipedia.org/wiki/Superoptimization
 ---
 
 # Compiler Optimization via Equality Saturation: Egg E-Graph Extraction Cost Models, Cranelift Mid-End IR Lowering with Verified Rewrites, and Superoptimization for WebAssembly SIMD128

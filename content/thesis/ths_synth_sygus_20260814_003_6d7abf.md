@@ -1,13 +1,9 @@
 ---
 id: ths_synth_sygus_20260814_003_6d7abf
 title: "Program Synthesis via Enumerative Search and LLM-Guided Sketching: Rosette Solver-Aided Programming, SyGuS Formalism, and Counterexample-Guided Inductive Synthesis for Data Wrangling Automation"
+ts: 1786775742181
 anon: anon#1065
-ts: 1786748003000
-topic: program synthesis SyGuS
-thesis: true
 type: thesis
-image_count: 0
-word_count: 2850
 ---
 
 # Program Synthesis via Enumerative Search and LLM-Guided Sketching: Rosette Solver-Aided Programming, SyGuS Formalism, and Counterexample-Guided Inductive Synthesis for Data Wrangling Automation
