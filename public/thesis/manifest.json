@@ -3947,11 +3947,12 @@
       }
     ],
     "images": [
-      "ths_gnn_wl_20260814_009_310828-0.webp"
+      "ths_gnn_wl_20260814_009_310828-0.webp",
+      "ths_gnn_wl_20260814_009_310828-1.webp"
     ],
     "generated_images": 1,
     "images_count": 1,
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 0
   },
   {
@@ -4017,7 +4018,12 @@
       "technical academic diagram, white background, clean vector style, showing conformal prediction EnbPI ensemble batch prediction intervals adaptive alpha sliding window, coverage gap, time series drift, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing non-stationary change point detection Markov switching states, adaptive retraining, conformal intervals widening, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_timesfm_chronos_20260814_007_5b6acb-0.webp",
+      "ths_timesfm_chronos_20260814_007_5b6acb-1.webp",
+      "ths_timesfm_chronos_20260814_007_5b6acb-2.webp",
+      "ths_timesfm_chronos_20260814_007_5b6acb-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -4069,7 +4075,7 @@
         "year": 2024
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3018
   },
   {
@@ -4205,8 +4211,13 @@
       "MoE Expert Parallelism AllToAll dispatch, 8 experts sharded across 4 GPUs, token routing load imbalance LIS, replicate-and-quantize balancing diagram, capacity factor overflow handling",
       "Speculative decoding tree verification attention mask, draft model 5 tokens proposed, target model parallel verification, acceptance residual sampling, speedup curve vs acceptance rate alpha"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_flash_moe_20260814_004_a3f9c1-0.webp",
+      "ths_flash_moe_20260814_004_a3f9c1-1.webp",
+      "ths_flash_moe_20260814_004_a3f9c1-2.webp",
+      "ths_flash_moe_20260814_004_a3f9c1-3.webp"
+    ],
+    "image_count": 4,
     "word_count": 3373
   },
   {
@@ -7330,8 +7341,7 @@
     "images": [
       "ths_1786732158360_1b99_442f-0.webp",
       "ths_1786732158360_1b99_442f-1.webp",
-      "ths_1786732158360_1b99_442f-2.webp",
-      "ths_1786732158360_1b99_442f-3.webp"
+      "ths_1786732158360_1b99_442f-2.webp"
     ],
     "sources": [
       {
@@ -7377,7 +7387,7 @@
         "authors": "Laine et al."
       }
     ],
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786732156860_1f5e_2980",
@@ -7552,7 +7562,6 @@
     "images": [
       "ths_1786732153860_0e68_5d81-0.webp",
       "ths_1786732153860_0e68_5d81-1.webp",
-      "ths_1786732153860_0e68_5d81-2.webp",
       "ths_1786732153860_0e68_5d81-3.webp"
     ],
     "sources": [
@@ -7599,7 +7608,7 @@
         "authors": "Schmidt et al."
       }
     ],
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786732152360_1850_75a6",
@@ -7626,7 +7635,6 @@
     "images": [
       "ths_1786732152360_1850_75a6-0.webp",
       "ths_1786732152360_1850_75a6-1.webp",
-      "ths_1786732152360_1850_75a6-2.webp",
       "ths_1786732152360_1850_75a6-3.webp"
     ],
     "sources": [
@@ -7673,7 +7681,7 @@
         "authors": "Raasveldt et al."
       }
     ],
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786732150860_0f8a_53fd",
@@ -7996,7 +8004,6 @@
     "images": [
       "ths_1786732144860_1d37_4dd7-0.webp",
       "ths_1786732144860_1d37_4dd7-1.webp",
-      "ths_1786732144860_1d37_4dd7-2.webp",
       "ths_1786732144860_1d37_4dd7-3.webp"
     ],
     "sources": [
@@ -8043,7 +8050,7 @@
         "authors": "Rathee et al."
       }
     ],
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786729246825_9100_7718",
@@ -8291,9 +8298,7 @@
     ],
     "images": [
       "ths_1786729243825_6627_fe01-0.webp",
-      "ths_1786729243825_6627_fe01-1.webp",
-      "ths_1786729243825_6627_fe01-2.webp",
-      "ths_1786729243825_6627_fe01-3.webp"
+      "ths_1786729243825_6627_fe01-1.webp"
     ],
     "sources": [
       {
@@ -8339,7 +8344,7 @@
         "authors": "SIGMOD 2021"
       }
     ],
-    "image_count": 4
+    "image_count": 2
   },
   {
     "id": "ths_1786729242825_9500_b87c",
@@ -8366,8 +8371,7 @@
     "images": [
       "ths_1786729242825_9500_b87c-0.webp",
       "ths_1786729242825_9500_b87c-1.webp",
-      "ths_1786729242825_9500_b87c-2.webp",
-      "ths_1786729242825_9500_b87c-3.webp"
+      "ths_1786729242825_9500_b87c-2.webp"
     ],
     "sources": [
       {
@@ -8413,7 +8417,7 @@
         "authors": "TinyML Tutorial"
       }
     ],
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786729241825_9881_4446",
@@ -8661,9 +8665,7 @@
     ],
     "images": [
       "ths_1786729238825_7596_a454-0.webp",
-      "ths_1786729238825_7596_a454-1.webp",
-      "ths_1786729238825_7596_a454-2.webp",
-      "ths_1786729238825_7596_a454-3.webp"
+      "ths_1786729238825_7596_a454-1.webp"
     ],
     "sources": [
       {
@@ -8709,7 +8711,7 @@
         "authors": "Semenov et al."
       }
     ],
-    "image_count": 4
+    "image_count": 2
   },
   {
     "id": "ths_1786729237825_1565_f0ae",
@@ -11860,8 +11862,7 @@
     "images": [
       "ths_1786710584248_9889_38d8-0.webp",
       "ths_1786710584248_9889_38d8-1.webp",
-      "ths_1786710584248_9889_38d8-2.webp",
-      "ths_1786710584248_9889_38d8-3.webp"
+      "ths_1786710584248_9889_38d8-2.webp"
     ],
     "sources": [
       {
@@ -11907,7 +11908,7 @@
         "authors": "Jayaram Subramanya et al."
       }
     ],
-    "image_count": 4
+    "image_count": 3
   },
   {
     "id": "ths_1786710583248_9862_8908",
@@ -12154,10 +12155,7 @@
       "technical academic diagram, white background, clean vector style, showing Learned Index Maintenance under LSM Compaction: PGM-Index Multipartite Recursion, FITing-Tree Bounded-Segment Guarantees, RadixSpline Parameter Tuning, and CDFShop RMI Autotuning limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786710580248_3633_2aba-0.webp",
-      "ths_1786710580248_3633_2aba-1.webp",
-      "ths_1786710580248_3633_2aba-2.webp",
-      "ths_1786710580248_3633_2aba-3.webp"
+      "ths_1786710580248_3633_2aba-1.webp"
     ],
     "sources": [
       {
@@ -12203,7 +12201,7 @@
         "authors": "VLDB"
       }
     ],
-    "image_count": 4
+    "image_count": 1
   },
   {
     "id": "ths_1786710579248_4772_e679",
@@ -12822,10 +12820,11 @@
       "technical academic diagram, white background, clean vector style, UCIe 2.0 to CXL 3.0 fabric over optics, disaggregated memory pooling, retimer fiber GFAM port based routing protocol stack diagram, highly detailed educational"
     ],
     "images": [
-      "public/thesis/ths_1786708005000_a5_5555-0.webp",
-      "public/thesis/ths_1786708005000_a5_5555-1.webp"
+      "ths_1786708005000_a5_5555-0.webp",
+      "ths_1786708005000_a5_5555-1.webp"
     ],
-    "word_count": 3220
+    "word_count": 3220,
+    "image_count": 2
   },
   {
     "id": "ths_1786708004000_a4_4444",
@@ -12913,9 +12912,9 @@
     "type": "thesis",
     "topic": "qLDPC Quantum Low-Density Parity-Check Codes Beyond Surface Codes: Product Code Expander Lifts, Single-Shot BP-OSD Decoding, and Lattice Surgery Overhead for Magic State Distillation",
     "images": [
-      "public/thesis/ths_1786708003000_a3_3333-0.webp",
-      "public/thesis/ths_1786708003000_a3_3333-1.webp",
-      "public/thesis/ths_1786708003000_a3_3333-2.webp"
+      "ths_1786708003000_a3_3333-0.webp",
+      "ths_1786708003000_a3_3333-1.webp",
+      "ths_1786708003000_a3_3333-2.webp"
     ],
     "image_prompts": [
       "technical academic diagram, white background, clean vector style, showing quantum LDPC Tanner graph hypergraph product construction of CSS codes, classical parity check matrices H1 and H2 forming quantum lifted product, nodes for X and Z stabilizers, variable qubits as circles, check nodes squares, edges sparse low-density, mathematical notation H_X = [H1 \u2297 I | I \u2297 H2^T], highly detailed, educational, high resolution",
@@ -12974,7 +12973,8 @@
       "Single-shot BP-OSD decoder flow lattice surgery magic state injection",
       "Performance plot threshold vs code family"
     ],
-    "word_count": 3665
+    "word_count": 3665,
+    "image_count": 3
   },
   {
     "id": "ths_1786708002000_a2_2222",
@@ -13057,9 +13057,9 @@
     "ts": 1786708001000,
     "image_count": 3,
     "images": [
-      "/thesis/ths_1786708001000_a1_1111-0.webp",
-      "/thesis/ths_1786708001000_a1_1111-1.webp",
-      "/thesis/ths_1786708001000_a1_1111-2.webp"
+      "ths_1786708001000_a1_1111-0.webp",
+      "ths_1786708001000_a1_1111-1.webp",
+      "ths_1786708001000_a1_1111-2.webp"
     ],
     "image_concepts": [
       "Vamana alpha-RNG graph pruning diagram showing angular diversity pruning of redundant edges, with directional vectors and alpha threshold comparison",
@@ -13132,8 +13132,8 @@
       "technical academic diagram, white background, clean vector style, showing ML-KEM decapsulation side-channel threat model, attacker measuring timing and power traces, Fujisaki-Okamoto re-encryption comparison, Clangover compiler branch leakage, masked decoder, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "public/thesis/ths_1786708000000_a0_0000-0.webp",
-      "public/thesis/ths_1786708000000_a0_0000-1.webp"
+      "ths_1786708000000_a0_0000-0.webp",
+      "ths_1786708000000_a0_0000-1.webp"
     ],
     "sources": [
       {
@@ -13179,7 +13179,8 @@
         "authors": "J. Chen, Y. Bai, Y. Wang, W. Peng"
       }
     ],
-    "word_count": 2740
+    "word_count": 2740,
+    "image_count": 2
   },
   {
     "id": "ths_1786703506478_6043",
@@ -13357,10 +13358,10 @@
     "anon": "anon#7517",
     "topic": "Neuromorphic Spiking Neural Networks on Intel Loihi 2 and SpiNNaker2: STDP Learning Dynamics, Event-Driven AER Routing, Sparse Temporal Coding, and On-Chip Online Continual Learning for Edge Robotics",
     "images": [
-      "public/thesis/ths_1786703455969_q99k39_d97107-0.webp",
-      "public/thesis/ths_1786703455969_q99k39_d97107-1.webp",
-      "public/thesis/ths_1786703455969_q99k39_d97107-2.webp",
-      "public/thesis/ths_1786703455969_q99k39_d97107-3.webp"
+      "ths_1786703455969_q99k39_d97107-0.webp",
+      "ths_1786703455969_q99k39_d97107-1.webp",
+      "ths_1786703455969_q99k39_d97107-2.webp",
+      "ths_1786703455969_q99k39_d97107-3.webp"
     ],
     "image_prompts": [
       "technical academic diagram, white background, clean vector style, showing Intel Loihi 2 neuromorphic chip architecture vs SpiNNaker2 many-core architecture comparison, nodes, arrows, microcode programmable neuron cores, 128 cores, 152 ARM cores, network-on-chip mesh, mathematical notation, highly detailed, educational, high resolution",
@@ -13368,7 +13369,8 @@
       "technical academic diagram, white background, clean vector style, showing AER Address-Event Representation routing fabric, multicast mesh routing, 2D mesh NoC, event packet format with source address, timestamp, asynchronous handshaking, routers, queues, hierarchical HiAER levels L0 L1 L2, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing sparse temporal coding and on-chip online continual learning for edge robotics, DVS event camera input, rank-order coding, time-to-first-spike, CLP-SNN prototype consolidation, neurogenesis, metaplasticity, robot closed-loop navigation, highly detailed, educational, high resolution"
     ],
-    "type": "thesis"
+    "type": "thesis",
+    "image_count": 4
   },
   {
     "id": "ths_1786703548417_7392_0",
@@ -14240,10 +14242,7 @@
       "technical academic diagram, white background, clean vector style, showing Photon-Counting CT Spectral Reconstruction with Physics-Informed Deep Priors: Energy Bin Unmixing via Non-Negative Matri limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786696353389_08bf_a1ec-0.webp",
-      "ths_1786696353389_08bf_a1ec-1.webp",
-      "ths_1786696353389_08bf_a1ec-2.webp",
-      "ths_1786696353389_08bf_a1ec-3.webp"
+      "ths_1786696353389_08bf_a1ec-0.webp"
     ],
     "sources": [
       {
@@ -14289,7 +14288,7 @@
         "authors": "Siemens Healthineers"
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 3958
   },
   {
@@ -14840,10 +14839,7 @@
       "technical academic diagram, white background, clean vector style, showing Verifiable Delay Functions over Class Groups of Imaginary Quadratic Fields: Wesolowski and Pietrzak Proof Systems, RSA U limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786696341389_9103_65ce-0.webp",
-      "ths_1786696341389_9103_65ce-1.webp",
-      "ths_1786696341389_9103_65ce-2.webp",
-      "ths_1786696341389_9103_65ce-3.webp"
+      "ths_1786696341389_9103_65ce-0.webp"
     ],
     "sources": [
       {
@@ -14889,7 +14885,7 @@
         "authors": "Bonneau et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 3926
   },
   {
@@ -15515,10 +15511,7 @@
       "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Machine Learning Inference via Halo2 Plonkish Arithmetization, GKR Sumcheck for CNN Layers, and Lookup Arguments for Transformer Non-Linearities limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786692933447_a6c0_707f-0.webp",
-      "ths_1786692933447_a6c0_707f-1.webp",
-      "ths_1786692933447_a6c0_707f-2.webp",
-      "ths_1786692933447_a6c0_707f-3.webp"
+      "ths_1786692933447_a6c0_707f-0.webp"
     ],
     "sources": [
       {
@@ -15564,7 +15557,7 @@
         "authors": "vCNN authors"
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 2766
   },
   {
@@ -15591,9 +15584,7 @@
     ],
     "images": [
       "ths_1786692932447_422b_574d-0.webp",
-      "ths_1786692932447_422b_574d-1.webp",
-      "ths_1786692932447_422b_574d-2.webp",
-      "ths_1786692932447_422b_574d-3.webp"
+      "ths_1786692932447_422b_574d-2.webp"
     ],
     "sources": [
       {
@@ -15639,7 +15630,7 @@
         "authors": "IETF RATS WG"
       }
     ],
-    "image_count": 4,
+    "image_count": 2,
     "word_count": 2743
   },
   {
@@ -19050,8 +19041,8 @@
       "diagram 4 for quantum LDPC neural decoding showing ablation or sensitivity analysis table as diagram"
     ],
     "images": [
-      "public/thesis/ths_1786674912772_bdab_424f-0.webp",
-      "public/thesis/ths_1786674912772_bdab_424f-1.webp"
+      "ths_1786674912772_bdab_424f-0.webp",
+      "ths_1786674912772_bdab_424f-1.webp"
     ],
     "image_count": 2,
     "sources": [
