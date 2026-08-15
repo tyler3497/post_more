@@ -350,7 +350,6 @@
       "technical academic diagram, white background, clean vector style, showing Secure Multi-Party Computation over Rings SPDZ2k with Overdrive-Style  limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786757395006_2857_79681f-0.webp",
       "ths_1786757395006_2857_79681f-1.webp",
       "ths_1786757395006_2857_79681f-2.webp",
       "ths_1786757395006_2857_79681f-3.webp"
@@ -406,7 +405,7 @@
         "year": 2024
       }
     ],
-    "image_count": 4,
+    "image_count": 3,
     "word_count": 4070
   },
   {
@@ -431,12 +430,7 @@
       "technical academic diagram, white background, clean vector style, showing Spiking Transformers with Leaky Integrate-and-Fire Neurons for Event C performance and proof structure, graphs, tables, complexity bounds, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Spiking Transformers with Leaky Integrate-and-Fire Neurons for Event C limitation and future work roadmap, tradeoffs, design space, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786757394006_6146_54e4d9-0.webp",
-      "ths_1786757394006_6146_54e4d9-1.webp",
-      "ths_1786757394006_6146_54e4d9-2.webp",
-      "ths_1786757394006_6146_54e4d9-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -488,7 +482,7 @@
         "year": 2024
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 4093
   },
   {
@@ -515,9 +509,7 @@
     ],
     "images": [
       "ths_1786757393006_4085_6f28cd-0.webp",
-      "ths_1786757393006_4085_6f28cd-1.webp",
-      "ths_1786757393006_4085_6f28cd-2.webp",
-      "ths_1786757393006_4085_6f28cd-3.webp"
+      "ths_1786757393006_4085_6f28cd-1.webp"
     ],
     "sources": [
       {
@@ -570,7 +562,7 @@
         "year": 2024
       }
     ],
-    "image_count": 4,
+    "image_count": 2,
     "word_count": 4081
   },
   {
