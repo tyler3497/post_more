@@ -37927,7 +37927,8 @@
     "images": [
       "ths_rdma_dc_20260815_2130_09b8_9-0.webp",
       "ths_rdma_dc_20260815_2130_09b8_9-1.webp",
-      "ths_rdma_dc_20260815_2130_09b8_9-2.webp"
+      "ths_rdma_dc_20260815_2130_09b8_9-2.webp",
+      "ths_rdma_dc_20260815_2130_09b8_9-3.webp"
     ],
     "sources": [
       {
@@ -37961,7 +37962,7 @@
         "authors": "Huang arXiv:2405.07608"
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2795
   }
 ]
