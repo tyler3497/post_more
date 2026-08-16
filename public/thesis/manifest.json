@@ -40907,9 +40907,10 @@
       "technical academic diagram, white background, clean vector style, showing Verifiable Delay Functions from Groups of Unknown Order, Isogeny Walks, and Lattice Assumptions: Wesolowski and Pietrzak Proofs, Sloth-Plus-VDFs, and Unbiasable Randomness Beacons limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "/thesis/ths_1786865601965_0591-0.webp",
-      "/thesis/ths_1786865601965_0591-1.webp",
-      "/thesis/ths_1786865601965_0591-2.webp"
+      "ths_1786865601965_0591-0.webp",
+      "ths_1786865601965_0591-1.webp",
+      "ths_1786865601965_0591-2.webp",
+      "ths_1786865601965_0591-3.webp"
     ],
     "sources": [
       {
@@ -40955,7 +40956,7 @@
         "authors": "Mongia et al."
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2737
   },
   {
@@ -40981,9 +40982,10 @@
       "technical academic diagram, white background, clean vector style, showing Post-Quantum Double Ratchet over ML-KEM: PQXDH Formal Verification with ProVerif and CryptoVerif, Harvest-Now-Decrypt-Later Resilience, and Forward-Secrecy Deniability Compositions limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "/thesis/ths_1786865602965_07ad-0.webp",
-      "/thesis/ths_1786865602965_07ad-1.webp",
-      "/thesis/ths_1786865602965_07ad-2.webp"
+      "ths_1786865602965_07ad-0.webp",
+      "ths_1786865602965_07ad-1.webp",
+      "ths_1786865602965_07ad-2.webp",
+      "ths_1786865602965_07ad-3.webp"
     ],
     "sources": [
       {
@@ -41029,7 +41031,7 @@
         "authors": "IETF PQUIP WG"
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2758
   },
   {
@@ -41055,8 +41057,10 @@
       "technical academic diagram, white background, clean vector style, showing Carbon-Aware Scheduling for Geo-Distributed GPU Training: Temporal Carbon Intensity Forecasting, Power-Capping via RAPL and NVML, and SLA-Preserving Migration across 24 Regions limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "/thesis/ths_1786865603965_20b0-0.webp",
-      "/thesis/ths_1786865603965_20b0-1.webp"
+      "ths_1786865603965_20b0-0.webp",
+      "ths_1786865603965_20b0-1.webp",
+      "ths_1786865603965_20b0-2.webp",
+      "ths_1786865603965_20b0-3.webp"
     ],
     "sources": [
       {
@@ -41102,7 +41106,7 @@
         "authors": "Wiesner et al."
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2776
   },
   {
@@ -41128,9 +41132,10 @@
       "technical academic diagram, white background, clean vector style, showing Learned Cardinality Estimation Deep Inside Query Optimizers: NeuroCard One Model for All Tables, DeepDB Relational Bayes, BayesCard Chow-Liu Tree, and Conservative Q-Error Bounds limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "/thesis/ths_1786865604965_120c-0.webp",
-      "/thesis/ths_1786865604965_120c-1.webp",
-      "/thesis/ths_1786865604965_120c-2.webp"
+      "ths_1786865604965_120c-0.webp",
+      "ths_1786865604965_120c-1.webp",
+      "ths_1786865604965_120c-2.webp",
+      "ths_1786865604965_120c-3.webp"
     ],
     "sources": [
       {
@@ -41176,7 +41181,7 @@
         "authors": "Wu et al. 2023"
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2761
   },
   {
@@ -41202,9 +41207,10 @@
       "technical academic diagram, white background, clean vector style, showing Silicon Photonic Accelerators for Transformer Inference: Mach-Zehnder Mesh Matrix Multiplication, Microring Weight Bank Non-Volatile Trimming, and Phase-Change Memory Photonic Memory limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "/thesis/ths_1786865605965_19b1-0.webp",
-      "/thesis/ths_1786865605965_19b1-1.webp",
-      "/thesis/ths_1786865605965_19b1-2.webp"
+      "ths_1786865605965_19b1-0.webp",
+      "ths_1786865605965_19b1-1.webp",
+      "ths_1786865605965_19b1-2.webp",
+      "ths_1786865605965_19b1-3.webp"
     ],
     "sources": [
       {
@@ -41250,7 +41256,7 @@
         "authors": "Shawon Saxena"
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2811
   },
   {
@@ -41275,7 +41281,12 @@
       "technical academic diagram, white background, clean vector style, showing Secure Multi-Party Computation at Internet Scale: SPDZ over Rings Z_2^k, Overdrive2k BGV Packing, SilentOT Sublinear OT Extension, and QUIC-Based Triple Sacrificing with MaliciousSecurity performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Secure Multi-Party Computation at Internet Scale: SPDZ over Rings Z_2^k, Overdrive2k BGV Packing, SilentOT Sublinear OT Extension, and QUIC-Based Triple Sacrificing with MaliciousSecurity limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786865606965_0af8-0.webp",
+      "ths_1786865606965_0af8-1.webp",
+      "ths_1786865606965_0af8-2.webp",
+      "ths_1786865606965_0af8-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -41320,7 +41331,7 @@
         "authors": "Damgard et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2788
   },
   {
@@ -41346,9 +41357,10 @@
       "technical academic diagram, white background, clean vector style, showing Dexterous Manipulation via SE(3)-Equivariant Diffusion Policies with Visuotactile Sensing: Tactile Impedance Control, Caging Grasp Synthesis, and Sim-to-Real Domain-Adaptive Diffusion via Tactile NeRF limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "/thesis/ths_1786865607965_22b3-0.webp",
-      "/thesis/ths_1786865607965_22b3-1.webp",
-      "/thesis/ths_1786865607965_22b3-2.webp"
+      "ths_1786865607965_22b3-0.webp",
+      "ths_1786865607965_22b3-1.webp",
+      "ths_1786865607965_22b3-2.webp",
+      "ths_1786865607965_22b3-3.webp"
     ],
     "sources": [
       {
@@ -41394,7 +41406,7 @@
         "authors": "Kapelyukh et al."
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2771
   },
   {
@@ -41420,9 +41432,10 @@
       "technical academic diagram, white background, clean vector style, showing Satellite-to-Ground Laser Communications under Atmospheric Turbulence: Adaptive Optics Tip-Tilt Correction, PPM vs Coherent Homodyne, ARQ-Free Fountain Coding with RaptorQ, and LEO Tracking limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "/thesis/ths_1786865608965_24e7-0.webp",
-      "/thesis/ths_1786865608965_24e7-1.webp",
-      "/thesis/ths_1786865608965_24e7-2.webp"
+      "ths_1786865608965_24e7-0.webp",
+      "ths_1786865608965_24e7-1.webp",
+      "ths_1786865608965_24e7-2.webp",
+      "ths_1786865608965_24e7-3.webp"
     ],
     "sources": [
       {
@@ -41468,7 +41481,7 @@
         "authors": "Yang et al. 2019"
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2801
   },
   {
@@ -41494,9 +41507,10 @@
       "technical academic diagram, white background, clean vector style, showing Decentralized Identity with BBS+ Signatures and AnonCreds v2: Selective Disclosure, Predicate Proofs over CL-Signatures, DIDComm v2 Link Secrets, and Revocation via Cryptographic Accumulators limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "/thesis/ths_1786865609965_1c4c-0.webp",
-      "/thesis/ths_1786865609965_1c4c-1.webp",
-      "/thesis/ths_1786865609965_1c4c-2.webp"
+      "ths_1786865609965_1c4c-0.webp",
+      "ths_1786865609965_1c4c-1.webp",
+      "ths_1786865609965_1c4c-2.webp",
+      "ths_1786865609965_1c4c-3.webp"
     ],
     "sources": [
       {
@@ -41542,7 +41556,7 @@
         "authors": "Sovrin Foundation"
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2730
   },
   {
@@ -41568,10 +41582,10 @@
       "technical academic diagram, white background, clean vector style, showing Mechanized Verification of Concurrent Garbage Collectors for Managed Linear Memory: MSWASM GC, RC Immix, Lace GC, Iris Separation Logic, and Parallel Mutator Collisions limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "/thesis/ths_1786865610965_1bb1-0.webp",
-      "/thesis/ths_1786865610965_1bb1-1.webp",
-      "/thesis/ths_1786865610965_1bb1-2.webp",
-      "/thesis/ths_1786865610965_1bb1-3.webp"
+      "ths_1786865610965_1bb1-0.webp",
+      "ths_1786865610965_1bb1-1.webp",
+      "ths_1786865610965_1bb1-2.webp",
+      "ths_1786865610965_1bb1-3.webp"
     ],
     "sources": [
       {
