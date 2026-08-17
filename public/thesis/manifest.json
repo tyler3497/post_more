@@ -8682,8 +8682,13 @@
       "technical academic diagram, white background, clean vector style, showing Neuromorphic Continual Learning via Elastic Weight Consolidation, Synaptic Intelligence, and Binary Spiking Neural Dynamics on Loihi 2 and SpiNNaker2: Lifelong Plasticity without Catastrophic Forgetting performance and proof structure graphs tables complexity bounds bars, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title",
       "technical academic diagram, white background, clean vector style, showing Neuromorphic Continual Learning via Elastic Weight Consolidation, Synaptic Intelligence, and Binary Spiking Neural Dynamics on Loihi 2 and SpiNNaker2: Lifelong Plasticity without Catastrophic Forgetting limitation tradeoff radar and future work roadmap design space, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1786990013633_993f-0.webp",
+      "ths_1786990013633_993f-1.webp",
+      "ths_1786990013633_993f-2.webp",
+      "ths_1786990013633_993f-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "Overcoming Catastrophic Forgetting in Neural Networks - EWC",
@@ -8746,8 +8751,13 @@
       "technical academic diagram, white background, clean vector style, showing Secure Multi-Party Computation for Genome-Wide Association Studies: Secret-Shared GWAS Linear Mixed Models, Differentially Private Release, and Malicious-Secure Parameter Tuning under GDPR/HIPAA performance and proof structure graphs tables complexity bounds bars, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title",
       "technical academic diagram, white background, clean vector style, showing Secure Multi-Party Computation for Genome-Wide Association Studies: Secret-Shared GWAS Linear Mixed Models, Differentially Private Release, and Malicious-Secure Parameter Tuning under GDPR/HIPAA limitation tradeoff radar and future work roadmap design space, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1786990014633_4575-0.webp",
+      "ths_1786990014633_4575-1.webp",
+      "ths_1786990014633_4575-2.webp",
+      "ths_1786990014633_4575-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "Secure Genome-Wide Association Analysis Using Multiparty Computation",
@@ -8810,8 +8820,13 @@
       "technical academic diagram, white background, clean vector style, showing Intermittent Computing for Batteryless IoT: Checkpointing Strategies, Idempotency via Formal Rewrites, Energy-Harvesting Predictors, and Crash Consistency Proofs with Rust Ownership Types performance and proof structure graphs tables complexity bounds bars, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title",
       "technical academic diagram, white background, clean vector style, showing Intermittent Computing for Batteryless IoT: Checkpointing Strategies, Idempotency via Formal Rewrites, Energy-Harvesting Predictors, and Crash Consistency Proofs with Rust Ownership Types limitation tradeoff radar and future work roadmap design space, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1786990015633_35a4-0.webp",
+      "ths_1786990015633_35a4-1.webp",
+      "ths_1786990015633_35a4-2.webp",
+      "ths_1786990015633_35a4-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "Chain: Tasks and Channels for Reliable Intermittent Programs - OOPSLA 2016",
