@@ -9029,9 +9029,11 @@
     ],
     "images": [
       "ths_1786990018633_9346-0.webp",
-      "ths_1786990018633_9346-1.webp"
+      "ths_1786990018633_9346-1.webp",
+      "ths_1786990018633_9346-2.webp",
+      "ths_1786990018633_9346-3.webp"
     ],
-    "image_count": 2,
+    "image_count": 4,
     "sources": [
       {
         "title": "A Framework for Formal Verification of Cache Coherence - FM 2015",
@@ -9094,8 +9096,13 @@
       "technical academic diagram, white background, clean vector style, showing Graph Neural Network Distillation and Dynamic Sparsification: Lottery Ticket Hypothesis, Edge Sampling, Temporal Tensors, and Knowledge Distillation Bounds under Heterophilic Distribution Shift performance and proof structure graphs tables complexity bounds bars, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title",
       "technical academic diagram, white background, clean vector style, showing Graph Neural Network Distillation and Dynamic Sparsification: Lottery Ticket Hypothesis, Edge Sampling, Temporal Tensors, and Knowledge Distillation Bounds under Heterophilic Distribution Shift limitation tradeoff radar and future work roadmap design space, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1786990019633_b143-0.webp",
+      "ths_1786990019633_b143-1.webp",
+      "ths_1786990019633_b143-2.webp",
+      "ths_1786990019633_b143-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "GraphSAINT: Graph Sampling Based Inductive Learning Method",
@@ -9158,8 +9165,13 @@
       "technical academic diagram, white background, clean vector style, showing Post-Moore Heterogeneous Chiplet Interconnects: UCIe, BoW, CXL 3.1, Die-to-Die Link Training, BER Modeling, Eye Diagram Optimization, and Formal Compliance Verification performance and proof structure graphs tables complexity bounds bars, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title",
       "technical academic diagram, white background, clean vector style, showing Post-Moore Heterogeneous Chiplet Interconnects: UCIe, BoW, CXL 3.1, Die-to-Die Link Training, BER Modeling, Eye Diagram Optimization, and Formal Compliance Verification limitation tradeoff radar and future work roadmap design space, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1786990020633_bcb0-0.webp",
+      "ths_1786990020633_bcb0-1.webp",
+      "ths_1786990020633_bcb0-2.webp",
+      "ths_1786990020633_bcb0-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "Universal Chiplet Interconnect Express (UCIe) 1.0 Specification",
