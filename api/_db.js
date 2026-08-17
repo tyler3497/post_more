@@ -257,7 +257,20 @@ export async function syncUnifiedFromFiles({ thesisPosts = [], satirePosts = [] 
     const all = [...satirePosts.map(p=>({...ensureType(p), type: p.type||'satire'})), ...thesisPosts.map(p=>({...ensureType(p), type: p.type||'thesis'}))]
     for (let p of all) {
       if (!p || !p.id) continue
-      if (set.has(p.id)) continue
+      if (set.has(p.id)) {
+        // Update score if ts newer (keeps newest-first correct without deleting)
+        try {
+          const existingRaw = await kv.get(`${POST_PREFIX}${p.id}`)
+          let existingTs = 0
+          if (existingRaw) {
+            try { const ej = typeof existingRaw === 'string' ? JSON.parse(existingRaw) : existingRaw; existingTs = ej?.ts || 0 } catch {}
+          }
+          if (p.ts && p.ts > existingTs) {
+            await savePost(p)
+          }
+        } catch {}
+        continue
+      }
       await savePost(p)
       added++
     }
