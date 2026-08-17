@@ -8510,8 +8510,13 @@
       "technical academic diagram, white background, clean vector style, showing Stacked Borrows 2 and Tree Borrows: Formal Verification of Rust Unsafe Code Aliasing Models, Miri Symbolic Execution, and Kani Model Checking for Provenance Safety performance and proof structure graphs tables complexity bounds bars, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title",
       "technical academic diagram, white background, clean vector style, showing Stacked Borrows 2 and Tree Borrows: Formal Verification of Rust Unsafe Code Aliasing Models, Miri Symbolic Execution, and Kani Model Checking for Provenance Safety limitation tradeoff radar and future work roadmap design space, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1786990011633_e067-0.webp",
+      "ths_1786990011633_e067-1.webp",
+      "ths_1786990011633_e067-2.webp",
+      "ths_1786990011633_e067-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "Stacked Borrows: An Aliasing Model for Rust",
@@ -8642,14 +8647,17 @@
       }
     ],
     "images": [
-      "ths_1786989538666_bdde-0.webp"
+      "ths_1786989538666_bdde-0.webp",
+      "ths_1786989538666_bdde-1.webp",
+      "ths_1786989538666_bdde-2.webp",
+      "ths_1786989538666_bdde-3.webp"
     ],
     "images_generated": [
       "public/thesis/ths_1786989538666_bdde-0.webp"
     ],
     "word_count": 3316,
     "thesis": true,
-    "image_count": 1
+    "image_count": 4
   },
   {
     "id": "ths_1786990013633_993f",
