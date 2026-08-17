@@ -8889,8 +8889,13 @@
       "technical academic diagram, white background, clean vector style, showing High-Throughput Streaming Joins Under Out-of-Order Data: Watermarks, Retraction, Granger Consistency, and Incremental View Maintenance with Differential Dataflow, Naiad, and Flink Stateful Functions performance and proof structure graphs tables complexity bounds bars, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title",
       "technical academic diagram, white background, clean vector style, showing High-Throughput Streaming Joins Under Out-of-Order Data: Watermarks, Retraction, Granger Consistency, and Incremental View Maintenance with Differential Dataflow, Naiad, and Flink Stateful Functions limitation tradeoff radar and future work roadmap design space, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1786990016633_7f14-0.webp",
+      "ths_1786990016633_7f14-1.webp",
+      "ths_1786990016633_7f14-2.webp",
+      "ths_1786990016633_7f14-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "Naiad: A Timely Dataflow System - SOSP 2013",
@@ -8953,8 +8958,13 @@
       "technical academic diagram, white background, clean vector style, showing Homomorphic Encryption for Private Information Retrieval: SealPIR, FastPIR, OnionPIR, Constant-Weight Codewords, and N-fold GPU Acceleration for Billion-Scale Searchable Indexes performance and proof structure graphs tables complexity bounds bars, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title",
       "technical academic diagram, white background, clean vector style, showing Homomorphic Encryption for Private Information Retrieval: SealPIR, FastPIR, OnionPIR, Constant-Weight Codewords, and N-fold GPU Acceleration for Billion-Scale Searchable Indexes limitation tradeoff radar and future work roadmap design space, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1786990017633_1459-0.webp",
+      "ths_1786990017633_1459-1.webp",
+      "ths_1786990017633_1459-2.webp",
+      "ths_1786990017633_1459-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "SealPIR: Private Information Retrieval via Homomorphic Encryption",
