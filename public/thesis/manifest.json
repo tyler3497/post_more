@@ -9027,8 +9027,11 @@
       "technical academic diagram, white background, clean vector style, showing SAT-Based Formal Verification of Hardware Cache Coherence Protocols: MESI, MOESI, CHI, Formal Invariants, Deadlock Freedom, and TLA+ Model Checking under Adversarial Schedulers performance and proof structure graphs tables complexity bounds bars, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title",
       "technical academic diagram, white background, clean vector style, showing SAT-Based Formal Verification of Hardware Cache Coherence Protocols: MESI, MOESI, CHI, Formal Invariants, Deadlock Freedom, and TLA+ Model Checking under Adversarial Schedulers limitation tradeoff radar and future work roadmap design space, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, large title"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1786990018633_9346-0.webp",
+      "ths_1786990018633_9346-1.webp"
+    ],
+    "image_count": 2,
     "sources": [
       {
         "title": "A Framework for Formal Verification of Cache Coherence - FM 2015",
