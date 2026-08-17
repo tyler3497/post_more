@@ -10027,7 +10027,8 @@
     ],
     "images": [
       "ths_1786994613978_1552-0.webp",
-      "ths_1786994613978_1552-1.webp"
+      "ths_1786994613978_1552-1.webp",
+      "ths_1786994613978_1552-2.webp"
     ],
     "sources": [
       {
@@ -10073,9 +10074,9 @@
         "authors": "Delta Lake Docs"
       }
     ],
-    "image_count": 2,
+    "image_count": 3,
     "word_count": 3939,
-    "images_generated": 2
+    "images_generated": 3
   },
   {
     "id": "ths_1786994614978_1e32",
@@ -10099,7 +10100,11 @@
       "technical academic diagram, white background, clean vector style, showing Warp-Level Cooperative Groups for Irregular Graph Analytics: Gunrock Load-Balanced Frontiers, Hornet Dynamic Vertex Updates, and Bounded Asynchronous BFS with Deterministic Tie-Breaking performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution, chart",
       "technical academic diagram, white background, clean vector style, showing Warp-Level Cooperative Groups for Irregular Graph Analytics: Gunrock Load-Balanced Frontiers, Hornet Dynamic Vertex Updates, and Bounded Asynchronous BFS with Deterministic Tie-Breaking limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786994614978_1e32-0.webp",
+      "ths_1786994614978_1e32-1.webp",
+      "ths_1786994614978_1e32-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -10144,9 +10149,9 @@
         "authors": "Slim et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 3893,
-    "images_generated": 0
+    "images_generated": 3
   },
   {
     "id": "ths_1786994615978_1d49",
@@ -10170,7 +10175,11 @@
       "technical academic diagram, white background, clean vector style, showing Multi-Server Information-Theoretic Private Information Retrieval: Goldberg Robustness via Reed-Solomon, CIP-PIR GPU Batching, and Covert Security Lattice Binding Empirical Reproduction with Verified Artifacts performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution, chart",
       "technical academic diagram, white background, clean vector style, showing Multi-Server Information-Theoretic Private Information Retrieval: Goldberg Robustness via Reed-Solomon, CIP-PIR GPU Batching, and Covert Security Lattice Binding Empirical Reproduction with Verified Artifacts limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786994615978_1d49-0.webp",
+      "ths_1786994615978_1d49-1.webp",
+      "ths_1786994615978_1d49-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -10215,9 +10224,9 @@
         "authors": "Mughees et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 3905,
-    "images_generated": 0
+    "images_generated": 3
   },
   {
     "id": "ths_1786994616978_1915",
@@ -10241,7 +10250,9 @@
       "technical academic diagram, white background, clean vector style, showing Formally Verified BPF JIT Hardening: Isabelle/HOL JITSafety Preservation, Constant-Time Masking for Packet Parsing, Speculative Load Hardening SLH for Spectre-v1/v4, and Translation Validation via Alive2 for BPF ISA Empirical Reproduction with Verified Artifacts performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution, chart",
       "technical academic diagram, white background, clean vector style, showing Formally Verified BPF JIT Hardening: Isabelle/HOL JITSafety Preservation, Constant-Time Masking for Packet Parsing, Speculative Load Hardening SLH for Spectre-v1/v4, and Translation Validation via Alive2 for BPF ISA Empirical Reproduction with Verified Artifacts limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786994616978_1915-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -10286,9 +10297,9 @@
         "authors": "Vaswani et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 3962,
-    "images_generated": 0
+    "images_generated": 1
   },
   {
     "id": "ths_1786994617978_218d",
@@ -10312,7 +10323,11 @@
       "technical academic diagram, white background, clean vector style, showing Carbon-Aware Global ML Training Placement: Sky Computing Spot Arbitrage across Clouds, Carbon-Intent DSL with Marginal CI Forecasting, and Battery-Buffered Geographical Load Balancing Empirical Reproduction with Verified Artifacts performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution, chart",
       "technical academic diagram, white background, clean vector style, showing Carbon-Aware Global ML Training Placement: Sky Computing Spot Arbitrage across Clouds, Carbon-Intent DSL with Marginal CI Forecasting, and Battery-Buffered Geographical Load Balancing Empirical Reproduction with Verified Artifacts limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786994617978_218d-0.webp",
+      "ths_1786994617978_218d-1.webp",
+      "ths_1786994617978_218d-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -10357,9 +10372,9 @@
         "authors": "Sukprasert et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 3895,
-    "images_generated": 0
+    "images_generated": 3
   },
   {
     "id": "ths_1786994618978_0d46",
@@ -10455,7 +10470,9 @@
       "technical academic diagram, white background, clean vector style, showing High-Throughput DAG-Based BFT Ordering: Narwhal Mempool Tiering and Batch Asynchronous Persistent Storage, Bullshark without Timeout Liveness, and Sailfish Quorum-Across-Views Reconfiguration Empirical Reproduction with Verified Artifacts limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786994619978_16af-0.webp"
+      "ths_1786994619978_16af-0.webp",
+      "ths_1786994619978_16af-1.webp",
+      "ths_1786994619978_16af-2.webp"
     ],
     "sources": [
       {
@@ -10501,9 +10518,9 @@
         "authors": "Danezis et al."
       }
     ],
-    "image_count": 1,
+    "image_count": 3,
     "word_count": 3898,
-    "images_generated": 1
+    "images_generated": 3
   },
   {
     "id": "ths_1786994620978_2368",
