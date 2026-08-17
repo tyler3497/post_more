@@ -10402,7 +10402,8 @@
     ],
     "images": [
       "ths_1786994618978_0d46-0.webp",
-      "ths_1786994618978_0d46-1.webp"
+      "ths_1786994618978_0d46-1.webp",
+      "ths_1786994618978_0d46-2.webp"
     ],
     "sources": [
       {
@@ -10448,9 +10449,9 @@
         "authors": "Li et al."
       }
     ],
-    "image_count": 2,
+    "image_count": 3,
     "word_count": 3900,
-    "images_generated": 2
+    "images_generated": 3
   },
   {
     "id": "ths_1786994619978_16af",
@@ -10549,7 +10550,11 @@
       "technical academic diagram, white background, clean vector style, showing Silicon-Photonic Interconnect Collective Communication: Microring Resonator Wavelength Division Multiplexing for AllReduce, DPU-Offloaded In-Network Hierarchies, and Topology-Aware Rail-Optimized Rings on DGX GH200 Empirical Reproduction with Verified Artifacts performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution, chart",
       "technical academic diagram, white background, clean vector style, showing Silicon-Photonic Interconnect Collective Communication: Microring Resonator Wavelength Division Multiplexing for AllReduce, DPU-Offloaded In-Network Hierarchies, and Topology-Aware Rail-Optimized Rings on DGX GH200 Empirical Reproduction with Verified Artifacts limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786994620978_2368-0.webp",
+      "ths_1786994620978_2368-1.webp",
+      "ths_1786994620978_2368-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -10594,9 +10599,9 @@
         "authors": "Zhang et al. 2023"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 3909,
-    "images_generated": 0
+    "images_generated": 3
   },
   {
     "id": "ths_1786994621978_0996",
@@ -10620,7 +10625,11 @@
       "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Machine Learning Model Auditing: zkCNN Convolution-to-Arithmetization, GKR Layer Aggregation with Sumcheck Batching, Proof-of-Training via Gradient Commitment and Hessian Range Proofs Empirical Reproduction with Verified Artifacts performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution, chart",
       "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Machine Learning Model Auditing: zkCNN Convolution-to-Arithmetization, GKR Layer Aggregation with Sumcheck Batching, Proof-of-Training via Gradient Commitment and Hessian Range Proofs Empirical Reproduction with Verified Artifacts limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786994621978_0996-0.webp",
+      "ths_1786994621978_0996-1.webp",
+      "ths_1786994621978_0996-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -10665,9 +10674,9 @@
         "authors": "B\u00fcnz et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 3885,
-    "images_generated": 0
+    "images_generated": 3
   },
   {
     "id": "ths_1786994622978_0ae4",
@@ -10691,7 +10700,11 @@
       "technical academic diagram, white background, clean vector style, showing Molecular DNA Circuit Compilation: Strand-Displacement Cascade Seesaw Gates, Chemical Reaction Network Bisimulation Semantics, Leak-Resistant Orthogonal Domain Design with Barcoded Fuel, and CRISPR-Guided Enforcement Empirical Reproduction with Verified Artifacts performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution, chart",
       "technical academic diagram, white background, clean vector style, showing Molecular DNA Circuit Compilation: Strand-Displacement Cascade Seesaw Gates, Chemical Reaction Network Bisimulation Semantics, Leak-Resistant Orthogonal Domain Design with Barcoded Fuel, and CRISPR-Guided Enforcement Empirical Reproduction with Verified Artifacts limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1786994622978_0ae4-0.webp",
+      "ths_1786994622978_0ae4-1.webp",
+      "ths_1786994622978_0ae4-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -10736,8 +10749,8 @@
         "authors": "Schaffter et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 3962,
-    "images_generated": 0
+    "images_generated": 3
   }
 ]
