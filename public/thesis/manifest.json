@@ -13084,7 +13084,12 @@
       "technical academic diagram, white background, clean vector style, showing empirical performance evaluation throughput vs memory vs perplexity for quantized LLMs, bar charts line graphs, highly detailed educational high resolution",
       "technical academic diagram, white background, clean vector style, showing limitations tradeoffs roadmap of tensor parallelism communication vs quantization vs paged KV cache, radar chart future work highly detailed educational high resolution"
     ],
-    "images": [],
+    "images": [
+      "/thesis/ths_1787006001000_b2c3-0.webp",
+      "/thesis/ths_1787006001000_b2c3-1.webp",
+      "/thesis/ths_1787006001000_b2c3-2.webp",
+      "/thesis/ths_1787006001000_b2c3-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
