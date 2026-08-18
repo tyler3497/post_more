@@ -17551,7 +17551,12 @@
       "technical academic diagram, white background, clean vector style, showing Composing Remote Attestation Evidence: SEV-SNP, Intel TDX 1.5, ARM CCA, RATS EAT Token Binding, and SPDM-Based Channel Authentication performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Composing Remote Attestation Evidence: SEV-SNP, Intel TDX 1.5, ARM CCA, RATS EAT Token Binding, and SPDM-Based Channel Authentication limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "/thesis/ths_1787027354310_2395-0.webp",
+      "/thesis/ths_1787027354310_2395-1.webp",
+      "/thesis/ths_1787027354310_2395-2.webp",
+      "/thesis/ths_1787027354310_2395-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -17596,7 +17601,7 @@
         "authors": "IETF RATS 2024"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2674
   },
   {
