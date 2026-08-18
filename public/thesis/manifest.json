@@ -23312,7 +23312,9 @@
     ],
     "images": [
       "ths_1787056165548_0787_9549-0.webp",
-      "ths_1787056165548_0787_9549-1.webp"
+      "ths_1787056165548_0787_9549-1.webp",
+      "ths_1787056165548_0787_9549-2.webp",
+      "ths_1787056165548_0787_9549-3.webp"
     ],
     "sources": [
       {
@@ -23580,7 +23582,10 @@
       "technical academic diagram, white background, clean vector style, showing GPU-driven rendering command buffer indirection: indirect draw count encoding, timestamp queries wedge collection for cache hit performance, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Cache coherence in multi-threaded workers WebWorker OffscreenCanvas shared buffer transfers, fallback for cache miss recompile 2.1ms p95, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787056169548_0f5e_c791-0.webp",
+      "ths_1787056169548_0f5e_c791-1.webp"
+    ],
     "sources": [
       {
         "title": "WebGPU Shading Language WGSL Specification \u2013 W3C Candidate Recommendation 2024",
