@@ -17407,7 +17407,9 @@
     ],
     "images": [
       "/thesis/ths_1787027352310_1ded-0.webp",
-      "/thesis/ths_1787027352310_1ded-1.webp"
+      "/thesis/ths_1787027352310_1ded-1.webp",
+      "/thesis/ths_1787027352310_1ded-2.webp",
+      "/thesis/ths_1787027352310_1ded-3.webp"
     ],
     "sources": [
       {
@@ -17453,7 +17455,7 @@
         "authors": "Microsoft Research 2024"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2708
   },
   {
@@ -17476,7 +17478,9 @@
       "technical academic diagram, white background, clean vector style, showing Verifying eBPF Safety via Abstract Domains: Tnum Tristate Analysis, Interval Bounds, Lock-Set Tracking, and Transient Execution Mitigations limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "/thesis/ths_1787027353310_11c4-0.webp"
+      "/thesis/ths_1787027353310_11c4-0.webp",
+      "/thesis/ths_1787027353310_11c4-1.webp",
+      "/thesis/ths_1787027353310_11c4-2.webp"
     ],
     "sources": [
       {
@@ -17522,7 +17526,7 @@
         "authors": "Springer SAS 2022"
       }
     ],
-    "image_count": 1,
+    "image_count": 3,
     "word_count": 2706
   },
   {
@@ -17757,7 +17761,9 @@
     ],
     "images": [
       "/thesis/ths_1787027357310_087d-0.webp",
-      "/thesis/ths_1787027357310_087d-1.webp"
+      "/thesis/ths_1787027357310_087d-1.webp",
+      "/thesis/ths_1787027357310_087d-2.webp",
+      "/thesis/ths_1787027357310_087d-3.webp"
     ],
     "sources": [
       {
@@ -17803,7 +17809,7 @@
         "authors": "Izraelevitz et al. CACM"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2708
   },
   {
@@ -17828,7 +17834,9 @@
     ],
     "images": [
       "/thesis/ths_1787027358310_0fb2-0.webp",
-      "/thesis/ths_1787027358310_0fb2-1.webp"
+      "/thesis/ths_1787027358310_0fb2-1.webp",
+      "/thesis/ths_1787027358310_0fb2-2.webp",
+      "/thesis/ths_1787027358310_0fb2-3.webp"
     ],
     "sources": [
       {
@@ -17874,7 +17882,7 @@
         "authors": "Yang et al."
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2717
   },
   {
@@ -17901,7 +17909,8 @@
     "images": [
       "/thesis/ths_1787027359310_11de-0.webp",
       "/thesis/ths_1787027359310_11de-1.webp",
-      "/thesis/ths_1787027359310_11de-2.webp"
+      "/thesis/ths_1787027359310_11de-2.webp",
+      "/thesis/ths_1787027359310_11de-3.webp"
     ],
     "sources": [
       {
@@ -17947,7 +17956,7 @@
         "authors": "NSDI 2023"
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2747
   },
   {
