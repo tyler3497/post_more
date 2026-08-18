@@ -17621,7 +17621,12 @@
       "technical academic diagram, white background, clean vector style, showing Optimal 3D Parallelism for Trillion-Parameter Training: Data, Tensor, and Pipeline Parallel Decomposition, ZeRO Stage-3 Sharding, and Activation Checkpointing via Selective Recomputation performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Optimal 3D Parallelism for Trillion-Parameter Training: Data, Tensor, and Pipeline Parallel Decomposition, ZeRO Stage-3 Sharding, and Activation Checkpointing via Selective Recomputation limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "/thesis/ths_1787027355310_0ab8-0.webp",
+      "/thesis/ths_1787027355310_0ab8-1.webp",
+      "/thesis/ths_1787027355310_0ab8-2.webp",
+      "/thesis/ths_1787027355310_0ab8-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -17666,7 +17671,7 @@
         "authors": "Narayanan et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2755
   },
   {
