@@ -6214,12 +6214,7 @@
       "technical academic diagram, white background, clean vector style, showing Incentive-Compatible Allocation Mechanisms for Cloud Spot Markets: VCG, Myerson Virtual Valuations, Bayesian IC, and Prophet Inequality Prophet-Secretary via Posted Pricing Revisited via Empirical Formal Methods performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Incentive-Compatible Allocation Mechanisms for Cloud Spot Markets: VCG, Myerson Virtual Valuations, Bayesian IC, and Prophet Inequality Prophet-Secretary via Posted Pricing Revisited via Empirical Formal Methods limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786986829765_1dd8-0.webp",
-      "ths_1786986829765_1dd8-1.webp",
-      "ths_1786986829765_1dd8-2.webp",
-      "ths_1786986829765_1dd8-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -6664,12 +6659,7 @@
       "technical academic diagram, white background, clean vector style, showing Computational Storage Pushdown: CXL-Attached SmartSSDs with ARM Cortex-R82 Offload, eBPF Filtering, NVMe ZNS Log-Structured Merge for Analytical Query Execution performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Computational Storage Pushdown: CXL-Attached SmartSSDs with ARM Cortex-R82 Offload, eBPF Filtering, NVMe ZNS Log-Structured Merge for Analytical Query Execution limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786985187878_0a62-0.webp",
-      "ths_1786985187878_0a62-1.webp",
-      "ths_1786985187878_0a62-2.webp",
-      "ths_1786985187878_0a62-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -6739,12 +6729,7 @@
       "technical academic diagram, white background, clean vector style, showing Quantum Error Mitigation via Zero-Noise Extrapolation, Probabilistic Error Cancellation with Clifford Data Regression, and Dynamic Decoupling Sequences on Superconducting Qubits performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Quantum Error Mitigation via Zero-Noise Extrapolation, Probabilistic Error Cancellation with Clifford Data Regression, and Dynamic Decoupling Sequences on Superconducting Qubits limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786985186878_177b-0.webp",
-      "ths_1786985186878_177b-1.webp",
-      "ths_1786985186878_177b-2.webp",
-      "ths_1786985186878_177b-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -6814,12 +6799,7 @@
       "technical academic diagram, white background, clean vector style, showing Compiler Optimization for Tensor Programs via MLIR Tiling Strategies, Polyhedral Auto-Scheduling, and Triton-GPU Warp-Level Matrix Fragment Allocation performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Compiler Optimization for Tensor Programs via MLIR Tiling Strategies, Polyhedral Auto-Scheduling, and Triton-GPU Warp-Level Matrix Fragment Allocation limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786985185878_1f90-0.webp",
-      "ths_1786985185878_1f90-1.webp",
-      "ths_1786985185878_1f90-2.webp",
-      "ths_1786985185878_1f90-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -6889,12 +6869,7 @@
       "technical academic diagram, white background, clean vector style, showing Verifiable Data Structures for Auditable Ledgers: Transparent Polynomial Commitments, Incremental Merkle Patricia Tries, and Fork-Consistency Proofs for Light Clients performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Verifiable Data Structures for Auditable Ledgers: Transparent Polynomial Commitments, Incremental Merkle Patricia Tries, and Fork-Consistency Proofs for Light Clients limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786985184878_24d8-0.webp",
-      "ths_1786985184878_24d8-1.webp",
-      "ths_1786985184878_24d8-2.webp",
-      "ths_1786985184878_24d8-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -6964,12 +6939,7 @@
       "technical academic diagram, white background, clean vector style, showing Post-Moore Chiplet Integration: UCIe 1.1 Die-to-Die Interconnect, Active Interposer NoC with Credit-Based Flow Control, and Thermal-Aware 3D Co-Packaged Optics Link Training performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Post-Moore Chiplet Integration: UCIe 1.1 Die-to-Die Interconnect, Active Interposer NoC with Credit-Based Flow Control, and Thermal-Aware 3D Co-Packaged Optics Link Training limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786985183878_0634-0.webp",
-      "ths_1786985183878_0634-1.webp",
-      "ths_1786985183878_0634-2.webp",
-      "ths_1786985183878_0634-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -7039,12 +7009,7 @@
       "technical academic diagram, white background, clean vector style, showing Real-Time Ray Tracing Denoising via Spatio-Temporal Variance-Guided Filtering, Neural Radiance Cache, and ReSTIR Path Reuse under Dynamic Scenes performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Real-Time Ray Tracing Denoising via Spatio-Temporal Variance-Guided Filtering, Neural Radiance Cache, and ReSTIR Path Reuse under Dynamic Scenes limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786985182878_1643-0.webp",
-      "ths_1786985182878_1643-1.webp",
-      "ths_1786985182878_1643-2.webp",
-      "ths_1786985182878_1643-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -7114,12 +7079,7 @@
       "technical academic diagram, white background, clean vector style, showing Scalable Vector Search Indexing with DiskANN Vamana Graph Construction, FreshDiskANN Streaming Deletes, and Learned Metric Adaptation via Siamese Calibration performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Scalable Vector Search Indexing with DiskANN Vamana Graph Construction, FreshDiskANN Streaming Deletes, and Learned Metric Adaptation via Siamese Calibration limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786985181878_1eae-0.webp",
-      "ths_1786985181878_1eae-1.webp",
-      "ths_1786985181878_1eae-2.webp",
-      "ths_1786985181878_1eae-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -7189,12 +7149,7 @@
       "technical academic diagram, white background, clean vector style, showing Deterministic Database Systems with Calvin-Style Epoch Ordering, Optimistic Graph Validation, and RDMA-Friendly Logging for Multi-Region Sequential Consistency performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Deterministic Database Systems with Calvin-Style Epoch Ordering, Optimistic Graph Validation, and RDMA-Friendly Logging for Multi-Region Sequential Consistency limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786985180878_1f8a-0.webp",
-      "ths_1786985180878_1f8a-1.webp",
-      "ths_1786985180878_1f8a-2.webp",
-      "ths_1786985180878_1f8a-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -7264,12 +7219,7 @@
       "technical academic diagram, white background, clean vector style, showing Compiler-Assisted Speculative Side-Channel Hardening: Speculative Load Hardening, Retpoline Replacement via BHI Mitigations, and Verifiable Software-Based Constant-Time Transformation via LLVM Middle-End performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Compiler-Assisted Speculative Side-Channel Hardening: Speculative Load Hardening, Retpoline Replacement via BHI Mitigations, and Verifiable Software-Based Constant-Time Transformation via LLVM Middle-End limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786985179878_0c78-0.webp",
-      "ths_1786985179878_0c78-1.webp",
-      "ths_1786985179878_0c78-2.webp",
-      "ths_1786985179878_0c78-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -7340,10 +7290,7 @@
       "technical academic diagram, white background, clean vector style, showing Confidential Federated Learning over Heterogeneous Edge: Secure Aggregation via Lattice Masking, Differential Privacy Amplification by Shuffling, and TEE-Based Model Personalization limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786985178878_2284-0.webp",
-      "ths_1786985178878_2284-1.webp",
-      "ths_1786985178878_2284-2.webp",
-      "ths_1786985178878_2284-3.webp"
+      "ths_1786985178878_2284-0.webp"
     ],
     "sources": [
       {
@@ -8147,8 +8094,7 @@
     "images": [
       "ths_1786976986194_1b38-0.webp",
       "ths_1786976986194_1b38-1.webp",
-      "ths_1786976986194_1b38-2.webp",
-      "ths_1786976986194_1b38-3.webp"
+      "ths_1786976986194_1b38-2.webp"
     ],
     "sources": [
       {
@@ -8294,12 +8240,7 @@
       "technical academic diagram, white background, clean vector style, showing Incentive-Compatible Allocation Mechanisms for Cloud Spot Markets: VCG, Myerson Virtual Valuations, Bayesian IC, and Prophet Inequality Prophet-Secretary via Posted Pricing Revisited via Empirical Formal Methods performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Incentive-Compatible Allocation Mechanisms for Cloud Spot Markets: VCG, Myerson Virtual Valuations, Bayesian IC, and Prophet Inequality Prophet-Secretary via Posted Pricing Revisited via Empirical Formal Methods limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786976984194_0b7f-0.webp",
-      "ths_1786976984194_0b7f-1.webp",
-      "ths_1786976984194_0b7f-2.webp",
-      "ths_1786976984194_0b7f-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -8371,9 +8312,7 @@
     ],
     "images": [
       "ths_1786976983194_13c1-0.webp",
-      "ths_1786976983194_13c1-1.webp",
-      "ths_1786976983194_13c1-2.webp",
-      "ths_1786976983194_13c1-3.webp"
+      "ths_1786976983194_13c1-1.webp"
     ],
     "sources": [
       {
@@ -8445,10 +8384,7 @@
       "technical academic diagram, white background, clean vector style, showing Composing Remote Attestation Evidence: SEV-SNP, Intel TDX 1.5, ARM CCA, RATS EAT Token Binding, and SPDM-Based Channel Authentication Revisited via Empirical Formal Methods limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786976982194_0ded-0.webp",
-      "ths_1786976982194_0ded-1.webp",
-      "ths_1786976982194_0ded-2.webp",
-      "ths_1786976982194_0ded-3.webp"
+      "ths_1786976982194_0ded-0.webp"
     ],
     "sources": [
       {
@@ -8595,10 +8531,7 @@
       "technical academic diagram, white background, clean vector style, showing Disaggregated Memory via CXL 3.0 Fabric: Tiered Page Placement, Latency Heterogeneity Management, and Coherent Migration for Large Vector Databases Revisited via Empirical Formal Methods limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786976980194_1b25-0.webp",
-      "ths_1786976980194_1b25-1.webp",
-      "ths_1786976980194_1b25-2.webp",
-      "ths_1786976980194_1b25-3.webp"
+      "ths_1786976980194_1b25-0.webp"
     ],
     "sources": [
       {
@@ -8745,10 +8678,7 @@
       "technical academic diagram, white background, clean vector style, showing DNA as Archival Storage Medium: Fountain Code LT Raptor Encoding, Inner-Outer Reed-Solomon Concatenation, PCR-Based Random Access, and Nanopore Consensus Decoding limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786973403743_225a-0.webp",
-      "ths_1786973403743_225a-1.webp",
-      "ths_1786973403743_225a-2.webp",
-      "ths_1786973403743_225a-3.webp"
+      "ths_1786973403743_225a-1.webp"
     ],
     "sources": [
       {
@@ -8972,8 +8902,7 @@
     "images": [
       "ths_1786973400743_0b56-0.webp",
       "ths_1786973400743_0b56-1.webp",
-      "ths_1786973400743_0b56-2.webp",
-      "ths_1786973400743_0b56-3.webp"
+      "ths_1786973400743_0b56-2.webp"
     ],
     "sources": [
       {
@@ -9044,12 +8973,7 @@
       "technical academic diagram, white background, clean vector style, showing Incentive-Compatible Allocation Mechanisms for Cloud Spot Markets: VCG, Myerson Virtual Valuations, Bayesian IC, and Prophet Inequality Prophet-Secretary via Posted Pricing performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Incentive-Compatible Allocation Mechanisms for Cloud Spot Markets: VCG, Myerson Virtual Valuations, Bayesian IC, and Prophet Inequality Prophet-Secretary via Posted Pricing limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786973399743_2155-0.webp",
-      "ths_1786973399743_2155-1.webp",
-      "ths_1786973399743_2155-2.webp",
-      "ths_1786973399743_2155-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -9119,12 +9043,7 @@
       "technical academic diagram, white background, clean vector style, showing Optimal 3D Parallelism for Trillion-Parameter Training: Data, Tensor, and Pipeline Parallel Decomposition, ZeRO Stage-3 Sharding, and Activation Checkpointing via Selective Recomputation performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Optimal 3D Parallelism for Trillion-Parameter Training: Data, Tensor, and Pipeline Parallel Decomposition, ZeRO Stage-3 Sharding, and Activation Checkpointing via Selective Recomputation limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786973398743_093d-0.webp",
-      "ths_1786973398743_093d-1.webp",
-      "ths_1786973398743_093d-2.webp",
-      "ths_1786973398743_093d-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -9269,12 +9188,7 @@
       "technical academic diagram, white background, clean vector style, showing Verifying eBPF Safety via Abstract Domains: Tnum Tristate Analysis, Interval Bounds, Lock-Set Tracking, and Transient Execution Mitigations performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Verifying eBPF Safety via Abstract Domains: Tnum Tristate Analysis, Interval Bounds, Lock-Set Tracking, and Transient Execution Mitigations limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786973396743_1aeb-0.webp",
-      "ths_1786973396743_1aeb-1.webp",
-      "ths_1786973396743_1aeb-2.webp",
-      "ths_1786973396743_1aeb-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -9419,12 +9333,7 @@
       "technical academic diagram, white background, clean vector style, showing Hybrid Post-Quantum TLS 1.3: X-Wing KEM Composition of ML-KEM-768 with X25519, Downgrade-Resistant Negotiation, and Encrypted ClientHello Integration performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Hybrid Post-Quantum TLS 1.3: X-Wing KEM Composition of ML-KEM-768 with X25519, Downgrade-Resistant Negotiation, and Encrypted ClientHello Integration limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1786973394743_11d9-0.webp",
-      "ths_1786973394743_11d9-1.webp",
-      "ths_1786973394743_11d9-2.webp",
-      "ths_1786973394743_11d9-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -11738,9 +11647,7 @@
       "technical academic diagram, white background, clean vector style, showing MOMENT, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786960152315_b6f9-0.webp",
-      "ths_1786960152315_b6f9-1.webp",
-      "ths_1786960152315_b6f9-2.webp"
+      "ths_1786960152315_b6f9-0.webp"
     ],
     "image_count": 3,
     "sources": [
@@ -11797,9 +11704,7 @@
       "technical academic diagram, white background, clean vector style, showing Morello, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786960151315_d6f5-0.webp",
-      "ths_1786960151315_d6f5-1.webp",
-      "ths_1786960151315_d6f5-2.webp"
+      "ths_1786960151315_d6f5-0.webp"
     ],
     "image_count": 3,
     "sources": [
@@ -11856,9 +11761,7 @@
       "technical academic diagram, white background, clean vector style, showing lifted product, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786960150315_9be7-0.webp",
-      "ths_1786960150315_9be7-1.webp",
-      "ths_1786960150315_9be7-2.webp"
+      "ths_1786960150315_9be7-0.webp"
     ],
     "image_count": 3,
     "sources": [
@@ -11915,9 +11818,7 @@
       "technical academic diagram, white background, clean vector style, showing event camera, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786960149315_e0b1-0.webp",
-      "ths_1786960149315_e0b1-1.webp",
-      "ths_1786960149315_e0b1-2.webp"
+      "ths_1786960149315_e0b1-0.webp"
     ],
     "image_count": 3,
     "sources": [
@@ -11974,9 +11875,7 @@
       "technical academic diagram, white background, clean vector style, showing Circuit-ORAM, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786960148315_0cb0-0.webp",
-      "ths_1786960148315_0cb0-1.webp",
-      "ths_1786960148315_0cb0-2.webp"
+      "ths_1786960148315_0cb0-0.webp"
     ],
     "image_count": 3,
     "sources": [
@@ -12033,9 +11932,7 @@
       "technical academic diagram, white background, clean vector style, showing Gaussian Splatting, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786960147315_f990-0.webp",
-      "ths_1786960147315_f990-1.webp",
-      "ths_1786960147315_f990-2.webp"
+      "ths_1786960147315_f990-0.webp"
     ],
     "image_count": 3,
     "sources": [
@@ -12092,9 +11989,7 @@
       "technical academic diagram, white background, clean vector style, showing ControlNet, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1786960146315_c424-0.webp",
-      "ths_1786960146315_c424-1.webp",
-      "ths_1786960146315_c424-2.webp"
+      "ths_1786960146315_c424-0.webp"
     ],
     "image_count": 3,
     "sources": [
@@ -12152,8 +12047,7 @@
     ],
     "images": [
       "ths_1786960145315_dad6-0.webp",
-      "ths_1786960145315_dad6-1.webp",
-      "ths_1786960145315_dad6-2.webp"
+      "ths_1786960145315_dad6-1.webp"
     ],
     "image_count": 3,
     "sources": [
@@ -12211,8 +12105,7 @@
     ],
     "images": [
       "ths_1786960144315_bff8-0.webp",
-      "ths_1786960144315_bff8-1.webp",
-      "ths_1786960144315_bff8-2.webp"
+      "ths_1786960144315_bff8-1.webp"
     ],
     "image_count": 3,
     "sources": [
@@ -12270,8 +12163,7 @@
     ],
     "images": [
       "ths_1786960143315_9c65-0.webp",
-      "ths_1786960143315_9c65-1.webp",
-      "ths_1786960143315_9c65-2.webp"
+      "ths_1786960143315_9c65-1.webp"
     ],
     "image_count": 3,
     "sources": [
@@ -13900,12 +13792,7 @@
     "type": "thesis",
     "thesis": true,
     "topic": "vdf-classgroup-beacon",
-    "images": [
-      "ths_1786944829419_9519_709b-0.webp",
-      "ths_1786944829419_9519_709b-1.webp",
-      "ths_1786944829419_9519_709b-2.webp",
-      "ths_1786944829419_9519_709b-3.webp"
-    ],
+    "images": [],
     "image_count": 4,
     "sources": [
       {
@@ -13998,12 +13885,7 @@
     "type": "thesis",
     "thesis": true,
     "topic": "decentralized-identity-bbs",
-    "images": [
-      "ths_1786944827603_5107_75cb-0.webp",
-      "ths_1786944827603_5107_75cb-1.webp",
-      "ths_1786944827603_5107_75cb-2.webp",
-      "ths_1786944827603_5107_75cb-3.webp"
-    ],
+    "images": [],
     "image_count": 4,
     "sources": [
       {
@@ -14048,10 +13930,7 @@
     "thesis": true,
     "topic": "he-acceleration-fhe",
     "images": [
-      "ths_1786944826378_5828_e269-0.webp",
-      "ths_1786944826378_5828_e269-1.webp",
-      "ths_1786944826378_5828_e269-2.webp",
-      "ths_1786944826378_5828_e269-3.webp"
+      "ths_1786944826378_5828_e269-0.webp"
     ],
     "image_count": 4,
     "sources": [
@@ -14099,7 +13978,6 @@
     "images": [
       "ths_1786944825421_5795_91be-0.webp",
       "ths_1786944825421_5795_91be-1.webp",
-      "ths_1786944825421_5795_91be-2.webp",
       "ths_1786944825421_5795_91be-3.webp"
     ],
     "image_count": 4,
@@ -14194,12 +14072,7 @@
     "type": "thesis",
     "thesis": true,
     "topic": "serverless-cold-start",
-    "images": [
-      "ths_1786944823553_4552_66ac-0.webp",
-      "ths_1786944823553_4552_66ac-1.webp",
-      "ths_1786944823553_4552_66ac-2.webp",
-      "ths_1786944823553_4552_66ac-3.webp"
-    ],
+    "images": [],
     "image_count": 4,
     "sources": [
       {
@@ -14244,10 +14117,7 @@
     "thesis": true,
     "topic": "nerf-compression-streaming",
     "images": [
-      "ths_1786944822939_6151_5235-0.webp",
-      "ths_1786944822939_6151_5235-1.webp",
-      "ths_1786944822939_6151_5235-2.webp",
-      "ths_1786944822939_6151_5235-3.webp"
+      "ths_1786944822939_6151_5235-0.webp"
     ],
     "image_count": 4,
     "sources": [
@@ -14292,12 +14162,7 @@
     "type": "thesis",
     "thesis": true,
     "topic": "byzantine-federated-learning",
-    "images": [
-      "ths_1786944821792_8403_d220-0.webp",
-      "ths_1786944821792_8403_d220-1.webp",
-      "ths_1786944821792_8403_d220-2.webp",
-      "ths_1786944821792_8403_d220-3.webp"
-    ],
+    "images": [],
     "image_count": 4,
     "sources": [
       {
@@ -14341,12 +14206,7 @@
     "type": "thesis",
     "thesis": true,
     "topic": "causal-representation-irm",
-    "images": [
-      "ths_1786944820471_2398_af25-0.webp",
-      "ths_1786944820471_2398_af25-1.webp",
-      "ths_1786944820471_2398_af25-2.webp",
-      "ths_1786944820471_2398_af25-3.webp"
-    ],
+    "images": [],
     "image_count": 4,
     "sources": [
       {
@@ -18803,8 +18663,7 @@
     "images": [
       "ths_1787034539747_19c0-0.webp",
       "ths_1787034539747_19c0-1.webp",
-      "ths_1787034539747_19c0-2.webp",
-      "ths_1787034539747_19c0-3.webp"
+      "ths_1787034539747_19c0-2.webp"
     ],
     "sources": [
       {
@@ -18878,8 +18737,7 @@
     "images": [
       "ths_1787034540747_062d-0.webp",
       "ths_1787034540747_062d-1.webp",
-      "ths_1787034540747_062d-2.webp",
-      "ths_1787034540747_062d-3.webp"
+      "ths_1787034540747_062d-2.webp"
     ],
     "sources": [
       {
