@@ -17702,7 +17702,12 @@
       "technical academic diagram, white background, clean vector style, showing Incentive-Compatible Allocation Mechanisms for Cloud Spot Markets: VCG, Myerson Virtual Valuations, Bayesian IC, and Prophet Inequality Prophet-Secretary via Posted Pricing performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Incentive-Compatible Allocation Mechanisms for Cloud Spot Markets: VCG, Myerson Virtual Valuations, Bayesian IC, and Prophet Inequality Prophet-Secretary via Posted Pricing limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "/thesis/ths_1787027356310_04cd-0.webp",
+      "/thesis/ths_1787027356310_04cd-1.webp",
+      "/thesis/ths_1787027356310_04cd-2.webp",
+      "/thesis/ths_1787027356310_04cd-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -17747,7 +17752,7 @@
         "authors": "Cai et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2741
   },
   {
@@ -17992,7 +17997,12 @@
       "technical academic diagram, white background, clean vector style, showing DNA as Archival Storage Medium: Fountain Code LT Raptor Encoding, Inner-Outer Reed-Solomon Concatenation, PCR-Based Random Access, and Nanopore Consensus Decoding performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing DNA as Archival Storage Medium: Fountain Code LT Raptor Encoding, Inner-Outer Reed-Solomon Concatenation, PCR-Based Random Access, and Nanopore Consensus Decoding limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "/thesis/ths_1787027360310_0eaf-0.webp",
+      "/thesis/ths_1787027360310_0eaf-1.webp",
+      "/thesis/ths_1787027360310_0eaf-2.webp",
+      "/thesis/ths_1787027360310_0eaf-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -18037,7 +18047,7 @@
         "authors": "Lin et al. 2021"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2772
   }
 ]
