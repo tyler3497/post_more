@@ -1,5 +1,129 @@
 [
   {
+    "id": "ths_1787124932169_c2f1",
+    "title": "Confidential Computing Side-Channel Hardening: Constant-Time Enclave Programming, Speculative Load Hardening, Cache Partitioning via CAT, and Transient Execution Mitigation for SGX TDX SEV-SNP",
+    "ts": 1787124934169,
+    "anon_id": "anon#9964",
+    "word_count": 3993,
+    "images": [
+      "ths_1787124932169_c2f1-0.webp",
+      "ths_1787124932169_c2f1-1.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Intel SGX Explained",
+        "url": "https://eprint.iacr.org/2016/086.pdf",
+        "authors": "Costan and Devadas 2016"
+      },
+      {
+        "id": 2,
+        "title": "Intel Trust Domain Extensions White Paper 1.5",
+        "url": "https://cdrdv2.intel.com/v1/dl/getContent/733568",
+        "authors": "Intel Corporation 2023"
+      },
+      {
+        "id": 3,
+        "title": "AMD SEV-SNP Strengthening VM Isolation",
+        "url": "https://www.amd.com/system/files/TechDocs/SEV-SNP-strengthening-vm-isolation-with-integrity-protection-and-more.pdf",
+        "authors": "AMD 2022"
+      },
+      {
+        "id": 4,
+        "title": "Spectre Attacks: Exploiting Speculative Execution",
+        "url": "https://spectreattack.com/spectre.pdf",
+        "authors": "Kocher et al. 2019"
+      },
+      {
+        "id": 5,
+        "title": "Meltdown: Reading Kernel Memory from User Space",
+        "url": "https://meltdownattack.com/meltdown.pdf",
+        "authors": "Lipp et al. 2018"
+      },
+      {
+        "id": 6,
+        "title": "Foreshadow: Extracting the Keys to the Intel SGX Kingdom",
+        "url": "https://arxiv.org/abs/1807.05079",
+        "authors": "Van Bulck et al. 2018"
+      },
+      {
+        "id": 7,
+        "title": "Speculative Load Hardening LLVM",
+        "url": "https://llvm.org/docs/SpeculativeLoadHardening.html",
+        "authors": "Carruth et al. LLVM"
+      },
+      {
+        "id": 8,
+        "title": "Introduction to Cache Allocation Technology",
+        "url": "https://www.intel.com/content/www/us/en/developer/articles/technical/introduction-to-cache-allocation-technology.html",
+        "authors": "Intel RDT Team"
+      },
+      {
+        "id": 9,
+        "title": "BearSSL Constant-Time Implementation",
+        "url": "https://bearssl.org/constanttime.html",
+        "authors": "Pornin 2017"
+      }
+    ]
+  },
+  {
+    "id": "ths_1787124917560_49aa",
+    "title": "Speculative Decoding for Autoregressive LLMs: Medusa Multi-Head Drafts, Tree Attention Calibration, Rejection Sampling, and Latency-Throughput Pareto via SpecInfer",
+    "ts": 1787124917560,
+    "anon_id": "anon#2693",
+    "word_count": 3066,
+    "images": [
+      "ths_1787124917560_49aa-0.webp",
+      "ths_1787124917560_49aa-1.webp",
+      "ths_1787124917560_49aa-2.webp",
+      "ths_1787124917560_49aa-3.webp"
+    ],
+    "sources": [
+      {
+        "id": "1",
+        "title": "Fast Inference from Transformers via Speculative Decoding",
+        "url": "https://arxiv.org/abs/2211.17192",
+        "authors": "Leviathan et al."
+      },
+      {
+        "id": "2",
+        "title": "Accelerating Large Language Model Decoding with Speculative Sampling",
+        "url": "https://arxiv.org/abs/2302.01318",
+        "authors": "Chen et al., DeepMind"
+      },
+      {
+        "id": "3",
+        "title": "SpecInfer: Accelerating Generative LLM Serving with Speculative Inference and Token Tree Verification",
+        "url": "https://arxiv.org/abs/2305.09781",
+        "authors": "Miao et al."
+      },
+      {
+        "id": "4",
+        "title": "Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads",
+        "url": "https://arxiv.org/abs/2401.10774",
+        "authors": "Cai et al."
+      },
+      {
+        "id": "5",
+        "title": "EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty",
+        "url": "https://arxiv.org/abs/2401.15077",
+        "authors": "Li et al."
+      },
+      {
+        "id": "6",
+        "title": "Sequoia: Scalable, Robust, and Hardware-aware Speculative Decoding",
+        "url": "https://arxiv.org/abs/2402.12374",
+        "authors": "Chen et al."
+      },
+      {
+        "id": "7",
+        "title": "REST: Retrieval-Based Speculative Decoding",
+        "url": "https://arxiv.org/abs/2311.08252",
+        "authors": "He et al."
+      }
+    ]
+  },
+  {
     "id": "ths_1787124899302_e1ad",
     "title": "Private Set Intersection at Internet Scale: OT Extension IKNP, VOLE-based PSI, BFV-Ring-OLE Homomorphic Encoding, and Circuit-PSI via Garbled Bloom Filters",
     "abstract": "This thesis provides a rigorous, PhD-level treatment of private set intersection at internet scale: ot extension iknp, vole-based psi, bfv-ring-ole homomorphic encoding, and circuit-psi via garbled bloom filters, synthesizing classical foundations from Oblivious Transfer Extension: IKNP OT Extension - EUROCRYPT 2003/2015 and Circuit-PSI: Efficient Protocol for PSI via Garbled Bloom Filters with 2026 systems practice. We formalize cost models C(N)=\u03b1T(N)+\u03b2E(N)+\u03b3S(N), protocol invariants Inv=TypeOK\u2227Agreement, and hardware-calibrated energy/accuracy tradeoffs for secure multiparty computation privacy. Methodology combines TLA+ temporal specification with TLC 100k states N=4, Coq/Lean mechanization where applicable, and Rust/Python/Wasmtime reference implementations evaluated on heterogeneous testbed 8\u00d7A100 96c Genoa NVLink4 600GBps RoCEv2 400G Micron7450 NVMe ZNS plus eBPF tracing. We prove safety, liveness, convergence, stash O(log N) bounds, and approximation error \u03b5_quant theorems with machine-checked sketches and statistical validation B=10000 bootstrap 95% BCa CI p<0.001 Mann-Whitney U Welch t. Empirical results report 2-10\u00d7 wins in throughput/latency/energy with ablation 81 configs Cliff \u03b4 0.72. Contributions include taxonomy, reusable artifacts Docker multi-arch, and deployment roadmap for verified production secure multiparty computation privacy.",
@@ -758,6 +882,183 @@
     ],
     "image_count": 4,
     "word_count": 3716
+  },
+  {
+    "id": "ths_1787124641725_8a4f",
+    "title": "Kernel-Bypass Datapath Design: DPDK PMD Memory Pool, AF_XDP Zero-Copy Socket, eBPF XDP Programmable Steering, and IOMMU Page Table Pressure under 800G Line Rate",
+    "ts": 1787124641725,
+    "anon_id": "anon#4829",
+    "word_count": 3481,
+    "images": [
+      "ths_1787124641725_8a4f-0.webp",
+      "ths_1787124641725_8a4f-1.webp",
+      "ths_1787124641725_8a4f-2.webp",
+      "ths_1787124641725_8a4f-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "DPDK \u2014 Data Plane Development Kit, rte_mempool and PMD documentation",
+        "url": "https://www.dpdk.org/doc/guides/prog_guide/mempool_lib.html",
+        "authors": "DPDK project, Linux Foundation"
+      },
+      {
+        "id": 2,
+        "title": "AF_XDP \u2014 High Performance Address Family XDP Sockets, Kernel documentation",
+        "url": "https://www.kernel.org/doc/html/latest/networking/af_xdp.html",
+        "authors": "Magnus Karlsson, Bj\u00f6rn T\u00f6pel, Linux kernel"
+      },
+      {
+        "id": 3,
+        "title": "The eXpress Data Path: Fast Programmable Packet Processing in the Operating System Kernel",
+        "url": "https://arxiv.org/abs/1804.00340",
+        "authors": "H\u00f8iland-J\u00f8rgensen et al., CoNEXT 2018"
+      },
+      {
+        "id": 4,
+        "title": "The Path to DPDK Speeds for AF_XDP \u2014 libxdp and xsks",
+        "url": "https://github.com/xdp-project/xdp-tools",
+        "authors": "Karlsson, T\u00f6pel, xdp-project"
+      },
+      {
+        "id": 5,
+        "title": "Intel Virtualization Technology for Directed I/O Architecture Specification Rev 4.1 \u2014 IOTLB ATS PASID",
+        "url": "https://www.intel.com/content/dam/develop/external/us/en/documents/vt-directed-io-spec.pdf",
+        "authors": "Intel Corp."
+      },
+      {
+        "id": 6,
+        "title": "Understanding PCIe Performance for End Host Networking",
+        "url": "https://dl.acm.org/doi/10.1145/3230543.3230575",
+        "authors": "Neugebauer et al., SIGCOMM 2018"
+      },
+      {
+        "id": 7,
+        "title": "IEEE 802.3df-2024 800 Gb/s and 1.6 Tb/s Ethernet and 800G Pluggable MSA",
+        "url": "https://ieeexplore.ieee.org/document/10522936",
+        "authors": "IEEE 802.3 Task Force"
+      },
+      {
+        "id": 8,
+        "title": "NVIDIA ConnectX-7 and BlueField-3 DPU \u2014 800G Datapath, PCIe Gen5, DOCA DPDK PMD",
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/data-center/mellanox-products/networking/NVIDIA-ConnectX-7-Datasheet.pdf",
+        "authors": "NVIDIA Corp."
+      }
+    ]
+  },
+  {
+    "id": "ths_1787124625493_7c91",
+    "title": "Oblivious RAM for Secure Cloud Search: Path ORAM, RingORAM Recursive Position Map, Oblivious Parallel RAM via Circuit ORAM, and Hardware-Accelerated Stash Management",
+    "ts": 1787124625493,
+    "anon_id": "anon#5726",
+    "word_count": 4136,
+    "images": [
+      "ths_1787124625493_7c91-0.webp",
+      "ths_1787124625493_7c91-1.webp",
+      "ths_1787124625493_7c91-2.webp",
+      "ths_1787124625493_7c91-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Goldreich Ostrovsky Oblivious RAM JACM",
+        "url": "https://dl.acm.org/doi/10.1145/234533.234544",
+        "authors": "Goldreich, Ostrovsky"
+      },
+      {
+        "id": 2,
+        "title": "Path ORAM: An Extremely Simple Oblivious RAM Protocol - CCS 2013",
+        "url": "https://eprint.iacr.org/2013/280.pdf",
+        "authors": "Stefanov et al."
+      },
+      {
+        "id": 3,
+        "title": "Constants Matter: Practical Improvements to Oblivious RAM - RingORAM USENIX Security 2015",
+        "url": "https://www.usenix.org/conference/usenixsecurity15/technical-sessions/presentation/ren",
+        "authors": "Ren et al."
+      },
+      {
+        "id": 4,
+        "title": "Circuit ORAM: On Tightness of the Goldreich-Ostrovsky Lower Bound - CCS 2015",
+        "url": "https://eprint.iacr.org/2014/672.pdf",
+        "authors": "Wang et al."
+      },
+      {
+        "id": 5,
+        "title": "Oblivious Parallel RAM and Applications - ePrint 2013/887",
+        "url": "https://eprint.iacr.org/2013/887.pdf",
+        "authors": "Boyle et al."
+      },
+      {
+        "id": 6,
+        "title": "A Low-Latency, Low-Area Hardware Oblivious RAM Controller - FCCM 2015",
+        "url": "https://arxiv.org/abs/1505.06630",
+        "authors": "Fletcher et al."
+      },
+      {
+        "id": 7,
+        "title": "Onion ORAM: A Constant Bandwidth Blowup Oblivious RAM - TCC 2016",
+        "url": "https://eprint.iacr.org/2015/304.pdf",
+        "authors": "Devadas et al."
+      }
+    ]
+  },
+  {
+    "id": "ths_1787124612461_6430",
+    "title": "Quantum LDPC Codes and Surface Code Decoding: Minimum-Weight Perfect Matching, Union-Find with Growing Clusters, Belief Propagation + OSD Post-Processing, and Lattice Surgery Overhead",
+    "ts": 1787124612461,
+    "anon_id": "anon#7391",
+    "word_count": 3170,
+    "images": [
+      "ths_1787124612461_6430-0.webp",
+      "ths_1787124612461_6430-1.webp",
+      "ths_1787124612461_6430-2.webp",
+      "ths_1787124612461_6430-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Quantum Low-Density Parity-Check Codes - Breuckmann, Eberhardt review",
+        "url": "https://arxiv.org/abs/2103.06309",
+        "authors": "Breuckmann, Eberhardt"
+      },
+      {
+        "id": 2,
+        "title": "Surface Codes: Towards Practical Large-Scale Quantum Computation - Fowler et al.",
+        "url": "https://arxiv.org/abs/1208.0928",
+        "authors": "Fowler et al."
+      },
+      {
+        "id": 3,
+        "title": "Topological quantum memory - Dennis et al.",
+        "url": "https://arxiv.org/abs/quant-ph/0110143",
+        "authors": "Dennis et al."
+      },
+      {
+        "id": 4,
+        "title": "Almost-linear time decoding algorithm for topological codes - Delfosse, Nickerson",
+        "url": "https://arxiv.org/abs/1709.06218",
+        "authors": "Delfosse, Nickerson"
+      },
+      {
+        "id": 5,
+        "title": "Degenerate Quantum LDPC Codes With Good Finite Length Performance - Panteleev, Kalachev",
+        "url": "https://arxiv.org/abs/2110.03606",
+        "authors": "Panteleev, Kalachev"
+      },
+      {
+        "id": 6,
+        "title": "Decoding Across the Quantum LDPC Code Landscape - Roffe et al.",
+        "url": "https://arxiv.org/abs/2005.07016",
+        "authors": "Roffe et al."
+      },
+      {
+        "id": 7,
+        "title": "A Game of Surface Codes: Large-Scale Quantum Computing with Lattice Surgery - Litinski",
+        "url": "https://arxiv.org/abs/1808.02892",
+        "authors": "Litinski"
+      }
+    ]
   },
   {
     "id": "ths_1787121465716_04f7",
