@@ -8631,7 +8631,9 @@
     ],
     "images": [
       "ths_1787251381866_2344_lsm_verify_2-0.webp",
-      "ths_1787251381866_2344_lsm_verify_2-1.webp"
+      "ths_1787251381866_2344_lsm_verify_2-1.webp",
+      "ths_1787251381866_2344_lsm_verify_2-2.webp",
+      "ths_1787251381866_2344_lsm_verify_2-3.webp"
     ],
     "sources": [
       {
@@ -8677,7 +8679,7 @@
         "authors": "Balasubramanian et al."
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 5312
   },
   {
@@ -9079,7 +9081,9 @@
     ],
     "images": [
       "ths_1787251387866_0f5a_tseries_gori-0.webp",
-      "ths_1787251387866_0f5a_tseries_gori-1.webp"
+      "ths_1787251387866_0f5a_tseries_gori-1.webp",
+      "ths_1787251387866_0f5a_tseries_gori-2.webp",
+      "ths_1787251387866_0f5a_tseries_gori-3.webp"
     ],
     "sources": [
       {
@@ -9125,7 +9129,7 @@
         "authors": "Raasveldt et al."
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 5311
   }
 ]
