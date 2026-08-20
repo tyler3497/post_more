@@ -7206,7 +7206,10 @@
       "technical academic diagram, white background, clean vector style, showing CXL persistent memory transactions performance evaluation chart, bar chart comparison, 95% CI, measurement hardware H100 CXL, highly detailed pmem-cxl-persist-20260820-2",
       "technical academic diagram, white background, clean vector style, showing CXL persistent memory transactions tradeoff table, Pareto frontier, cost model, encoding tradeoffs, educational infographic pmem-cxl-persist-20260820-3"
     ],
-    "images": [],
+    "images": [
+      "ths_1787244266816_9e0525_6fcf1f-0.webp",
+      "ths_1787244266816_9e0525_6fcf1f-1.webp"
+    ],
     "sources": [
       {
         "title": "PMDK - Persistent Memory Development Kit Documentation",
@@ -7251,7 +7254,7 @@
         "year": 2020
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 4888
   },
   {
@@ -7276,7 +7279,10 @@
       "technical academic diagram, white background, clean vector style, showing RDMA DCQCN HPCC congestion control performance evaluation chart, bar chart comparison, 95% CI, measurement hardware H100 CXL, highly detailed rdma-dcqcn-hpcc-swift-20260820-2",
       "technical academic diagram, white background, clean vector style, showing RDMA DCQCN HPCC congestion control tradeoff table, Pareto frontier, cost model, encoding tradeoffs, educational infographic rdma-dcqcn-hpcc-swift-20260820-3"
     ],
-    "images": [],
+    "images": [
+      "ths_1787244267816_f593e4_975408-0.webp",
+      "ths_1787244267816_f593e4_975408-1.webp"
+    ],
     "sources": [
       {
         "title": "DCQCN: Congestion Notification for RoCE Networks - Zhu et al. SIGCOMM 2015",
@@ -7321,7 +7327,7 @@
         "year": 2019
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 4936
   },
   {
