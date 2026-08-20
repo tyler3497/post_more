@@ -7567,7 +7567,10 @@
       "Recursion via verification circuits, STARK-to-STARK verifier circuit, STARK-to-SNARK Groth16 compression, control IDs and control root"
     ],
     "images": [
-      "ths_1787246984868_6f690719-0.webp"
+      "ths_1787246984868_6f690719-0.webp",
+      "ths_1787246984868_6f690719-1.webp",
+      "ths_1787246984868_6f690719-2.webp",
+      "ths_1787246984868_6f690719-3.webp"
     ],
     "sources": [
       {
@@ -7624,7 +7627,8 @@
         "url": "https://medium.com/@CFrontier_Labs/unlocking-po2-22-segment-proving-in-risc0-zkvm-81c4cb9f4232",
         "authors": "Computation Frontier"
       }
-    ]
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1787246985868_4f7a92b1",
@@ -7878,7 +7882,7 @@
       "Prometheus TSDB XOR chunk and persisted block format with varint delta timestamps, 2-hour chunk cutting heuristics, CRC32C, and block compaction from head chunks to block chunks",
       "SIMD vectorized time-series query pipeline with columnar batches, AVX-512 selection masks, branchless aggregation, and scan-filter-project operator fusion for downsampling and rate queries"
     ],
-    "image_count": 1,
+    "image_count": 4,
     "image_prompts": [
       "technical academic diagram, white background, clean vector style, showing Gorilla XOR time series compression algorithm flow, delta-of-delta timestamp encoding, XOR value encoding, leading zeros, trailing zeros, bitstream layout, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Chimp128 variant with ring buffer of 128 previous values, hash table selection for trailing zeros optimization, XOR comparison, index encoding, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
@@ -7886,7 +7890,10 @@
       "technical academic diagram, white background, clean vector style, showing SIMD vectorized query execution for time series, AVX-512 batch processing, columnar batches, selection masks, aggregation pipeline, scan-filter-project operators, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787246992868_0bee8f7d-1.webp"
+      "ths_1787246992868_0bee8f7d-0.webp",
+      "ths_1787246992868_0bee8f7d-1.webp",
+      "ths_1787246992868_0bee8f7d-2.webp",
+      "ths_1787246992868_0bee8f7d-3.webp"
     ],
     "sources": [
       {
@@ -7968,7 +7975,12 @@
       "technical academic diagram, white background, clean vector style, showing KV-cache deduplication content hashing and disaggregated prefill-decode scheduling architecture, prefill pool compute-intensive, decode pool memory-bandwidth-bound, RDMA NIXL NVLink transfer, async KV connector, nodes arrows layers, highly detailed educational high resolution",
       "technical academic diagram, white background, clean vector style, showing LLM KV-cache empirical tradeoffs performance: block size vs fragmentation table, hit-rate vs cache ratio graph, goodput vs SLO DistServe, transfer cost break-even, graphs tables bars, mathematical notation, highly detailed educational high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787246994868_a3f9c1d2-0.webp",
+      "ths_1787246994868_a3f9c1d2-1.webp",
+      "ths_1787246994868_a3f9c1d2-2.webp",
+      "ths_1787246994868_a3f9c1d2-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -8130,7 +8142,8 @@
     "images": [
       "ths_1787246998868_a3f9c12d-0.webp",
       "ths_1787246998868_a3f9c12d-1.webp",
-      "ths_1787246998868_a3f9c12d-2.webp"
+      "ths_1787246998868_a3f9c12d-2.webp",
+      "ths_1787246998868_a3f9c12d-3.webp"
     ],
     "type": "thesis",
     "thesis": true,
@@ -8198,7 +8211,7 @@
       }
     ],
     "word_count": 2587,
-    "image_count": 3,
+    "image_count": 4,
     "wordcount": 2587
   },
   {
