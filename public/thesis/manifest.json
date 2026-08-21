@@ -28462,7 +28462,10 @@
       "Plenoxel sparse voxel SH coefficients and trilinear interpolation",
       "NeRF-SLAM integration dense mapping and tracking latency tradeoffs"
     ],
-    "images": []
+    "images": [
+      "ths_1787344733133_nerf_gauss_d3f69935-0.webp",
+      "ths_1787344733133_nerf_gauss_d3f69935-1.webp"
+    ]
   },
   {
     "id": "ths_1787344734133_ckks_boot_cb6d6770",
@@ -28574,7 +28577,10 @@
       "Lock-set tracking and deadlock freedom invariant across BPF helpers",
       "Speculative taint tracking for Spectre v1/v4 mitigation in verifier"
     ],
-    "images": []
+    "images": [
+      "ths_1787344735133_ebpf_verif_71f19022-0.webp",
+      "ths_1787344735133_ebpf_verif_71f19022-1.webp"
+    ]
   },
   {
     "id": "ths_1787344736133_ann_db_24b2dc3b",
@@ -28686,7 +28692,9 @@
       "Wasmtime nanoprocess sandboxing and Cranelift codegen pipeline",
       "WASI 0.2 Preview 2 layered worlds and async streams future polling"
     ],
-    "images": []
+    "images": [
+      "ths_1787344737133_wasm_cm_8fc49f4c-0.webp"
+    ]
   },
   {
     "id": "ths_1787344738133_nova_fold_f33f3a8c",
