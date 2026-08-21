@@ -24546,7 +24546,8 @@
       "technical academic diagram, white background, clean vector style, showing End-to-End Verifiable Credential Revocation via RSA Accumulators, Vector Commitments, and Hyper-Logarithmic Witness Updates limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787330162001_e9d8-0.webp"
+      "ths_1787330162001_e9d8-0.webp",
+      "ths_1787330162001_e9d8-1.webp"
     ],
     "sources": [
       {
@@ -24592,7 +24593,7 @@
         "authors": "Hyperledger"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2686
   },
   {
@@ -24618,7 +24619,8 @@
       "technical academic diagram, white background, clean vector style, showing High-Throughput Streaming Joins under Exactly-Once Semantics: Flink Checkpoint Barriers, MillWheel Low-Watermarks, Kafka Transactional Idempotency, and Epoch Fencing at Trillion-Event Scale limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787330163001_df0b-0.webp"
+      "ths_1787330163001_df0b-0.webp",
+      "ths_1787330163001_df0b-1.webp"
     ],
     "sources": [
       {
@@ -24664,7 +24666,7 @@
         "authors": "Confluent"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2742
   },
   {
@@ -24764,7 +24766,8 @@
       "technical academic diagram, white background, clean vector style, showing Silicon Photonic Interconnects for Scale-Out LLM Inference: Microring Modulator Weight Banks, AWGR Wavelength Routing, Co-Packaged Optics, and Broadcast-and-Weight Architectures limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787330165001_e5ec-0.webp"
+      "ths_1787330165001_e5ec-0.webp",
+      "ths_1787330165001_e5ec-1.webp"
     ],
     "sources": [
       {
@@ -24810,7 +24813,7 @@
         "authors": "Xiao et al."
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2761
   },
   {
