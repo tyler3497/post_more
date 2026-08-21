@@ -28238,7 +28238,12 @@
       "View-change linear authenticator complexity O(n) vs O(n^2) comparison table and message flow",
       "Latency-throughput tradeoff pipelining Jolteon under asynchrony and optimistic responsiveness"
     ],
-    "images": []
+    "images": [
+      "ths_1787344729133_hotstuff2_1fc44058-0.webp",
+      "ths_1787344729133_hotstuff2_1fc44058-1.webp",
+      "ths_1787344729133_hotstuff2_1fc44058-2.webp",
+      "ths_1787344729133_hotstuff2_1fc44058-3.webp"
+    ]
   },
   {
     "id": "ths_1787344730133_iris_alloc_3e138918",
@@ -28294,7 +28299,12 @@
       "Lock-free free-list linearizability atomic triple and helping CAS diagram",
       "Verified C refinement layers from abstract allocator spec to compiled assembly via CompCert"
     ],
-    "images": []
+    "images": [
+      "ths_1787344730133_iris_alloc_3e138918-0.webp",
+      "ths_1787344730133_iris_alloc_3e138918-1.webp",
+      "ths_1787344730133_iris_alloc_3e138918-2.webp",
+      "ths_1787344730133_iris_alloc_3e138918-3.webp"
+    ]
   },
   {
     "id": "ths_1787344731133_dp_fl_ab2d5729",
@@ -28352,7 +28362,9 @@
     ],
     "images": [
       "ths_1787344731133_dp_fl_ab2d5729-0.webp",
-      "ths_1787344731133_dp_fl_ab2d5729-1.webp"
+      "ths_1787344731133_dp_fl_ab2d5729-1.webp",
+      "ths_1787344731133_dp_fl_ab2d5729-2.webp",
+      "ths_1787344731133_dp_fl_ab2d5729-3.webp"
     ]
   },
   {
@@ -28409,7 +28421,12 @@
       "Demikernel LibOS architecture queue abstraction and LibOS bypass",
       "AF_XDP socket UMEM ring and io_uring zero-copy RX flow"
     ],
-    "images": []
+    "images": [
+      "ths_1787344732133_dpdk_xdp_c820d89b-0.webp",
+      "ths_1787344732133_dpdk_xdp_c820d89b-1.webp",
+      "ths_1787344732133_dpdk_xdp_c820d89b-2.webp",
+      "ths_1787344732133_dpdk_xdp_c820d89b-3.webp"
+    ]
   },
   {
     "id": "ths_1787344733133_nerf_gauss_d3f69935",
