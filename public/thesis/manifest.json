@@ -28350,7 +28350,10 @@
       "Secure aggregation masking and unmasking with pairwise DH seeds",
       "ESA shuffle model TEE shuffler anonymity and privacy amplification diagram"
     ],
-    "images": []
+    "images": [
+      "ths_1787344731133_dp_fl_ab2d5729-0.webp",
+      "ths_1787344731133_dp_fl_ab2d5729-1.webp"
+    ]
   },
   {
     "id": "ths_1787344732133_dpdk_xdp_c820d89b",
@@ -28464,7 +28467,9 @@
     ],
     "images": [
       "ths_1787344733133_nerf_gauss_d3f69935-0.webp",
-      "ths_1787344733133_nerf_gauss_d3f69935-1.webp"
+      "ths_1787344733133_nerf_gauss_d3f69935-1.webp",
+      "ths_1787344733133_nerf_gauss_d3f69935-2.webp",
+      "ths_1787344733133_nerf_gauss_d3f69935-3.webp"
     ]
   },
   {
@@ -28579,7 +28584,9 @@
     ],
     "images": [
       "ths_1787344735133_ebpf_verif_71f19022-0.webp",
-      "ths_1787344735133_ebpf_verif_71f19022-1.webp"
+      "ths_1787344735133_ebpf_verif_71f19022-1.webp",
+      "ths_1787344735133_ebpf_verif_71f19022-2.webp",
+      "ths_1787344735133_ebpf_verif_71f19022-3.webp"
     ]
   },
   {
@@ -28693,7 +28700,10 @@
       "WASI 0.2 Preview 2 layered worlds and async streams future polling"
     ],
     "images": [
-      "ths_1787344737133_wasm_cm_8fc49f4c-0.webp"
+      "ths_1787344737133_wasm_cm_8fc49f4c-0.webp",
+      "ths_1787344737133_wasm_cm_8fc49f4c-1.webp",
+      "ths_1787344737133_wasm_cm_8fc49f4c-2.webp",
+      "ths_1787344737133_wasm_cm_8fc49f4c-3.webp"
     ]
   },
   {
@@ -28750,6 +28760,8 @@
       "HyperNova CCS linearization and sum-check folding verifier",
       "Protostar high-degree gate accumulation and Protogalaxy generalization"
     ],
-    "images": []
+    "images": [
+      "ths_1787344738133_nova_fold_f33f3a8c-0.webp"
+    ]
   }
 ]
