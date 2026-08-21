@@ -28470,7 +28470,8 @@
       "ths_1787344733133_nerf_gauss_d3f69935-1.webp",
       "ths_1787344733133_nerf_gauss_d3f69935-2.webp",
       "ths_1787344733133_nerf_gauss_d3f69935-3.webp"
-    ]
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1787344734133_ckks_boot_cb6d6770",
@@ -28526,7 +28527,13 @@
       "NTT butterfly GPU acceleration and HEXL AVX512 optimization",
       "Sparse secret Hamming weight vs security and bootstrapping depth tradeoff"
     ],
-    "images": []
+    "images": [
+      "ths_1787344734133_ckks_boot_cb6d6770-0.webp",
+      "ths_1787344734133_ckks_boot_cb6d6770-1.webp",
+      "ths_1787344734133_ckks_boot_cb6d6770-2.webp",
+      "ths_1787344734133_ckks_boot_cb6d6770-3.webp"
+    ],
+    "image_count": 4
   },
   {
     "id": "ths_1787344735133_ebpf_verif_71f19022",
@@ -28643,7 +28650,12 @@
       "SPANN posting list inverted index and query routing with centroids",
       "Product quantization codebook ADC lookup and reranking tradeoff"
     ],
-    "images": []
+    "images": [
+      "ths_1787344736133_ann_db_24b2dc3b-0.webp",
+      "ths_1787344736133_ann_db_24b2dc3b-1.webp",
+      "ths_1787344736133_ann_db_24b2dc3b-2.webp",
+      "ths_1787344736133_ann_db_24b2dc3b-3.webp"
+    ]
   },
   {
     "id": "ths_1787344737133_wasm_cm_8fc49f4c",
@@ -28761,7 +28773,10 @@
       "Protostar high-degree gate accumulation and Protogalaxy generalization"
     ],
     "images": [
-      "ths_1787344738133_nova_fold_f33f3a8c-0.webp"
+      "ths_1787344738133_nova_fold_f33f3a8c-0.webp",
+      "ths_1787344738133_nova_fold_f33f3a8c-1.webp",
+      "ths_1787344738133_nova_fold_f33f3a8c-2.webp",
+      "ths_1787344738133_nova_fold_f33f3a8c-3.webp"
     ]
   }
 ]
