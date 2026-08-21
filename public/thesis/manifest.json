@@ -24839,7 +24839,8 @@
       "technical academic diagram, white background, clean vector style, showing Hardware-Accelerated Private Set Intersection at Billion-Scale via Garbled Circuit Half-Gates, IkNP Oblivious Transfer Extension, VOLE Silent OT Preprocessing, and GPU NTT-Montgomery Multiplication limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787330166001_fd22-0.webp"
+      "ths_1787330166001_fd22-0.webp",
+      "ths_1787330166001_fd22-1.webp"
     ],
     "sources": [
       {
@@ -24885,7 +24886,7 @@
         "authors": "Yang et al."
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2736
   },
   {
@@ -24911,7 +24912,8 @@
       "technical academic diagram, white background, clean vector style, showing Confidential Virtual Machines with AMD SEV-SNP and Intel TDX 1.5: Remote Attestation Composition, EAT Profile Binding, Live Migration with SPDM Session Continuity limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787330167001_59cc-0.webp"
+      "ths_1787330167001_59cc-0.webp",
+      "ths_1787330167001_59cc-1.webp"
     ],
     "sources": [
       {
@@ -24957,7 +24959,7 @@
         "authors": "TCG"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2712
   },
   {
@@ -24983,7 +24985,8 @@
       "technical academic diagram, white background, clean vector style, showing Compressed Neural Radiance Fields for Real-Time Mobile Rendering: Instant-NGP Multi-Resolution Hash Encoding, 3D Gaussian Splatting Hybridization, LoD Hierarchies, and Adaptive Edge Streaming Protocols limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787330168001_aae9-0.webp"
+      "ths_1787330168001_aae9-0.webp",
+      "ths_1787330168001_aae9-1.webp"
     ],
     "sources": [
       {
@@ -25029,7 +25032,7 @@
         "authors": "Yu et al."
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2760
   },
   {
@@ -25055,7 +25058,8 @@
       "technical academic diagram, white background, clean vector style, showing Disaggregated GPU Memory via CXL 3.1 Switching and NVLink-C2C: Tiered Page Placement, Latency Heterogeneity Management, and Coherent Migration for Large Vector Databases limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787330169001_a1ff-0.webp"
+      "ths_1787330169001_a1ff-0.webp",
+      "ths_1787330169001_a1ff-1.webp"
     ],
     "sources": [
       {
@@ -25101,7 +25105,7 @@
         "authors": "CXL Forum"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2764
   },
   {
@@ -25127,7 +25131,8 @@
       "technical academic diagram, white background, clean vector style, showing Proof-Carrying Data and Incrementally Verifiable Computation: Nova Folding Schemes, SuperNova Non-Uniform IVC, Sangria CycleFold, and Customizable Constraint Systems for zkVM Architectures limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787330170001_24f0-0.webp"
+      "ths_1787330170001_24f0-0.webp",
+      "ths_1787330170001_24f0-1.webp"
     ],
     "sources": [
       {
@@ -25173,7 +25178,7 @@
         "authors": "Setty et al."
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2743
   },
   {
@@ -25199,7 +25204,8 @@
       "technical academic diagram, white background, clean vector style, showing User-Level Differential Privacy for Federated Learning at Billion-User Scale: R\u00e9nyi DP Accounting, Poisson Subsampling Amplification, Secure Aggregation via SecAgg+, and Shuffled Model Utility-Privacy Tradeoffs limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787330171001_884a-0.webp"
+      "ths_1787330171001_884a-0.webp",
+      "ths_1787330171001_884a-1.webp"
     ],
     "sources": [
       {
@@ -25245,7 +25251,7 @@
         "authors": "Bell et al."
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2755
   }
 ]
