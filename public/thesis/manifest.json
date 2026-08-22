@@ -38011,10 +38011,7 @@
       "technical academic diagram, white background, clean vector style, showing Fully Homomorphic Encryption Bootstrapping: CKKS Approximate Rescaling, Chebyshev Modular Approximation, and GPU-Accelerated NTT via Tensor Cores limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787394668789_1781-0.webp",
-      "ths_1787394668789_1781-1.webp",
-      "ths_1787394668789_1781-2.webp",
-      "ths_1787394668789_1781-3.webp"
+      "ths_1787394668789_1781-0.webp"
     ],
     "sources": [
       {
@@ -38060,7 +38057,7 @@
         "authors": "Jung et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 2740
   },
   {
@@ -38088,8 +38085,7 @@
     "images": [
       "ths_1787394669789_04ed-0.webp",
       "ths_1787394669789_04ed-1.webp",
-      "ths_1787394669789_04ed-2.webp",
-      "ths_1787394669789_04ed-3.webp"
+      "ths_1787394669789_04ed-2.webp"
     ],
     "sources": [
       {
@@ -38135,7 +38131,7 @@
         "authors": "Bunz et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 3,
     "word_count": 2720
   },
   {
@@ -38238,8 +38234,7 @@
     "images": [
       "ths_1787394671789_230f-0.webp",
       "ths_1787394671789_230f-1.webp",
-      "ths_1787394671789_230f-2.webp",
-      "ths_1787394671789_230f-3.webp"
+      "ths_1787394671789_230f-2.webp"
     ],
     "sources": [
       {
@@ -38285,7 +38280,7 @@
         "authors": "Mayr et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 3,
     "word_count": 2740
   },
   {
@@ -38313,8 +38308,7 @@
     "images": [
       "ths_1787394672789_0a6d-0.webp",
       "ths_1787394672789_0a6d-1.webp",
-      "ths_1787394672789_0a6d-2.webp",
-      "ths_1787394672789_0a6d-3.webp"
+      "ths_1787394672789_0a6d-2.webp"
     ],
     "sources": [
       {
@@ -38360,7 +38354,7 @@
         "authors": "W3C Component Model Docs"
       }
     ],
-    "image_count": 4,
+    "image_count": 3,
     "word_count": 2742
   },
   {
@@ -38385,12 +38379,7 @@
       "technical academic diagram, white background, clean vector style, showing LSM-Tree Compaction Orchestration for Billion-Scale Vector Databases: Leveled vs Tiered Tradeoffs, Learned Bloom Filters, Block Cache Tiering, and CSD Computational Storage Offload performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing LSM-Tree Compaction Orchestration for Billion-Scale Vector Databases: Leveled vs Tiered Tradeoffs, Learned Bloom Filters, Block Cache Tiering, and CSD Computational Storage Offload limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1787394673789_1d0b-0.webp",
-      "ths_1787394673789_1d0b-1.webp",
-      "ths_1787394673789_1d0b-2.webp",
-      "ths_1787394673789_1d0b-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -38435,7 +38424,7 @@
         "authors": "Dai et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2738
   },
   {
@@ -38613,8 +38602,7 @@
     "images": [
       "ths_1787394676789_264f-0.webp",
       "ths_1787394676789_264f-1.webp",
-      "ths_1787394676789_264f-2.webp",
-      "ths_1787394676789_264f-3.webp"
+      "ths_1787394676789_264f-2.webp"
     ],
     "sources": [
       {
@@ -38660,7 +38648,7 @@
         "authors": "Nasrallah et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 3,
     "word_count": 2756
   },
   {
