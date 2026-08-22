@@ -2,3 +2,5 @@ dist
 node_modules
 public/thesis/media-generation-*
 public/thesis/tmp_hold
+public/thesis/.media-generation-*
+.media-generation-*
