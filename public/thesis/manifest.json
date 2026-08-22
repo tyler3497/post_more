@@ -38752,7 +38752,10 @@
       "technical academic diagram, white background, clean vector style, showing Post-Quantum Software Supply Chain Integrity: X-Wing Hybrid KEM ML-KEM-768+X25519, LMS Hash-Based Signatures, SPHINCS+ Stateless Verification, and Sigstore Rekor Transparency Log Inclusion Proofs performance empirical graph with latency vs throughput, recall vs QPS, benchmark bars, tables, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Post-Quantum Software Supply Chain Integrity: X-Wing Hybrid KEM ML-KEM-768+X25519, LMS Hash-Based Signatures, SPHINCS+ Stateless Verification, and Sigstore Rekor Transparency Log Inclusion Proofs limitation tradeoff radar and future work roadmap illustrating design space and tradeoffs, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787402128601_d43f-0.webp",
+      "ths_1787402128601_d43f-1.webp"
+    ],
     "sources": [
       {
         "title": "X-Wing: Hybrid KEM for TLS 1.3 - IETF Draft",
@@ -38790,7 +38793,7 @@
         "authors": "Bos et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 3336,
     "slug": "pq-xwing-sphincs"
   },
@@ -38880,7 +38883,10 @@
       "technical academic diagram, white background, clean vector style, showing eBPF-Based Runtime Security Enforcement: Linux Security Module Hook Interposition, Prevail Abstract Interpretation Verifier, Spectre v1/v4 Taint Tracking Hardening, and FineIBPF Formal Semantics for Kubernetes Admission Control performance empirical graph with latency vs throughput, recall vs QPS, benchmark bars, tables, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing eBPF-Based Runtime Security Enforcement: Linux Security Module Hook Interposition, Prevail Abstract Interpretation Verifier, Spectre v1/v4 Taint Tracking Hardening, and FineIBPF Formal Semantics for Kubernetes Admission Control limitation tradeoff radar and future work roadmap illustrating design space and tradeoffs, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787402130532_88d9-0.webp",
+      "ths_1787402130532_88d9-1.webp"
+    ],
     "sources": [
       {
         "title": "Prevail: Verifying eBPF Programs with Abstract Interpretation - PLDI 2020",
@@ -38918,7 +38924,7 @@
         "authors": "Cilium Team"
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 3428,
     "slug": "ebpf-lsm-prevail"
   },
@@ -39008,7 +39014,10 @@
       "technical academic diagram, white background, clean vector style, showing Memory-Safe Linux Kernel Development with Rust: Binder IPC Lifetime Semantics, RFL Refcount Abstractions, Slab Allocator KASAN Integration, Lockdep Deadlock Detection Formal Model, and Miri Stacked Borrows Verification for Unsafe FFI Boundaries performance empirical graph with latency vs throughput, recall vs QPS, benchmark bars, tables, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Memory-Safe Linux Kernel Development with Rust: Binder IPC Lifetime Semantics, RFL Refcount Abstractions, Slab Allocator KASAN Integration, Lockdep Deadlock Detection Formal Model, and Miri Stacked Borrows Verification for Unsafe FFI Boundaries limitation tradeoff radar and future work roadmap illustrating design space and tradeoffs, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787402132583_2b05-0.webp",
+      "ths_1787402132583_2b05-1.webp"
+    ],
     "sources": [
       {
         "title": "Rust for Linux Kernel - Official Documentation",
@@ -39046,7 +39055,7 @@
         "authors": "Google Android"
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 3410,
     "slug": "rust-kernel-rfl"
   },
@@ -39136,7 +39145,10 @@
       "technical academic diagram, white background, clean vector style, showing High-Performance Columnar Data Transfer via Apache Arrow Flight over UCX and RoCEv2: GPUDirect RDMA Zero-Copy, Plasma Object Store Shared Memory, and CXL 3.0 Memory Pooling for Disaggregated Dataframe Shuffle at Petabyte Scale performance empirical graph with latency vs throughput, recall vs QPS, benchmark bars, tables, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing High-Performance Columnar Data Transfer via Apache Arrow Flight over UCX and RoCEv2: GPUDirect RDMA Zero-Copy, Plasma Object Store Shared Memory, and CXL 3.0 Memory Pooling for Disaggregated Dataframe Shuffle at Petabyte Scale limitation tradeoff radar and future work roadmap illustrating design space and tradeoffs, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787402134796_2eed-0.webp",
+      "ths_1787402134796_2eed-1.webp"
+    ],
     "sources": [
       {
         "title": "Apache Arrow Flight RPC Specification",
@@ -39174,7 +39186,7 @@
         "authors": "Spark Authors"
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 3402,
     "slug": "arrow-flight-ucx"
   },
@@ -39264,7 +39276,10 @@
       "technical academic diagram, white background, clean vector style, showing Photonic Die-to-Die Interconnects for AI Accelerator Scaling: Co-Packaged Optics DWDM Laser Arrays, Micro-Ring Resonator Thermal Tuning and Crosstalk Mitigation, UCIe 2.0 Die-to-Die PHY Retimerless Links, and BoW Wide-Parallel Interconnect for Blackwell B200 Chiplet Clusters performance empirical graph with latency vs throughput, recall vs QPS, benchmark bars, tables, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Photonic Die-to-Die Interconnects for AI Accelerator Scaling: Co-Packaged Optics DWDM Laser Arrays, Micro-Ring Resonator Thermal Tuning and Crosstalk Mitigation, UCIe 2.0 Die-to-Die PHY Retimerless Links, and BoW Wide-Parallel Interconnect for Blackwell B200 Chiplet Clusters limitation tradeoff radar and future work roadmap illustrating design space and tradeoffs, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787402136658_6b15-0.webp",
+      "ths_1787402136658_6b15-1.webp"
+    ],
     "sources": [
       {
         "title": "Co-Packaged Optics for AI Clusters: Design and Deployment - LightCounting 2024",
@@ -39302,7 +39317,7 @@
         "authors": "IEEE JLT"
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 3468,
     "slug": "photonic-cpo-uci"
   },
