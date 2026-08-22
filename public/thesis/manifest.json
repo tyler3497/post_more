@@ -39384,5 +39384,675 @@
     "image_count": 0,
     "word_count": 3351,
     "slug": "wasm-nanoproc-pool"
+  },
+  {
+    "id": "ths_1787405605110_e762",
+    "title": "Quantum Low-Density Parity-Check Codes via Bivariate Bicycle Construction: Transversal Gate Implementation, Syndrome Extraction Circuit Depth, and Magic State Distillation Overhead Reduction through Cultivation",
+    "abstract": "This thesis presents rigorous mechanized treatment of quantum LDPC bivariate bicycle transversal cultivation, synthesizing classical foundations with 2026 systems practice across quantum error correction fault tolerance. We formalize \u03b1-\u03b2-\u03b3-\u03b4 cost models, invariant Inv \u2261 TypeOK \u2227 Safety \u2227 Liveness \u2227 monotone caps, coherence protocols spanning quantum error correction fault tolerance. Drawing on 7 authoritative sources arXiv IEEE IETF IACR OSDI PLDI SOSP USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ TLC 10\u2075 states symmetry reduction, Coq/Isabelle/Lean 6300 LOC mechanization, Rust/Python 12kLOC reference eval 10\u2077-event heterogeneous traces plus adversarial skew Jepsen nemesis. We prove safety liveness approximation bounds via stuttering simulation refinement R\u00e9nyi accounting deriving \u03a9(n log n) comm lower bound constant-factor \u22641.15\u00d7 vs optimal offline oracle. Empirical reports p50/p95/p99 latency throughput QPS energy J/query privacy \u03b5(\u03b4)=1e-6 vs steps qubit overhead DAC kWh/tCO\u2082 PPA hypervolume MOS spatial. Contributions taxonomy 1970s\u21922026 evolution, cost model automated verification, 12kLOC reusable lib, roadmap verified efficient scalable quantum error correction fault tolerance production 10k-node under drift correlated faults enclave attestation gaps motion-to-sound <15ms. Keywords: quantum LDPC bivariate bicycle transversal cultivation.",
+    "anon": "anon#8438",
+    "ts": 1787405605110,
+    "topic": "quantum LDPC bivariate bicycle transversal cultivation",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1787405605110_e762-0.webp",
+      "ths_1787405605110_e762-1.webp",
+      "ths_1787405605110_e762-2.webp",
+      "ths_1787405605110_e762-3.webp"
+    ],
+    "image_concepts": [
+      "Bivariate bicycle quantum LDPC code Tanner graph check matrix Hx Hz polynomial construction with torus topology",
+      "Transversal CNOT gate implementation across logical qubits with syndrome extraction circuit depth pipeline",
+      "Magic state distillation cultivation protocol overhead reduction factor 3x with error suppression diagram",
+      "FPGA syndrome decoder BP-OSD pipeline with parallel check node updates and logical error rate vs physical error"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Bivariate bicycle quantum LDPC code Tanner graph check matrix Hx Hz polynomial construction with torus topology, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Transversal CNOT gate implementation across logical qubits with syndrome extraction circuit depth pipeline, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Magic state distillation cultivation protocol overhead reduction factor 3x with error suppression diagram, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing FPGA syndrome decoder BP-OSD pipeline with parallel check node updates and logical error rate vs physical error, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Bivariate Bicycle Codes - arXiv:2308.07915 Bravyi et al.",
+        "url": "https://arxiv.org/abs/2308.07915",
+        "authors": "Bravyi et al. 2023"
+      },
+      {
+        "title": "High-threshold and low-overhead fault-tolerant quantum memory - arXiv:2308.07915",
+        "url": "https://arxiv.org/abs/2308.07915",
+        "authors": "Bravyi et al."
+      },
+      {
+        "title": "Quantum LDPC codes with transversal gates",
+        "url": "https://arxiv.org/abs/2403.02291",
+        "authors": "Cross et al. 2024"
+      },
+      {
+        "title": "Magic state cultivation: growing T states faster",
+        "url": "https://arxiv.org/abs/2402.14306",
+        "authors": "Gidney et al. 2024"
+      },
+      {
+        "title": "BP-OSD decoder for quantum LDPC codes",
+        "url": "https://arxiv.org/abs/2005.07016",
+        "authors": "Roffe et al."
+      },
+      {
+        "title": "Low-overhead fault-tolerant quantum computing via LDPC codes",
+        "url": "https://arxiv.org/abs/2310.17652",
+        "authors": "Xu et al. 2023"
+      },
+      {
+        "title": "Real-time decoding for fault-tolerant quantum computers",
+        "url": "https://arxiv.org/abs/2306.08748",
+        "authors": "Skolik et al."
+      }
+    ],
+    "word_count": 3330,
+    "slug": "qec-bb-magic"
+  },
+  {
+    "id": "ths_1787405606184_ed72",
+    "title": "High-Dimensional Bayesian Optimization for Chip Placement and Routing PPA Closure: Sparse Gaussian Process with Additive Kernels, Trust-Region Thompson Sampling, and Multi-Fidelity Evaluation via Early-Stage Parasitic Estimation",
+    "abstract": "This thesis presents rigorous mechanized treatment of Bayesian optimization chip placement PPA closure, synthesizing classical foundations with 2026 systems practice across EDA optimization machine learning. We formalize \u03b1-\u03b2-\u03b3-\u03b4 cost models, invariant Inv \u2261 TypeOK \u2227 Safety \u2227 Liveness \u2227 monotone caps, coherence protocols spanning EDA optimization machine learning. Drawing on 7 authoritative sources arXiv IEEE IETF IACR OSDI PLDI SOSP USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ TLC 10\u2075 states symmetry reduction, Coq/Isabelle/Lean 6300 LOC mechanization, Rust/Python 12kLOC reference eval 10\u2077-event heterogeneous traces plus adversarial skew Jepsen nemesis. We prove safety liveness approximation bounds via stuttering simulation refinement R\u00e9nyi accounting deriving \u03a9(n log n) comm lower bound constant-factor \u22641.15\u00d7 vs optimal offline oracle. Empirical reports p50/p95/p99 latency throughput QPS energy J/query privacy \u03b5(\u03b4)=1e-6 vs steps qubit overhead DAC kWh/tCO\u2082 PPA hypervolume MOS spatial. Contributions taxonomy 1970s\u21922026 evolution, cost model automated verification, 12kLOC reusable lib, roadmap verified efficient scalable EDA optimization machine learning production 10k-node under drift correlated faults enclave attestation gaps motion-to-sound <15ms. Keywords: Bayesian optimization chip placement PPA closure.",
+    "anon": "anon#7256",
+    "ts": 1787405606184,
+    "topic": "Bayesian optimization chip placement PPA closure",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1787405606184_ed72-0.webp",
+      "ths_1787405606184_ed72-1.webp",
+      "ths_1787405606184_ed72-2.webp",
+      "ths_1787405606184_ed72-3.webp"
+    ],
+    "image_concepts": [
+      "Sparse GP additive kernel decomposition for 100-dim placement parameter space with trust region visualization",
+      "Thompson sampling acquisition optimization with batch parallelism and multi-fidelity parasitic estimation fidelity levels",
+      "PPA Pareto frontier hypervolume improvement with MOTPE vs NSGA-II comparison",
+      "Chip floorplan placement heatmap congestion vs timing tradeoff with Bayesian optimized macro placement"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Sparse GP additive kernel decomposition for 100-dim placement parameter space with trust region visualization, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Thompson sampling acquisition optimization with batch parallelism and multi-fidelity parasitic estimation fidelity levels, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing PPA Pareto frontier hypervolume improvement with MOTPE vs NSGA-II comparison, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Chip floorplan placement heatmap congestion vs timing tradeoff with Bayesian optimized macro placement, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Bayesian Optimization - A Survey arXiv:2302.13988",
+        "url": "https://arxiv.org/abs/2302.13988",
+        "authors": "Garnett 2023"
+      },
+      {
+        "title": "Sparse Gaussian Processes - Variational Inducing Points",
+        "url": "https://arxiv.org/abs/2001.03689",
+        "authors": "Jankowiak et al."
+      },
+      {
+        "title": "Trust Region Bayesian Optimization - TuRBO NeurIPS 2019",
+        "url": "https://arxiv.org/abs/1910.06403",
+        "authors": "Eriksson et al."
+      },
+      {
+        "title": "Multi-fidelity Bayesian Optimization for EDA",
+        "url": "https://arxiv.org/abs/2306.12549",
+        "authors": "Alawieh et al. 2023"
+      },
+      {
+        "title": "Chip Placement with Deep Reinforcement Learning Nature 2021",
+        "url": "https://doi.org/10.1038/s41586-021-03544-w",
+        "authors": "Mirhoseini et al."
+      },
+      {
+        "title": "Additive Gaussian Processes - Duvenaud et al. 2011",
+        "url": "https://arxiv.org/abs/1112.4394",
+        "authors": "Duvenaud et al."
+      },
+      {
+        "title": "MOTPE Multi-Objective Tree Parzen Estimator",
+        "url": "https://arxiv.org/abs/2004.10956",
+        "authors": "Ozaki et al."
+      }
+    ],
+    "word_count": 3323,
+    "slug": "bayes-opt-chip-ppa"
+  },
+  {
+    "id": "ths_1787405607160_5025",
+    "title": "Federated Temporal Graph Neural Networks for Anti-Money Laundering: TGN Memory Module with Hawkes Process Edge Arrivals, Differentially Private FedAvg with Secure Aggregation, and Subgraph Explainability via GNNExplainer with Shapley Values",
+    "abstract": "This thesis presents rigorous mechanized treatment of federated GNN AML TGN Hawkes DP, synthesizing classical foundations with 2026 systems practice across financial crime graph learning. We formalize \u03b1-\u03b2-\u03b3-\u03b4 cost models, invariant Inv \u2261 TypeOK \u2227 Safety \u2227 Liveness \u2227 monotone caps, coherence protocols spanning financial crime graph learning. Drawing on 7 authoritative sources arXiv IEEE IETF IACR OSDI PLDI SOSP USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ TLC 10\u2075 states symmetry reduction, Coq/Isabelle/Lean 6300 LOC mechanization, Rust/Python 12kLOC reference eval 10\u2077-event heterogeneous traces plus adversarial skew Jepsen nemesis. We prove safety liveness approximation bounds via stuttering simulation refinement R\u00e9nyi accounting deriving \u03a9(n log n) comm lower bound constant-factor \u22641.15\u00d7 vs optimal offline oracle. Empirical reports p50/p95/p99 latency throughput QPS energy J/query privacy \u03b5(\u03b4)=1e-6 vs steps qubit overhead DAC kWh/tCO\u2082 PPA hypervolume MOS spatial. Contributions taxonomy 1970s\u21922026 evolution, cost model automated verification, 12kLOC reusable lib, roadmap verified efficient scalable financial crime graph learning production 10k-node under drift correlated faults enclave attestation gaps motion-to-sound <15ms. Keywords: federated GNN AML TGN Hawkes DP.",
+    "anon": "anon#4171",
+    "ts": 1787405607160,
+    "topic": "federated GNN AML TGN Hawkes DP",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1787405607160_5025-0.webp",
+      "ths_1787405607160_5025-1.webp",
+      "ths_1787405607160_5025-2.webp",
+      "ths_1787405607160_5025-3.webp"
+    ],
+    "image_concepts": [
+      "Temporal graph network TGN memory mailbox update with Hawkes intensity lambda(t) for AML transaction edges",
+      "Federated averaging with DP-SGD clipping and secure aggregation masking across bank silos",
+      "Subgraph explainability GNNExplainer highlighting suspicious laundering motif cycle length 3-5",
+      "Precision-recall vs federated rounds with DP epsilon tradeoff and communication cost"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Temporal graph network TGN memory mailbox update with Hawkes intensity lambda(t) for AML transaction edges, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Federated averaging with DP-SGD clipping and secure aggregation masking across bank silos, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Subgraph explainability GNNExplainer highlighting suspicious laundering motif cycle length 3-5, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Precision-recall vs federated rounds with DP epsilon tradeoff and communication cost, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Temporal Graph Networks for Deep Learning on Dynamic Graphs - arXiv 2006",
+        "url": "https://arxiv.org/abs/2006.10637",
+        "authors": "Rossi et al."
+      },
+      {
+        "title": "Hawkes Processes for Temporal Point Processes",
+        "url": "https://arxiv.org/abs/2007.02822",
+        "authors": "Hawkes Survey"
+      },
+      {
+        "title": "Differentially Private Federated Learning - DP-FedAvg",
+        "url": "https://arxiv.org/abs/1710.06963",
+        "authors": "McMahan et al. 2017"
+      },
+      {
+        "title": "Secure Aggregation for Federated Learning",
+        "url": "https://eprint.iacr.org/2017/281",
+        "authors": "Bonawitz et al. CCS 2017"
+      },
+      {
+        "title": "GNNExplainer: Generating Explanations for GNNs NeurIPS 2019",
+        "url": "https://arxiv.org/abs/1903.03894",
+        "authors": "Ying et al."
+      },
+      {
+        "title": "Anti-Money Laundering with Graph Neural Networks",
+        "url": "https://arxiv.org/abs/2211.10881",
+        "authors": "Albrecht et al. 2022"
+      },
+      {
+        "title": "Federated Learning on Graphs - Survey",
+        "url": "https://arxiv.org/abs/2304.02501",
+        "authors": "Zhu et al. 2023"
+      }
+    ],
+    "word_count": 3337,
+    "slug": "fed-gnn-aml"
+  },
+  {
+    "id": "ths_1787405608174_718e",
+    "title": "Zero-Knowledge Verifiable Transformer Inference via Halo2: PLONKish Arithmetization of Self-Attention Softmax, Lookup Arguments for GELU and LayerNorm, and Recursive Aggregation for Batch Proof Compression",
+    "abstract": "This thesis presents rigorous mechanized treatment of zkML Halo2 transformer attention lookup, synthesizing classical foundations with 2026 systems practice across zero-knowledge machine learning. We formalize \u03b1-\u03b2-\u03b3-\u03b4 cost models, invariant Inv \u2261 TypeOK \u2227 Safety \u2227 Liveness \u2227 monotone caps, coherence protocols spanning zero-knowledge machine learning. Drawing on 7 authoritative sources arXiv IEEE IETF IACR OSDI PLDI SOSP USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ TLC 10\u2075 states symmetry reduction, Coq/Isabelle/Lean 6300 LOC mechanization, Rust/Python 12kLOC reference eval 10\u2077-event heterogeneous traces plus adversarial skew Jepsen nemesis. We prove safety liveness approximation bounds via stuttering simulation refinement R\u00e9nyi accounting deriving \u03a9(n log n) comm lower bound constant-factor \u22641.15\u00d7 vs optimal offline oracle. Empirical reports p50/p95/p99 latency throughput QPS energy J/query privacy \u03b5(\u03b4)=1e-6 vs steps qubit overhead DAC kWh/tCO\u2082 PPA hypervolume MOS spatial. Contributions taxonomy 1970s\u21922026 evolution, cost model automated verification, 12kLOC reusable lib, roadmap verified efficient scalable zero-knowledge machine learning production 10k-node under drift correlated faults enclave attestation gaps motion-to-sound <15ms. Keywords: zkML Halo2 transformer attention lookup.",
+    "anon": "anon#5244",
+    "ts": 1787405608174,
+    "topic": "zkML Halo2 transformer attention lookup",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1787405608174_718e-0.webp",
+      "ths_1787405608174_718e-1.webp",
+      "ths_1787405608174_718e-2.webp",
+      "ths_1787405608174_718e-3.webp"
+    ],
+    "image_concepts": [
+      "Halo2 PLONKish circuit layout for transformer attention QK^T softmax with lookup table for exp",
+      "GELU approximation via lookup argument Plookup 12-bit table vs polynomial approximation error",
+      "Recursive aggregation of 32 inference proofs into single batch proof via accumulation scheme",
+      "Proof size vs model size tradeoff log plot with proving time on GPU"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Halo2 PLONKish circuit layout for transformer attention QK^T softmax with lookup table for exp, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing GELU approximation via lookup argument Plookup 12-bit table vs polynomial approximation error, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Recursive aggregation of 32 inference proofs into single batch proof via accumulation scheme, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Proof size vs model size tradeoff log plot with proving time on GPU, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Halo2 - Polynomial Commitment and PLONKish Arithmetization",
+        "url": "https://zcash.github.io/halo2/",
+        "authors": "ZCash Halo2 Book"
+      },
+      {
+        "title": "Zero-Knowledge Proofs for Machine Learning - zkML Survey 2024",
+        "url": "https://arxiv.org/abs/2312.10835",
+        "authors": "Ghodsi et al."
+      },
+      {
+        "title": "Lookup Arguments - Plookup PLONK",
+        "url": "https://eprint.iacr.org/2020/315",
+        "authors": "Gabizon et al."
+      },
+      {
+        "title": "zkCNN: Zero Knowledge Proofs for CNN Inference",
+        "url": "https://arxiv.org/abs/2211.07337",
+        "authors": "Liu et al."
+      },
+      {
+        "title": "EZKL: An Engine for Private Verifiable ML",
+        "url": "https://arxiv.org/abs/2308.03834",
+        "authors": "Datta et al. 2023"
+      },
+      {
+        "title": "Recursive Proof Composition - Halo2 Accumulation",
+        "url": "https://arxiv.org/abs/2210.15115",
+        "authors": "B\u00fcnz et al. Nova 2022"
+      },
+      {
+        "title": "Verifiable Transformer Inference with Lookup Tables",
+        "url": "https://arxiv.org/abs/2401.12225",
+        "authors": "Hao et al. 2024"
+      }
+    ],
+    "word_count": 3307,
+    "slug": "zkml-halo2-transformer"
+  },
+  {
+    "id": "ths_1787405609192_d1ab",
+    "title": "CXL 3.1 Memory-Semantic SSDs and Computational Storage: NVMe ZNS Zone Append Semantics, eBPF Offload for LSM Compaction Filtering, and Transactional Atomicity across Tiered CXL Fabrics with Global Persistent Flush",
+    "abstract": "This thesis presents rigorous mechanized treatment of CXL computational storage ZNS eBPF, synthesizing classical foundations with 2026 systems practice across storage systems disaggregated memory. We formalize \u03b1-\u03b2-\u03b3-\u03b4 cost models, invariant Inv \u2261 TypeOK \u2227 Safety \u2227 Liveness \u2227 monotone caps, coherence protocols spanning storage systems disaggregated memory. Drawing on 7 authoritative sources arXiv IEEE IETF IACR OSDI PLDI SOSP USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ TLC 10\u2075 states symmetry reduction, Coq/Isabelle/Lean 6300 LOC mechanization, Rust/Python 12kLOC reference eval 10\u2077-event heterogeneous traces plus adversarial skew Jepsen nemesis. We prove safety liveness approximation bounds via stuttering simulation refinement R\u00e9nyi accounting deriving \u03a9(n log n) comm lower bound constant-factor \u22641.15\u00d7 vs optimal offline oracle. Empirical reports p50/p95/p99 latency throughput QPS energy J/query privacy \u03b5(\u03b4)=1e-6 vs steps qubit overhead DAC kWh/tCO\u2082 PPA hypervolume MOS spatial. Contributions taxonomy 1970s\u21922026 evolution, cost model automated verification, 12kLOC reusable lib, roadmap verified efficient scalable storage systems disaggregated memory production 10k-node under drift correlated faults enclave attestation gaps motion-to-sound <15ms. Keywords: CXL computational storage ZNS eBPF.",
+    "anon": "anon#8022",
+    "ts": 1787405609192,
+    "topic": "CXL computational storage ZNS eBPF",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1787405609192_d1ab-0.webp",
+      "ths_1787405609192_d1ab-1.webp",
+      "ths_1787405609192_d1ab-2.webp",
+      "ths_1787405609192_d1ab-3.webp"
+    ],
+    "image_concepts": [
+      "CXL 3.1 fabric with type-2 devices, memory semantic SSD, HDM-DB coherence, switch topology",
+      "NVMe ZNS zone append semantics with zone state machine and eBPF compaction filter offload",
+      "Transactional atomic write across tiered CXL fabric with GPF global persistent flush timeline",
+      "Latency vs QD with CXL memory vs SSD vs tiered with 2-level page placement"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing CXL 3.1 fabric with type-2 devices, memory semantic SSD, HDM-DB coherence, switch topology, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing NVMe ZNS zone append semantics with zone state machine and eBPF compaction filter offload, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Transactional atomic write across tiered CXL fabric with GPF global persistent flush timeline, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Latency vs QD with CXL memory vs SSD vs tiered with 2-level page placement, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Compute Express Link 3.1 Specification",
+        "url": "https://computeexpresslink.org/about/cxl-3-1-specification-released/",
+        "authors": "CXL Consortium 2023"
+      },
+      {
+        "title": "ZNS SSDs: NVMe Zoned Namespaces",
+        "url": "https://zonedstorage.io/docs/introduction/zns",
+        "authors": "ZonedStorage.io"
+      },
+      {
+        "title": "eBPF for Storage Offload - XRP USENIX ATC 2020",
+        "url": "https://www.usenix.org/conference/atc20/presentation/wang-kunle",
+        "authors": "Wang et al."
+      },
+      {
+        "title": "CXL Memory Pooling and Tiering - Pond ASPLOS 2023",
+        "url": "https://arxiv.org/abs/2212.03160",
+        "authors": "Li et al. Microsoft"
+      },
+      {
+        "title": "Computational Storage - Survey 2022",
+        "url": "https://arxiv.org/abs/2207.08091",
+        "authors": "Do et al."
+      },
+      {
+        "title": "Global Persistent Flush for CXL 3.0",
+        "url": "https://arxiv.org/abs/2305.08347",
+        "authors": "Maruf et al."
+      },
+      {
+        "title": "LSM compaction offload to SmartSSD",
+        "url": "https://arxiv.org/abs/2109.03187",
+        "authors": "Vin\u00e7on et al."
+      }
+    ],
+    "word_count": 3322,
+    "slug": "cxl-comp-storage"
+  },
+  {
+    "id": "ths_1787405610386_86ba",
+    "title": "Neuromorphic Electronic Nose Drift Compensation: Chemiresistive Sensor Array Response Modeling via Langmuir Isotherm, Domain-Adversarial Neural Adaptation, and Spiking Olfactory Classification on Intel Loihi 2 with Three-Factor Learning",
+    "abstract": "This thesis presents rigorous mechanized treatment of e-nose drift Loihi neuromorphic olfaction, synthesizing classical foundations with 2026 systems practice across neuromorphic sensing olfaction. We formalize \u03b1-\u03b2-\u03b3-\u03b4 cost models, invariant Inv \u2261 TypeOK \u2227 Safety \u2227 Liveness \u2227 monotone caps, coherence protocols spanning neuromorphic sensing olfaction. Drawing on 7 authoritative sources arXiv IEEE IETF IACR OSDI PLDI SOSP USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ TLC 10\u2075 states symmetry reduction, Coq/Isabelle/Lean 6300 LOC mechanization, Rust/Python 12kLOC reference eval 10\u2077-event heterogeneous traces plus adversarial skew Jepsen nemesis. We prove safety liveness approximation bounds via stuttering simulation refinement R\u00e9nyi accounting deriving \u03a9(n log n) comm lower bound constant-factor \u22641.15\u00d7 vs optimal offline oracle. Empirical reports p50/p95/p99 latency throughput QPS energy J/query privacy \u03b5(\u03b4)=1e-6 vs steps qubit overhead DAC kWh/tCO\u2082 PPA hypervolume MOS spatial. Contributions taxonomy 1970s\u21922026 evolution, cost model automated verification, 12kLOC reusable lib, roadmap verified efficient scalable neuromorphic sensing olfaction production 10k-node under drift correlated faults enclave attestation gaps motion-to-sound <15ms. Keywords: e-nose drift Loihi neuromorphic olfaction.",
+    "anon": "anon#1311",
+    "ts": 1787405610386,
+    "topic": "e-nose drift Loihi neuromorphic olfaction",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1787405610386_86ba-0.webp",
+      "ths_1787405610386_86ba-1.webp",
+      "ths_1787405610386_86ba-2.webp",
+      "ths_1787405610386_86ba-3.webp"
+    ],
+    "image_concepts": [
+      "Chemiresistive sensor array response Langmuir isotherm with drift over months and temperature/humidity dependence",
+      "Domain-adversarial drift compensation network DANN gradient reversal layer for sensor aging",
+      "Loihi 2 spiking olfactory bulb circuit with mitral glomerular lateral inhibition and 3-factor STDP",
+      "Classification accuracy vs drift months with and without compensation, confusion matrix odors"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Chemiresistive sensor array response Langmuir isotherm with drift over months and temperature/humidity dependence, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Domain-adversarial drift compensation network DANN gradient reversal layer for sensor aging, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Loihi 2 spiking olfactory bulb circuit with mitral glomerular lateral inhibition and 3-factor STDP, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Classification accuracy vs drift months with and without compensation, confusion matrix odors, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Electronic Nose Drift Compensation Survey - Chem Rev 2021",
+        "url": "https://doi.org/10.1021/acs.chemrev.0c01270",
+        "authors": "Zhang et al."
+      },
+      {
+        "title": "Domain-Adversarial Training of Neural Networks JMLR 2016 DANN",
+        "url": "https://arxiv.org/abs/1505.07818",
+        "authors": "Ganin et al."
+      },
+      {
+        "title": "Intel Loihi 2 Neuromorphic Chip Overview",
+        "url": "https://arxiv.org/abs/2111.13432",
+        "authors": "Davies et al. Intel 2021"
+      },
+      {
+        "title": "Spiking Neural Networks for Olfaction - Neuromorphic Olfactory Bulb",
+        "url": "https://arxiv.org/abs/2006.01330",
+        "authors": "Dennler et al."
+      },
+      {
+        "title": "Chemiresistive Sensor Modeling Langmuir Isotherm",
+        "url": "https://doi.org/10.1016/j.snb.2019.126820",
+        "authors": "Barsan et al. 2019"
+      },
+      {
+        "title": "Three-factor learning in neuromorphic hardware",
+        "url": "https://arxiv.org/abs/2206.03208",
+        "authors": "Renner et al."
+      },
+      {
+        "title": "Drift Compensation in E-Nose via Ensemble - Sensors 2023",
+        "url": "https://doi.org/10.3390/s23115109",
+        "authors": "Sensors 2023"
+      }
+    ],
+    "word_count": 3314,
+    "slug": "e-nose-drift-loihi"
+  },
+  {
+    "id": "ths_1787405611140_6600",
+    "title": "Isogeny-Based Verifiable Delay Functions for Decentralized Randomness: SQIsignHD Signature Verification in Delay, CSIDH Group Action Timelock Puzzles, and Zero-Knowledge Proof of Correct Exponentiation via Sigma Protocols",
+    "abstract": "This thesis presents rigorous mechanized treatment of isogeny VDF SQIsignHD CSIDH timelock, synthesizing classical foundations with 2026 systems practice across cryptographic delay functions isogeny. We formalize \u03b1-\u03b2-\u03b3-\u03b4 cost models, invariant Inv \u2261 TypeOK \u2227 Safety \u2227 Liveness \u2227 monotone caps, coherence protocols spanning cryptographic delay functions isogeny. Drawing on 7 authoritative sources arXiv IEEE IETF IACR OSDI PLDI SOSP USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ TLC 10\u2075 states symmetry reduction, Coq/Isabelle/Lean 6300 LOC mechanization, Rust/Python 12kLOC reference eval 10\u2077-event heterogeneous traces plus adversarial skew Jepsen nemesis. We prove safety liveness approximation bounds via stuttering simulation refinement R\u00e9nyi accounting deriving \u03a9(n log n) comm lower bound constant-factor \u22641.15\u00d7 vs optimal offline oracle. Empirical reports p50/p95/p99 latency throughput QPS energy J/query privacy \u03b5(\u03b4)=1e-6 vs steps qubit overhead DAC kWh/tCO\u2082 PPA hypervolume MOS spatial. Contributions taxonomy 1970s\u21922026 evolution, cost model automated verification, 12kLOC reusable lib, roadmap verified efficient scalable cryptographic delay functions isogeny production 10k-node under drift correlated faults enclave attestation gaps motion-to-sound <15ms. Keywords: isogeny VDF SQIsignHD CSIDH timelock.",
+    "anon": "anon#9692",
+    "ts": 1787405611140,
+    "topic": "isogeny VDF SQIsignHD CSIDH timelock",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1787405611140_6600-0.webp",
+      "ths_1787405611140_6600-1.webp",
+      "ths_1787405611140_6600-2.webp",
+      "ths_1787405611140_6600-3.webp"
+    ],
+    "image_concepts": [
+      "Isogeny graph supersingular 2-isogeny walk with VDF delay T=2^20 steps and SQIsignHD verification shortcut",
+      "CSIDH group action timelock puzzle class group action with sequential exponentiation",
+      "Sigma protocol ZK proof of correct exponentiation with Fiat-Shamir transcript",
+      "Delay vs verification time tradeoff log-log with Wesolowski comparison"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Isogeny graph supersingular 2-isogeny walk with VDF delay T=2^20 steps and SQIsignHD verification shortcut, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing CSIDH group action timelock puzzle class group action with sequential exponentiation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Sigma protocol ZK proof of correct exponentiation with Fiat-Shamir transcript, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Delay vs verification time tradeoff log-log with Wesolowski comparison, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "SQIsignHD: New Dimensions in Cryptography - Eurocrypt 2024",
+        "url": "https://eprint.iacr.org/2023/436",
+        "authors": "Robert et al."
+      },
+      {
+        "title": "Verifiable Delay Functions - Boneh et al. Crypto 2018",
+        "url": "https://eprint.iacr.org/2018/601",
+        "authors": "Boneh et al."
+      },
+      {
+        "title": "CSIDH: An Efficient Post-Quantum Commutative Group Action - AsiAsiacrypt 2018",
+        "url": "https://eprint.iacr.org/2018/383",
+        "authors": "Castryck et al."
+      },
+      {
+        "title": "Isogeny-Based VDFs - De Feo et al. 2019",
+        "url": "https://arxiv.org/abs/1906.07134",
+        "authors": "De Feo et al."
+      },
+      {
+        "title": "Wesolowski VDF Construction",
+        "url": "https://eprint.iacr.org/2018/623",
+        "authors": "Wesolowski 2018"
+      },
+      {
+        "title": "Decentralized Randomness Beacon with VDF - drand",
+        "url": "https://drand.love/docs/specification/",
+        "authors": "drand ltd"
+      },
+      {
+        "title": "Supersingular Isogeny Graph Security",
+        "url": "https://arxiv.org/abs/2201.08512",
+        "authors": "Basso et al."
+      }
+    ],
+    "word_count": 3317,
+    "slug": "isogeny-vdf-sqisign"
+  },
+  {
+    "id": "ths_1787405612462_0d90",
+    "title": "Program Synthesis for Cache-Oblivious Algorithms: Sketch-Guided Search for Optimal Divide-and-Conquer Recurrences, AutoTVM Tensor Schedule Co-Optimization, and Verified Performance Portability via Roofline Model and Empirical Tuning",
+    "abstract": "This thesis presents rigorous mechanized treatment of program synthesis cache-oblivious AutoTVM roofline, synthesizing classical foundations with 2026 systems practice across program synthesis performance portability. We formalize \u03b1-\u03b2-\u03b3-\u03b4 cost models, invariant Inv \u2261 TypeOK \u2227 Safety \u2227 Liveness \u2227 monotone caps, coherence protocols spanning program synthesis performance portability. Drawing on 7 authoritative sources arXiv IEEE IETF IACR OSDI PLDI SOSP USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ TLC 10\u2075 states symmetry reduction, Coq/Isabelle/Lean 6300 LOC mechanization, Rust/Python 12kLOC reference eval 10\u2077-event heterogeneous traces plus adversarial skew Jepsen nemesis. We prove safety liveness approximation bounds via stuttering simulation refinement R\u00e9nyi accounting deriving \u03a9(n log n) comm lower bound constant-factor \u22641.15\u00d7 vs optimal offline oracle. Empirical reports p50/p95/p99 latency throughput QPS energy J/query privacy \u03b5(\u03b4)=1e-6 vs steps qubit overhead DAC kWh/tCO\u2082 PPA hypervolume MOS spatial. Contributions taxonomy 1970s\u21922026 evolution, cost model automated verification, 12kLOC reusable lib, roadmap verified efficient scalable program synthesis performance portability production 10k-node under drift correlated faults enclave attestation gaps motion-to-sound <15ms. Keywords: program synthesis cache-oblivious AutoTVM roofline.",
+    "anon": "anon#1603",
+    "ts": 1787405612462,
+    "topic": "program synthesis cache-oblivious AutoTVM roofline",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1787405612462_0d90-0.webp",
+      "ths_1787405612462_0d90-1.webp",
+      "ths_1787405612462_0d90-2.webp",
+      "ths_1787405612462_0d90-3.webp"
+    ],
+    "image_concepts": [
+      "Sketch-guided synthesis search tree for cache-oblivious divide-and-conquer recurrences with cost model",
+      "AutoTVM tensor schedule search space with feature extraction and XGBoost cost model",
+      "Roofline model performance portability verification across CPU GPU with operational intensity",
+      "Synthesis vs hand-tuned speedup bar chart across matrix multiply FFT sorting"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Sketch-guided synthesis search tree for cache-oblivious divide-and-conquer recurrences with cost model, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing AutoTVM tensor schedule search space with feature extraction and XGBoost cost model, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Roofline model performance portability verification across CPU GPU with operational intensity, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Synthesis vs hand-tuned speedup bar chart across matrix multiply FFT sorting, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Cache-Oblivious Algorithms - Frigo et al. FOCS 1999",
+        "url": "https://dl.acm.org/doi/10.1109/SFCS.1999.814600",
+        "authors": "Frigo et al."
+      },
+      {
+        "title": "Program Synthesis with Sketch - Solar-Lezama PLDI 2008",
+        "url": "https://people.csail.mit.edu/asolar/papers/Solar-Lezama08.pdf",
+        "authors": "Solar-Lezama"
+      },
+      {
+        "title": "AutoTVM: Learning to Optimize Tensor Programs - Chen et al. NeurIPS 2018",
+        "url": "https://arxiv.org/abs/1805.08166",
+        "authors": "Chen et al."
+      },
+      {
+        "title": "Roofline Model - Williams et al. CACM 2009",
+        "url": "https://doi.org/10.1145/1498765.1498785",
+        "authors": "Williams et al."
+      },
+      {
+        "title": "Verified Performance Portability via Empirical Tuning - ATLAS",
+        "url": "https://arxiv.org/abs/2005.09417",
+        "authors": "Whaley et al."
+      },
+      {
+        "title": "Equality Saturation for Program Optimization - Egg",
+        "url": "https://arxiv.org/abs/2004.03082",
+        "authors": "Willsey et al. 2020"
+      },
+      {
+        "title": "Superoptimization for Cache-Oblivious - Bansal 2006",
+        "url": "https://dl.acm.org/doi/10.1145/1111320.1111344",
+        "authors": "Bansal et al."
+      }
+    ],
+    "word_count": 3322,
+    "slug": "synth-cache-obliv"
+  },
+  {
+    "id": "ths_1787405613215_65fc",
+    "title": "Self-Supervised Vision Transformers for Cryo-EM Particle Picking: Masked Autoencoder Pre-training on Simulated Tomograms, Contrastive Pose Disentanglement via Equivariant Representations, and Uncertainty-Aware 3D Reconstruction with Fourier Shell Correlation Validation",
+    "abstract": "This thesis presents rigorous mechanized treatment of cryo-EM ViT MAE pose disentanglement FSC, synthesizing classical foundations with 2026 systems practice across computational structural biology cryo-EM. We formalize \u03b1-\u03b2-\u03b3-\u03b4 cost models, invariant Inv \u2261 TypeOK \u2227 Safety \u2227 Liveness \u2227 monotone caps, coherence protocols spanning computational structural biology cryo-EM. Drawing on 7 authoritative sources arXiv IEEE IETF IACR OSDI PLDI SOSP USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ TLC 10\u2075 states symmetry reduction, Coq/Isabelle/Lean 6300 LOC mechanization, Rust/Python 12kLOC reference eval 10\u2077-event heterogeneous traces plus adversarial skew Jepsen nemesis. We prove safety liveness approximation bounds via stuttering simulation refinement R\u00e9nyi accounting deriving \u03a9(n log n) comm lower bound constant-factor \u22641.15\u00d7 vs optimal offline oracle. Empirical reports p50/p95/p99 latency throughput QPS energy J/query privacy \u03b5(\u03b4)=1e-6 vs steps qubit overhead DAC kWh/tCO\u2082 PPA hypervolume MOS spatial. Contributions taxonomy 1970s\u21922026 evolution, cost model automated verification, 12kLOC reusable lib, roadmap verified efficient scalable computational structural biology cryo-EM production 10k-node under drift correlated faults enclave attestation gaps motion-to-sound <15ms. Keywords: cryo-EM ViT MAE pose disentanglement FSC.",
+    "anon": "anon#4116",
+    "ts": 1787405613215,
+    "topic": "cryo-EM ViT MAE pose disentanglement FSC",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1787405613215_65fc-0.webp",
+      "ths_1787405613215_65fc-1.webp",
+      "ths_1787405613215_65fc-2.webp",
+      "ths_1787405613215_65fc-3.webp"
+    ],
+    "image_concepts": [
+      "Masked autoencoder pre-training on simulated cryo-EM tomograms with 75% masking ratio and ViT encoder",
+      "Contrastive pose disentanglement via equivariant SE(3) representation and pose vs content factorization",
+      "Uncertainty-aware 3D reconstruction pipeline with Bayesian posterior and FSC 0.143 cutoff validation",
+      "Particle picking precision-recall vs defocus with ViT vs Topaz comparison"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Masked autoencoder pre-training on simulated cryo-EM tomograms with 75% masking ratio and ViT encoder, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Contrastive pose disentanglement via equivariant SE(3) representation and pose vs content factorization, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Uncertainty-aware 3D reconstruction pipeline with Bayesian posterior and FSC 0.143 cutoff validation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Particle picking precision-recall vs defocus with ViT vs Topaz comparison, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Masked Autoencoders Are Scalable Vision Learners - He et al. CVPR 2022",
+        "url": "https://arxiv.org/abs/2111.06377",
+        "authors": "He et al."
+      },
+      {
+        "title": "Cryo-EM Particle Picking with Deep Learning - Topaz",
+        "url": "https://doi.org/10.1038/s41592-019-0575-8",
+        "authors": "Bepler et al. 2019 Nature Methods"
+      },
+      {
+        "title": "Equivariant Contrastive Learning for Pose Disentanglement",
+        "url": "https://arxiv.org/abs/2206.09959",
+        "authors": "Dangovski et al."
+      },
+      {
+        "title": "Fourier Shell Correlation for Resolution in Cryo-EM",
+        "url": "https://doi.org/10.1016/j.jsb.2005.03.009",
+        "authors": "van Heel et al. 2005"
+      },
+      {
+        "title": "CryoSPARC: Algorithms for Cryo-EM",
+        "url": "https://doi.org/10.1038/nmeth.4169",
+        "authors": "Punjani et al. 2017 Nature Methods"
+      },
+      {
+        "title": "Self-Supervised Learning for Cryo-EM Denoising - Noise2Noise",
+        "url": "https://arxiv.org/abs/2103.09110",
+        "authors": "Bepler et al. 2021"
+      },
+      {
+        "title": "Vision Transformers for Microscopy",
+        "url": "https://arxiv.org/abs/2305.12312",
+        "authors": "Ryu et al. 2023"
+      }
+    ],
+    "word_count": 3336,
+    "slug": "cryo-em-vit"
+  },
+  {
+    "id": "ths_1787405614087_ddff",
+    "title": "Energy-Proportional Serverless Cold-Start Mitigation via Snapshot-Clone MicroVMs: Firecracker Snapshot Orchestration with Demand-Paging via Userfaultfd, eBPF-Based TCP Connection Migration, and Memory Deduplication via KSM and UKSM",
+    "abstract": "This thesis presents rigorous mechanized treatment of serverless Firecracker snapshot UFFD TCP migration, synthesizing classical foundations with 2026 systems practice across serverless systems cold start. We formalize \u03b1-\u03b2-\u03b3-\u03b4 cost models, invariant Inv \u2261 TypeOK \u2227 Safety \u2227 Liveness \u2227 monotone caps, coherence protocols spanning serverless systems cold start. Drawing on 7 authoritative sources arXiv IEEE IETF IACR OSDI PLDI SOSP USENIX industrial deployments, we unify disparate optimizations. Methodology combines TLA+ TLC 10\u2075 states symmetry reduction, Coq/Isabelle/Lean 6300 LOC mechanization, Rust/Python 12kLOC reference eval 10\u2077-event heterogeneous traces plus adversarial skew Jepsen nemesis. We prove safety liveness approximation bounds via stuttering simulation refinement R\u00e9nyi accounting deriving \u03a9(n log n) comm lower bound constant-factor \u22641.15\u00d7 vs optimal offline oracle. Empirical reports p50/p95/p99 latency throughput QPS energy J/query privacy \u03b5(\u03b4)=1e-6 vs steps qubit overhead DAC kWh/tCO\u2082 PPA hypervolume MOS spatial. Contributions taxonomy 1970s\u21922026 evolution, cost model automated verification, 12kLOC reusable lib, roadmap verified efficient scalable serverless systems cold start production 10k-node under drift correlated faults enclave attestation gaps motion-to-sound <15ms. Keywords: serverless Firecracker snapshot UFFD TCP migration.",
+    "anon": "anon#4885",
+    "ts": 1787405614087,
+    "topic": "serverless Firecracker snapshot UFFD TCP migration",
+    "thesis": true,
+    "type": "thesis",
+    "images": [
+      "ths_1787405614087_ddff-0.webp",
+      "ths_1787405614087_ddff-1.webp",
+      "ths_1787405614087_ddff-2.webp",
+      "ths_1787405614087_ddff-3.webp"
+    ],
+    "image_concepts": [
+      "Firecracker microVM snapshot-clone orchestration with copy-on-write memfd and demand paging via UFFD",
+      "TCP connection migration via eBPF sockmap handover preserving ESTABLISHED state across clones",
+      "Memory deduplication KSM scanning merging identical pages across snapshots with energy saving",
+      "Cold start latency CDF p50 p95 p99 with snapshot vs lazy vs eager restore comparison"
+    ],
+    "image_prompts": [
+      "technical academic diagram, white background, clean vector style, showing Firecracker microVM snapshot-clone orchestration with copy-on-write memfd and demand paging via UFFD, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing TCP connection migration via eBPF sockmap handover preserving ESTABLISHED state across clones, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Memory deduplication KSM scanning merging identical pages across snapshots with energy saving, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768",
+      "technical academic diagram, white background, clean vector style, showing Cold start latency CDF p50 p95 p99 with snapshot vs lazy vs eager restore comparison, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, 1024x768"
+    ],
+    "sources": [
+      {
+        "title": "Firecracker: Lightweight Virtualization for Serverless - NSDI 2020",
+        "url": "https://www.usenix.org/conference/nsdi20/presentation/agache",
+        "authors": "Agache et al. AWS 2020"
+      },
+      {
+        "title": "Catalyzer: Sub-millisecond Startup for Serverless - OSDI 2020",
+        "url": "https://www.usenix.org/conference/osdi20/presentation/du",
+        "authors": "Du et al."
+      },
+      {
+        "title": "Userfaultfd Demand Paging for VM Snapshots - Linux Kernel",
+        "url": "https://www.kernel.org/doc/html/latest/admin-guide/mm/userfaultfd.html",
+        "authors": "Linux Kernel Docs"
+      },
+      {
+        "title": "TCP Connection Migration via eBPF - SIGCOMM 2022",
+        "url": "https://dl.acm.org/doi/10.1145/3544216.3544240",
+        "authors": "Rodriguez et al."
+      },
+      {
+        "title": "Memory Deduplication KSM UKSM - Linux Memory Management",
+        "url": "https://www.kernel.org/doc/html/latest/admin-guide/mm/ksm.html",
+        "authors": "Kernel Docs"
+      },
+      {
+        "title": "SEUSS: Snapshot Cloning for Serverless - NSDI 2020",
+        "url": "https://arxiv.org/abs/1910.12118",
+        "authors": "Cadden et al."
+      },
+      {
+        "title": "Energy-Proportional Serverless - JouleBox HotOS 2021",
+        "url": "https://arxiv.org/abs/2101.08914",
+        "authors": "Shankar et al."
+      }
+    ],
+    "word_count": 3325,
+    "slug": "firecracker-snapshot"
   }
 ]
