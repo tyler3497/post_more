@@ -37500,7 +37500,9 @@
       "technical academic diagram, white background, clean vector style, showing Verified Consensus Protocols: Raft TLA+ Refinement, Multi-Paxos TLAPS Proofs, EPaxos Fast Path, and IronFleet Verdi Coq Certification \u2014 Extended Systems Analysis performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Verified Consensus Protocols: Raft TLA+ Refinement, Multi-Paxos TLAPS Proofs, EPaxos Fast Path, and IronFleet Verdi Coq Certification \u2014 Extended Systems Analysis limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787387355485_1054-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -37545,7 +37547,7 @@
         "authors": "Moraru et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2784
   },
   {
@@ -37789,7 +37791,9 @@
       "technical academic diagram, white background, clean vector style, showing Quantum Error Correction via Surface Codes: Lattice Surgery Merge-Split, Magic State Distillation 15-to-1, BP-OSD Decoding, and Bivariate Bicycle LDPC \u2014 Extended Systems Analysis performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Quantum Error Correction via Surface Codes: Lattice Surgery Merge-Split, Magic State Distillation 15-to-1, BP-OSD Decoding, and Bivariate Bicycle LDPC \u2014 Extended Systems Analysis limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787387359485_20ab-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -37834,7 +37838,7 @@
         "authors": "Litinski 2019"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2819
   },
   {
@@ -37934,7 +37938,9 @@
       "technical academic diagram, white background, clean vector style, showing WebAssembly GC and Component Model: WIT Interface Types, Canonical ABI Lifting/Lowering, Nanoprocess Isolation, and Wasmtime Cranelift Fuel Metering \u2014 Extended Systems Analysis performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing WebAssembly GC and Component Model: WIT Interface Types, Canonical ABI Lifting/Lowering, Nanoprocess Isolation, and Wasmtime Cranelift Fuel Metering \u2014 Extended Systems Analysis limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787387361485_05fb-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -37979,7 +37985,7 @@
         "authors": "Scheller et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2697
   }
 ]
