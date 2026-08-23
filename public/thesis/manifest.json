@@ -16465,6 +16465,7 @@
     ],
     "images": [
       "public/thesis/ths_1787524412125_ff86-0.webp",
+      "public/thesis/ths_1787524412125_ff86-1.webp",
       "public/thesis/ths_1787524412125_ff86-2.webp"
     ],
     "image_concepts": [
@@ -16473,7 +16474,7 @@
       "private evolution via API loop with private voting, variation API, histogram, convergence",
       "DP synthetic data utility-privacy tradeoff Pareto frontier with downstream classifier accuracy"
     ],
-    "image_count": 2
+    "image_count": 3
   },
   {
     "id": "ths_1787524413242_0d9b",
