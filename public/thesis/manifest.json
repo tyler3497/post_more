@@ -47566,9 +47566,12 @@
       "technical academic diagram, white background, clean vector style, showing Adaptive poisoning A Little Is Enough attack, mimic benign variance, evaluation CIFAR-10 non-IID Dirichlet alpha 0.2, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787445079302_1772_e6b4-0.webp"
+      "ths_1787445079302_1772_e6b4-0.webp",
+      "ths_1787445079302_1772_e6b4-1.webp",
+      "ths_1787445079302_1772_e6b4-2.webp",
+      "ths_1787445079302_1772_e6b4-3.webp"
     ],
-    "image_count": 1,
+    "image_count": 4,
     "sources": [
       {
         "title": "Machine Learning with Adversaries: Byzantine Tolerant Gradient Descent",
@@ -47738,8 +47741,13 @@
       "technical academic diagram, white background, clean vector style, showing Cranelift IR CLIF verifier, egraph SSA dominance, verified register allocation greedy linear scan with proof witness, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing WAMR AOT emit LLVM via OCaml extraction, CFI shadow stack indirect call type-id check 4-byte tag, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1787445082028_1864_79b8-0.webp",
+      "ths_1787445082028_1864_79b8-1.webp",
+      "ths_1787445082028_1864_79b8-2.webp",
+      "ths_1787445082028_1864_79b8-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "Bringing the Web up to Speed with WebAssembly",
@@ -47795,8 +47803,13 @@
       "technical academic diagram, white background, clean vector style, showing Lag-Llama lag features 7 lags {1,2,3,6,12,24,36}, RoPE, student-T mixture 4 components distribution head, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Conformal prediction ACI adaptive alpha 0.1 coverage 90% marginal time-series Violation under drift, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1787445082976_6908_bfe9-0.webp",
+      "ths_1787445082976_6908_bfe9-1.webp",
+      "ths_1787445082976_6908_bfe9-2.webp",
+      "ths_1787445082976_6908_bfe9-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "Chronos: Learning the Language of Time Series",
@@ -47970,9 +47983,11 @@
     ],
     "images": [
       "ths_1787445086274_4395_8cf8-0.webp",
-      "ths_1787445086274_4395_8cf8-1.webp"
+      "ths_1787445086274_4395_8cf8-1.webp",
+      "ths_1787445086274_4395_8cf8-2.webp",
+      "ths_1787445086274_4395_8cf8-3.webp"
     ],
-    "image_count": 2,
+    "image_count": 4,
     "sources": [
       {
         "title": "AWQ: Activation-aware Weight Quantization for LLM Compression",
@@ -48028,8 +48043,13 @@
       "technical academic diagram, white background, clean vector style, showing Class group Cl(-p) unknown order 2048-bit discriminant p=4*(-big prime) fast reduction Gauss logN 1.2ms mult 1.8ms, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Continuous VDF sequential evaluation T=2^22 ~5 min per beacon, aggregation Nova-style folding recursive SNARK 9 KB proof chain, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "ths_1787445087429_5099_5ee4-0.webp",
+      "ths_1787445087429_5099_5ee4-1.webp",
+      "ths_1787445087429_5099_5ee4-2.webp",
+      "ths_1787445087429_5099_5ee4-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "Efficient Verifiable Delay Functions",
