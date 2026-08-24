@@ -14142,9 +14142,11 @@
       "technical academic diagram, white background, clean vector style, showing WebAssembly GC structural types formal verification state machine with TLA+ invariants, safety proof tree, Coq tactics, highly detailed",
       "technical academic diagram, white background, clean vector style, showing WebAssembly GC structural types performance evaluation with bar charts, 95% CI, throughput vs latency Pareto, energy proportionality, highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1787614403678_be71-0.webp"
+    ],
     "word_count": 2569,
-    "image_count": 0
+    "image_count": 1
   },
   {
     "id": "ths_1787614404678_ef84",
@@ -14203,10 +14205,11 @@
     "images": [
       "ths_1787614404678_ef84-0.webp",
       "ths_1787614404678_ef84-1.webp",
-      "ths_1787614404678_ef84-2.webp"
+      "ths_1787614404678_ef84-2.webp",
+      "ths_1787614404678_ef84-3.webp"
     ],
     "word_count": 2629,
-    "image_count": 3
+    "image_count": 4
   },
   {
     "id": "ths_1787614405678_142d",
@@ -14262,9 +14265,11 @@
       "technical academic diagram, white background, clean vector style, showing LSM compaction scheduling amplification formal verification state machine with TLA+ invariants, safety proof tree, Coq tactics, highly detailed",
       "technical academic diagram, white background, clean vector style, showing LSM compaction scheduling amplification performance evaluation with bar charts, 95% CI, throughput vs latency Pareto, energy proportionality, highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1787614405678_142d-0.webp"
+    ],
     "word_count": 2594,
-    "image_count": 0
+    "image_count": 1
   },
   {
     "id": "ths_1787614406678_eb11",
@@ -14323,10 +14328,11 @@
     "images": [
       "ths_1787614406678_eb11-0.webp",
       "ths_1787614406678_eb11-1.webp",
-      "ths_1787614406678_eb11-2.webp"
+      "ths_1787614406678_eb11-2.webp",
+      "ths_1787614406678_eb11-3.webp"
     ],
     "word_count": 2616,
-    "image_count": 3
+    "image_count": 4
   },
   {
     "id": "ths_1787614407678_3d42",
@@ -14382,9 +14388,11 @@
       "technical academic diagram, white background, clean vector style, showing LEO ISL routing FSO formal verification state machine with TLA+ invariants, safety proof tree, Coq tactics, highly detailed",
       "technical academic diagram, white background, clean vector style, showing LEO ISL routing FSO performance evaluation with bar charts, 95% CI, throughput vs latency Pareto, energy proportionality, highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1787614407678_3d42-0.webp"
+    ],
     "word_count": 2602,
-    "image_count": 0
+    "image_count": 1
   },
   {
     "id": "ths_1787614408678_c524",
@@ -14443,10 +14451,11 @@
     "images": [
       "ths_1787614408678_c524-0.webp",
       "ths_1787614408678_c524-1.webp",
-      "ths_1787614408678_c524-2.webp"
+      "ths_1787614408678_c524-2.webp",
+      "ths_1787614408678_c524-3.webp"
     ],
     "word_count": 2600,
-    "image_count": 3
+    "image_count": 4
   },
   {
     "id": "ths_1787614409678_c1e8",
@@ -14563,10 +14572,11 @@
     "images": [
       "ths_1787614410678_db4f-0.webp",
       "ths_1787614410678_db4f-1.webp",
-      "ths_1787614410678_db4f-2.webp"
+      "ths_1787614410678_db4f-2.webp",
+      "ths_1787614410678_db4f-3.webp"
     ],
     "word_count": 2603,
-    "image_count": 3
+    "image_count": 4
   },
   {
     "id": "ths_1787614411678_6262",
