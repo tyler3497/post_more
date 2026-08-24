@@ -10836,7 +10836,11 @@
       "technical academic diagram, white background, clean vector style, showing fault-tolerant threshold plots, logical error vs physical error curves for surface code vs qLDPC Tanner vs BB codes, rate versus distance tradeoff, table, graphs, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing end-to-end fault-tolerant architecture with qLDPC memory, lattice surgery bus, surface code compute plane, magic state distillation 15-to-1 factory recursive levels, qubit overhead arrows, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787549504386_a549-0.webp",
+      "ths_1787549504386_a549-1.webp",
+      "ths_1787549504386_a549-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -10881,7 +10885,7 @@
         "authors": "Moussa 2026"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 4029
   }
 ]
