@@ -10912,7 +10912,11 @@
       "technical academic diagram, white background, clean vector style, showing Secure Multi-Party Computation at Scale: SPDZ Over Shared Secret Sharing, BMR Garbled Circuits, OT Extension via IKNP, and Beaver Triple Preprocessing for Malicious Majority performance evaluation charts, latency throughput tradeoff, benchmark bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Secure Multi-Party Computation at Scale: SPDZ Over Shared Secret Sharing, BMR Garbled Circuits, OT Extension via IKNP, and Beaver Triple Preprocessing for Malicious Majority limitations tradeoff radar, future work roadmap, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787556776325_c0753d6a-0.webp",
+      "ths_1787556776325_c0753d6a-1.webp",
+      "ths_1787556776325_c0753d6a-2.webp"
+    ],
     "sources": [
       {
         "title": "SPDZ: Efficient MPC Modulo 2^k with Active Security - CCS 2018",
@@ -11034,7 +11038,10 @@
       "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Proofs for Verifiable Machine Learning: Plonkish Arithmetization, Halo2 Recursion, Nova Folding Schemes, and GKR Protocol for Deep Neural Network Inference performance evaluation charts, latency throughput tradeoff, benchmark bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Proofs for Verifiable Machine Learning: Plonkish Arithmetization, Halo2 Recursion, Nova Folding Schemes, and GKR Protocol for Deep Neural Network Inference limitations tradeoff radar, future work roadmap, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787556778247_457adbd2-0.webp",
+      "ths_1787556778247_457adbd2-1.webp"
+    ],
     "sources": [
       {
         "title": "PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive Arguments of Knowledge - ePrint 2019/953",
@@ -11156,7 +11163,9 @@
       "technical academic diagram, white background, clean vector style, showing Mitigating Serverless Cold Starts via MicroVM Snapshot Restore: Firecracker Memory Deduplication, gVisor Sentry/Gofer Isolation, Snapshot-Based CRIU SECCOMP, and Predictive Pre-Warming with Queueing Models performance evaluation charts, latency throughput tradeoff, benchmark bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Mitigating Serverless Cold Starts via MicroVM Snapshot Restore: Firecracker Memory Deduplication, gVisor Sentry/Gofer Isolation, Snapshot-Based CRIU SECCOMP, and Predictive Pre-Warming with Queueing Models limitations tradeoff radar, future work roadmap, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787556780263_7becc14e-0.webp"
+    ],
     "sources": [
       {
         "title": "Firecracker: Lightweight Virtualization for Serverless Applications - NSDI 2020",
@@ -11278,7 +11287,10 @@
       "technical academic diagram, white background, clean vector style, showing Formal Verification of Move Smart Contracts: Linear Resource Types, Borrow Semantics with Stacked Borrows, Certora Prover CVL Specification, and Move Prover Boogie Translation with Abilities performance evaluation charts, latency throughput tradeoff, benchmark bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Formal Verification of Move Smart Contracts: Linear Resource Types, Borrow Semantics with Stacked Borrows, Certora Prover CVL Specification, and Move Prover Boogie Translation with Abilities limitations tradeoff radar, future work roadmap, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787556782235_d34ae32a-0.webp",
+      "ths_1787556782235_d34ae32a-1.webp"
+    ],
     "sources": [
       {
         "title": "The Move Language: Safe Smart Contracts on Diem Blockchain - 2019",
@@ -11400,7 +11412,11 @@
       "technical academic diagram, white background, clean vector style, showing Adaptive Bitrate Streaming over QUIC: MPC-Based Rate Control, Pensieve Reinforcement Learning ABR, BOLA Lyapunov Optimization, and Connection Migration-Aware Buffer Management for Live Low-Latency performance evaluation charts, latency throughput tradeoff, benchmark bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Adaptive Bitrate Streaming over QUIC: MPC-Based Rate Control, Pensieve Reinforcement Learning ABR, BOLA Lyapunov Optimization, and Connection Migration-Aware Buffer Management for Live Low-Latency limitations tradeoff radar, future work roadmap, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787556784556_d17b6537-0.webp",
+      "ths_1787556784556_d17b6537-1.webp",
+      "ths_1787556784556_d17b6537-2.webp"
+    ],
     "sources": [
       {
         "title": "MPC: Robust Model Predictive Control for ABR Streaming - SIGCOMM 2015",
@@ -11461,7 +11477,9 @@
       "technical academic diagram, white background, clean vector style, showing Market Microstructure for High-Frequency Trading: Limit Order Book Dynamics, Hawkes Process Self-Excitation for Order Flow, Adverse Selection via Glosten-Milgrom, and Optimal Execution with Almgren-Chriss Impact performance evaluation charts, latency throughput tradeoff, benchmark bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Market Microstructure for High-Frequency Trading: Limit Order Book Dynamics, Hawkes Process Self-Excitation for Order Flow, Adverse Selection via Glosten-Milgrom, and Optimal Execution with Almgren-Chriss Impact limitations tradeoff radar, future work roadmap, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787556785600_cfbe7672-0.webp"
+    ],
     "sources": [
       {
         "title": "Market Microstructure: Theory and Empirics - Foucault et al. 2023 Book",
