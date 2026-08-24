@@ -14143,10 +14143,13 @@
       "technical academic diagram, white background, clean vector style, showing WebAssembly GC structural types performance evaluation with bar charts, 95% CI, throughput vs latency Pareto, energy proportionality, highly detailed"
     ],
     "images": [
-      "ths_1787614403678_be71-0.webp"
+      "ths_1787614403678_be71-0.webp",
+      "ths_1787614403678_be71-1.webp",
+      "ths_1787614403678_be71-2.webp",
+      "ths_1787614403678_be71-3.webp"
     ],
     "word_count": 2569,
-    "image_count": 1
+    "image_count": 4
   },
   {
     "id": "ths_1787614404678_ef84",
@@ -14266,10 +14269,13 @@
       "technical academic diagram, white background, clean vector style, showing LSM compaction scheduling amplification performance evaluation with bar charts, 95% CI, throughput vs latency Pareto, energy proportionality, highly detailed"
     ],
     "images": [
-      "ths_1787614405678_142d-0.webp"
+      "ths_1787614405678_142d-0.webp",
+      "ths_1787614405678_142d-1.webp",
+      "ths_1787614405678_142d-2.webp",
+      "ths_1787614405678_142d-3.webp"
     ],
     "word_count": 2594,
-    "image_count": 1
+    "image_count": 4
   },
   {
     "id": "ths_1787614406678_eb11",
@@ -14389,10 +14395,13 @@
       "technical academic diagram, white background, clean vector style, showing LEO ISL routing FSO performance evaluation with bar charts, 95% CI, throughput vs latency Pareto, energy proportionality, highly detailed"
     ],
     "images": [
-      "ths_1787614407678_3d42-0.webp"
+      "ths_1787614407678_3d42-0.webp",
+      "ths_1787614407678_3d42-1.webp",
+      "ths_1787614407678_3d42-2.webp",
+      "ths_1787614407678_3d42-3.webp"
     ],
     "word_count": 2602,
-    "image_count": 1
+    "image_count": 4
   },
   {
     "id": "ths_1787614408678_c524",
@@ -14511,9 +14520,14 @@
       "technical academic diagram, white background, clean vector style, showing seL4 verification capability isolation formal verification state machine with TLA+ invariants, safety proof tree, Coq tactics, highly detailed",
       "technical academic diagram, white background, clean vector style, showing seL4 verification capability isolation performance evaluation with bar charts, 95% CI, throughput vs latency Pareto, energy proportionality, highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1787614409678_c1e8-0.webp",
+      "ths_1787614409678_c1e8-1.webp",
+      "ths_1787614409678_c1e8-2.webp",
+      "ths_1787614409678_c1e8-3.webp"
+    ],
     "word_count": 2581,
-    "image_count": 0
+    "image_count": 4
   },
   {
     "id": "ths_1787614410678_db4f",
@@ -14632,8 +14646,13 @@
       "technical academic diagram, white background, clean vector style, showing neural audio codecs RVQ-VAE formal verification state machine with TLA+ invariants, safety proof tree, Coq tactics, highly detailed",
       "technical academic diagram, white background, clean vector style, showing neural audio codecs RVQ-VAE performance evaluation with bar charts, 95% CI, throughput vs latency Pareto, energy proportionality, highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1787614411678_6262-0.webp",
+      "ths_1787614411678_6262-1.webp",
+      "ths_1787614411678_6262-2.webp",
+      "ths_1787614411678_6262-3.webp"
+    ],
     "word_count": 2599,
-    "image_count": 0
+    "image_count": 4
   }
 ]
