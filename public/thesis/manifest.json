@@ -21959,7 +21959,8 @@
     "images": [
       "/thesis/ths_1787657363147_1c01-0.webp",
       "/thesis/ths_1787657363147_1c01-1.webp",
-      "/thesis/ths_1787657363147_1c01-2.webp"
+      "/thesis/ths_1787657363147_1c01-2.webp",
+      "/thesis/ths_1787657363147_1c01-3.webp"
     ],
     "sources": [
       {
@@ -21998,7 +21999,7 @@
         "authors": "Subramanya et al."
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2078
   },
   {
@@ -22023,7 +22024,12 @@
       "technical academic diagram, white background, clean vector style, showing Kafka idempotent producer sequence number and transaction coordinator, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Differential dataflow incremental maintenance with difference collections, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "/thesis/ths_1787657364147_2c02-0.webp",
+      "/thesis/ths_1787657364147_2c02-1.webp",
+      "/thesis/ths_1787657364147_2c02-2.webp",
+      "/thesis/ths_1787657364147_2c02-3.webp"
+    ],
     "sources": [
       {
         "title": "Apache Flink Stream Processing - State Management and Checkpointing",
@@ -22061,7 +22067,7 @@
         "authors": "Carbone et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2077
   },
   {
@@ -22088,7 +22094,9 @@
     ],
     "images": [
       "/thesis/ths_1787657365147_3d03-0.webp",
-      "/thesis/ths_1787657365147_3d03-1.webp"
+      "/thesis/ths_1787657365147_3d03-1.webp",
+      "/thesis/ths_1787657365147_3d03-2.webp",
+      "/thesis/ths_1787657365147_3d03-3.webp"
     ],
     "sources": [
       {
@@ -22127,7 +22135,7 @@
         "authors": "MLSys 2021"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2049
   },
   {
@@ -22152,7 +22160,12 @@
       "technical academic diagram, white background, clean vector style, showing LTL liveness properties for Raft with temporal operators, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Reconfiguration joint consensus with old/new quorum overlap, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "/thesis/ths_1787657366147_4e04-0.webp",
+      "/thesis/ths_1787657366147_4e04-1.webp",
+      "/thesis/ths_1787657366147_4e04-2.webp",
+      "/thesis/ths_1787657366147_4e04-3.webp"
+    ],
     "sources": [
       {
         "title": "In Search of an Understandable Consensus Algorithm - Raft Paper",
@@ -22190,7 +22203,7 @@
         "authors": "CMU 2020"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2047
   },
   {
