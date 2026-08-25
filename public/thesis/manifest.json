@@ -23759,7 +23759,8 @@
     ],
     "images": [
       "ths_1787664712045_bfcb-0.webp",
-      "ths_1787664712045_bfcb-1.webp"
+      "ths_1787664712045_bfcb-1.webp",
+      "ths_1787664712045_bfcb-2.webp"
     ],
     "sources": [
       {
@@ -23798,7 +23799,7 @@
         "authors": "Rappaport et al."
       }
     ],
-    "image_count": 2,
+    "image_count": 3,
     "word_count": 3793
   },
   {
@@ -23824,7 +23825,9 @@
       "technical academic diagram white background clean vector style showing causal discovery FCI PAG KCI GES quantitative evaluation bar chart p50 p99 throughput energy 95 CI",
       "technical academic diagram white background clean vector style showing causal discovery FCI PAG KCI GES formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1787664713053_e533-0.webp"
+    ],
     "sources": [
       {
         "title": "Causation Prediction and Search - Spirtes Glymour Scheines 2000 FCI",
@@ -23862,7 +23865,7 @@
         "authors": "Ramsey et al. Tetrad"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 3745
   },
   {
