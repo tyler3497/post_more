@@ -21405,7 +21405,12 @@
       "technical academic diagram, white background, clean vector style, showing HBM3e bandwidth-aware prefetch engine for KV-cache, 4.8 TB/s HBM3e, TMA multicast to 4 SMs, L2 resident FP8 scale cache, paged KV 2MB pages, GQA head grouping 8 query to 1 KV, adaptive block size Bc formula, bandwidth utilization 81%, nodes, arrows, memory hierarchy layers, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing end-to-end 1M context inference co-design integration, flowchart from sparsity prediction to S-SpMM tiled QKV generation to FA3 fused kernel to prefetch orchestrator, TTFT vs sequence length log-log plot with curves for FA2, FA3, STAR, PADE, and ours, 9.2x speedup annotation, energy per token bar chart, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787653771040_c9d0-0.webp",
+      "ths_1787653771040_c9d0-1.webp",
+      "ths_1787653771040_c9d0-2.webp",
+      "ths_1787653771040_c9d0-3.webp"
+    ],
     "sources": [
       "https://arxiv.org/abs/2407.08608",
       "https://arxiv.org/abs/2205.14135",
@@ -21418,7 +21423,7 @@
       "https://github.com/adityaa-saha17/sparse-matrix-multiplication",
       "http://arxiv.org/pdf/2503.09650"
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3227,
     "wordcount": 3227
   },
@@ -21604,7 +21609,12 @@
       "technical academic diagram, white background, clean vector style, showing nanopore insertion deletion channel HMM with drift states, watermark inner code factor graph, forward backward trellis, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing biochemical constraint screening for DNA storage, GC content histogram 40-60 percent, homopolymer avoidance table, secondary structure filtering, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787653774040_c5e6-0.webp",
+      "ths_1787653774040_c5e6-1.webp",
+      "ths_1787653774040_c5e6-2.webp",
+      "ths_1787653774040_c5e6-3.webp"
+    ],
     "sources": [
       {
         "authors": "Erlich & Zielinski, Science 2017",
