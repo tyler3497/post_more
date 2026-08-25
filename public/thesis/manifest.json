@@ -28876,7 +28876,8 @@
     ],
     "images": [
       "ths_1787689877760_c275-0.webp",
-      "ths_1787689877760_c275-1.webp"
+      "ths_1787689877760_c275-1.webp",
+      "ths_1787689877760_c275-2.webp"
     ],
     "sources": [
       {
@@ -28922,7 +28923,7 @@
         "authors": "Cheon et al. 2018"
       }
     ],
-    "image_count": 2,
+    "image_count": 3,
     "word_count": 2704
   },
   {
@@ -28948,7 +28949,8 @@
       "technical academic diagram, white background, clean vector style, showing Crash-Consistent Persistent Memory Transactions: PMDK libpmemobj Transactional Semantics, Romulus Lock-Free Logging, Pisces Dual Views, and CXL Persistent Memory Flush Semantics limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787689878760_dd56-0.webp"
+      "ths_1787689878760_dd56-0.webp",
+      "ths_1787689878760_dd56-1.webp"
     ],
     "sources": [
       {
@@ -28994,7 +28996,7 @@
         "authors": "Liu et al. ASPLOS 2019"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2720
   },
   {
@@ -29096,7 +29098,9 @@
     ],
     "images": [
       "ths_1787689880760_b0a4-0.webp",
-      "ths_1787689880760_b0a4-1.webp"
+      "ths_1787689880760_b0a4-1.webp",
+      "ths_1787689880760_b0a4-2.webp",
+      "ths_1787689880760_b0a4-3.webp"
     ],
     "sources": [
       {
@@ -29142,7 +29146,7 @@
         "authors": "AWS Docs"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2741
   },
   {
