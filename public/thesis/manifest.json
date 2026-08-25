@@ -23297,10 +23297,7 @@
       "technical academic diagram white background clean vector style showing homomorphic encryption PIR acceleration formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
     "images": [
-      "ths_1787664705332_5f51-0.webp",
-      "ths_1787664705332_5f51-1.webp",
-      "ths_1787664705332_5f51-2.webp",
-      "ths_1787664705332_5f51-3.webp"
+      "ths_1787664705332_5f51-0.webp"
     ],
     "sources": [
       {
@@ -23339,7 +23336,7 @@
         "authors": "Brakerski et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 3724
   },
   {
@@ -23366,10 +23363,7 @@
       "technical academic diagram white background clean vector style showing verified WebAssembly compilation Cranelift LLVM formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
     "images": [
-      "ths_1787664706196_6caf-0.webp",
-      "ths_1787664706196_6caf-1.webp",
-      "ths_1787664706196_6caf-2.webp",
-      "ths_1787664706196_6caf-3.webp"
+      "ths_1787664706196_6caf-0.webp"
     ],
     "sources": [
       {
@@ -23408,7 +23402,7 @@
         "authors": "Bytecode Alliance"
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 3700
   },
   {
@@ -23434,12 +23428,7 @@
       "technical academic diagram white background clean vector style showing neuromorphic spiking Loihi 2 STDP quantitative evaluation bar chart p50 p99 throughput energy 95 CI",
       "technical academic diagram white background clean vector style showing neuromorphic spiking Loihi 2 STDP formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
-    "images": [
-      "ths_1787664707325_0bcd-0.webp",
-      "ths_1787664707325_0bcd-1.webp",
-      "ths_1787664707325_0bcd-2.webp",
-      "ths_1787664707325_0bcd-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "title": "Loihi 2: A New Architecture for Brain-Inspired Computing - Intel 2021",
@@ -23477,7 +23466,7 @@
         "authors": "Blouw et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 3763
   },
   {
@@ -23504,10 +23493,7 @@
       "technical academic diagram white background clean vector style showing BFT SMR HotStuff-2 BLS threshold formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
     "images": [
-      "ths_1787664708145_1225-0.webp",
-      "ths_1787664708145_1225-1.webp",
-      "ths_1787664708145_1225-2.webp",
-      "ths_1787664708145_1225-3.webp"
+      "ths_1787664708145_1225-0.webp"
     ],
     "sources": [
       {
@@ -23546,7 +23532,7 @@
         "authors": "Diem Team"
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 3713
   },
   {
@@ -23572,12 +23558,7 @@
       "technical academic diagram white background clean vector style showing differential privacy GWAS genomics quantitative evaluation bar chart p50 p99 throughput energy 95 CI",
       "technical academic diagram white background clean vector style showing differential privacy GWAS genomics formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
-    "images": [
-      "ths_1787664709293_a4b2-0.webp",
-      "ths_1787664709293_a4b2-1.webp",
-      "ths_1787664709293_a4b2-2.webp",
-      "ths_1787664709293_a4b2-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "title": "The Algorithmic Foundations of Differential Privacy - Dwork Roth 2014",
@@ -23615,7 +23596,7 @@
         "authors": "Raisaro et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 3743
   },
   {
@@ -23643,9 +23624,7 @@
     ],
     "images": [
       "ths_1787664710199_e001-0.webp",
-      "ths_1787664710199_e001-1.webp",
-      "ths_1787664710199_e001-2.webp",
-      "ths_1787664710199_e001-3.webp"
+      "ths_1787664710199_e001-1.webp"
     ],
     "sources": [
       {
@@ -23684,7 +23663,7 @@
         "authors": "AWS Science"
       }
     ],
-    "image_count": 4,
+    "image_count": 2,
     "word_count": 3731
   },
   {
@@ -23710,12 +23689,7 @@
       "technical academic diagram white background clean vector style showing formal synthesis GR1 LTL DPA CEGIS quantitative evaluation bar chart p50 p99 throughput energy 95 CI",
       "technical academic diagram white background clean vector style showing formal synthesis GR1 LTL DPA CEGIS formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
-    "images": [
-      "ths_1787664711206_9d6e-0.webp",
-      "ths_1787664711206_9d6e-1.webp",
-      "ths_1787664711206_9d6e-2.webp",
-      "ths_1787664711206_9d6e-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "title": "Synthesis of Reactive(1) Designs - Piterman et al. VMCAI 2006 GR(1)",
@@ -23753,7 +23727,7 @@
         "authors": "Kupferman Vardi"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 3762
   },
   {
@@ -23779,12 +23753,7 @@
       "technical academic diagram white background clean vector style showing ABR 8K VR 5G QUIC SVC foveated quantitative evaluation bar chart p50 p99 throughput energy 95 CI",
       "technical academic diagram white background clean vector style showing ABR 8K VR 5G QUIC SVC foveated formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
-    "images": [
-      "ths_1787664712045_bfcb-0.webp",
-      "ths_1787664712045_bfcb-1.webp",
-      "ths_1787664712045_bfcb-2.webp",
-      "ths_1787664712045_bfcb-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "title": "QUIC Transport Protocol - RFC 9000 IETF 2021",
@@ -23822,7 +23791,7 @@
         "authors": "Rappaport et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 3793
   },
   {
@@ -23848,12 +23817,7 @@
       "technical academic diagram white background clean vector style showing causal discovery FCI PAG KCI GES quantitative evaluation bar chart p50 p99 throughput energy 95 CI",
       "technical academic diagram white background clean vector style showing causal discovery FCI PAG KCI GES formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
-    "images": [
-      "ths_1787664713053_e533-0.webp",
-      "ths_1787664713053_e533-1.webp",
-      "ths_1787664713053_e533-2.webp",
-      "ths_1787664713053_e533-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "title": "Causation Prediction and Search - Spirtes Glymour Scheines 2000 FCI",
@@ -23891,7 +23855,7 @@
         "authors": "Ramsey et al. Tetrad"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 3745
   },
   {
@@ -23918,10 +23882,7 @@
       "technical academic diagram white background clean vector style showing confidential ML SGX SEV-SNP H100 CC formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
     "images": [
-      "ths_1787664714284_66f3-0.webp",
-      "ths_1787664714284_66f3-1.webp",
-      "ths_1787664714284_66f3-2.webp",
-      "ths_1787664714284_66f3-3.webp"
+      "ths_1787664714284_66f3-0.webp"
     ],
     "sources": [
       {
@@ -23960,7 +23921,7 @@
         "authors": "Li et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 3776
   }
 ]
