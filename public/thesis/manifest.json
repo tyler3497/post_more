@@ -21120,7 +21120,8 @@
     "images": [
       "ths_1787653767040_a1b2-0.webp",
       "ths_1787653767040_a1b2-1.webp",
-      "ths_1787653767040_a1b2-2.webp"
+      "ths_1787653767040_a1b2-2.webp",
+      "ths_1787653767040_a1b2-3.webp"
     ],
     "sources": [
       {
@@ -21180,7 +21181,9 @@
     ],
     "images": [
       "ths_1787653768040_c3d4-0.webp",
-      "ths_1787653768040_c3d4-1.webp"
+      "ths_1787653768040_c3d4-1.webp",
+      "ths_1787653768040_c3d4-2.webp",
+      "ths_1787653768040_c3d4-3.webp"
     ],
     "sources": [
       {
@@ -21246,7 +21249,12 @@
       "technical academic diagram, white background, clean vector style, showing 8K NeRF telepresence performance evaluation, PSNR vs bitrate curve, FPS vs resolution bar chart, latency pie chart 77ms breakdown, VMAF vs QP, energy per frame, tables, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing volumetric telepresence limitation and future roadmap, tradeoff triangle bandwidth-quality-latency, hardware constraints Snapdragon vs RTX 4090, design space radar, future 12K foveated, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787653769040_e5f6-0.webp",
+      "ths_1787653769040_e5f6-1.webp",
+      "ths_1787653769040_e5f6-2.webp",
+      "ths_1787653769040_e5f6-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -21516,7 +21524,9 @@
       "technical academic diagram, white background, clean vector style, showing CUPED CUPAC synthetic control variance reduction, scatter correlation, variance factor 1 minus rho squared, donor weighting, tight confidence intervals, bars and arrows, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787653773040_a3b4-0.webp"
+      "ths_1787653773040_a3b4-0.webp",
+      "ths_1787653773040_a3b4-1.webp",
+      "ths_1787653773040_a3b4-2.webp"
     ],
     "sources": [
       {
@@ -21568,7 +21578,7 @@
         "authors": "Abadie, Diamond, Hainmueller 2010"
       }
     ],
-    "image_count": 4,
+    "image_count": 3,
     "word_count": 2670,
     "wordcount": 2670
   },
@@ -21678,7 +21688,12 @@
       "technical academic diagram, white background, clean vector style, showing MARL performance comparison QMIX MAPPO VDN IQL collision vs throughput vs comfort empirical graphs benchmark bars tables CBVF dual shield proactive reactive safety filter, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing MARL intersection management limitation tradeoff radar dimensionality curse DeepReach PINN 9D 20 agents mean-field sim-to-real low adhesion occlusion V2V Byzantine future roadmap design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787653775040_e7f8-0.webp",
+      "ths_1787653775040_e7f8-1.webp",
+      "ths_1787653775040_e7f8-2.webp",
+      "ths_1787653775040_e7f8-3.webp"
+    ],
     "sources": [
       {
         "authors": "Cederle et al.",
@@ -21728,7 +21743,8 @@
     "topic": "MARL Autonomous Intersection",
     "ts": 1787653775040,
     "type": "thesis",
-    "wordcount": 3324
+    "wordcount": 3324,
+    "image_count": 4
   },
   {
     "id": "ths_1787653776040_a9c0",
@@ -21754,7 +21770,8 @@
     ],
     "images": [
       "ths_1787653776040_a9c0-0.webp",
-      "ths_1787653776040_a9c0-1.webp"
+      "ths_1787653776040_a9c0-1.webp",
+      "ths_1787653776040_a9c0-2.webp"
     ],
     "sources": [
       {
@@ -21830,7 +21847,7 @@
         "authors": "Polygon Zero"
       }
     ],
-    "image_count": 4,
+    "image_count": 3,
     "word_count": 2567,
     "wordcount": 2567
   }
