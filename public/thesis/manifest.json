@@ -23363,7 +23363,8 @@
       "technical academic diagram white background clean vector style showing verified WebAssembly compilation Cranelift LLVM formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
     "images": [
-      "ths_1787664706196_6caf-0.webp"
+      "ths_1787664706196_6caf-0.webp",
+      "ths_1787664706196_6caf-2.webp"
     ],
     "sources": [
       {
@@ -23402,7 +23403,7 @@
         "authors": "Bytecode Alliance"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 3700
   },
   {
@@ -23428,7 +23429,9 @@
       "technical academic diagram white background clean vector style showing neuromorphic spiking Loihi 2 STDP quantitative evaluation bar chart p50 p99 throughput energy 95 CI",
       "technical academic diagram white background clean vector style showing neuromorphic spiking Loihi 2 STDP formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1787664707325_0bcd-0.webp"
+    ],
     "sources": [
       {
         "title": "Loihi 2: A New Architecture for Brain-Inspired Computing - Intel 2021",
@@ -23466,7 +23469,7 @@
         "authors": "Blouw et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 3763
   },
   {
@@ -23754,7 +23757,10 @@
       "technical academic diagram white background clean vector style showing ABR 8K VR 5G QUIC SVC foveated quantitative evaluation bar chart p50 p99 throughput energy 95 CI",
       "technical academic diagram white background clean vector style showing ABR 8K VR 5G QUIC SVC foveated formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1787664712045_bfcb-0.webp",
+      "ths_1787664712045_bfcb-1.webp"
+    ],
     "sources": [
       {
         "title": "QUIC Transport Protocol - RFC 9000 IETF 2021",
@@ -23792,7 +23798,7 @@
         "authors": "Rappaport et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 3793
   },
   {
