@@ -28801,7 +28801,9 @@
     ],
     "images": [
       "ths_1787689876760_ac85-0.webp",
-      "ths_1787689876760_ac85-1.webp"
+      "ths_1787689876760_ac85-1.webp",
+      "ths_1787689876760_ac85-2.webp",
+      "ths_1787689876760_ac85-3.webp"
     ],
     "sources": [
       {
@@ -28847,7 +28849,7 @@
         "authors": "Howard et al. 2020"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2704
   },
   {
@@ -29093,7 +29095,8 @@
       "technical academic diagram, white background, clean vector style, showing Lakehouse ACID Transactions at Scale: Delta Lake Log Protocol, Apache Iceberg Snapshot Isolation, Apache Hudi MOR/COPY and Three-Level Metadata Commit via DynamoDB Commit Coordination limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787689880760_b0a4-0.webp"
+      "ths_1787689880760_b0a4-0.webp",
+      "ths_1787689880760_b0a4-1.webp"
     ],
     "sources": [
       {
@@ -29139,7 +29142,7 @@
         "authors": "AWS Docs"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2741
   },
   {
@@ -29240,7 +29243,10 @@
       "technical academic diagram, white background, clean vector style, showing Photonic Integrated Circuits for Deep Neural Network Acceleration: Mach-Zehnder Interferometer Mesh, Microring Resonator Weight Banks, Phase-Change Material Non-Volatile Weights, and WDM Parallelism limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787689882760_f100-0.webp"
+      "ths_1787689882760_f100-0.webp",
+      "ths_1787689882760_f100-1.webp",
+      "ths_1787689882760_f100-2.webp",
+      "ths_1787689882760_f100-3.webp"
     ],
     "sources": [
       {
@@ -29286,7 +29292,7 @@
         "authors": "Sun et al. DATE 2022"
       }
     ],
-    "image_count": 1,
+    "image_count": 4,
     "word_count": 2714
   },
   {
@@ -29383,7 +29389,9 @@
       "technical academic diagram, white background, clean vector style, showing Federated Unlearning with SISA Sharding: Influence Functions for Certified Removal, Gradient Ascent Unlearning, Differential Privacy Amplification, and Secure Aggregation Compatibility performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Federated Unlearning with SISA Sharding: Influence Functions for Certified Removal, Gradient Ascent Unlearning, Differential Privacy Amplification, and Secure Aggregation Compatibility limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787689884760_bf76-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -29428,7 +29436,7 @@
         "authors": "Sekhari et al. NeurIPS 2021"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2659
   }
 ]
