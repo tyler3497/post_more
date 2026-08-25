@@ -28800,7 +28800,8 @@
       "technical academic diagram, white background, clean vector style, showing Formal Verification of Distributed Consensus Protocols: Raft Log Matching, TLA+ Refinement Mapping, Ivy Decidable Fragment, and EPaxos Dependency Graphs limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787689876760_ac85-0.webp"
+      "ths_1787689876760_ac85-0.webp",
+      "ths_1787689876760_ac85-1.webp"
     ],
     "sources": [
       {
@@ -28846,7 +28847,7 @@
         "authors": "Howard et al. 2020"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2704
   },
   {
@@ -29310,7 +29311,9 @@
       "technical academic diagram, white background, clean vector style, showing Verifiable Delay Functions for Decentralized Randomness Beacons: Wesolowski and Pietrzak Proofs, drand Threshold Network, RANDAO Mix with VDF Output, and Formal Sequentiality via Repeated Squaring in Class Groups performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Verifiable Delay Functions for Decentralized Randomness Beacons: Wesolowski and Pietrzak Proofs, drand Threshold Network, RANDAO Mix with VDF Output, and Formal Sequentiality via Repeated Squaring in Class Groups limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787689883760_28d2-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -29355,7 +29358,7 @@
         "authors": "drand Go impl"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2727
   },
   {
