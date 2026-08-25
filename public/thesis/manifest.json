@@ -28877,7 +28877,8 @@
     "images": [
       "ths_1787689877760_c275-0.webp",
       "ths_1787689877760_c275-1.webp",
-      "ths_1787689877760_c275-2.webp"
+      "ths_1787689877760_c275-2.webp",
+      "ths_1787689877760_c275-3.webp"
     ],
     "sources": [
       {
@@ -28923,7 +28924,7 @@
         "authors": "Cheon et al. 2018"
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2704
   },
   {
@@ -28950,7 +28951,9 @@
     ],
     "images": [
       "ths_1787689878760_dd56-0.webp",
-      "ths_1787689878760_dd56-1.webp"
+      "ths_1787689878760_dd56-1.webp",
+      "ths_1787689878760_dd56-2.webp",
+      "ths_1787689878760_dd56-3.webp"
     ],
     "sources": [
       {
@@ -28996,7 +28999,7 @@
         "authors": "Liu et al. ASPLOS 2019"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2720
   },
   {
@@ -29322,7 +29325,10 @@
       "technical academic diagram, white background, clean vector style, showing Verifiable Delay Functions for Decentralized Randomness Beacons: Wesolowski and Pietrzak Proofs, drand Threshold Network, RANDAO Mix with VDF Output, and Formal Sequentiality via Repeated Squaring in Class Groups limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787689883760_28d2-0.webp"
+      "ths_1787689883760_28d2-0.webp",
+      "ths_1787689883760_28d2-1.webp",
+      "ths_1787689883760_28d2-2.webp",
+      "ths_1787689883760_28d2-3.webp"
     ],
     "sources": [
       {
@@ -29368,7 +29374,7 @@
         "authors": "drand Go impl"
       }
     ],
-    "image_count": 1,
+    "image_count": 4,
     "word_count": 2727
   },
   {
@@ -29394,7 +29400,10 @@
       "technical academic diagram, white background, clean vector style, showing Federated Unlearning with SISA Sharding: Influence Functions for Certified Removal, Gradient Ascent Unlearning, Differential Privacy Amplification, and Secure Aggregation Compatibility limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787689884760_bf76-0.webp"
+      "ths_1787689884760_bf76-0.webp",
+      "ths_1787689884760_bf76-1.webp",
+      "ths_1787689884760_bf76-2.webp",
+      "ths_1787689884760_bf76-3.webp"
     ],
     "sources": [
       {
@@ -29440,7 +29449,7 @@
         "authors": "Sekhari et al. NeurIPS 2021"
       }
     ],
-    "image_count": 1,
+    "image_count": 4,
     "word_count": 2659
   }
 ]
