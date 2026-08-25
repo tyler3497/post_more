@@ -28051,7 +28051,9 @@
     ],
     "images": [
       "ths_1787689857760_1182-0.webp",
-      "ths_1787689857760_1182-1.webp"
+      "ths_1787689857760_1182-1.webp",
+      "ths_1787689857760_1182-2.webp",
+      "ths_1787689857760_1182-3.webp"
     ],
     "sources": [
       {
@@ -28097,7 +28099,7 @@
         "authors": "Wasmtime Docs"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2686
   },
   {
@@ -28349,7 +28351,9 @@
     ],
     "images": [
       "ths_1787689861760_11e9-0.webp",
-      "ths_1787689861760_11e9-1.webp"
+      "ths_1787689861760_11e9-1.webp",
+      "ths_1787689861760_11e9-2.webp",
+      "ths_1787689861760_11e9-3.webp"
     ],
     "sources": [
       {
@@ -28395,7 +28399,7 @@
         "authors": "Zhao et al. 2023"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2751
   },
   {
@@ -28646,7 +28650,10 @@
       "technical academic diagram, white background, clean vector style, showing Formal Verification of Linux eBPF Verifier Soundness via Abstract Interpretation: Tnum Precision Loss, Range Analysis with Widening, and Lock Invariant Checking for Deadlock Freedom limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787689865760_17fc-0.webp"
+      "ths_1787689865760_17fc-0.webp",
+      "ths_1787689865760_17fc-1.webp",
+      "ths_1787689865760_17fc-2.webp",
+      "ths_1787689865760_17fc-3.webp"
     ],
     "sources": [
       {
@@ -28692,7 +28699,7 @@
         "authors": "LWN 2022"
       }
     ],
-    "image_count": 1,
+    "image_count": 4,
     "word_count": 2774
   }
 ]
