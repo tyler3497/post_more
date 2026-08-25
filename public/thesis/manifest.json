@@ -23493,7 +23493,8 @@
       "technical academic diagram white background clean vector style showing BFT SMR HotStuff-2 BLS threshold formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
     "images": [
-      "ths_1787664708145_1225-0.webp"
+      "ths_1787664708145_1225-0.webp",
+      "ths_1787664708145_1225-1.webp"
     ],
     "sources": [
       {
@@ -23532,7 +23533,7 @@
         "authors": "Diem Team"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 3713
   },
   {
@@ -23882,7 +23883,8 @@
       "technical academic diagram white background clean vector style showing confidential ML SGX SEV-SNP H100 CC formal verification state machine TLA+ invariants refinement proof highly detailed"
     ],
     "images": [
-      "ths_1787664714284_66f3-0.webp"
+      "ths_1787664714284_66f3-0.webp",
+      "ths_1787664714284_66f3-1.webp"
     ],
     "sources": [
       {
@@ -23921,7 +23923,7 @@
         "authors": "Li et al."
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 3776
   }
 ]
