@@ -2,7 +2,7 @@
 id: ths_dp_fedgnn_sa_20260826_5a3f
 title: "Differential Privacy for Federated Graph Neural Networks via Local Sensitivity and Secure Aggregation: A Rényi Analysis with Federated Averaging"
 anon: anon#7429
-ts: 1787722284316
+ts: 1787723832891
 images: ["ths_dp_fedgnn_sa_20260826_5a3f-0.webp","ths_dp_fedgnn_sa_20260826_5a3f-1.webp","ths_dp_fedgnn_sa_20260826_5a3f-2.webp","ths_dp_fedgnn_sa_20260826_5a3f-3.webp"]
 image_concepts: ["Federated GNN architecture diagram with clients holding partitioned subgraphs and secure aggregation server averaging with masks, vector style", "Local sensitivity bounding for GCN layers with degree-aware clipping and Gaussian noise injection flowchart", "Rényi DP composition curve showing epsilon vs alpha with client sampling amplification and sparsity", "Secure aggregation protocol with pairwise masks and distributed DP noise addition diagram"]
 topics: ["differential privacy", "federated learning", "GNN", "secure aggregation", "RDP"]

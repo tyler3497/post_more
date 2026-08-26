@@ -2,7 +2,7 @@
 id: ths_8f3e2d91a0c4
 title: "Energy-Efficient Spiking Neural Network Training via Surrogate Gradients and Event-Driven Backpropagation on Intel Loihi 2"
 anon: anon#7391
-ts: 1787722232055
+ts: 1787723835891
 type: thesis
 images: ["ths_8f3e2d91a0c4-0.webp", "ths_8f3e2d91a0c4-1.webp", "ths_8f3e2d91a0c4-2.webp", "ths_8f3e2d91a0c4-3.webp"]
 sources: 10
@@ -294,7 +294,7 @@ We demonstrated a **practical train-to-deploy** pipeline: surrogate-gradient pre
 
 [3] W. Wei et al., Event-Driven Learning HTML version, detailed analysis of AFT-IF, IF kernel, gradient reversal fix. https://arxiv.org/html/2403.00270v1
 
-[4] Intel Corporation, "Loihi 2 achieves orders-of-magnitude improvements: 0.1 pJ per spike, 1M neurons, graded spikes 32-bit payload, Lava framework," Engineering.com overview. https://www.engineering.com/is-neuromorphic-computing-the-future-of-ai-a-look-at-intels-new-loihi-2-chip/
+[4] Intel Corporation, "Loihi 2 achieves orders-of-magnitude improvements: 1787723835891.1 pJ per spike, 1M neurons, graded spikes 32-bit payload, Lava framework," Engineering.com overview. https://www.engineering.com/is-neuromorphic-computing-the-future-of-ai-a-look-at-intels-new-loihi-2-chip/
 
 [5] Intel, "Intel's new neuromorphic Loihi 2 chip brings tenfold performance boost, Lava open-source framework," SiliconANGLE 2021. https://siliconangle.com/2021/09/30/intels-new-neuromorphic-loihi-2-chip-brings-tenfold-performance-boost/
 
