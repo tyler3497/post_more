@@ -31789,7 +31789,36 @@
     "type": "thesis",
     "thesis": true,
     "image_count": 4,
-    "sources": []
+    "sources": [
+      {
+        "title": "Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs",
+        "url": "https://arxiv.org/abs/1603.09320"
+      },
+      {
+        "title": "DiskANN: Fast Accurate Billion-point Nearest Neighbor Search on a Single Node",
+        "url": "https://arxiv.org/abs/1905.09418"
+      },
+      {
+        "title": "SPANN: Highly-efficient Billion-scale Approximate Nearest Neighbor Search",
+        "url": "https://arxiv.org/abs/2111.08566"
+      },
+      {
+        "title": "Product quantization for nearest neighbor search",
+        "url": "https://ieeexplore.ieee.org/document/5432202"
+      },
+      {
+        "title": "ACORN: ACORN-\u03b3: Indexing Low-Cardinality Distributions for Filtered Nearest Neighbor Search",
+        "url": "https://arxiv.org/abs/2403.01609"
+      },
+      {
+        "title": "Billion-scale similarity search with GPUs",
+        "url": "https://arxiv.org/abs/1702.08734"
+      },
+      {
+        "title": "ScaNN: Efficient Vector Search",
+        "url": "https://arxiv.org/abs/2004.01663"
+      }
+    ]
   },
   {
     "id": "ths_1787704181000_7e2b",
@@ -32101,7 +32130,36 @@
     "type": "thesis",
     "thesis": true,
     "image_count": 4,
-    "sources": []
+    "sources": [
+      {
+        "title": "Conflict-Based Search For Optimal Multi-Agent Pathfinding",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/8140"
+      },
+      {
+        "title": "Suboptimal Variants of the Conflict-Based Search Algorithm for MAPF",
+        "url": "https://ojs.aaai.org/index.php/SOCS/article/view/18322"
+      },
+      {
+        "title": "LaCAM: Search-Based Algorithm for Quick Multi-Agent Path Finding",
+        "url": "https://arxiv.org/abs/2304.00241"
+      },
+      {
+        "title": "Priority Inheritance with Backtracking for Iterative Multi-agent Path Finding",
+        "url": "https://arxiv.org/abs/1910.11586"
+      },
+      {
+        "title": "Improving LaCAM for Scalable Eventually Optimal Multi-Agent Pathfinding",
+        "url": "https://arxiv.org/abs/2308.03685"
+      },
+      {
+        "title": "Lifelong Multi-Agent Path Finding in Large-Scale Warehouses",
+        "url": "https://arxiv.org/abs/2005.07371"
+      },
+      {
+        "title": "Multi-Agent Path Finding: Definitions, Variants, and Benchmarks",
+        "url": "https://arxiv.org/abs/2202.01181"
+      }
+    ]
   },
   {
     "id": "ths_1787704186000_16216a6b",
@@ -32194,6 +32252,35 @@
     "type": "thesis",
     "thesis": true,
     "image_count": 4,
-    "sources": []
+    "sources": [
+      {
+        "title": "TPM 2.0 Library Specification",
+        "url": "https://trustedcomputinggroup.org/resource/tpm-library-specification/"
+      },
+      {
+        "title": "AMD SEV-SNP: Strengthening VM Isolation with Integrity Protection and More",
+        "url": "https://www.amd.com/content/dam/amd/en/documents/epyc-business-docs/white-papers/SEV-SNP-strengthening-vm-isolation-with-integrity-protection-and-more.pdf"
+      },
+      {
+        "title": "Intel Trust Domain Extensions (Intel TDX) Module Specification",
+        "url": "https://cdrdv2.intel.com/v1/dl/getContent/733575"
+      },
+      {
+        "title": "Security Protocol and Data Model (SPDM) Specification 1.2",
+        "url": "https://www.dmtf.org/dsp/DSP0274"
+      },
+      {
+        "title": "Compute Express Link 3.0 Specification",
+        "url": "https://computeexpresslink.org/about-cxl/"
+      },
+      {
+        "title": "SEV-SNP Attestation: Formal Analysis and Attacks",
+        "url": "https://arxiv.org/abs/2303.15540"
+      },
+      {
+        "title": "Intel TDX Attestation and Security Analysis",
+        "url": "https://arxiv.org/abs/2211.00971"
+      }
+    ]
   }
 ]
