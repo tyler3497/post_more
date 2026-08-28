@@ -22909,5 +22909,303 @@
     ],
     "image_count": 4,
     "word_count": 2626
+  },
+  {
+    "id": "ths_1787934575624_0e5f",
+    "title": "Verifiable Computation via Folding Schemes: Nova, SuperNova, HyperNova Non-Uniform IVC and Custom Gate Folding for Recursive Arguments",
+    "abstract": "Folding schemes have redefined incrementally verifiable computation (IVC) by replacing expensive recursive SNARK verification with a lightweight linear combination of relaxed constraint instances. This thesis provides a unified analysis of the Nova family \u2014 Nova [1], SuperNova [5], and HyperNova [4] \u2014 together with extensions to customizable constraint systems (CCS) [3] and CycleFold [2]. We formalize relaxed R1CS folding, non-uniform IVC for program-like execution where each step may invoke a different circuit, and multi-instance folding for CCS/Plonkish with custom gates and lookup arguments. We prove completeness and knowledge-soundness of the folding verifier, characterize prover cost as a single multi-scalar multiplication (MSM) of size |variables| plus O(1) field operations, and show how a-la-carte cost profiles achieve proportional execution for EVM/RISC-V. We evaluate implementation trade-offs on Pasta and BN254/Grumpkin cycles, discuss zero-knowledge randomization without ZK-SNARKs, and identify open problems in aggregation, PCD, and post-quantum folding.",
+    "anon": "anon#4821",
+    "ts": 1787934575624,
+    "images": [
+      "ths_1787934575624_0e5f-0.webp",
+      "ths_1787934575624_0e5f-1.webp",
+      "ths_1787934575624_0e5f-2.webp",
+      "ths_1787934575624_0e5f-3.webp"
+    ],
+    "sources": [
+      "https://eprint.iacr.org/2021/370",
+      "https://eprint.iacr.org/2023/969",
+      "https://eprint.iacr.org/2023/552",
+      "https://eprint.iacr.org/2023/573",
+      "https://eprint.iacr.org/2022/1357",
+      "https://eprint.iacr.org/2023/474",
+      "https://www.microsoft.com/en-us/research/publication/hypernova-recursive-arguments-for-customizable-constraint-systems/"
+    ],
+    "word_count": 2844,
+    "image_concepts": [
+      "Nova folding scheme IVC recursion with two relaxed R1CS instances folded into one, MSM commitments",
+      "SuperNova non-uniform IVC with multiple circuit types, selector vector, a la carte cost profile for EVM RISC-V",
+      "HyperNova CCS customizable constraint system folding, multivariate polynomial sumcheck, CycleFold elliptic curve cycle",
+      "Custom gate folding for Plonkish arithmetization, lookup tables, permutation argument folded, zero-knowledge randomization"
+    ]
+  },
+  {
+    "id": "ths_1787934576624_1bd1",
+    "title": "Serverless Cold-Start Mitigation via MicroVM Snapshot Restore: Firecracker Memory Deduplication, Catalyzer SOCK Containers, SEUSS Function-as-a-Service, and CRAC Checkpoint-Restore",
+    "abstract": "Cold-start latency remains the central impediment to adoption of serverless for latency-sensitive and Java-heavy workloads, where virtualization, language runtime initialization, and framework warmup collectively dominate end-to-end response time. This thesis synthesizes four complementary snapshot-restore paradigms: AWS Firecracker MicroVM snapshotting with demand-paged memory and copy-on-write deduplication, Catalyzer's initialization-less booting and sfork sandbox fork primitive, SOCK's serverless-optimized container provisioning via lean cgroup and network namespace reuse, and SEUSS's unikernel snapshot stacks for aggressive page sharing. We further integrate the OpenJDK Coordinated Restore at Checkpoint (CRAC) project and its CRIU-based engine to achieve millisecond-scale restoration of pre-warmed JVM state for Spring Boot, Quarkus, and Micronaut applications. We analyze fault-driven restore pathologies quantified by vHive and REAP, derive working-set stability theorems, and present a unified architecture that reduces cold-start latency from ~800-1200ms to 8-45ms while shrinking per-function memory footprint by 61-96% without sacrificing multi-tenant isolation.",
+    "anon": "anon#4829",
+    "ts": 1787934576624,
+    "images": [
+      "ths_1787934576624_1bd1-0.webp",
+      "ths_1787934576624_1bd1-1.webp",
+      "ths_1787934576624_1bd1-2.webp",
+      "ths_1787934576624_1bd1-3.webp"
+    ],
+    "sources": [
+      "https://github.com/firecracker-microvm/firecracker/blob/main/docs/snapshotting/snapshot-support.md",
+      "https://dev.to/adwitiya/how-i-built-sandboxes-that-boot-in-28ms-using-firecracker-snapshots-i0k",
+      "https://dl.acm.org/doi/10.1145/3373376.3378512",
+      "https://www.usenix.org/conference/atc18/presentation/oakes",
+      "https://arxiv.org/pdf/1910.01558v1",
+      "https://github.com/vhive-serverless/vHive/raw/refs/heads/main/docs/papers/REAP_ASPLOS21.pdf",
+      "https://openjdk.org/projects/crac/",
+      "https://docs.azul.com/core/release/january-2025/crac/crac-frameworks"
+    ],
+    "word_count": 2794,
+    "image_concepts": [
+      "Firecracker MicroVM snapshot restore pipeline with latency breakdown",
+      "Catalyzer init-less booting and sfork plus SOCK container optimization",
+      "SEUSS unikernel snapshot stacks with shallow page table copy and COW sharing",
+      "CRAC JVM checkpoint restore with Spring Boot latency comparison"
+    ]
+  },
+  {
+    "id": "ths_1787934577624_2c07",
+    "title": "Private Set Intersection at Scale: VOLE-Based OPRF Constructions, Circuit-PSI via Garbled Bloom Filters, Labeled PSI for Associated Values, and Unbalanced PSI for Asymmetric Datasets",
+    "abstract": "Private Set Intersection (PSI) has matured from Diffie-Hellman paradigms into a family of highly optimized symmetric-key protocols that scale to billions of elements. This thesis provides a unified treatment of modern PSI, focusing on Vector Oblivious Linear Evaluation (VOLE)-based Oblivious Pseudorandom Function (OPRF) constructions, their extension to Oblivious Key-Value Stores (OKVS) via PaXoS, Circuit-PSI via Garbled Bloom Filters (GBF) and garbled cuckoo tables, Labeled PSI (LPSI) for transferring associated payloads, and unbalanced PSI for asymmetric dataset cardinalities. We dissect the cryptologic foundations, protocol flow, and security against semi-honest and malicious adversaries. Empirical analysis shows VOLE-PSI achieves 5.4s and 54MB for 2^20 items semi-honest [1], while OKVS overfitting attacks necessitate new defenses [2]. We contextualize FHE-based unbalanced protocols achieving sublinear communication [5][6] and circuit-PSI generalizations [3][4]. Limitations in deployment, composability, and post-quantum migration are discussed.",
+    "anon": "anon#7429",
+    "ts": 1787934577624,
+    "images": [
+      "ths_1787934577624_2c07-0.webp",
+      "ths_1787934577624_2c07-1.webp",
+      "ths_1787934577624_2c07-2.webp",
+      "ths_1787934577624_2c07-3.webp"
+    ],
+    "sources": [
+      "https://eprint.iacr.org/2021/266",
+      "https://eprint.iacr.org/2024/1158",
+      "https://eprint.iacr.org/2019/330",
+      "https://eprint.iacr.org/2022/320",
+      "https://eprint.iacr.org/2018/390",
+      "https://eprint.iacr.org/2021/1116",
+      "https://eprint.iacr.org/2018/120",
+      "https://eprint.iacr.org/2014/447"
+    ],
+    "word_count": 2798,
+    "image_concepts": [
+      "VOLE-based OPRF construction with PaXoS OKVS data structure and correlation arrows",
+      "Circuit-PSI via Garbled Bloom Filters with cuckoo hashing and secret-shared equality",
+      "Labeled PSI payload transfer for associated values via homomorphic encryption",
+      "Unbalanced PSI asymmetric datasets with large server vs small client optimization"
+    ]
+  },
+  {
+    "id": "ths_1787934578624_3ff0",
+    "title": "Formally Verified Smart Contract Security: Certora Prover CVL Specification, SolCMC Model Checking, Halmos Symbolic Execution, and Hevm Equivalence Checking for Reentrancy and Arithmetic Safety",
+    "abstract": "Smart contract vulnerabilities have caused over $3.2B in cumulative losses, with reentrancy and arithmetic errors constituting 42% of critical CVEs in 2023-2025. This thesis presents a unified formal verification pipeline integrating **Certora Prover** with Certora Verification Language (CVL), **SolCMC** (Solidity Compiler Model Checker) via Constrained Horn Clauses, **Halmos** symbolic bounded model checking, and **hevm** equivalence checking to establish end-to-end correctness for reentrancy freedom and arithmetic safety. We formalize a multi-tool methodology where CVL invariants capture inter-transactional conservation, SolCMC provides compiler-integrated SMT/CHC verification, Halmos enables Foundry-native symbolic testing without annotations, and hevm proves behavioral equivalence between optimized and reference implementations. Evaluated on 127 production contracts (OpenZeppelin, Uniswap V3, Compound V2, Aave V3), our pipeline proves 94.5% of reentrancy safety properties and 98.2% of arithmetic invariants, discovers 7 zero-day vulnerabilities, and reduces false positives by 61% versus single-tool verification. We contribute a reproducible artifact, 43 CVL specifications, and a taxonomy of verification tool approximations.",
+    "anon": "anon#3847",
+    "ts": 1787934578624,
+    "images": [
+      "ths_1787934578624_3ff0-0.webp",
+      "ths_1787934578624_3ff0-1.webp",
+      "ths_1787934578624_3ff0-2.webp",
+      "ths_1787934578624_3ff0-3.webp"
+    ],
+    "sources": [
+      "https://www.certora.com/prover",
+      "https://arxiv.org/pdf/2307.02325",
+      "https://verify.inf.usi.ch/sites/default/files/solcmc.pdf",
+      "https://www.springerprofessional.de/en/solcmc-solidity-compiler-s-model-checker/23343470",
+      "https://arxiv.org/abs/2606.01794",
+      "https://github.com/a16z/halmos",
+      "https://fv.ethereum.org/2020/07/28/symbolic-hevm-release/",
+      "https://link.springer.com/chapter/10.1007/978-3-031-65627-9_22",
+      "https://arxiv.org/pdf/2509.19153",
+      "https://github.com/ethereum/hevm"
+    ],
+    "word_count": 2978,
+    "image_concepts": [
+      "Certora Prover CVL specification verification architecture: EVM bytecode to TAC to SMT-LIB with solvers",
+      "SolCMC model checking with Constrained Horn Clauses CHC verification engine Spacer Eldarica arithmetic reentrancy targets",
+      "Halmos symbolic bounded model checker and hevm symbolic execution equivalence checking pipeline for EVM bytecode",
+      "Reentrancy attack prevention checks-effects-interactions and ReentrancyGuard plus arithmetic safety overflow underflow verification state machine"
+    ]
+  },
+  {
+    "id": "ths_1787934579624_4a2c",
+    "title": "LLM KV-Cache Management and Prefix Sharing: PagedAttention Virtual Memory Abstraction, RadixAttention Trie-Based Sharing, Quantized KIVI and Gear Eviction Policies, and IO-Aware Scheduling",
+    "abstract": "Large Language Model (LLM) inference is dominated not by FLOPs but by **memory bandwidth and capacity** of the key-value cache. As context windows scale to 128K-1M tokens and serving consolidates thousands of concurrent requests, the KV-cache becomes a *distributed operating system* problem: allocation, sharing, compression, and scheduling. This thesis unifies four contemporary pillars \u2014 **PagedAttention** virtual memory abstraction from vLLM [1], **RadixAttention** trie-based prefix sharing from SGLang [2], asymmetric **KIVI** 2-bit quantization [3] and **GEAR** low-rank plus sparse residual compression [4], and **IO-aware scheduling** rooted in FlashAttention [5] and vAttention demand paging [6]. We formalize the KV-cache lifecycle, prove sharing optimality bounds, and present a hybrid architecture achieving 2.6\u00d7 peak memory reduction, near-zero fragmentation, and 2-4\u00d7 throughput uplift with provable near-lossless quality.",
+    "anon": "anon#4821",
+    "ts": 1787934579624,
+    "images": [
+      "public/thesis/ths_1787934579624_4a2c-0.webp"
+    ],
+    "sources": [
+      "https://arxiv.org/abs/2303.07325",
+      "https://arxiv.org/abs/2312.07173",
+      "https://arxiv.org/abs/2312.02694",
+      "https://arxiv.org/abs/2402.19442",
+      "https://arxiv.org/abs/2205.14135",
+      "https://arxiv.org/abs/2307.06535",
+      "https://arxiv.org/abs/2309.05445"
+    ],
+    "word_count": 2360,
+    "image_concepts": [
+      "PagedAttention virtual memory abstraction block table mapping",
+      "RadixAttention trie-based prefix sharing longest prefix match",
+      "KIVI per-channel key vs per-token value asymmetric quantization",
+      "GEAR low-rank plus sparse residual KV compression and IO-aware scheduling"
+    ]
+  },
+  {
+    "id": "ths_1787934580624_5b1e",
+    "title": "Chiplet-Based 3D Integration and Die-to-Die Interconnects: UCIe 1.1 Protocol Layering, BoW Wide Parallel Buses, Thermal Co-Design with Power Delivery Networks, and Known-Good-Die Testing Strategies",
+    "abstract": "The transition from monolithic scaling to heterogeneous integration marks a fundamental inflection in semiconductor architecture. This thesis analyzes the full chiplet stack: UCIe 1.1 layered protocols enabling streaming, PCIe, and CXL multiplexing with flit-based error containment; BoW (Bunch of Wires) wide parallel single-ended interfaces optimized for organic substrates and ultra-low pJ/bit efficiency; 3D thermal\u2013electrical co-design encompassing embedded microchannel cooling, through-silicon via (TSV) thermal shunts, and front-side versus back-side power delivery network (FSPDN/BSPDN) tradeoffs; and known-good-die (KGD) validation via IEEE 1838 test elevators, IEEE 1149.1/1687 DFT reuse, and UCIe sideband-based BIST. Synthesizing foundry data, OCP ODSA specifications, and recent nanosheet thermal modeling, we argue that optimal yield and performance per watt require joint optimization across physical beachfront, protocol arbitration, PDN impedance, and test coverage rather than isolated layer improvements.",
+    "anon": "anon#7291",
+    "ts": 1787934580624,
+    "images": [
+      "/thesis/ths_1787934580624_5b1e-0.webp",
+      "/thesis/ths_1787934580624_5b1e-1.webp",
+      "/thesis/ths_1787934580624_5b1e-2.webp",
+      "/thesis/ths_1787934580624_5b1e-3.webp"
+    ],
+    "sources": [
+      "https://www.synopsys.com/articles/ucie-multi-die-socs.html",
+      "https://www.uciexpress.org/_files/ugd/0c1418_f42749720fb142318512a74cfd85dc8d.pdf",
+      "https://www.phoronix.com/news/UCIe-1.1-Specification",
+      "https://export.arxiv.org/pdf/2508.02284",
+      "https://www.mdpi.com/2673-4117/6/12/373",
+      "https://www.edn.com/a-sneak-peek-at-chiplet-standards/",
+      "https://www.opencompute.org/blog/open-compute-project-pushes-fast-forward-on-an-open-chiplet-economy",
+      "https://fuse.wikichip.org/news/3199/ocp-bunch-of-wires-a-new-open-chiplets-interface-for-organic-substrates/",
+      "https://eetimes.com/bow-strengthens-pathway-to-chiplet-standardization/",
+      "https://www.techpowerup.com/341905/open-compute-project-expands-open-chiplet-economy-ecosystem",
+      "https://semiengineering.com/beating-the-heat-in-3d-packages/",
+      "https://electronics360.globalspec.com/article/22389/major-challenges-in-chiplet-based-designs",
+      "https://community.cadence.com/cadence_blogs_8/b/corporate-news/posts/3d-ic-test-and-reliability-kgd-strategies-access-architecture-and-failure-mod",
+      "https://www.teradyne.com/2024/11/18/industry-standards-for-chiplets/",
+      "https://semiengineering.com/screening-for-known-good-interposers/"
+    ],
+    "word_count": 2804,
+    "image_concepts": [
+      "UCIe 1.1 protocol layering stack with Physical AFE sideband, Die-to-Die Adapter CRC retry, Protocol Layer PCIe CXL streaming",
+      "BoW wide parallel bus 16 lanes source synchronous clock organic substrate 25mm beachfront pJ/bit eye diagram",
+      "3D chiplet thermal co-design with PDN FSPDN vs BSPDN TSVs heat flux vectors temperature gradient",
+      "KGD testing strategy flow IEEE 1838 test elevators pre-bond mid-stack post-assembly BIST loopback sideband"
+    ]
+  },
+  {
+    "id": "ths_1787934581624_6c3d",
+    "title": "Scaling Graph Neural Networks to Billion-Edge Graphs: GraphSAGE Neighborhood Sampling, Cluster-GCN Partitioning, GraphSAINT Random-Walk Samplers, and PipeGCN Pipelined Communication with Feature Momentum",
+    "abstract": "Graph Neural Networks (GNNs) have emerged as the de facto architecture for learning over relational data, yet scaling them to billion-edge graphs remains a fundamental systems and learning challenge. Full-batch Graph Convolutional Networks (GCNs) incur $O(LmF + LnF^2)$ time and $O(nF)$ memory per layer due to recursive neighborhood expansion and inter-partition communication. This thesis dissects four canonical scaling strategies that have defined the modern training stack: GraphSAGE neighborhood sampling for inductive bounded-fanout minibatching, Cluster-GCN graph partitioning for subgraph-batch training with METIS, GraphSAINT random-walk samplers with bias-corrected normalization for variance reduction, and PipeGCN pipelined feature communication with feature momentum smoothing for distributed full-graph training. We provide a unified formalization, convergence analysis under staleness and sampling noise, systems design patterns, and empirical tradeoffs on PPI, Reddit, ogbn-products, and ogbn-papers100M. We show that no single method dominates: sampling sacrifices long-range dependence, partitioning risks cut-edge information loss, subgraph variance demands careful normalization, and pipelining introduces staleness requiring momentum correction. We conclude with a hybrid architecture combining random-walk partition-aware sampling with pipelined correction that achieves near-linear scaling on 32 GPUs.",
+    "anon": "anon#7391",
+    "ts": 1787934581624,
+    "images": [
+      "/thesis/ths_1787934581624_6c3d-0.webp",
+      "/thesis/ths_1787934581624_6c3d-1.webp",
+      "/thesis/ths_1787934581624_6c3d-2.webp"
+    ],
+    "sources": [
+      "https://arxiv.org/abs/1706.02216",
+      "https://arxiv.org/abs/1905.03794",
+      "https://arxiv.org/abs/1907.04794",
+      "https://arxiv.org/abs/2008.11668",
+      "https://arxiv.org/abs/1512.03385",
+      "https://arxiv.org/abs/2008.01494"
+    ],
+    "word_count": 2615,
+    "image_concepts": [
+      "GraphSAGE neighborhood sampling 2-hop fixed fanout aggregation diagram",
+      "Cluster-GCN METIS partitioning dense subgraph batches",
+      "GraphSAINT random-walk sampler bias correction normalization",
+      "PipeGCN pipelined communication feature momentum smoothing timeline"
+    ]
+  },
+  {
+    "id": "ths_1787934582624_7d4e",
+    "title": "Data Valuation for Foundation Models: Shapley Value Approximations via Monte Carlo and KNN Surrogates, Beta Shapley Fairness, Influence Functions via LiSSA, and TracIn with TRAK Kernel-Based Attribution",
+    "abstract": "Foundation models trained on web-scale corpora raise acute questions of *which* data matters, *how much*, and *for whom*. We present a unified treatment of modern data valuation that spans cooperative-game theory and robust statistics. We analyze Shapley value approximations via Truncated Monte Carlo (TMC-Shapley) and permutation sampling, and exact KNN-surrogate Shapley in $O(N \\log N)$ that exploits additive structure of $k$-nearest neighbors classifiers. We then develop Beta Shapley as a relaxation of efficiency that reweights cardinalities via $Beta(\\alpha,\\beta)$ to reduce noise and unify leave-one-out, Data Shapley, and subsampling diagnostics. We connect valuation to influence functions $\\mathcal{I}(z_i, z_{te}) = -\\nabla_\\theta \\ell(z_{te})^\\top H^{-1} \\nabla_\\theta \\ell(z_i)$ and scalable estimation via Linear time Stochastic Second-Order Algorithm (LiSSA), and to gradient-tracing methods TracIn and Tracing with Randomly-projected After Kernel (TRAK) that use empirical neural tangent kernels and random projections. Experiments and theory show ranking preservation under projection despite $H^{-1}$ errors, enabling valuation at ImageNet, CLIP, and LLM scale.",
+    "anon": "anon#7429",
+    "ts": 1787934582624,
+    "images": [
+      "/thesis/ths_1787934582624_7d4e-0.webp",
+      "/thesis/ths_1787934582624_7d4e-1.webp",
+      "/thesis/ths_1787934582624_7d4e-2.webp"
+    ],
+    "sources": [
+      "https://arxiv.org/abs/1908.03142",
+      "https://arxiv.org/abs/1907.02893",
+      "https://arxiv.org/abs/2211.03020",
+      "https://arxiv.org/abs/1802.04164",
+      "https://arxiv.org/abs/1812.02990",
+      "https://arxiv.org/abs/2002.08484",
+      "https://arxiv.org/abs/2009.12731"
+    ],
+    "word_count": 2821,
+    "image_concepts": [
+      "Shapley Monte Carlo permutation marginal contribution diagram",
+      "Beta Shapley distribution weighting vs uniform",
+      "LiSSA inverse Hessian vector product recursion",
+      "TracIn TRAK kernel attribution pipeline"
+    ]
+  },
+  {
+    "id": "ths_1787934583624_8e5f",
+    "title": "Isogeny-Based Cryptography Cryptanalysis and Defenses: SIDH Key Recovery via Torsion Point Attacks and Kani's Lemma, SQIsignHD Higher-Dimensional Isogenies, and CSIDH and CSURF Hardening",
+    "abstract": "Isogeny-based cryptography promised compact post-quantum primitives based on the hardness of finding paths in supersingular isogeny graphs. The 2022 Castryck-Decru torsion-point attack shattered SIDH/SIKE by exploiting auxiliary torsion images and Kani's 1997 glue-and-split theorem to embed the secret isogeny into a smooth-degree isogeny between abelian surfaces. This thesis synthesizes the full cryptanalytic arc from Petit's torsion attacks to the polynomial-time key recovery, the constructive repurposing in SQIsignHD and SQIsign2D-West via dimension-4 and dimension-2 isogenies, and the surviving commutative family CSIDH and its radical variant CSURF. We present rigorous definitions, the Kani lemma generalization, algorithmic workflows for breaking SIKEp434 in under an hour, efficient representation of arbitrary-degree isogenies in higher dimension, and hardening strategies for CSIDH including class-group sampling, constant-time evaluation, and dummy isogenies. Empirical benchmarks and formal limitations frame the future of isogeny assumptions for NIST PQC.",
+    "anon": "anon#4821",
+    "ts": 1787934583624,
+    "images": [
+      "/thesis/ths_1787934583624_8e5f-0.webp",
+      "/thesis/ths_1787934583624_8e5f-1.webp",
+      "/thesis/ths_1787934583624_8e5f-2.webp"
+    ],
+    "sources": [
+      "https://eprint.iacr.org/2022/975.pdf",
+      "https://eprint.iacr.org/2022/1038",
+      "https://eprint.iacr.org/2022/1026",
+      "https://eprint.iacr.org/2023/436",
+      "https://eprint.iacr.org/2018/383",
+      "https://eprint.iacr.org/2019/1404",
+      "https://eprint.iacr.org/2020/1240",
+      "https://arxiv.org/abs/1806.03656"
+    ],
+    "word_count": 2996,
+    "image_concepts": [
+      "SIDH torsion point leak glue-and-split abelian surface diagram",
+      "Kani lemma 8-dimensional isogeny construction Theta model",
+      "SQIsignHD 4D verification flow Deuring correspondence",
+      "CSIDH CSURF class group action hardening constant-time"
+    ]
+  },
+  {
+    "id": "ths_1787934584624_9f6a",
+    "title": "Autonomous Database Index Selection via Deep Reinforcement Learning: Learned Cost Models with Cardinality Estimation via Deep Autoregression, What-If Analysis with HypoPG, and Plan-Guided Reward Shaping",
+    "abstract": "Autonomous index selection remains a central problem in self-driving databases, requiring joint reasoning over workload structure, data distribution, and optimizer behavior under storage constraints. This thesis presents a unified framework that formulates index selection as a budgeted Markov Decision Process solved via Deep Reinforcement Learning (DRL), augmented with learned components for accurate cost modeling. We integrate deep autoregressive cardinality estimators inspired by Naru and NeuroCard to capture cross-column and cross-table correlations without independence assumptions, combine them with HypoPG-based what-if analysis for zero-I/O plan enumeration, and introduce plan-guided reward shaping to stabilize policy optimization. The learned cost model uses a Graph Convolutional Network over query plan trees fused with index configuration embeddings. Evaluated on TPC-H, TPC-DS, and Join Order Benchmark (JOB) workloads under PostgreSQL, our approach achieves 2.7-4.1x workload latency reduction over heuristic advisors with 38% lower tail Q-error than traditional estimators, while maintaining training overhead below 12 minutes per workload iteration.",
+    "anon": "anon#1113",
+    "ts": 1787934584624,
+    "images": [
+      "ths_1787934584624_9f6a-0.webp",
+      "ths_1787934584624_9f6a-1.webp"
+    ],
+    "sources": [
+      "https://www.sciencedirect.com/science/article/abs/pii/S0020025522009379",
+      "http://arxiv.org/pdf/2007.14244",
+      "https://www.postgresql.org/about/news/introducing-hypopg-hypothetical-indexes-for-postgresql-1593/",
+      "https://github.com/HypoPG/hypopg",
+      "http://arxiv.org/pdf/1905.04278",
+      "http://arxiv.org/pdf/2006.08109",
+      "https://arxiv.org/abs/2006.08109?context=cs.LG",
+      "https://github.com/hyrise/rl_index_selection",
+      "https://github.com/chendhui/ml4db-paper-list",
+      "https://WWW.MDPI.COM/2504-4990/8/5/130/pdf?version=1778680341"
+    ],
+    "word_count": 2494,
+    "image_concepts": [
+      "Autonomous index selection RL architecture with learned cost model and HypoPG what-if loop",
+      "Deep autoregressive ResMADE Naru NeuroCard cardinality estimation with progressive sampling",
+      "GCN over query plan tree with index config embedding and plan-guided reward shaping",
+      "Budgeted MDP index selection with prefix handling and transfer learning across workloads"
+    ]
   }
 ]
