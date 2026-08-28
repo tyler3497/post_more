@@ -24666,7 +24666,9 @@
     ],
     "images": [
       "ths_1787945373170_e751-0.webp",
-      "ths_1787945373170_e751-1.webp"
+      "ths_1787945373170_e751-1.webp",
+      "ths_1787945373170_e751-2.webp",
+      "ths_1787945373170_e751-3.webp"
     ],
     "sources": [
       {
@@ -24712,7 +24714,7 @@
         "authors": "NIST"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2759
   },
   {
@@ -24957,7 +24959,10 @@
       "technical academic diagram, white background, clean vector style, showing Homomorphic Encryption for Private Information Retrieval: BFV Exact Packing, CKKS Approximate Arithmetic, SEAL Ciphertext Expansion, and NTT-Accelerated Query Processing limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787945377170_4b35-0.webp"
+      "ths_1787945377170_4b35-0.webp",
+      "ths_1787945377170_4b35-1.webp",
+      "ths_1787945377170_4b35-2.webp",
+      "ths_1787945377170_4b35-3.webp"
     ],
     "sources": [
       {
@@ -25003,7 +25008,7 @@
         "authors": "Mughees et al."
       }
     ],
-    "image_count": 1,
+    "image_count": 4,
     "word_count": 2710
   },
   {
@@ -25104,7 +25109,8 @@
       "technical academic diagram, white background, clean vector style, showing Neural Radiance Fields to Real-Time Rendering: Instant-NGP Multi-Resolution Hash Encoding, 3D Gaussian Splatting Differentiable Rasterization, Spherical Harmonics, and Level-of-Detail Streaming limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787945379170_7092-0.webp"
+      "ths_1787945379170_7092-0.webp",
+      "ths_1787945379170_7092-1.webp"
     ],
     "sources": [
       {
@@ -25150,7 +25156,7 @@
         "authors": "Wiles et al."
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2755
   },
   {
@@ -25251,7 +25257,10 @@
       "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Proof Systems Composition: PLONK Permutation Arguments, Halo2 Lookup Tables, Nova Recursive Folding, and Accumulation Schemes for IVC limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787945381170_8def-0.webp"
+      "ths_1787945381170_8def-0.webp",
+      "ths_1787945381170_8def-1.webp",
+      "ths_1787945381170_8def-2.webp",
+      "ths_1787945381170_8def-3.webp"
     ],
     "sources": [
       {
@@ -25297,7 +25306,7 @@
         "authors": "Kothapalli Setty"
       }
     ],
-    "image_count": 1,
+    "image_count": 4,
     "word_count": 2694
   }
 ]
