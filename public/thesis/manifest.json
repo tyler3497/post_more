@@ -31343,10 +31343,7 @@
       "technical academic diagram, white background, clean vector style, showing Deterministic Transaction Processing in Geo-Distributed Databases: Calvin Epoch Scheduling, Aria Optimistic Determinism, and Caracal Preemptive Ordering limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787974174140_4d17-0.webp",
-      "ths_1787974174140_4d17-1.webp",
-      "ths_1787974174140_4d17-2.webp",
-      "ths_1787974174140_4d17-3.webp"
+      "ths_1787974174140_4d17-0.webp"
     ],
     "sources": [
       {
@@ -31392,7 +31389,7 @@
         "authors": "Zhang et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2747
   },
   {
@@ -31418,10 +31415,7 @@
       "technical academic diagram, white background, clean vector style, showing Vectorized Query Execution over Compressed Columnar Formats: Apache DataFusion Operator Fusion, Arrow ADBC Zero-Copy Pushdown, and Late Materialization limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787974175140_2480-0.webp",
-      "ths_1787974175140_2480-1.webp",
-      "ths_1787974175140_2480-2.webp",
-      "ths_1787974175140_2480-3.webp"
+      "ths_1787974175140_2480-0.webp"
     ],
     "sources": [
       {
@@ -31467,7 +31461,7 @@
         "authors": "Pedreira et al. Meta"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2709
   },
   {
@@ -31493,10 +31487,7 @@
       "technical academic diagram, white background, clean vector style, showing Confidential Machine Learning with TEE-GPU Co-Attestation: Intel TDX 1.5 TD Partitioning, NVIDIA H100 Confidential Computing, and SPDM Device Authentication limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787974176140_2d25-0.webp",
-      "ths_1787974176140_2d25-1.webp",
-      "ths_1787974176140_2d25-2.webp",
-      "ths_1787974176140_2d25-3.webp"
+      "ths_1787974176140_2d25-0.webp"
     ],
     "sources": [
       {
@@ -31542,7 +31533,7 @@
         "authors": "IETF RATS WG"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2726
   },
   {
@@ -31568,10 +31559,7 @@
       "technical academic diagram, white background, clean vector style, showing Mechanized Verification of CRDT Convergence: Isabelle/HOL Strong Eventual Consistency Proofs, TLA+ Operation-Based Specs, and LWW Lattice Composition limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787974177140_77d8-0.webp",
-      "ths_1787974177140_77d8-1.webp",
-      "ths_1787974177140_77d8-2.webp",
-      "ths_1787974177140_77d8-3.webp"
+      "ths_1787974177140_77d8-0.webp"
     ],
     "sources": [
       {
@@ -31617,7 +31605,7 @@
         "authors": "Kleppmann et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2765
   },
   {
@@ -31643,10 +31631,7 @@
       "technical academic diagram, white background, clean vector style, showing Long-Haul Quantum Key Distribution with Measurement-Device-Independent and Twin-Field Protocols: Decoy-State Analysis, Finite-Key Security, and Repeaterless Bound Violation over 1000 km Fiber limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787974178140_91d5-0.webp",
-      "ths_1787974178140_91d5-1.webp",
-      "ths_1787974178140_91d5-2.webp",
-      "ths_1787974178140_91d5-3.webp"
+      "ths_1787974178140_91d5-0.webp"
     ],
     "sources": [
       {
@@ -31692,7 +31677,7 @@
         "authors": "Duan et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2773
   },
   {
@@ -31717,12 +31702,7 @@
       "technical academic diagram, white background, clean vector style, showing Differentiable Rendering for 3D Scene Editing via 3D Gaussian Splatting: Spherical Harmonic Appearance, SuGaR Surface Alignment, and Physics-Informed Deformation Fields performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Differentiable Rendering for 3D Scene Editing via 3D Gaussian Splatting: Spherical Harmonic Appearance, SuGaR Surface Alignment, and Physics-Informed Deformation Fields limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1787974179140_3da3-0.webp",
-      "ths_1787974179140_3da3-1.webp",
-      "ths_1787974179140_3da3-2.webp",
-      "ths_1787974179140_3da3-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -31793,10 +31773,7 @@
       "technical academic diagram, white background, clean vector style, showing Zero-Knowledge Proof Aggregation and Recursion: SnarkPack DKG Aggregation, Halo2 KZG Batch Opening, Nova Folding Accumulators, and LogUp Lookup Compression limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787974180140_a8bc-0.webp",
-      "ths_1787974180140_a8bc-1.webp",
-      "ths_1787974180140_a8bc-2.webp",
-      "ths_1787974180140_a8bc-3.webp"
+      "ths_1787974180140_a8bc-0.webp"
     ],
     "sources": [
       {
@@ -31842,7 +31819,7 @@
         "authors": "B\u00fcnz et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2744
   },
   {
@@ -31868,10 +31845,7 @@
       "technical academic diagram, white background, clean vector style, showing Persistent Memory File Systems with Crash-Consistent Isolation: NOVA-Fortis In-Place Updates, WineFS Copy-on-Write Isolation Domains, and CXL Persistent Flush Semantics limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1787974181140_a47b-0.webp",
-      "ths_1787974181140_a47b-1.webp",
-      "ths_1787974181140_a47b-2.webp",
-      "ths_1787974181140_a47b-3.webp"
+      "ths_1787974181140_a47b-0.webp"
     ],
     "sources": [
       {
@@ -31917,7 +31891,7 @@
         "authors": "Wilcox et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2782
   },
   {
@@ -31942,12 +31916,7 @@
       "technical academic diagram, white background, clean vector style, showing Federated Learning with Secure Aggregation and Distributed Differential Privacy: SecAgg Masking, DDP Distributed Noise, Skellam Mechanism, and Heavy-Hitter Discovery via Private Information Retrieval performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Federated Learning with Secure Aggregation and Distributed Differential Privacy: SecAgg Masking, DDP Distributed Noise, Skellam Mechanism, and Heavy-Hitter Discovery via Private Information Retrieval limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1787974182140_3e3e-0.webp",
-      "ths_1787974182140_3e3e-1.webp",
-      "ths_1787974182140_3e3e-2.webp",
-      "ths_1787974182140_3e3e-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
