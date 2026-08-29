@@ -30299,7 +30299,10 @@
       "technical academic diagram, white background, clean vector style, showing Fully Homomorphic Encryption for Private Information Retrieval: SealPIR Query Compression, FastPIR Response Packing, and Spiral Rate Optimality limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "/thesis/ths_1787970907983_31c5-0.webp"
+      "/thesis/ths_1787970907983_31c5-0.webp",
+      "/thesis/ths_1787970907983_31c5-1.webp",
+      "/thesis/ths_1787970907983_31c5-2.webp",
+      "/thesis/ths_1787970907983_31c5-3.webp"
     ],
     "sources": [
       {
@@ -30345,7 +30348,7 @@
         "authors": "Menon & Wu 2022"
       }
     ],
-    "image_count": 1,
+    "image_count": 4,
     "word_count": 2921
   },
   {
