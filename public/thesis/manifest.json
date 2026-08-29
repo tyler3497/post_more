@@ -32141,9 +32141,10 @@
       "technical academic diagram, white background, clean vector style, showing loihi2-map hardware mapping, H100/Loihi2/CXL placement, energy vs accuracy Pareto, highly detailed - diagram 4"
     ],
     "images": [
-      "ths_1787981454773_b35774-0.webp"
+      "ths_1787981454773_b35774-0.webp",
+      "ths_1787981454773_b35774-1.webp"
     ],
-    "image_count": 1
+    "image_count": 2
   },
   {
     "id": "ths_1787981455773_3f36dc",
@@ -32200,9 +32201,10 @@
       "technical academic diagram, white background, clean vector style, showing narwhal-bullshark hardware mapping, H100/Loihi2/CXL placement, energy vs accuracy Pareto, highly detailed - diagram 4"
     ],
     "images": [
-      "ths_1787981455773_3f36dc-0.webp"
+      "ths_1787981455773_3f36dc-0.webp",
+      "ths_1787981455773_3f36dc-1.webp"
     ],
-    "image_count": 1
+    "image_count": 2
   },
   {
     "id": "ths_1787981456773_aba662",
@@ -32259,9 +32261,10 @@
       "technical academic diagram, white background, clean vector style, showing mlgo-compiler-rl hardware mapping, H100/Loihi2/CXL placement, energy vs accuracy Pareto, highly detailed - diagram 4"
     ],
     "images": [
-      "ths_1787981456773_aba662-0.webp"
+      "ths_1787981456773_aba662-0.webp",
+      "ths_1787981456773_aba662-1.webp"
     ],
-    "image_count": 1
+    "image_count": 2
   },
   {
     "id": "ths_1787981457773_8e3ddc",
@@ -32318,9 +32321,10 @@
       "technical academic diagram, white background, clean vector style, showing tee-llm-infer hardware mapping, H100/Loihi2/CXL placement, energy vs accuracy Pareto, highly detailed - diagram 4"
     ],
     "images": [
-      "ths_1787981457773_8e3ddc-0.webp"
+      "ths_1787981457773_8e3ddc-0.webp",
+      "ths_1787981457773_8e3ddc-1.webp"
     ],
-    "image_count": 1
+    "image_count": 2
   },
   {
     "id": "ths_1787981458773_3fadc4",
@@ -32377,9 +32381,10 @@
       "technical academic diagram, white background, clean vector style, showing tsn-deterministic hardware mapping, H100/Loihi2/CXL placement, energy vs accuracy Pareto, highly detailed - diagram 4"
     ],
     "images": [
-      "ths_1787981458773_3fadc4-0.webp"
+      "ths_1787981458773_3fadc4-0.webp",
+      "ths_1787981458773_3fadc4-1.webp"
     ],
-    "image_count": 1
+    "image_count": 2
   },
   {
     "id": "ths_1787981459773_9b0150",
@@ -32436,9 +32441,10 @@
       "technical academic diagram, white background, clean vector style, showing diff-dataflow-dbsp hardware mapping, H100/Loihi2/CXL placement, energy vs accuracy Pareto, highly detailed - diagram 4"
     ],
     "images": [
-      "ths_1787981459773_9b0150-0.webp"
+      "ths_1787981459773_9b0150-0.webp",
+      "ths_1787981459773_9b0150-1.webp"
     ],
-    "image_count": 1
+    "image_count": 2
   },
   {
     "id": "ths_1787981460773_fcd84e",
@@ -32495,9 +32501,10 @@
       "technical academic diagram, white background, clean vector style, showing qldpc-hypergraph hardware mapping, H100/Loihi2/CXL placement, energy vs accuracy Pareto, highly detailed - diagram 4"
     ],
     "images": [
-      "ths_1787981460773_fcd84e-0.webp"
+      "ths_1787981460773_fcd84e-0.webp",
+      "ths_1787981460773_fcd84e-1.webp"
     ],
-    "image_count": 1
+    "image_count": 2
   },
   {
     "id": "ths_1787981461773_665036",
@@ -32554,8 +32561,9 @@
       "technical academic diagram, white background, clean vector style, showing ebpf-servicemesh hardware mapping, H100/Loihi2/CXL placement, energy vs accuracy Pareto, highly detailed - diagram 4"
     ],
     "images": [
-      "ths_1787981461773_665036-0.webp"
+      "ths_1787981461773_665036-0.webp",
+      "ths_1787981461773_665036-1.webp"
     ],
-    "image_count": 1
+    "image_count": 2
   }
 ]
