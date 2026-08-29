@@ -42524,7 +42524,9 @@
     ],
     "images": [
       "ths_1788042799653_0f43-0.webp",
-      "ths_1788042799653_0f43-1.webp"
+      "ths_1788042799653_0f43-1.webp",
+      "ths_1788042799653_0f43-2.webp",
+      "ths_1788042799653_0f43-3.webp"
     ],
     "sources": [
       {
@@ -42570,7 +42572,7 @@
         "authors": "Flink Community"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2695
   },
   {
