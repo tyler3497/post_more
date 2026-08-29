@@ -42524,9 +42524,7 @@
     ],
     "images": [
       "ths_1788042799653_0f43-0.webp",
-      "ths_1788042799653_0f43-1.webp",
-      "ths_1788042799653_0f43-2.webp",
-      "ths_1788042799653_0f43-3.webp"
+      "ths_1788042799653_0f43-1.webp"
     ],
     "sources": [
       {
@@ -42572,7 +42570,7 @@
         "authors": "Flink Community"
       }
     ],
-    "image_count": 4,
+    "image_count": 2,
     "word_count": 2695
   },
   {
@@ -42599,9 +42597,7 @@
     ],
     "images": [
       "ths_1788042800653_0807-0.webp",
-      "ths_1788042800653_0807-1.webp",
-      "ths_1788042800653_0807-2.webp",
-      "ths_1788042800653_0807-3.webp"
+      "ths_1788042800653_0807-1.webp"
     ],
     "sources": [
       {
@@ -42647,7 +42643,7 @@
         "authors": "Wood et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 2,
     "word_count": 2708
   },
   {
@@ -42672,12 +42668,7 @@
       "technical academic diagram, white background, clean vector style, showing Learned Query Optimizer via Reinforcement Learning: Balsa, Neo, Bao Hints, and Cost Model Transfer across Workloads with Join Order Enumeration performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Learned Query Optimizer via Reinforcement Learning: Balsa, Neo, Bao Hints, and Cost Model Transfer across Workloads with Join Order Enumeration limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1788042801653_0c4a-0.webp",
-      "ths_1788042801653_0c4a-1.webp",
-      "ths_1788042801653_0c4a-2.webp",
-      "ths_1788042801653_0c4a-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -42722,7 +42713,7 @@
         "authors": "Hilprecht et al. VLDB 2020"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2746
   },
   {
@@ -42822,12 +42813,7 @@
       "technical academic diagram, white background, clean vector style, showing Secure Aggregation for Federated Learning: SecAgg+, Bell et al. Sharding, LWE Masking, and Verifiable Aggregation via Homomorphic Commitments performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Secure Aggregation for Federated Learning: SecAgg+, Bell et al. Sharding, LWE Masking, and Verifiable Aggregation via Homomorphic Commitments limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_1788042803653_1cc5-0.webp",
-      "ths_1788042803653_1cc5-1.webp",
-      "ths_1788042803653_1cc5-2.webp",
-      "ths_1788042803653_1cc5-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -42872,7 +42858,7 @@
         "authors": "Bonawitz et al."
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2728
   },
   {
@@ -42899,9 +42885,7 @@
     ],
     "images": [
       "ths_1788042804653_1cd1-0.webp",
-      "ths_1788042804653_1cd1-1.webp",
-      "ths_1788042804653_1cd1-2.webp",
-      "ths_1788042804653_1cd1-3.webp"
+      "ths_1788042804653_1cd1-2.webp"
     ],
     "sources": [
       {
@@ -42947,7 +42931,7 @@
         "authors": "Pinecone Research"
       }
     ],
-    "image_count": 4,
+    "image_count": 2,
     "word_count": 2766
   },
   {
