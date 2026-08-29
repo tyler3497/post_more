@@ -36845,10 +36845,7 @@
     "type": "thesis",
     "thesis": true,
     "images": [
-      "ths_1788006738570_scann-spann-css-0829-0.webp",
-      "ths_1788006738570_scann-spann-css-0829-1.webp",
-      "ths_1788006738570_scann-spann-css-0829-2.webp",
-      "ths_1788006738570_scann-spann-css-0829-3.webp"
+      "ths_1788006738570_scann-spann-css-0829-0.webp"
     ],
     "sources": [
       {
@@ -36897,12 +36894,7 @@
     "ts": 1788006739570,
     "type": "thesis",
     "thesis": true,
-    "images": [
-      "ths_1788006739570_zk-quant-proof-0829-0.webp",
-      "ths_1788006739570_zk-quant-proof-0829-1.webp",
-      "ths_1788006739570_zk-quant-proof-0829-2.webp",
-      "ths_1788006739570_zk-quant-proof-0829-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "title": "Halo2: Recursive Proof Composition - Zcash 2022",
@@ -37003,12 +36995,7 @@
     "ts": 1788006741570,
     "type": "thesis",
     "thesis": true,
-    "images": [
-      "ths_1788006741570_mlir-sparse-0829-0.webp",
-      "ths_1788006741570_mlir-sparse-0829-1.webp",
-      "ths_1788006741570_mlir-sparse-0829-2.webp",
-      "ths_1788006741570_mlir-sparse-0829-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "title": "MLIR SparseTensor Dialect - LLVM Documentation 2023",
@@ -37057,10 +37044,7 @@
     "type": "thesis",
     "thesis": true,
     "images": [
-      "ths_1788006742570_tgn-causal-0829-0.webp",
-      "ths_1788006742570_tgn-causal-0829-1.webp",
-      "ths_1788006742570_tgn-causal-0829-2.webp",
-      "ths_1788006742570_tgn-causal-0829-3.webp"
+      "ths_1788006742570_tgn-causal-0829-0.webp"
     ],
     "sources": [
       {
@@ -37109,12 +37093,7 @@
     "ts": 1788006743570,
     "type": "thesis",
     "thesis": true,
-    "images": [
-      "ths_1788006743570_pqtls-ech-0829-0.webp",
-      "ths_1788006743570_pqtls-ech-0829-1.webp",
-      "ths_1788006743570_pqtls-ech-0829-2.webp",
-      "ths_1788006743570_pqtls-ech-0829-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "title": "RFC 8446 TLS 1.3 - IETF",
@@ -37162,12 +37141,7 @@
     "ts": 1788006744570,
     "type": "thesis",
     "thesis": true,
-    "images": [
-      "ths_1788006744570_energy-llm-0829-0.webp",
-      "ths_1788006744570_energy-llm-0829-1.webp",
-      "ths_1788006744570_energy-llm-0829-2.webp",
-      "ths_1788006744570_energy-llm-0829-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "title": "Energy and Policy Considerations for Deep Learning in NLP - ACL 2019",
@@ -37215,12 +37189,7 @@
     "ts": 1788006745570,
     "type": "thesis",
     "thesis": true,
-    "images": [
-      "ths_1788006745570_synth-syscode-0829-0.webp",
-      "ths_1788006745570_synth-syscode-0829-1.webp",
-      "ths_1788006745570_synth-syscode-0829-2.webp",
-      "ths_1788006745570_synth-syscode-0829-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "title": "SyGuS: Syntax-Guided Synthesis - FMCAD 2013",
