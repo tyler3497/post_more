@@ -41388,8 +41388,13 @@
       "technical academic diagram, white background, clean vector style, showing gPTP PTPv2.1 BMCA grandmaster election, path delay NRR 2-step timestamp hardware PTP clock servo PI, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Network calculus arrival curve sigma+rho*t, service curve rate-latency beta, worst-case delay backlog bound, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "/thesis/ths_1788031790777_1861_e362-0.webp",
+      "/thesis/ths_1788031790777_1861_e362-1.webp",
+      "/thesis/ths_1788031790777_1861_e362-2.webp",
+      "/thesis/ths_1788031790777_1861_e362-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "IEEE 802.1Qbv-2015: Enhancements for Scheduled Traffic",
@@ -41448,9 +41453,10 @@
     "images": [
       "/thesis/ths_1788031791739_6804_c1bf-0.webp",
       "/thesis/ths_1788031791739_6804_c1bf-1.webp",
-      "/thesis/ths_1788031791739_6804_c1bf-2.webp"
+      "/thesis/ths_1788031791739_6804_c1bf-2.webp",
+      "/thesis/ths_1788031791739_6804_c1bf-3.webp"
     ],
-    "image_count": 3,
+    "image_count": 4,
     "sources": [
       {
         "title": "Let's Verify Step by Step - OpenAI Process Supervision 2023",
@@ -41509,9 +41515,10 @@
     "images": [
       "/thesis/ths_1788031793044_3893_de8d-0.webp",
       "/thesis/ths_1788031793044_3893_de8d-1.webp",
-      "/thesis/ths_1788031793044_3893_de8d-2.webp"
+      "/thesis/ths_1788031793044_3893_de8d-2.webp",
+      "/thesis/ths_1788031793044_3893_de8d-3.webp"
     ],
-    "image_count": 3,
+    "image_count": 4,
     "sources": [
       {
         "title": "Mixture-of-Depths: Dynamically Allocating Compute in Transformer LMs - Raposo et al. 2024",
@@ -41751,9 +41758,10 @@
     "images": [
       "/thesis/ths_1788031796345_3948_fce6-0.webp",
       "/thesis/ths_1788031796345_3948_fce6-1.webp",
-      "/thesis/ths_1788031796345_3948_fce6-2.webp"
+      "/thesis/ths_1788031796345_3948_fce6-2.webp",
+      "/thesis/ths_1788031796345_3948_fce6-3.webp"
     ],
-    "image_count": 3,
+    "image_count": 4,
     "sources": [
       {
         "title": "Cilium: eBPF-based Networking, Security, Observability",
@@ -41809,8 +41817,13 @@
       "technical academic diagram, white background, clean vector style, showing Miri symbolic execution machine stacked interpreter 10^6 steps, leak detection isolation -Zmiri-disable-isolation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Kani CBMC unwind bound 32 loop, harness proof #[kani::proof] assert pointer non-null validity, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
-    "image_count": 0,
+    "images": [
+      "/thesis/ths_1788031797487_3109_99cc-0.webp",
+      "/thesis/ths_1788031797487_3109_99cc-1.webp",
+      "/thesis/ths_1788031797487_3109_99cc-2.webp",
+      "/thesis/ths_1788031797487_3109_99cc-3.webp"
+    ],
+    "image_count": 4,
     "sources": [
       {
         "title": "Stacked Borrows: An Aliasing Model for Rust - Jung et al. POPL 2020",
