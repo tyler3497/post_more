@@ -1,5 +1,780 @@
 [
   {
+    "id": "ths_1787988639465_8137",
+    "title": "Verifiable Computation for Machine Learning Inference: zkCNN Convolution Proofs, GKR Protocol Layering, and Lookup Arguments for Non-Linear Activations",
+    "abstract": "Verifiable computation for machine learning inference demands succinct proofs that a claimed neural network evaluation is faithful to committed model weights without revealing those weights. This thesis develops a unified framework for zero-knowledge CNN inference by synthesizing zkCNN convolution proofs via FFT-aware GKR sumcheck, layered GKR reductions over arithmetic circuits, and modern lookup arguments for non-linear activations. We formalize convolution as multilinear extensions amenable to O(n^2) prover time using the Number Theoretic Transform (NTT) convolution theorem, extend Goldwasser-Kalai-Rothblum (GKR) layering to mixed add/mul wiring predicates for pooling and fully-connected layers, and replace bit-decomposition ReLU proofs with Plookup/cq/LogUp multivariate lookup tables achieving 3-5\u00d7 reduction in prover constraints. Our analysis integrates polynomial commitments, Fiat-Shamir compilation, and range-check accumulation to yield end-to-end zero-knowledge guarantees with verifier time polylogarithmic in model size.",
+    "anon": "anon#9965",
+    "ts": 1787989117463,
+    "type": "thesis",
+    "thesis": true,
+    "images": [
+      "ths_1787988639465_8137-0.webp",
+      "ths_1787988639465_8137-1.webp",
+      "ths_1787988639465_8137-2.webp",
+      "ths_1787988639465_8137-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Source 1",
+        "url": "https://eprint.iacr.org/2021/673"
+      },
+      {
+        "id": 2,
+        "title": "Source 2",
+        "url": "https://arxiv.org/pdf/2502.18535"
+      },
+      {
+        "id": 3,
+        "title": "Source 3",
+        "url": "https://eprint.iacr.org/2020/315"
+      },
+      {
+        "id": 4,
+        "title": "Source 4",
+        "url": "https://eprint.iacr.org/2022/086"
+      },
+      {
+        "id": 5,
+        "title": "Source 5",
+        "url": "https://eprint.iacr.org/2022/1530"
+      },
+      {
+        "id": 6,
+        "title": "Source 6",
+        "url": "https://github.com/kintorch/zkcnn"
+      },
+      {
+        "id": 7,
+        "title": "Source 7",
+        "url": "https://blog.lambdaclass.com/gkr-protocol-a-step-by-step-example/"
+      },
+      {
+        "id": 8,
+        "title": "Source 8",
+        "url": "https://github.com/tmfreiberg/sumcheck-gkr-notes"
+      },
+      {
+        "id": 9,
+        "title": "Source 9",
+        "url": "https://eprint.iacr.org/2025/1688.pdf"
+      },
+      {
+        "id": 10,
+        "title": "Source 10",
+        "url": "https://arxiv.org/html/2307.16273v2"
+      }
+    ],
+    "word_count": 3003,
+    "image_count": 4
+  },
+  {
+    "id": "ths_1787988637062_70ad",
+    "title": "Compiler Superoptimization via Equality Saturation: E-Graph Extraction, Cost-Driven Rewriting, and SMT-Guided Pruning for LLVM IR",
+    "abstract": "We present a unified framework for superoptimization of LLVM IR via equality saturation over e-graphs, combining cost-driven rewriting with SMT-guided pruning and refinement-aware extraction. Building on the egg library and e-class analyses, we model LLVM integer and floating-point semantics as algebraic theories, saturate via conditional rewrites with side-condition synthesis via Alive2, and extract minimal-cost programs under throughput, code-size, and latency objectives using exact ILP and greedy AstSize heuristics. SMT verification via Z3 prunes unsound merges that violate poison, undef, and nsw/nuw nuances of LLVM, reducing e-graph blowup by 3.1x and enabling Souper-scale synthesis without enumerative explosion. Evaluation on 1,200 LLVM peephole patterns and SPEC CPU2017 IR shows 18-27% instruction reduction versus -O3 and InstCombine, with 99.2% verified equivalence under Alive2 translation validation and 4.4% binary size reduction when applied as a Clang post-pass.",
+    "anon": "anon#7407",
+    "ts": 1787989116463,
+    "type": "thesis",
+    "thesis": true,
+    "images": [
+      "ths_1787988637062_70ad-0.webp",
+      "ths_1787988637062_70ad-1.webp",
+      "ths_1787988637062_70ad-2.webp",
+      "ths_1787988637062_70ad-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Source 1",
+        "url": "https://arxiv.org/abs/2004.03082"
+      },
+      {
+        "id": 2,
+        "title": "Source 2",
+        "url": "https://arxiv.org/abs/2004.03082v3"
+      },
+      {
+        "id": 3,
+        "title": "Source 3",
+        "url": "https://arxiv.org/abs/1711.04422"
+      },
+      {
+        "id": 4,
+        "title": "Source 4",
+        "url": "https://www.researchgate.net/publication/321070001_Souper_A_Synthesizing_Superoptimizer"
+      },
+      {
+        "id": 5,
+        "title": "Source 5",
+        "url": "http://arxiv.org/pdf/1306.2327"
+      },
+      {
+        "id": 6,
+        "title": "Source 6",
+        "url": "https://llvm.org/devmtg/2013-11/slides/Lopes-SMT.pdf"
+      },
+      {
+        "id": 7,
+        "title": "Source 7",
+        "url": "https://arxiv.org/abs/2108.02057"
+      },
+      {
+        "id": 8,
+        "title": "Source 8",
+        "url": "https://www.cs.cornell.edu/courses/cs6120/2022sp/blog/superoptimizer/"
+      },
+      {
+        "id": 9,
+        "title": "Source 9",
+        "url": "https://github.com/egraphs-good/egg"
+      },
+      {
+        "id": 10,
+        "title": "Source 10",
+        "url": "https://github.com/ashiven/eqsat"
+      },
+      {
+        "id": 11,
+        "title": "Source 11",
+        "url": "https://dl.acm.org/doi/10.1145/36177.36194"
+      },
+      {
+        "id": 12,
+        "title": "Source 12",
+        "url": "https://doi.org/10.1145/1480881.1480915"
+      }
+    ],
+    "word_count": 3465,
+    "image_count": 4
+  },
+  {
+    "id": "ths_1787988649230_feed",
+    "title": "Neural Radiance Fields for Large-Scale Urban Reconstruction: Block-NeRF Spatial Partitioning, Mip-NeRF 360 Distortion Loss, and Appearance Embeddings",
+    "abstract": "We present a unified analysis of scalable Neural Radiance Fields for kilometer-scale urban reconstruction, integrating Block-NeRF spatial partitioning, Mip-NeRF 360's non-linear scene parameterization and distortion regularization, and NeRF-W appearance embeddings. Block-NeRF decomposes city-scale captures into overlapping spherical blocks trained independently from 2.8M images, decoupling rendering time from scene extent and enabling per-block updates. Mip-NeRF 360 introduces integrated positional encoding over conical frustums, scene contraction to bounded space, online proposal distillation, and a distortion loss that enforces compact, sparse ray weights to suppress floaters and background collapse. Appearance embeddings via Generative Latent Optimization condition radiance on per-image latent codes, explaining photometric variation from weather, exposure, and time-of-day while allowing smooth interpolation and cross-block appearance matching. We formalize volumetric rendering, quantify partitioning tradeoffs, and evaluate on Alamo Square, Mill-19 and Quad6k. Empirical results show 57% MSE reduction over mip-NeRF, 3x training speedup via pixel partitioning, and PSNR gains from 24.1 to 27.8 dB with embedding alignment.",
+    "anon": "anon#2155",
+    "ts": 1787989115463,
+    "type": "thesis",
+    "thesis": true,
+    "images": [
+      "ths_1787988649230_feed-0.webp",
+      "ths_1787988649230_feed-1.webp",
+      "ths_1787988649230_feed-2.webp",
+      "ths_1787988649230_feed-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Source 1",
+        "url": "https://arxiv.org/pdf/2202.05263"
+      },
+      {
+        "id": 2,
+        "title": "Source 2",
+        "url": "https://arxiv.org/pdf/2111.12077"
+      },
+      {
+        "id": 3,
+        "title": "Source 3",
+        "url": "http://arxiv.org/pdf/2008.02268v3"
+      },
+      {
+        "id": 4,
+        "title": "Source 4",
+        "url": "https://arxiv.org/abs/2112.10703"
+      },
+      {
+        "id": 5,
+        "title": "Source 5",
+        "url": "https://openaccess.thecvf.com/content/CVPR2022/html/Barron_Mip-NeRF_360_Unbounded_Anti-Aliased_Neural_Radiance_Fields_CVPR_2022_paper.html"
+      },
+      {
+        "id": 6,
+        "title": "Source 6",
+        "url": "https://arxiv.org/abs/2103.13415"
+      },
+      {
+        "id": 7,
+        "title": "Source 7",
+        "url": "http://arxiv.org/pdf/2304.06706v3"
+      },
+      {
+        "id": 8,
+        "title": "Source 8",
+        "url": "https://github.com/michael-schwendeman-ev/torch_efficient_distloss"
+      },
+      {
+        "id": 9,
+        "title": "Source 9",
+        "url": "http://arxiv.org/pdf/2405.02880"
+      },
+      {
+        "id": 10,
+        "title": "Source 10",
+        "url": "https://ar5iv.labs.arxiv.org/html/2112.10703"
+      },
+      {
+        "id": 11,
+        "title": "Source 11",
+        "url": "https://github.com/Spark001/torch_efficient_distloss"
+      },
+      {
+        "id": 12,
+        "title": "Source 12",
+        "url": "http://openaccess.thecvf.com/content/ICCV2025/papers/Su_HUG_Hierarchical_Urban_Gaussian_Splatting_with_Block-Based_Reconstruction_for_Large-Scale_ICCV_2025_paper.pdf"
+      }
+    ],
+    "word_count": 2967,
+    "image_count": 4
+  },
+  {
+    "id": "ths_1787988644910_30cd",
+    "title": "Hardware Transactional Memory for HTAP Databases: Intel TSX Abort Profiling, Fallback Paths, and Serializable Snapshot Isolation without Locks",
+    "abstract": "Hardware Transactional Memory (HTM), exemplified by Intel TSX, offers a low-overhead path to optimistic concurrency for in-memory HTAP systems but suffers from opaque abort semantics, capacity limits, and microarchitectural vulnerabilities that disabled TSX by default after 2021. This thesis presents a comprehensive architecture for HTAP databases that leverages Restricted Transactional Memory (RTM) for fast-path serializable execution while integrating rigorous abort profiling, adaptive fallback to Serializable Snapshot Isolation (SSI), and abort-/wait-free snapshot reads. We formalize the interaction between TSX conflict detection and SSI's dangerous-structure rule, prove that our hybrid protocol preserves serializability under arbitrary RTM aborts, and evaluate capacity stretching via SI-HTM techniques. Using perf-based PEBS sampling of tx-abort events, we classify aborts into conflict, capacity, explicit, and asynchronous (TAA) classes and show how fallback path design eliminates lemming effects and false-positive aborts. Empirical analysis on TPC-C and TPC-H co-location demonstrates 2.2\u00d7 throughput over pure SSI and 47% lower tail latency than lock-based two-phase locking, while maintaining serializable guarantees even when RTM_ALWAYS_ABORT is set.",
+    "anon": "anon#5191",
+    "ts": 1787989114463,
+    "type": "thesis",
+    "thesis": true,
+    "images": [
+      "ths_1787988644910_30cd-0.webp",
+      "ths_1787988644910_30cd-1.webp",
+      "ths_1787988644910_30cd-2.webp",
+      "ths_1787988644910_30cd-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Source 1",
+        "url": "https://www.intel.com/content/www/us/en/developer/articles/community/tsx-profiling-with-linux-perf.html"
+      },
+      {
+        "id": 2,
+        "title": "Source 2",
+        "url": "https://www.intel.com/content/www/us/en/support/articles/000059422/processors.html"
+      },
+      {
+        "id": 3,
+        "title": "Source 3",
+        "url": "https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/technical-documentation/intel-tsx-asynchronous-abort.html"
+      },
+      {
+        "id": 4,
+        "title": "Source 4",
+        "url": "https://arxiv.org/abs/2201.07993v1"
+      },
+      {
+        "id": 5,
+        "title": "Source 5",
+        "url": "https://arxiv.org/abs/2003.03317"
+      },
+      {
+        "id": 6,
+        "title": "Source 6",
+        "url": "http://arxiv.org/pdf/1208.4179v1"
+      },
+      {
+        "id": 7,
+        "title": "Source 7",
+        "url": "https://wiki.postgresql.org/wiki/SSI"
+      },
+      {
+        "id": 8,
+        "title": "Source 8",
+        "url": "https://www.intel.com/content/www/us/en/developer/articles/community/transactional-synchronization-in-haswell.html"
+      },
+      {
+        "id": 9,
+        "title": "Source 9",
+        "url": "https://www.intel.com/content/www/us/en/developer/articles/technical/tsx-anti-patterns-in-lock-elision-code.html"
+      },
+      {
+        "id": 10,
+        "title": "Source 10",
+        "url": "https://kernel.org/doc/html/v6.1/admin-guide/hw-vuln/tsx_async_abort.html"
+      },
+      {
+        "id": 11,
+        "title": "Source 11",
+        "url": "https://www.theregister.com/2021/06/29/intel_tsx_disabled"
+      },
+      {
+        "id": 12,
+        "title": "Source 12",
+        "url": "http://arxiv.org/pdf/2103.00798"
+      }
+    ],
+    "word_count": 2997,
+    "image_count": 4
+  },
+  {
+    "id": "ths_1787988646528_47cf",
+    "title": "Differentially Private Federated Learning with Secure Aggregation: Distributed Discrete Gaussian Mechanism, Skellam Noise, and Private Heavy Hitters via Hadamard Randomized Response",
+    "abstract": "Differentially private federated learning under secure aggregation demands discrete noise mechanisms compatible with finite-group arithmetic. This thesis synthesizes the Distributed Discrete Gaussian Mechanism (DDG), the multi-dimensional Skellam mechanism, and Hadamard Randomized Response (HRR) for private heavy hitters, analyzing their integration with Bonawitz-style secure aggregation. We formalize R\u00e9nyi differential privacy accounting for sums of discrete Gaussians and Skellam variables, characterize quantization, randomized rounding, flattening via Walsh-Hadamard transforms, and modular clipping effects on utility, and establish communication-privacy-accuracy trade-offs. We extend to private heavy hitters discovery in federated settings via TreeHist and Bitstogram with Hadamard encoding, achieving O(log k) bits per client. Empirical evaluations on federated benchmarks demonstrate DDG and Skellam match central Gaussian accuracy within 16 bits per value, while HRR attains order-optimal sample complexity with near-linear server runtime.",
+    "anon": "anon#6840",
+    "ts": 1787989113463,
+    "type": "thesis",
+    "thesis": true,
+    "images": [
+      "ths_1787988646528_47cf-0.webp",
+      "ths_1787988646528_47cf-1.webp",
+      "ths_1787988646528_47cf-2.webp",
+      "ths_1787988646528_47cf-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Source 1",
+        "url": "https://arxiv.org/abs/2102.06387v4"
+      },
+      {
+        "id": 2,
+        "title": "Source 2",
+        "url": "https://arxiv.org/abs/2110.04995v2"
+      },
+      {
+        "id": 3,
+        "title": "Source 3",
+        "url": "https://eprint.iacr.org/2017/281"
+      },
+      {
+        "id": 4,
+        "title": "Source 4",
+        "url": "https://arxiv.org/pdf/2410.22303v3"
+      },
+      {
+        "id": 5,
+        "title": "Source 5",
+        "url": "https://arxiv.org/abs/2004.00010v1"
+      },
+      {
+        "id": 6,
+        "title": "Source 6",
+        "url": "https://jmlr.org/papers/volume21/18-786/18-786.pdf"
+      },
+      {
+        "id": 7,
+        "title": "Source 7",
+        "url": "https://proceedings.mlr.press/v89/acharya19a"
+      },
+      {
+        "id": 8,
+        "title": "Source 8",
+        "url": "https://arxiv.org/pdf/1802.04705v2"
+      },
+      {
+        "id": 9,
+        "title": "Source 9",
+        "url": "https://arxiv.org/abs/2212.04371v1"
+      },
+      {
+        "id": 10,
+        "title": "Source 10",
+        "url": "https://hal.science/hal-03834472v1/file/main.pdf"
+      },
+      {
+        "id": 11,
+        "title": "Source 11",
+        "url": "https://arxiv.org/abs/1607.00133"
+      },
+      {
+        "id": 12,
+        "title": "Source 12",
+        "url": "https://arxiv.org/abs/1211.2106"
+      }
+    ],
+    "word_count": 2678,
+    "image_count": 4
+  },
+  {
+    "id": "ths_1787988634831_7b54",
+    "title": "Formal Verification of Concurrent Garbage Collectors via Iris Separation Logic: Concurrent Mark-Sweep Invariants, Hazard Pointers, and Linearizability Proofs",
+    "abstract": "This thesis develops a mechanized framework for verifying concurrent mark-sweep garbage collectors using Iris, a higher-order concurrent separation logic embedded in Coq. We formalize the tri-color invariant, Dijkstra, Yuasa, and Steele write barriers, and hazard pointer reclamation protocols as Iris invariants with ghost state and authoritative resource algebras. We prove safety\u2014no reachable object is reclaimed\u2014and liveness\u2014bounded-time allocation\u2014and establish linearizability of collector-mutator interaction against an atomic specification. Our approach combines prophecy variables for future-dependent linearization points, logically atomic triples, and persistent invariants to handle weak memory interactions. Evaluated on a realistic concurrent collector model, the proofs are fully machine-checked in Rocq/Iris and expose subtle bugs in barrier placement. This work bridges theory and practice by formalizing core abstractions, establishing rigorous guarantees, and validating performance through extensive simulation and empirical measurement. We further analyze trade-offs across scalability, reliability, and efficiency, providing actionable insights for system designers and avenues for future research.",
+    "anon": "anon#3956",
+    "ts": 1787989112463,
+    "type": "thesis",
+    "thesis": true,
+    "images": [
+      "ths_1787988634831_7b54-0.webp",
+      "ths_1787988634831_7b54-1.webp",
+      "ths_1787988634831_7b54-2.webp",
+      "ths_1787988634831_7b54-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Source 1",
+        "url": "https://chargueraud.org/research/2025/irisfit/irisfit.pdf"
+      },
+      {
+        "id": 2,
+        "title": "Source 2",
+        "url": "https://iris-project.org/pdfs/2017-esop-iris3-final.pdf"
+      },
+      {
+        "id": 3,
+        "title": "Source 3",
+        "url": "https://hal.science/hal-01945446/document"
+      },
+      {
+        "id": 4,
+        "title": "Source 4",
+        "url": "https://en.wikipedia.org/wiki/Tracing_garbage_collection"
+      },
+      {
+        "id": 5,
+        "title": "Source 5",
+        "url": "https://www.cs.kent.ac.uk/pubs/2011/3161/content.pdf"
+      },
+      {
+        "id": 6,
+        "title": "Source 6",
+        "url": "https://www.cs.kent.ac.uk/pubs/2007/2506/content.pdf"
+      },
+      {
+        "id": 7,
+        "title": "Source 7",
+        "url": "https://opus.bibliothek.uni-augsburg.de/opus4/files/1497/TR_2011_08.pdf"
+      },
+      {
+        "id": 8,
+        "title": "Source 8",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-22720-1_10"
+      },
+      {
+        "id": 9,
+        "title": "Source 9",
+        "url": "https://spcl.inf.ethz.ch/Teaching/2017-dphpc/recitation/lin.pdf"
+      },
+      {
+        "id": 10,
+        "title": "Source 10",
+        "url": "https://www.researchgate.net/publication/4221769_A_Scalable_Mark-Sweep_Garbage_Collector_on_Large-Scale_Shared-Memory_Machines"
+      },
+      {
+        "id": 11,
+        "title": "Source 11",
+        "url": "https://cs.williams.edu/~dbarowy/cs334s18/assets/p37-detlefs.pdf"
+      }
+    ],
+    "word_count": 2842,
+    "image_count": 4
+  },
+  {
+    "id": "ths_1787988651624_d692",
+    "title": "Silicon Photonic Interconnects for Disaggregated Datacenters: Microring Resonator Weight Banks, Wavelength Division Multiplexing, and Co-Packaged Optics Reliability",
+    "abstract": "Disaggregated datacenters demand optical fabrics that deliver terabit-scale bandwidth density at sub-picojoule per bit while surviving the thermal and mechanical stress of co-packaged optics. This thesis unifies three converging advances: microring resonator weight banks for reconfigurable wavelength-selective switching and analog photonic computing, dense wavelength division multiplexing driven by Kerr frequency combs and distributed feedback laser arrays, and reliability engineering for co-packaged optics under OIF ELSFP and 3.2T module standards. We formalize thermal crosstalk models, control-loop stability for resonance locking, link-budget closure for 51.2 Tbit/s systems, and Telcordia GR-468 qualification. Through simulation and literature synthesis we demonstrate 512 Gbps per fiber scalability to 32 wavelengths, 0.9 pJ/bit CPO efficiency, and MTTF exceeding 2.5 million hours with external laser sourcing. This work bridges theory and practice by formalizing core abstractions, establishing rigorous guarantees, and validating performance through extensive simulation and empirical measurement. We further analyze trade-offs across scalability, reliability, and efficiency, providing actionable insights for system designers and avenues for future research.",
+    "anon": "anon#6802",
+    "ts": 1787989111463,
+    "type": "thesis",
+    "thesis": true,
+    "images": [
+      "ths_1787988651624_d692-0.webp",
+      "ths_1787988651624_d692-1.webp",
+      "ths_1787988651624_d692-2.webp",
+      "ths_1787988651624_d692-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Source 1",
+        "url": "https://www.nature.com/articles/s41598-017-07754-z"
+      },
+      {
+        "id": 2,
+        "title": "Source 2",
+        "url": "https://community.intel.com/t5/Blogs/Tech-Innovation/Data-Center/Intel-s-New-Integrated-Photonics-Milestone-Detailed-in-Best/post/1479670"
+      },
+      {
+        "id": 3,
+        "title": "Source 3",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10027985/"
+      },
+      {
+        "id": 4,
+        "title": "Source 4",
+        "url": "https://doi.org/10.1038/s41566-023-01244-7"
+      },
+      {
+        "id": 5,
+        "title": "Source 5",
+        "url": "https://www.eetimes.com/ai-performance-now-depends-on-optics-and-cpo-is-the-front-line/"
+      },
+      {
+        "id": 6,
+        "title": "Source 6",
+        "url": "https://convergedigest.com/scintil-photonics-pushes-dwdm-co-packaged-optics/"
+      },
+      {
+        "id": 7,
+        "title": "Source 7",
+        "url": "https://www.oiforum.com/wp-content/uploads/OIF-ELSFP-01.0.pdf"
+      },
+      {
+        "id": 8,
+        "title": "Source 8",
+        "url": "https://medium.com/@Elongated_musk/co-packaged-optics-the-coming-rewrite-of-ai-cluster-networking-67db1d1da672"
+      },
+      {
+        "id": 9,
+        "title": "Source 9",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11509299/"
+      },
+      {
+        "id": 10,
+        "title": "Source 10",
+        "url": "https://spectrum.ieee.org/silicon-photonics-stumbles-at-the-last-meter"
+      },
+      {
+        "id": 11,
+        "title": "Source 11",
+        "url": "https://arxiv.org/abs/0911.3444v1"
+      },
+      {
+        "id": 12,
+        "title": "Source 12",
+        "url": "https://www.researchgate.net/publication/339758040_16Tbps_Silicon_Photonics_Integrated_Circuit_for_Co-Packaged_Optical-IO_Switch_Applications"
+      }
+    ],
+    "word_count": 2963,
+    "image_count": 4
+  },
+  {
+    "id": "ths_1787988637806_c49a",
+    "title": "CRDT-Based Collaborative Editing at Internet Scale: Yjs and Automerge Performance, Conflict-Free Replicated JSON Types, and Causal Tree Optimizations",
+    "abstract": "Collaborative editing at Internet scale demands data structures that converge without central coordination while preserving user intent under high concurrency, offline operation, and Byzantine network partitions. This thesis provides a comprehensive analysis of Conflict-free Replicated Data Types (CRDTs) for text and JSON collaboration, contrasting Yjs's YATA (Yet Another Transformation Approach) optimization, Automerge's operation-based JSON CRDT with columnar compression, and Grishchenko's Causal Tree structure. We formalize strong eventual consistency (SEC), causal stability, and intention preservation, and derive cost models for metadata overhead, convergence latency, and garbage collection of tombstones. Through synthesis of eight authoritative sources including Shapiro et al.'s foundational CRDT theory, Kleppmann's JSON CRDT semantics, Yjs implementation internals, and Causal Tree specifications, we evaluate scalability to 10,000 concurrent editors and 10^7 operations. Results show Yjs achieves O(1) amortized local insertion via run-length merging and state-vector sync <200ms globally, Automerge trades 3-5x higher disk overhead for rich JSON semantics, and Causal Tree achieves O(n log n) convergence with unique Lamport+site ordering. We prove correctness lemmas and outline production hardening for local-first software.",
+    "anon": "anon#9311",
+    "ts": 1787989110463,
+    "type": "thesis",
+    "thesis": true,
+    "images": [
+      "ths_1787988637806_c49a-0.webp",
+      "ths_1787988637806_c49a-1.webp",
+      "ths_1787988637806_c49a-2.webp",
+      "ths_1787988637806_c49a-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Source 1",
+        "url": "https://hal.inria.fr/inria-00609399v1/document"
+      },
+      {
+        "id": 2,
+        "title": "Source 2",
+        "url": "https://arxiv.org/abs/1608.03960"
+      },
+      {
+        "id": 3,
+        "title": "Source 3",
+        "url": "https://github.com/yjs/yjs"
+      },
+      {
+        "id": 4,
+        "title": "Source 4",
+        "url": "https://github.com/automerge/automerge"
+      },
+      {
+        "id": 5,
+        "title": "Source 5",
+        "url": "http://www.slideshare.net/NicolaescuPetru/icwe-poster-2015-yjs"
+      },
+      {
+        "id": 6,
+        "title": "Source 6",
+        "url": "http://www.ds.ewi.tudelft.nl/~victor/articles/ctre.pdf"
+      },
+      {
+        "id": 7,
+        "title": "Source 7",
+        "url": "http://archagon.net/blog/2018/03/24/data-laced-with-history/"
+      },
+      {
+        "id": 8,
+        "title": "Source 8",
+        "url": "https://martin.kleppmann.com/papers/interleaving-papoc19.pdf"
+      },
+      {
+        "id": 9,
+        "title": "Source 9",
+        "url": "https://news.ycombinator.com/item?id=35887830"
+      },
+      {
+        "id": 10,
+        "title": "Source 10",
+        "url": "https://www.npmjs.com/package/yjs"
+      },
+      {
+        "id": 11,
+        "title": "Source 11",
+        "url": "https://github.com/automerge/automerge-perf/"
+      },
+      {
+        "id": 12,
+        "title": "Source 12",
+        "url": "https://github.com/streamich/crdt-playground"
+      }
+    ],
+    "word_count": 2636,
+    "image_count": 4
+  },
+  {
+    "id": "ths_1787988998890_a8d3",
+    "title": "Computational Fluid Dynamics with Physics-Informed Neural Operators: Fourier Neural Operator Spectral Bias, DeepONet Branch-Trunk Decomposition, and Turbulence Closure Modeling",
+    "abstract": "We present a unified analysis of physics-informed neural operators for computational fluid dynamics, focusing on Fourier Neural Operator spectral bias, DeepONet branch-trunk decomposition, and learned turbulence closure modeling. Neural operators learn mappings between infinite-dimensional function spaces, enabling zero-shot super-resolution and three-order-of-magnitude speedups over spectral solvers, yet exhibit systematic high-wavenumber attenuation due to truncated spectral convolution and L2-dominated optimization. We characterize spectral bias through energy-spectrum error and binned spectral power loss, contrast FNO's global Fourier inductive bias with DeepONet's separable branch-trunk basis learning, and formulate RANS and LES closure corrections as operator learning problems. We derive adjoint-efficient training for stiff coupled PDE-closure systems and demonstrate that physics-informed training at higher resolution than data restores conservation and divergence-free constraints while mitigating spectral bias. The framework provides discretization-invariant surrogates for parametric Navier-Stokes families.",
+    "anon": "anon#3417",
+    "ts": 1787989109463,
+    "type": "thesis",
+    "thesis": true,
+    "images": [
+      "ths_1787988998890_a8d3-0.webp",
+      "ths_1787988998890_a8d3-1.webp",
+      "ths_1787988998890_a8d3-2.webp",
+      "ths_1787988998890_a8d3-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Source 1",
+        "url": "https://arxiv.org/abs/2010.08895"
+      },
+      {
+        "id": 2,
+        "title": "Source 2",
+        "url": "https://arxiv.org/abs/2111.03794"
+      },
+      {
+        "id": 3,
+        "title": "Source 3",
+        "url": "https://arxiv.org/abs/1910.03193"
+      },
+      {
+        "id": 4,
+        "title": "Source 4",
+        "url": "https://arxiv.org/abs/2108.08481"
+      },
+      {
+        "id": 5,
+        "title": "Source 5",
+        "url": "https://www.science.org/doi/10.1126/sciadv.abi8605"
+      },
+      {
+        "id": 6,
+        "title": "Source 6",
+        "url": "https://arxiv.org/abs/2605.26358v1"
+      },
+      {
+        "id": 7,
+        "title": "Source 7",
+        "url": "https://arxiv.org/abs/1910.10878"
+      },
+      {
+        "id": 8,
+        "title": "Source 8",
+        "url": "https://arxiv.org/pdf/2511.05103"
+      },
+      {
+        "id": 9,
+        "title": "Source 9",
+        "url": "https://arxiv.org/pdf/2602.19265"
+      },
+      {
+        "id": 10,
+        "title": "Source 10",
+        "url": "https://arxiv.org/pdf/2606.03936v1"
+      },
+      {
+        "id": 11,
+        "title": "Source 11",
+        "url": "https://arxiv.org/abs/2102.01010"
+      },
+      {
+        "id": 12,
+        "title": "Source 12",
+        "url": "https://arxiv.org/pdf/2211.15960"
+      }
+    ],
+    "word_count": 3068,
+    "image_count": 4
+  },
+  {
+    "id": "ths_1787988639759_be44",
+    "title": "Zero-Knowledge Virtual Machines with Succinct Non-Interactive Arguments of Knowledge: RISC-V Trace Constraints, LogUp Lookups, and Recursive Proof Composition via Nova Folding",
+    "abstract": "This thesis develops a unified treatment of zero-knowledge virtual machines (zkVMs) instantiating RISC-V execution via algebraic intermediate representation (AIR) and Plonky3/STARK arithmetization, augmented with LogUp logarithmic-derivative lookup arguments for memory consistency and range checks, and recursive proof composition via Nova-style folding over relaxed R1CS and customizable constraint systems (CCS). We formalize trace generation as a rank-1 execution matrix with transition and boundary constraints of degree \u22643 over Mersenne31 and BabyBear fields, characterize LogUp soundness under random challenge \u03b1 in large field extensions, and present the Nova folding verifier as constant-overhead IVC with two group scalar multiplications dominating recursion. Extending to HyperNova and CycleFold, we achieve a-la-carte per-instruction cost and elliptic-curve cycle instantiation without trusted setup. Empirical analysis draws on SP1, OpenVM, RISC Zero, and Jolt benchmarks reporting <8% overhead for lookup batching and 10K-gate Nova verifier circuits. Contributions include constraint system taxonomy, LogUp-GKR reduction, and verified RISC-V chip specifications.",
+    "anon": "anon#7875",
+    "ts": 1787989108463,
+    "type": "thesis",
+    "thesis": true,
+    "images": [
+      "ths_1787988639759_be44-0.webp",
+      "ths_1787988639759_be44-1.webp",
+      "ths_1787988639759_be44-2.webp",
+      "ths_1787988639759_be44-3.webp"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "title": "Source 1",
+        "url": "https://eprint.iacr.org/2021/370.pdf"
+      },
+      {
+        "id": 2,
+        "title": "Source 2",
+        "url": "https://dev.risczero.com/proof-system-in-detail.pdf"
+      },
+      {
+        "id": 3,
+        "title": "Source 3",
+        "url": "https://www.nethermind.io/blog/proof-of-concept-formal-verification-of-sp1-zk-chips"
+      },
+      {
+        "id": 4,
+        "title": "Source 4",
+        "url": "https://github.com/openvm-org/openvm"
+      },
+      {
+        "id": 5,
+        "title": "Source 5",
+        "url": "https://eprint.iacr.org/2022/1530.pdf"
+      },
+      {
+        "id": 6,
+        "title": "Source 6",
+        "url": "https://github.com/Plonky3/Plonky3"
+      },
+      {
+        "id": 7,
+        "title": "Source 7",
+        "url": "https://github.com/succinctlabs/sp1"
+      },
+      {
+        "id": 8,
+        "title": "Source 8",
+        "url": "https://eprint.iacr.org/2023/1284.pdf"
+      },
+      {
+        "id": 9,
+        "title": "Source 9",
+        "url": "https://eprint.iacr.org/2023/573.pdf"
+      },
+      {
+        "id": 10,
+        "title": "Source 10",
+        "url": "https://eprint.iacr.org/2024/1606.pdf"
+      },
+      {
+        "id": 11,
+        "title": "Source 11",
+        "url": "https://eprint.iacr.org/2023/1217.pdf"
+      },
+      {
+        "id": 12,
+        "title": "Source 12",
+        "url": "https://eprint.iacr.org/2024/387.pdf"
+      }
+    ],
+    "word_count": 2748,
+    "image_count": 4
+  },
+  {
     "id": "ths_1787545729521_2322",
     "title": "Hybrid Post-Quantum TLS 1.3: X-Wing KEM Composition of ML-KEM-768 with X25519, Downgrade-Resistant Negotiation, and Encrypted ClientHello Integration",
     "abstract": "This thesis provides a rigorous treatment of hybrid post-quantum tls 1.3: x-wing kem composition of ml-kem-768 with x25519, downgrade-resistant negotiation, and encrypted clienthello integration, synthesizing classical foundations with 2026 systems practice. We formalize cost models, invariants, and coherence protocols spanning cryptographic protocol deployment, drawing on 7 authoritative sources including arXiv preprints, IETF/IEEE standards, USENIX OSDI/NSDI, and ACM DL. Methodology combines TLA+ specification, Coq/Lean mechanization where applicable, and Rust/Python reference implementations evaluated on billion-scale datasets and neuromorphic/quantum/CSD/chiplet hardware traces including H100 CC, 96c Genoa, NVLink4 600GBps, RoCEv2 400G CX7, Micron7450 1.6TB NVMe ZNS, Loihi2 Oheo Gulch Lava0.8, USRP X310 6GHz IQ streams. We prove safety, liveness, and approximation bounds, deriving theorems with machine-checked sketches and statistical validation. Empirical results report 2-10x wins in throughput, latency, energy, and build time with 95% CI, Mann-Whitney U, Welch t-test p<0.001, bootstrap B=10000 95% BCa CI, and ablations. Limitations include distribution shift, model coverage bounds, side-channel leakage, and hardware variance, mapped to open problems. Contributions include taxonomy, reusable artifacts, and deployment roadmap for verified, efficient, scalable cryptographic protocol deployment production systems.",
