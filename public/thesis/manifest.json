@@ -42599,7 +42599,9 @@
     ],
     "images": [
       "ths_1788042800653_0807-0.webp",
-      "ths_1788042800653_0807-1.webp"
+      "ths_1788042800653_0807-1.webp",
+      "ths_1788042800653_0807-2.webp",
+      "ths_1788042800653_0807-3.webp"
     ],
     "sources": [
       {
@@ -42645,7 +42647,7 @@
         "authors": "Wood et al."
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2708
   },
   {
@@ -42821,6 +42823,8 @@
       "technical academic diagram, white background, clean vector style, showing Secure Aggregation for Federated Learning: SecAgg+, Bell et al. Sharding, LWE Masking, and Verifiable Aggregation via Homomorphic Commitments limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
+      "ths_1788042803653_1cc5-0.webp",
+      "ths_1788042803653_1cc5-1.webp",
       "ths_1788042803653_1cc5-2.webp",
       "ths_1788042803653_1cc5-3.webp"
     ],
@@ -42868,7 +42872,7 @@
         "authors": "Bonawitz et al."
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2728
   },
   {
