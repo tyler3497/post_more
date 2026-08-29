@@ -31916,7 +31916,9 @@
       "technical academic diagram, white background, clean vector style, showing Federated Learning with Secure Aggregation and Distributed Differential Privacy: SecAgg Masking, DDP Distributed Noise, Skellam Mechanism, and Heavy-Hitter Discovery via Private Information Retrieval performance and proof structure, graphs, tables, complexity bounds, bars, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Federated Learning with Secure Aggregation and Distributed Differential Privacy: SecAgg Masking, DDP Distributed Noise, Skellam Mechanism, and Heavy-Hitter Discovery via Private Information Retrieval limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1787974182140_3e3e-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -31961,7 +31963,7 @@
         "authors": "Canonne et al."
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2807
   }
 ]
