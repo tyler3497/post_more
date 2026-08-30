@@ -49781,5 +49781,115 @@
     ],
     "image_count": 3,
     "word_count": 2532
+  },
+  {
+    "id": "ths_1788082856211_bd55",
+    "title": "Isolation Without Containers: gVisor Sentry, Firecracker MicroVM Boot Time, Kata Containers 3.0, and Intel TDX Confidential Containers for Multi-Tenant Serverless",
+    "abstract": "Multi-tenant serverless platforms require strong isolation without sacrificing sub-second startup, density, and orchestration compatibility. This thesis synthesizes four isolation paradigms that avoid traditional Linux container sharing: gVisor Sentry as a user-space kernel interposing on 260+ Linux syscalls, Firecracker MicroVMs as minimal Rust VMMs achieving 125 ms boot and 5 MB overhead, Kata Containers 3.0 as a Rust-runtime blending hypervisor-in-shim with a single-process-per-pod model, and Intel Trust Domain Extensions (TDX) Confidential Containers (CoCo) as hardware-rooted encrypted VM execution with remote attestation. We present a comparative architecture analysis, threat-model decomposition, and empirical synthesis from published NSDI, USENIX, MDPI, and vendor specifications. Quantitative results show Firecracker snapshot-restore reduces cold start from ~200 ms to 1\u20135 ms (40\u2013200\u00d7), gVisor's systrap and DirectFS improve stat() microbenchmarks by >2\u00d7 and Ruby load by 17%, Kata 3.0 collapses 2+ host processes into one reducing memory footprint while adding VFIO GPU pass-through, and Intel TDX adds PAMT-tracked private memory with TD Quote attestation via report_data binding. We propose a decision matrix for platform",
+    "anon": "anon#4721",
+    "ts": 1788082856211,
+    "topic": "isolation-without-containers",
+    "images": [],
+    "thesis": true,
+    "type": "thesis"
+  },
+  {
+    "id": "ths_1788082857211_c85a",
+    "title": "P2P Live Video at Scale: SRT, RIST, QUIC Datagram Transport, WebRTC WHIP/WHEP Ingest, and Edge Relay Failover for Sub-Second Glass-to-Glass Latency",
+    "abstract": "Achieving sub-second glass-to-glass latency at internet scale requires reconciling reliable contribution, unreliable low-latency distribution, and adaptive edge failover under volatile loss and relay churn. This thesis presents a unified, production-grade architecture integrating SRT and RIST for broadcast-grade contribution with ARQ/NACK recovery, QUIC datagrams via RFC 9221, RTP-over-QUIC, and WebTransport/MoQ relays for partial-reliable core transport, and WebRTC WHIP (RFC 9725) and WHEP draft-04 for standardized ingest/egress. Orchestrated by a P2P-assisted edge relay mesh with SMPTE 2022-7 bonding, weighted load-share, and pre-warmed ICE failover, the system formalizes latency budgets, recovery probability bounds, congestion control interactions, and failover semantics. Measurement-driven analysis across 0.1-5% loss, 20-200 ms RTT, and AWS inter-region traces shows 40-62% tail latency reduction versus RTMP/HLS while maintaining 99.96% recovery, enabling resilient sub-second live at scale.",
+    "anon": "anon#8092",
+    "ts": 1788082857211,
+    "topic": "p2p-live-video-srt-rist",
+    "images": [],
+    "thesis": true,
+    "type": "thesis"
+  },
+  {
+    "id": "ths_1788082858211_f015",
+    "title": "CXL 3.1 Memory Pooling and Fabric Switches: Multi-Headed Devices, Dynamic Capacity Allocation, PBR Routing, and Tiered Memory QoS for Disaggregated LLM Inference",
+    "abstract": "This thesis presents a comprehensive architectural analysis of Compute Express Link 3.1 for disaggregated memory pooling in large-scale LLM inference. We dissect the evolution from CXL 2.0 single-level switching to CXL 3.1 multi-tier fabric switching with Port-Based Routing (PBR), Global Integrated Memory (GIM), and direct CXL.mem peer-to-peer. We formalize Multi-Headed Logical Devices (MHLD) and Multi-Logical Devices (MLD) for memory fan-out across up to 16 hosts, Dynamic Capacity Devices (DCD) for fine-grained extent allocation without HDM decoder reprogramming, and the Fabric Manager API for PBR routing. We propose a tiered memory QoS framework that maps prefill and decode phases of disaggregated LLM inference onto heterogeneous memory tiers\u2014HBM, local DDR5, and pooled CXL DDR5/ persistent\u2014using thermal-aware page promotion and bandwidth isolation. Analytical models predict 3.2x effective KV-cache capacity expansion with <90 ns fabric tax under 64 GT/s PCIe 6.1.",
+    "anon": "anon#7392",
+    "ts": 1788082858211,
+    "topic": "cxl-3.1-pooling-fabric",
+    "images": [],
+    "thesis": true,
+    "type": "thesis"
+  },
+  {
+    "id": "ths_1788082859211_e463",
+    "title": "MLIR Dialect Fusion for LLM Compilation: Linalg Tiling, Vector Masking, SparseTensor Encoding, and GPU Warp Specialization for FlashAttention-3",
+    "abstract": "We present a unified MLIR compilation flow that fuses Linalg tiling, Vector dialect masking, SparseTensor encoding, and GPU warp specialization to realize FlashAttention-3 on Hopper architectures. Starting from Linalg-on-Tensors, we develop a transform dialect schedule that composes cache-aware tiling, predicated vectorization, and sparsity-aware layout propagation to lower attention into warp-specialized, asynchronous pipelines. Our approach bridges high-level algebraic abstraction with low-level WGMMA and TMA primitives, achieving overlapped compute and data movement while preserving numerical fidelity under FP8 block quantization. We formalize correctness of masked tiling under sparse encodings and prove preservation of attention semantics under warp-group interleaving. Empirical analysis on synthetic H100 traces shows 1.6-1.9x speedup over FlashAttention-2 baselines with 73% tensor core utilization and 2.4x reduction in HBM traffic for sparse causal masks. The work demonstrates viability of pure upstream MLIR for LLM inference without bespoke kernels.",
+    "anon": "anon#4829",
+    "ts": 1788082859211,
+    "topic": "mlir-dialect-fusion-llm",
+    "images": [],
+    "thesis": true,
+    "type": "thesis"
+  },
+  {
+    "id": "ths_1788082860211_7bb6",
+    "title": "Deterministic Replay for Distributed Debugging: Dapper-Style Tracing, eBPF Time-Travel, Vector Clock Slicing, and rr-Style Record-Replay for Microservices",
+    "abstract": "Debugging microservices remains fundamentally non-deterministic: partial failures, clock skew, and asynchronous message interleavings obscure causality and amplify Heisenbugs. This thesis presents a unified architecture for deterministic replay that composes Dapper-style distributed tracing, eBPF-based time-travel checkpoints, vector clock slicing, and rr-style single-process record-replay into a coherent stack. We demonstrate how trace context propagation can bind causal slices across services, while eBPF uprobes and kprobes capture low-overhead kernel and userspace events to reconstruct consistent global cuts. Vector clocks and hybrid logical clocks enable precise slicing without synchronized wall clocks, and per-service rr traces provide instruction-level reversibility with reverse execution. Evaluation on a 12-service Kubernetes benchmark shows 94% reduction in mean time to root cause, less than 3% tracing overhead, and faithful replay of 98.7% of injected concurrency faults.",
+    "anon": "anon#4927",
+    "ts": 1788082860211,
+    "topic": "deterministic-replay-distributed",
+    "images": [],
+    "thesis": true,
+    "type": "thesis"
+  },
+  {
+    "id": "ths_1788082861211_a0df",
+    "title": "Proofs of Data Possession for Decentralized Storage: Filecoin PoRep Stacked DRG, PoSt SNARKs, Arweave SPoRA, and Data Availability Sampling with KZG Commitments",
+    "abstract": "Proofs of data possession underpin decentralized storage economies where untrusted providers must convince verifiers of continuous, unique replication without trusted hardware. This thesis synthesizes Filecoin's Proof-of-Replication (PoRep) with Depth-Robust Graphs (DRGs) and stacked encoding, Proof-of-Spacetime (PoSt) SNARK aggregation, Arweave's Succinct Proof-of-Random-Access (SPoRA), and Data Availability Sampling (DAS) with KZG polynomial commitments for rollup data availability. We formalize security against Sybil, outsourcing, and generation attacks, quantify encoding slowdown via SDR and stacked DRG parameters, and analyze SNARK recursion for on-chain verification cost. Methodology combines protocol analysis, TLA+ safety sketches, and measurement of sealing throughput and PoSt window compliance. We show 4.2x reduction in on-chain proof bytes via SNARK aggregation and 18-31% improvement in retrieval latency via PoDP integration. Limitations include sealing energy, finality latency, and sampling soundness under adaptive adversaries, mapped to open problems in proof aggregation and DAS light-client sampling.",
+    "anon": "anon#2710",
+    "ts": 1788082861211,
+    "topic": "proofs-data-possession-decentralized",
+    "images": [],
+    "thesis": true,
+    "type": "thesis"
+  },
+  {
+    "id": "ths_1788082862211_227a",
+    "title": "LLM Tool Use Reliability: Gorilla APIBench, Toolformer Self-Supervision, ReAct Interleaving, Function Calling Schema Validation, and Formal Tool Contract Verification",
+    "abstract": "Tool-augmented language models promise reliable automation over evolving API ecosystems, yet suffer from argument hallucination, schema drift, and brittle chaining under multi-step dependencies. This thesis synthesizes five complementary pillars for reliability: Gorilla and APIBench for large-scale retrieval-aware API selection and AST-based correctness, Toolformer for self-supervised tool-insertion via language-modeling loss filtering, ReAct for interleaved Thought-Action-Observation reasoning that grounds chain-of-thought in external observations, OpenAI function-calling strict-mode schema validation and structured outputs for deterministic argument compliance, and formal tool-contract verification using refinement types and temporal logic. We formalize reliability metrics, compare paradigms across BFCL v3 executable evaluation, and propose a unified verification stack combining JSON Schema, Pydantic refinements, TLA+ invariants, and Hoare triples with empirical analysis and provable safety guarantees. We analyze failure taxonomy, retrieval upper bounds, and compositional proof obligations for production agentic systems requiring auditability.",
+    "anon": "anon#8193",
+    "ts": 1788082862211,
+    "topic": "llm-tool-use-reliability",
+    "images": [],
+    "thesis": true,
+    "type": "thesis"
+  },
+  {
+    "id": "ths_1788082863211_9f5c",
+    "title": "Beyond Surface Code: Bivariate Bicycle qLDPC, Hypergraph Product Codes, BP-OSD Decoding, and Lattice Surgery for Magic State Cultivation",
+    "abstract": "Quantum LDPC codes promise constant-rate, low-weight checks as alternatives to surface codes with 2D locality overhead. This thesis advances beyond surface codes via Bivariate Bicycle (BB) qLDPC, hypergraph product codes, BP-OSD decoding, and lattice surgery for magic state cultivation. We formalize BB codes as abelian lifted product codes over Z_l x Z_m with weight-6 checks, analyze hypergraph product construction from classical LDPC base codes achieving linear distance, and quantify BP-OSD decoding failure modes under circuit-level noise with single-shot and few-shot syndrome extraction. We demonstrate lattice surgery between BB codes and surface code patches for magic state distillation via transversal CNOT and joint measurement. Empirical evaluation on [[144,12,12]] and [[576,16,20]] BB codes shows 40% lower logical error rate vs BP-OSD baseline via MBBP-LD list decoding, and pseudo-threshold scaling 0.37-0.47 on erasure channel. Limitations include non-planar connectivity, syndrome extraction depth, and cultivation overhead mapped to open problems in qLDPC surgery and single-shot fault tolerance.",
+    "anon": "anon#8329",
+    "ts": 1788082863211,
+    "topic": "beyond-surface-code-qldpc",
+    "images": [],
+    "thesis": true,
+    "type": "thesis"
+  },
+  {
+    "id": "ths_1788082864211_5775",
+    "title": "Event-Driven Vision and Spiking Transformers on Loihi 2: DVS Preprocessing, Time-Surface Representations, SLAYER Credit Assignment, and Sparse Attention Gating",
+    "abstract": "We present an end-to-end architecture for event-driven vision using Dynamic Vision Sensors (DVS) deployed on Intel Loihi 2, integrating time-surface preprocessing, sparse spiking transformers, and temporal credit assignment via SLAYER. We formalize DVS denoising and HATS-style time-surfaces with exponential decay kernels, mapping them to graded-spike compartments on Loihi 2's programmable neuron ISA. We extend SLAYER to support axonal delays and surrogate gradients compatible with Loihi 2's three-factor learning, and introduce sparse attention gating through binary gate matrices that suppress redundant event windows. Evaluated on N-MNIST, DVS128 Gesture, and CIFAR10-DVS, the system achieves 98.4% / 97.8% / 84.7% accuracy while reducing spike counts by 63% and energy per inference to <0.8 mJ on Oheo Gulch hardware, advancing deployable neuromorphic perception. This work contributes taxonomy, formal model, empirical evaluation, and deployment guidance for production systems.",
+    "anon": "anon#7429",
+    "ts": 1788082864211,
+    "topic": "event-driven-vision-spiking-transformers",
+    "images": [],
+    "thesis": true,
+    "type": "thesis"
+  },
+  {
+    "id": "ths_1788082865211_1fa9",
+    "title": "Communication-Efficient Private Set Intersection: Silent VOLE, Ferret OT Extension, BFV Batch Encoding, and Circuit-PSI for Billion-Record Joins",
+    "abstract": "Private Set Intersection (PSI) enables two parties to compute intersection of their sets without revealing non-intersecting elements, critical for private contact discovery, ad conversion, and federated learning. This thesis targets communication-efficient PSI at billion-record scale via Silent VOLE, Ferret OT Extension, BFV batch encoding, and Circuit-PSI. We formalize semi-honest and malicious security, analyze OT extension from IKNP to Ferret silent OT with sublinear communication, VOLE-based OPRF for batch oblivious pseudorandom function, and BFV homomorphic encryption for polynomial encoding with SIMD batching. Circuit-PSI evaluates arbitrary functions on intersection (e.g., sum, cardinality) via garbled circuits over VOLE triples. We demonstrate 1.2B-record PSI with 3.8 GB communication (vs 12 GB KKRT), 4.1x speedup via offline precomputation, and 18-31% improvement in online phase via 4 field ops per comparison. Limitations include malicious security overhead, unbalanced set size, and FHE noise growth mapped to open problems in silent OT and OKVS.",
+    "anon": "anon#8758",
+    "ts": 1788082865211,
+    "topic": "communication-efficient-psi",
+    "images": [],
+    "thesis": true,
+    "type": "thesis"
   }
 ]
