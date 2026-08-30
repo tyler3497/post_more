@@ -49504,7 +49504,11 @@
       "technical academic diagram, white background, clean vector style, showing Post-Quantum Signature Aggregation at Scale: Falcon Lattice Trapdoors, Dilithium Fiat-Shamir Batching, SPHINCS+ Stateless Hash-Based Merging, and Blockchain Light Client Verification performance empirical evaluation, graphs, latency, throughput, benchmark bars, tables, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Post-Quantum Signature Aggregation at Scale: Falcon Lattice Trapdoors, Dilithium Fiat-Shamir Batching, SPHINCS+ Stateless Hash-Based Merging, and Blockchain Light Client Verification limitations future work tradeoff radar, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788078646779_a540-0.webp",
+      "ths_1788078646779_a540-1.webp",
+      "ths_1788078646779_a540-2.webp"
+    ],
     "sources": [
       {
         "name": "Falcon: Fast-Fourier Lattice-based Compact Signatures",
@@ -49535,7 +49539,7 @@
         "url": "https://eprint.iacr.org/2020/520.pdf"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 2493
   },
   {
@@ -49560,7 +49564,11 @@
       "technical academic diagram, white background, clean vector style, showing Hardware Root of Trust Orchestration for Zero-Trust Infrastructure: SPDM 1.3 Device Attestation, DICE Layered Identity, Caliptra RTL Measurement, and Supply-Chain Transparency Logs performance empirical evaluation, graphs, latency, throughput, benchmark bars, tables, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Hardware Root of Trust Orchestration for Zero-Trust Infrastructure: SPDM 1.3 Device Attestation, DICE Layered Identity, Caliptra RTL Measurement, and Supply-Chain Transparency Logs limitations future work tradeoff radar, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788078647779_6346-0.webp",
+      "ths_1788078647779_6346-1.webp",
+      "ths_1788078647779_6346-2.webp"
+    ],
     "sources": [
       {
         "name": "SPDM Specification 1.3 - DMTF",
@@ -49591,7 +49599,7 @@
         "url": "https://arxiv.org/abs/2107.08820"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 2519
   },
   {
@@ -49616,7 +49624,11 @@
       "technical academic diagram, white background, clean vector style, showing Streaming Cardinality Estimation under Mergeable Semantics: HyperLogLog++ Sparse-Dense Switching, Theta Sketches Set Operations, HyperLogLogLog Compression, and Range-Query Aware Summaries performance empirical evaluation, graphs, latency, throughput, benchmark bars, tables, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Streaming Cardinality Estimation under Mergeable Semantics: HyperLogLog++ Sparse-Dense Switching, Theta Sketches Set Operations, HyperLogLogLog Compression, and Range-Query Aware Summaries limitations future work tradeoff radar, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788078648779_d5d9-0.webp",
+      "ths_1788078648779_d5d9-1.webp",
+      "ths_1788078648779_d5d9-2.webp"
+    ],
     "sources": [
       {
         "name": "HyperLogLog: Analysis of a Near-Optimal Cardinality Estimation Algorithm - Flajolet et al.",
@@ -49647,7 +49659,7 @@
         "url": "https://arxiv.org/abs/1204.2083"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 2528
   },
   {
@@ -49672,7 +49684,11 @@
       "technical academic diagram, white background, clean vector style, showing Mechanism Design for Data Markets and Federated Valuation: Myerson Optimal Auctions, Differential Privacy Pricing Curves, Shapley Data Valuation via KNN Surrogates, and Truthful Federated Learning Incentives performance empirical evaluation, graphs, latency, throughput, benchmark bars, tables, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Mechanism Design for Data Markets and Federated Valuation: Myerson Optimal Auctions, Differential Privacy Pricing Curves, Shapley Data Valuation via KNN Surrogates, and Truthful Federated Learning Incentives limitations future work tradeoff radar, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788078649779_5e6e-0.webp",
+      "ths_1788078649779_5e6e-1.webp",
+      "ths_1788078649779_5e6e-2.webp"
+    ],
     "sources": [
       {
         "name": "Optimal Auction Design - Myerson 1981",
@@ -49703,7 +49719,7 @@
         "url": "https://arxiv.org/abs/1907.02020"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 2577
   },
   {
@@ -49728,7 +49744,11 @@
       "technical academic diagram, white background, clean vector style, showing Formal Verification of Smart Contract Invariants: Move Prover Resource Semantics, Certora CVL Parametric Rule Proving, Halmos Symbolic Execution for EVM, and DeFi Reentrancy Preservation performance empirical evaluation, graphs, latency, throughput, benchmark bars, tables, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Formal Verification of Smart Contract Invariants: Move Prover Resource Semantics, Certora CVL Parametric Rule Proving, Halmos Symbolic Execution for EVM, and DeFi Reentrancy Preservation limitations future work tradeoff radar, design space, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788078650779_0f62-0.webp",
+      "ths_1788078650779_0f62-1.webp",
+      "ths_1788078650779_0f62-2.webp"
+    ],
     "sources": [
       {
         "name": "The Move Prover - Zhong et al.",
@@ -49759,7 +49779,7 @@
         "url": "https://ethereum.github.io/yellowpaper/paper.pdf"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 2532
   }
 ]
