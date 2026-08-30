@@ -44633,7 +44633,8 @@
       "technical academic diagram, white background, clean vector style, showing cubical type theory Kan composition hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788053548292_7640-0.webp"
+      "ths_1788053548292_7640-0.webp",
+      "ths_1788053548292_7640-1.webp"
     ],
     "sources": [
       "https://arxiv.org/abs/1611.03359",
@@ -44645,7 +44646,7 @@
       "https://arxiv.org/abs/1902.06572",
       "https://arxiv.org/abs/2111.10195"
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2470,
     "wordcount": 2470
   },
@@ -44672,7 +44673,8 @@
       "technical academic diagram, white background, clean vector style, showing Gorilla TSDB compression hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788053549292_48d7-0.webp"
+      "ths_1788053549292_48d7-0.webp",
+      "ths_1788053549292_48d7-1.webp"
     ],
     "sources": [
       "https://www.vldb.org/pvldb/vol8/p1816-teller.pdf",
@@ -44684,7 +44686,7 @@
       "https://arxiv.org/abs/1910.09058",
       "https://prometheus.io/docs/concepts/data-model/"
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2407,
     "wordcount": 2407
   },
@@ -44868,7 +44870,8 @@
       "technical academic diagram, white background, clean vector style, showing two-tower DLRM HNSW hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788053554292_5ca9-0.webp"
+      "ths_1788053554292_5ca9-0.webp",
+      "ths_1788053554292_5ca9-1.webp"
     ],
     "sources": [
       "https://arxiv.org/abs/1904.01028",
@@ -44880,7 +44883,7 @@
       "https://arxiv.org/abs/1912.05680",
       "https://doi.org/10.1145/3285028.3285131"
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2407,
     "wordcount": 2407
   },
