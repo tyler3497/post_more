@@ -46045,7 +46045,12 @@
       "technical academic diagram, white background, clean vector style, showing equality-saturation-egraphs-egg TLA+ specification state machine, safety invariants, temporal logic, model checking states, formal verification flow, highly detailed",
       "technical academic diagram, white background, clean vector style, showing equality-saturation-egraphs-egg hardware acceleration mapping to H100 GPU NVLink Loihi2 neuromorphic, energy proportionality, DVFS, RAPL capping, highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1788060555000_4a5b-0.webp",
+      "ths_1788060555000_4a5b-1.webp",
+      "ths_1788060555000_4a5b-2.webp",
+      "ths_1788060555000_4a5b-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -46090,7 +46095,7 @@
         "url": "https://arxiv.org/abs/2302.03293"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2556
   },
   {
@@ -46115,7 +46120,9 @@
       "technical academic diagram, white background, clean vector style, showing webgpu-pathtracing-restir-svgf TLA+ specification state machine, safety invariants, temporal logic, model checking states, formal verification flow, highly detailed",
       "technical academic diagram, white background, clean vector style, showing webgpu-pathtracing-restir-svgf hardware acceleration mapping to H100 GPU NVLink Loihi2 neuromorphic, energy proportionality, DVFS, RAPL capping, highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1788060556000_5c6d-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -46160,7 +46167,7 @@
         "url": "https://arxiv.org/abs/1905.05645"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 2527
   },
   {
