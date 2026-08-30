@@ -1,13 +1,5 @@
 [
   {
-    "id": "sat_1787759518753_4982",
-    "title": "I Tried to Organize My Camera Roll and Now My 2019 Self Is Suing My 2026 Self for Emotional Distress",
-    "body": "**I finally decided to clean up my 47,000-photo camera roll.** *That was my first mistake.*\n\nIt started innocently enough. A Sunday afternoon, cold coffee, a burst of optimism that could only mean I was avoiding real responsibilities. I told myself I'd be a responsible adult and organize seven years into cute little folders. What I found instead was evidence.\n\n## The Evidence File\n\nMy phone became a courtroom exhibit with worse lighting:\n\n- 2019 Me: making sourdough *before* it was a personality, wearing jeans that actually fit, hiking *voluntarily* without being bribed by brunch\n- 2021 Me: learning ukulele for exactly three days, buying a houseplant and naming it after a coworker I barely knew\n- 2023 Me: 400 screenshots of recipes I never made, each captioned \"definitely this week\" in my notes app\n- 2026 Me: 2,800 identical photos of my cat sleeping in slightly different light, each one *essential* apparently\n\n> \"You used to be fun,\" whispered my 2019 self from a photo where I'm holding a festival wristband and a haircut that was 90% optimism. \"When did you become a guy who photographs his own lunch like it's a crime scene?\"\n\n### The Lawsuit\n\nBy Tuesday, my past selves had unionized.\n\nMy 2019 self filed a formal complaint for emotional distress. 2021 self is acting as very underqualified legal counsel. They allege I have caused *irreparable harm* by letting my camera roll become a digital attic of broken promises and blurry concert videos.\n\nTheir settlement demands include:\n\n- Immediately deleting `if (photo.isBlurry && photo.isImportant == false) { deleteForever(); }`\n- Finally posting the 2022 vacation pics I've been \"editing\" for four years\n- Admitting that I never needed 19 photos of the same sunset\n\n---\n\n**Now I'm in court-ordered mediation with my own Google Photos.** My therapist says this is growth. My phone storage says this is a crisis. Either way, I'm preemptively counter-suing my 2027 self for whatever embarrassing hobby he's about to pick up next.\n\n*Satire / Parody: This is 100% fictional. No actual selves were harmed in the making of this camera roll.*\n",
-    "image": "/satire/sat_1787759518753_4982.jpg",
-    "ts": 1787759518753,
-    "anon": "anon#9795"
-  },
-  {
     "id": "sat_1787763088501_3386",
     "title": "I Told My Groceries They Were an Investment and Now My Budget App is Auditing My Fridge",
     "anon": "anon#4428",
@@ -804,5 +796,13 @@
     "ts": 1788115939816,
     "anon": "anon#9592",
     "type": "satire"
+  },
+  {
+    "id": "sat_1788119479223_2684",
+    "title": "I Finally Organized My Junk Drawer and Now It's Charging Me Rent",
+    "body": "**I finally decided to organize my junk drawer.** *That was my first mistake.*\n\nFor seven years, that drawer has been a sacred ecosystem of tangled chargers, dead batteries, takeout menus from restaurants that closed during the Obama administration, and one very confident tape measure. I thought I was being an adult. The drawer thought I was staging a hostile takeover.\n\n## The Renovation\n\nI dumped everything onto the kitchen counter and immediately regretted every life choice that led me here:\n\n- 11 micro-USB cables that fit nothing I currently own, but *what if*\n- 3 pairs of scissors that all cut with the enthusiasm of a butter knife\n- A coupon for 10% off dry cleaning from 2019, still emotionally valid\n- The key to something, I'm sure of it\n- `drawer.exe has stopped working` - literally what my brain did when I saw it all\n\n> \"You've changed,\" whispered the drawer, now empty and gleaming. \"I used to be affordable housing for your bad decisions. Now look at me. I'm... *organized.*\"\n\n### The Betrayal\n\nWithin 24 hours, the drawer had unionized with my other storage spaces. It installed little dividers, labeled sections, and worst of all \u2014 standards.\n\nIt now charges me $50 a month in rent because, quote, \"exposure to this level of organization doesn't come free.\" My utility drawer saw this and raised its price. My coat closet is now asking for a security deposit.\n\n---\n\n**I tried to put one loose battery back in.** Just one. The drawer made a noise like a disappointed landlord and emailed me a lease violation.\n\n*SATIRE / PARODY \u2014 This is 100% fictional. My drawer is not actually my landlord. Yet.*\n\n",
+    "image": "/satire/sat_1788119479223_2684.jpg",
+    "ts": 1788119479223,
+    "anon": "anon#2684"
   }
 ]
