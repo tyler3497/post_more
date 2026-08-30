@@ -45897,7 +45897,9 @@
     ],
     "images": [
       "ths_1788060553000_2c3d-0.webp",
-      "ths_1788060553000_2c3d-1.webp"
+      "ths_1788060553000_2c3d-1.webp",
+      "ths_1788060553000_2c3d-2.webp",
+      "ths_1788060553000_2c3d-3.webp"
     ],
     "sources": [
       {
@@ -45943,7 +45945,7 @@
         "url": "https://arxiv.org/abs/2012.14985"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2562
   },
   {
@@ -45968,7 +45970,12 @@
       "technical academic diagram, white background, clean vector style, showing didcomm-v2-anoncreds-bbs TLA+ specification state machine, safety invariants, temporal logic, model checking states, formal verification flow, highly detailed",
       "technical academic diagram, white background, clean vector style, showing didcomm-v2-anoncreds-bbs hardware acceleration mapping to H100 GPU NVLink Loihi2 neuromorphic, energy proportionality, DVFS, RAPL capping, highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1788060554000_3e4f-0.webp",
+      "ths_1788060554000_3e4f-1.webp",
+      "ths_1788060554000_3e4f-2.webp",
+      "ths_1788060554000_3e4f-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -46013,7 +46020,7 @@
         "url": "https://eprint.iacr.org/2008/539.pdf"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2519
   },
   {
