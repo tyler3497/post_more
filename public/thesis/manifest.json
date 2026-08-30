@@ -44632,7 +44632,9 @@
       "technical academic diagram, white background, clean vector style, showing cubical type theory Kan composition security proof flow with commitments, verifier, prover interaction, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing cubical type theory Kan composition hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788053548292_7640-0.webp"
+    ],
     "sources": [
       "https://arxiv.org/abs/1611.03359",
       "https://arxiv.org/abs/1802.01170",
@@ -44643,7 +44645,7 @@
       "https://arxiv.org/abs/1902.06572",
       "https://arxiv.org/abs/2111.10195"
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 2470,
     "wordcount": 2470
   },
@@ -44669,7 +44671,9 @@
       "technical academic diagram, white background, clean vector style, showing Gorilla TSDB compression security proof flow with commitments, verifier, prover interaction, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Gorilla TSDB compression hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788053549292_48d7-0.webp"
+    ],
     "sources": [
       "https://www.vldb.org/pvldb/vol8/p1816-teller.pdf",
       "https://arxiv.org/abs/2101.12134",
@@ -44680,7 +44684,7 @@
       "https://arxiv.org/abs/1910.09058",
       "https://prometheus.io/docs/concepts/data-model/"
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 2407,
     "wordcount": 2407
   },
@@ -44706,7 +44710,9 @@
       "technical academic diagram, white background, clean vector style, showing DNA fountain LDPC enzymatic security proof flow with commitments, verifier, prover interaction, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing DNA fountain LDPC enzymatic hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788053550292_5118-0.webp"
+    ],
     "sources": [
       "https://doi.org/10.1038/nature11875",
       "https://doi.org/10.1126/science.aaj0044",
@@ -44717,7 +44723,7 @@
       "https://arxiv.org/abs/1908.04395",
       "https://www.nature.com/articles/nbt.4079"
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 2429,
     "wordcount": 2429
   },
@@ -44743,7 +44749,9 @@
       "technical academic diagram, white background, clean vector style, showing FHE PIR NTT recursion security proof flow with commitments, verifier, prover interaction, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing FHE PIR NTT recursion hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788053551292_7478-0.webp"
+    ],
     "sources": [
       "https://eprint.iacr.org/2016/1025.pdf",
       "https://eprint.iacr.org/2017/1042.pdf",
@@ -44754,7 +44762,7 @@
       "https://eprint.iacr.org/2022/004.pdf",
       "https://arxiv.org/abs/2201.01917"
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 2442,
     "wordcount": 2442
   },
@@ -44780,7 +44788,9 @@
       "technical academic diagram, white background, clean vector style, showing CRIU Firecracker snapshot security proof flow with commitments, verifier, prover interaction, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing CRIU Firecracker snapshot hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788053552292_4047-0.webp"
+    ],
     "sources": [
       "https://www.usenix.org/system/files/nsdi20-agache.pdf",
       "https://dl.acm.org/doi/10.1145/3342195.3387534",
@@ -44791,7 +44801,7 @@
       "https://arxiv.org/abs/1907.01519",
       "https://doi.org/10.1145/3447786.3456259"
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 2424,
     "wordcount": 2424
   },
@@ -44817,7 +44827,10 @@
       "technical academic diagram, white background, clean vector style, showing factor graph iSAM2 sensor fusion security proof flow with commitments, verifier, prover interaction, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing factor graph iSAM2 sensor fusion hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788053553292_35a8-0.webp",
+      "ths_1788053553292_35a8-1.webp"
+    ],
     "sources": [
       "https://arxiv.org/abs/1708.01583",
       "https://doi.org/10.1109/TRO.2011.2174756",
@@ -44828,7 +44841,7 @@
       "https://arxiv.org/abs/2104.10824",
       "https://doi.org/10.1109/IVS.2017.7995883"
     ],
-    "image_count": 4,
+    "image_count": 2,
     "word_count": 2467,
     "wordcount": 2467
   },
@@ -44854,7 +44867,9 @@
       "technical academic diagram, white background, clean vector style, showing two-tower DLRM HNSW security proof flow with commitments, verifier, prover interaction, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing two-tower DLRM HNSW hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788053554292_5ca9-0.webp"
+    ],
     "sources": [
       "https://arxiv.org/abs/1904.01028",
       "https://arxiv.org/abs/1708.04314",
@@ -44865,7 +44880,7 @@
       "https://arxiv.org/abs/1912.05680",
       "https://doi.org/10.1145/3285028.3285131"
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 2407,
     "wordcount": 2407
   },
@@ -44902,7 +44917,7 @@
       "https://arxiv.org/abs/1807.03748",
       "https://arxiv.org/abs/1908.01051"
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2477,
     "wordcount": 2477
   },
@@ -44928,7 +44943,9 @@
       "technical academic diagram, white background, clean vector style, showing Nova folding recursive SNARK security proof flow with commitments, verifier, prover interaction, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Nova folding recursive SNARK hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788053556292_1a5d-0.webp"
+    ],
     "sources": [
       "https://eprint.iacr.org/2021/370.pdf",
       "https://eprint.iacr.org/2023/620.pdf",
@@ -44939,7 +44956,7 @@
       "https://eprint.iacr.org/2022/981.pdf",
       "https://doi.org/10.1109/SP40001.2021.00016"
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 2433,
     "wordcount": 2433
   },
@@ -44965,7 +44982,9 @@
       "technical academic diagram, white background, clean vector style, showing carbon-aware RAPL temporal shifting security proof flow with commitments, verifier, prover interaction, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing carbon-aware RAPL temporal shifting hardware mapping with accelerators, memory hierarchy, dataflow, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788053557292_1da6-0.webp"
+    ],
     "sources": [
       "https://arxiv.org/abs/2009.12723",
       "https://arxiv.org/abs/2106.09450",
@@ -44976,7 +44995,7 @@
       "https://doi.org/10.1109/HPCA.2013.6522347",
       "https://arxiv.org/abs/2305.10269"
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 2427,
     "wordcount": 2427
   }
