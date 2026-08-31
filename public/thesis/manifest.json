@@ -18280,7 +18280,9 @@
       "technical academic diagram, white background, clean vector style, showing Near-field holographic codebook design with Fresnel zone focusing at 10m, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing ISAC waveform Pareto tradeoff sensing RMSE vs communication SE with Tbps markers, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788204728589_3fa4-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -18325,7 +18327,7 @@
         "url": "https://arxiv.org/abs/2102.04707"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4301
   },
   {
@@ -18350,7 +18352,9 @@
       "technical academic diagram, white background, clean vector style, showing Byzantine-robust FedAvg with trimmed mean and Krum distance filtering malicious updates, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Cross-bank fraud detection ROC curves with AUC 0.94 vs centralized and DP epsilon tradeoff, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788204729545_2a0c-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -18395,7 +18399,7 @@
         "url": "https://arxiv.org/abs/2302.12168"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4327
   },
   {
@@ -18420,7 +18424,9 @@
       "technical academic diagram, white background, clean vector style, showing Retraction semantics for recursive Datalog with semi-naive evaluation and negative cycles, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Skew-aware sharding for Zipf hot keys with hot 1% detection and load balancing mitigation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788204731137_d0f3-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -18465,7 +18471,7 @@
         "url": "https://arxiv.org/abs/1304.5182"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4311
   },
   {
@@ -18490,7 +18496,9 @@
       "technical academic diagram, white background, clean vector style, showing TSN 802.1Qbv gate control list timeline with 8 queues and guard bands for URLLC, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing PTP hardware timestamping sync tree with BMC and 340ns error accumulation over 5 hops, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788204731507_8f6b-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -18535,7 +18543,7 @@
         "url": "https://doi.org/10.1109/ACCESS.2021.3069580"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4331
   },
   {
@@ -18560,7 +18568,9 @@
       "technical academic diagram, white background, clean vector style, showing Quantized INT8 weight range proof circuit with 8-bit decomposition and overflow checks, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing GPU-accelerated MSM on BLS12-381 with 8k constraints per second prover and 12KB proof size graph, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788204732662_40e9-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -18605,7 +18615,7 @@
         "url": "https://eprint.iacr.org/2019/1000.pdf"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4315
   },
   {
@@ -18630,7 +18640,9 @@
       "technical academic diagram, white background, clean vector style, showing Lag-Llama LLaMA-inspired probabilistic forecasting with Student-t heads and RoPE, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Conformal prediction adaptive coverage under distribution shift with ACI gamma 0.01 and 92% coverage, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788204733988_466f-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -18675,7 +18687,7 @@
         "url": "https://arxiv.org/abs/2310.14157"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4335
   },
   {
@@ -18700,7 +18712,9 @@
       "technical academic diagram, white background, clean vector style, showing Kani model checking for unsafe blocks with CBMC unwinding and harness generation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Binder IPC formal verification via TLA+ state machine with Tree Borrows Stacked Borrows aliasing, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788204734474_eb6a-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -18745,7 +18759,7 @@
         "url": "https://arxiv.org/abs/2203.07005"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4383
   }
 ]
