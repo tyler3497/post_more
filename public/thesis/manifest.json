@@ -6953,10 +6953,10 @@
       "technical academic diagram, white background, clean vector style, showing side-channel resilient enclave, Reverse Map Table RMP, Secure EPT SEPT, memory encryption engine, cache partitioning, interrupt injection filtering, page-fault oblivious execution, threat arrows mitigated, highly detailed"
     ],
     "images": [
-      "public/thesis/ths_1788147010284_ae39-0.webp",
-      "public/thesis/ths_1788147010284_ae39-1.webp",
-      "public/thesis/ths_1788147010284_ae39-2.webp",
-      "public/thesis/ths_1788147010284_ae39-3.webp"
+      "/thesis/ths_1788147010284_ae39-0.webp",
+      "/thesis/ths_1788147010284_ae39-1.webp",
+      "/thesis/ths_1788147010284_ae39-2.webp",
+      "/thesis/ths_1788147010284_ae39-3.webp"
     ],
     "sources": [
       {
@@ -7046,8 +7046,8 @@
       "technical academic diagram, white background, clean vector style, showing Flink Stateful Functions architecture with virtual functions, type and id routing, state partitioning, ingress from Kafka, egress transactional, serverless elasticity"
     ],
     "images": [
-      "public/thesis/ths_1788147251099_a687-0.webp",
-      "public/thesis/ths_1788147251099_a687-1.webp"
+      "/thesis/ths_1788147251099_a687-0.webp",
+      "/thesis/ths_1788147251099_a687-1.webp"
     ],
     "sources": [
       {
@@ -7362,10 +7362,10 @@
       }
     ],
     "images": [
-      "ths_1788147208728_3696-0.webp",
-      "ths_1788147208728_3696-1.webp",
-      "ths_1788147208728_3696-2.webp",
-      "ths_1788147208728_3696-3.webp"
+      "/thesis/ths_1788147208728_3696-0.webp",
+      "/thesis/ths_1788147208728_3696-1.webp",
+      "/thesis/ths_1788147208728_3696-2.webp",
+      "/thesis/ths_1788147208728_3696-3.webp"
     ],
     "image_count": 4,
     "image_concepts": [
