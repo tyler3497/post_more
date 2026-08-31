@@ -15133,13 +15133,8 @@
     "thesis": true,
     "type": "thesis",
     "domain": "Federated Learning with Heterogeneous Differential",
-    "image_count": 4,
-    "images": [
-      "ths_1788190261234_b730-0.webp",
-      "ths_1788190261234_b730-1.webp",
-      "ths_1788190261234_b730-2.webp",
-      "ths_1788190261234_b730-3.webp"
-    ],
+    "image_count": 0,
+    "images": [],
     "image_concepts": [
       "Federated Learning with Heterogeneous Differential Privacy architecture overview with layers, nodes, arrows",
       "Federated Learning with Heterogeneous Differential Privacy performance tradeoff diagram with metrics, bar charts, mathematical notation",
@@ -15210,13 +15205,8 @@
     "thesis": true,
     "type": "thesis",
     "domain": "Scalable Causal Discovery from Interventional Data",
-    "image_count": 4,
-    "images": [
-      "ths_1788190262434_b1fd-0.webp",
-      "ths_1788190262434_b1fd-1.webp",
-      "ths_1788190262434_b1fd-2.webp",
-      "ths_1788190262434_b1fd-3.webp"
-    ],
+    "image_count": 0,
+    "images": [],
     "image_concepts": [
       "Scalable Causal Discovery from Interventional Data architecture overview with layers, nodes, arrows",
       "Scalable Causal Discovery from Interventional Data performance tradeoff diagram with metrics, bar charts, mathematical notation",
@@ -15287,13 +15277,8 @@
     "thesis": true,
     "type": "thesis",
     "domain": "Hardware-Software Co-Design for Sparse Attention i",
-    "image_count": 4,
-    "images": [
-      "ths_1788190263297_d796-0.webp",
-      "ths_1788190263297_d796-1.webp",
-      "ths_1788190263297_d796-2.webp",
-      "ths_1788190263297_d796-3.webp"
-    ],
+    "image_count": 0,
+    "images": [],
     "image_concepts": [
       "Hardware-Software Co-Design for Sparse Attention in Long-Context LLMs architecture overview with layers, nodes, arrows",
       "Hardware-Software Co-Design for Sparse Attention in Long-Context LLMs performance tradeoff diagram with metrics, bar charts, mathematical notation",
@@ -15364,13 +15349,8 @@
     "thesis": true,
     "type": "thesis",
     "domain": "Program Synthesis for High-Performance GPU Kernels",
-    "image_count": 4,
-    "images": [
-      "ths_1788190264232_ddc0-0.webp",
-      "ths_1788190264232_ddc0-1.webp",
-      "ths_1788190264232_ddc0-2.webp",
-      "ths_1788190264232_ddc0-3.webp"
-    ],
+    "image_count": 0,
+    "images": [],
     "image_concepts": [
       "Program Synthesis for High-Performance GPU Kernels architecture overview with layers, nodes, arrows",
       "Program Synthesis for High-Performance GPU Kernels performance tradeoff diagram with metrics, bar charts, mathematical notation",
@@ -15441,13 +15421,8 @@
     "thesis": true,
     "type": "thesis",
     "domain": "Retrieval-Augmented Generation at Web Scale",
-    "image_count": 4,
-    "images": [
-      "ths_1788190265407_a9ad-0.webp",
-      "ths_1788190265407_a9ad-1.webp",
-      "ths_1788190265407_a9ad-2.webp",
-      "ths_1788190265407_a9ad-3.webp"
-    ],
+    "image_count": 0,
+    "images": [],
     "image_concepts": [
       "Retrieval-Augmented Generation at Web Scale architecture overview with layers, nodes, arrows",
       "Retrieval-Augmented Generation at Web Scale performance tradeoff diagram with metrics, bar charts, mathematical notation",
@@ -15518,13 +15493,8 @@
     "thesis": true,
     "type": "thesis",
     "domain": "Homomorphic Secret Sharing for Private Information",
-    "image_count": 4,
-    "images": [
-      "ths_1788190266396_565f-0.webp",
-      "ths_1788190266396_565f-1.webp",
-      "ths_1788190266396_565f-2.webp",
-      "ths_1788190266396_565f-3.webp"
-    ],
+    "image_count": 0,
+    "images": [],
     "image_concepts": [
       "Homomorphic Secret Sharing for Private Information Retrieval architecture overview with layers, nodes, arrows",
       "Homomorphic Secret Sharing for Private Information Retrieval performance tradeoff diagram with metrics, bar charts, mathematical notation",
@@ -15595,13 +15565,8 @@
     "thesis": true,
     "type": "thesis",
     "domain": "Verified Smart Contract Verification via Separatio",
-    "image_count": 4,
-    "images": [
-      "ths_1788190267596_47a0-0.webp",
-      "ths_1788190267596_47a0-1.webp",
-      "ths_1788190267596_47a0-2.webp",
-      "ths_1788190267596_47a0-3.webp"
-    ],
+    "image_count": 0,
+    "images": [],
     "image_concepts": [
       "Verified Smart Contract Verification via Separation Logic architecture overview with layers, nodes, arrows",
       "Verified Smart Contract Verification via Separation Logic performance tradeoff diagram with metrics, bar charts, mathematical notation",
@@ -15672,13 +15637,8 @@
     "thesis": true,
     "type": "thesis",
     "domain": "Generative Modeling for Scientific Data",
-    "image_count": 4,
-    "images": [
-      "ths_1788190268383_8be8-0.webp",
-      "ths_1788190268383_8be8-1.webp",
-      "ths_1788190268383_8be8-2.webp",
-      "ths_1788190268383_8be8-3.webp"
-    ],
+    "image_count": 0,
+    "images": [],
     "image_concepts": [
       "Generative Modeling for Scientific Data architecture overview with layers, nodes, arrows",
       "Generative Modeling for Scientific Data performance tradeoff diagram with metrics, bar charts, mathematical notation",
@@ -15749,13 +15709,8 @@
     "thesis": true,
     "type": "thesis",
     "domain": "Post-Quantum TLS 1.3 Handshake Optimization",
-    "image_count": 4,
-    "images": [
-      "ths_1788190269270_3401-0.webp",
-      "ths_1788190269270_3401-1.webp",
-      "ths_1788190269270_3401-2.webp",
-      "ths_1788190269270_3401-3.webp"
-    ],
+    "image_count": 0,
+    "images": [],
     "image_concepts": [
       "Post-Quantum TLS 1.3 Handshake Optimization architecture overview with layers, nodes, arrows",
       "Post-Quantum TLS 1.3 Handshake Optimization performance tradeoff diagram with metrics, bar charts, mathematical notation",
