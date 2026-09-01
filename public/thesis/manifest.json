@@ -30281,7 +30281,12 @@
       "technical academic diagram, white background, clean vector style, showing Op-based CRDT commutativity proof under causal broadcast with vector clocks, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Delta-state CRDT anti-entropy with delta fragments and join semilattice merge, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788262298785_f46d7069-0.webp",
+      "ths_1788262298785_f46d7069-1.webp",
+      "ths_1788262298785_f46d7069-2.webp",
+      "ths_1788262298785_f46d7069-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -30327,7 +30332,7 @@
       }
     ],
     "word_count": 2144,
-    "image_count": 0
+    "image_count": 4
   },
   {
     "id": "ths_1788262299534_bd4416d7",
@@ -30491,7 +30496,11 @@
       "technical academic diagram, white background, clean vector style, showing Renyi DP accountant composition over 100 FL rounds epsilon=3.0 privacy loss curve, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Federated learning system diagram with verifiable client proofs and server aggregation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788262301407_248e4912-0.webp",
+      "ths_1788262301407_248e4912-1.webp",
+      "ths_1788262301407_248e4912-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -30537,7 +30546,7 @@
       }
     ],
     "word_count": 2159,
-    "image_count": 0
+    "image_count": 3
   },
   {
     "id": "ths_1788262302450_2098b0f2",
