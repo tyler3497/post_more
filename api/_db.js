@@ -107,9 +107,18 @@ export async function savePost(post) {
     mem.posts.set(post.id, post)
     return true
   }
+  let stored=false
   try {
     await kv.set(`${POST_PREFIX}${post.id}`, JSON.stringify(post))
+    stored=true
   } catch {}
+  if(!stored){
+    try{
+      const slim={...post, body: (post.body||'').slice(0,4000), _truncated:true}
+      await kv.set(`${POST_PREFIX}${post.id}`, JSON.stringify(slim))
+      stored=true
+    }catch{}
+  }
   try {
     try { await kv.zadd(POST_INDEX, { score: post.ts, member: post.id }) }
     catch {
@@ -129,7 +138,14 @@ export async function savePost(post) {
     try {
       try { await kv.zadd('thesis:index', { score: post.ts, member: post.id }) }
       catch { try { await kv.zadd('thesis:index', post.ts, post.id) } catch {} }
-      await kv.set(`thesis:post:${post.id}`, JSON.stringify(post))
+      if(stored){
+        try{ await kv.set(`thesis:post:${post.id}`, JSON.stringify(post)) }catch{
+          try{
+            const slim={...post, body: (post.body||'').slice(0,4000), _truncated:true}
+            await kv.set(`thesis:post:${post.id}`, JSON.stringify(slim))
+          }catch{}
+        }
+      }
     } catch {}
   }
   return true
