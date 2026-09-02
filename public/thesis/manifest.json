@@ -39938,7 +39938,9 @@
     ],
     "images": [
       "ths_1788316303311_5e1d-0.webp",
-      "ths_1788316303311_5e1d-1.webp"
+      "ths_1788316303311_5e1d-1.webp",
+      "ths_1788316303311_5e1d-2.webp",
+      "ths_1788316303311_5e1d-3.webp"
     ],
     "sources": [
       {
@@ -39984,7 +39986,7 @@
         "url": "https://doi.org/10.1109/HOTI.2023.00015"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 4377
   },
   {
@@ -40083,7 +40085,9 @@
     ],
     "images": [
       "ths_1788316304776_7ba1-0.webp",
-      "ths_1788316304776_7ba1-1.webp"
+      "ths_1788316304776_7ba1-1.webp",
+      "ths_1788316304776_7ba1-2.webp",
+      "ths_1788316304776_7ba1-3.webp"
     ],
     "sources": [
       {
@@ -40129,7 +40133,7 @@
         "url": "https://doi.org/10.1145/3448016.3457550"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 4366
   },
   {
@@ -40230,7 +40234,9 @@
       "technical academic diagram, white background, clean vector style, showing Provenance tracking mapping generated sentences to top-3 passages via attention rollout citation graph, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788316306792_7ea6-0.webp"
+      "ths_1788316306792_7ea6-0.webp",
+      "ths_1788316306792_7ea6-1.webp",
+      "ths_1788316306792_7ea6-2.webp"
     ],
     "sources": [
       {
@@ -40276,7 +40282,7 @@
         "url": "https://arxiv.org/abs/2210.03362"
       }
     ],
-    "image_count": 1,
+    "image_count": 3,
     "word_count": 4388
   },
   {
@@ -40379,6 +40385,7 @@
     "images": [
       "ths_1788316309248_236c-0.webp",
       "ths_1788316309248_236c-1.webp",
+      "ths_1788316309248_236c-2.webp",
       "ths_1788316309248_236c-3.webp"
     ],
     "sources": [
@@ -40425,7 +40432,7 @@
         "url": "https://doi.org/10.1109/TWC.2022.3183948"
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 4402
   },
   {
@@ -40521,7 +40528,9 @@
       "technical academic diagram, white background, clean vector style, showing Non-IID Dirichlet \u03b1=0.1 label skew partitioning vs IID accuracy drop mitigation via SCAFFOLD, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788316310876_acfe-1.webp"
+      "ths_1788316310876_acfe-0.webp",
+      "ths_1788316310876_acfe-1.webp",
+      "ths_1788316310876_acfe-2.webp"
     ],
     "sources": [
       {
@@ -40567,7 +40576,7 @@
         "url": "https://doi.org/10.1145/3292500.3330807"
       }
     ],
-    "image_count": 1,
+    "image_count": 3,
     "word_count": 4372
   }
 ]
