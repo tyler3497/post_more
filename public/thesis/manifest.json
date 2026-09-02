@@ -39937,6 +39937,7 @@
       "technical academic diagram, white background, clean vector style, showing Performance isolation graph pooled memory QPS vs local vs remote UPI with noisy neighbor contention, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
+      "ths_1788316303311_5e1d-0.webp",
       "ths_1788316303311_5e1d-1.webp"
     ],
     "sources": [
@@ -39983,7 +39984,7 @@
         "url": "https://doi.org/10.1109/HOTI.2023.00015"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 4377
   },
   {
@@ -40080,7 +40081,10 @@
       "technical academic diagram, white background, clean vector style, showing Replicated file system OR-Map causal+ consistency rename/delete LWW resolution with vector clocks, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Awareness protocol cursor propagation ephemeral CRDT heartbeat 50ms reducing conflicts, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788316304776_7ba1-0.webp",
+      "ths_1788316304776_7ba1-1.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -40125,7 +40129,7 @@
         "url": "https://doi.org/10.1145/3448016.3457550"
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 4366
   },
   {
@@ -40152,7 +40156,9 @@
     ],
     "images": [
       "ths_1788316305918_4afc-0.webp",
-      "ths_1788316305918_4afc-1.webp"
+      "ths_1788316305918_4afc-1.webp",
+      "ths_1788316305918_4afc-2.webp",
+      "ths_1788316305918_4afc-3.webp"
     ],
     "sources": [
       {
@@ -40198,7 +40204,7 @@
         "url": "https://arxiv.org/abs/2207.01559"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 4379
   },
   {
@@ -40223,7 +40229,9 @@
       "technical academic diagram, white background, clean vector style, showing NLI entailment verification DeBERTa-v3 filtering hallucinated sentences with entailment >0.8 threshold, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Provenance tracking mapping generated sentences to top-3 passages via attention rollout citation graph, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788316306792_7ea6-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -40268,7 +40276,7 @@
         "url": "https://arxiv.org/abs/2210.03362"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4388
   },
   {
@@ -40294,7 +40302,10 @@
       "technical academic diagram, white background, clean vector style, showing MEV flashloan oracle manipulation Stackelberg game modeling economic exploit profit bound, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788316307729_20f2-0.webp"
+      "ths_1788316307729_20f2-0.webp",
+      "ths_1788316307729_20f2-1.webp",
+      "ths_1788316307729_20f2-2.webp",
+      "ths_1788316307729_20f2-3.webp"
     ],
     "sources": [
       {
@@ -40340,7 +40351,7 @@
         "url": "https://arxiv.org/abs/2101.05511"
       }
     ],
-    "image_count": 1,
+    "image_count": 4,
     "word_count": 4386
   },
   {
@@ -40366,7 +40377,9 @@
       "technical academic diagram, white background, clean vector style, showing Mutual coupling impedance matrix Z_self+Z_mutual reducing effective rank at \u03bb/2 spacing, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788316309248_236c-1.webp"
+      "ths_1788316309248_236c-0.webp",
+      "ths_1788316309248_236c-1.webp",
+      "ths_1788316309248_236c-3.webp"
     ],
     "sources": [
       {
@@ -40412,7 +40425,7 @@
         "url": "https://doi.org/10.1109/TWC.2022.3183948"
       }
     ],
-    "image_count": 1,
+    "image_count": 3,
     "word_count": 4402
   },
   {
@@ -40507,7 +40520,9 @@
       "technical academic diagram, white background, clean vector style, showing Poisson subsampling amplification theorem \u03b5 to O(q\u03b5) for cross-device FL 1M clients, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Non-IID Dirichlet \u03b1=0.1 label skew partitioning vs IID accuracy drop mitigation via SCAFFOLD, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788316310876_acfe-1.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -40552,7 +40567,7 @@
         "url": "https://doi.org/10.1145/3292500.3330807"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4372
   }
 ]
