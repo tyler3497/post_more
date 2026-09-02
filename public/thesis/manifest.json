@@ -21,7 +21,12 @@
       "technical academic diagram, white background, clean vector style, showing Live migration protocol with Lamport clock and monotonic counter handoff, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Performance isolation graph: Redis QPS vs noisy neighbor contention levels, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_cc-sev-snp-v2_1788309282472_a8b1-0.webp",
+      "ths_cc-sev-snp-v2_1788309282472_a8b1-1.webp",
+      "ths_cc-sev-snp-v2_1788309282472_a8b1-2.webp",
+      "ths_cc-sev-snp-v2_1788309282472_a8b1-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -91,7 +96,11 @@
       "technical academic diagram, white background, clean vector style, showing Spiking transformer attention with surrogate gradient BPTT unrolled through time, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Event-camera time-surface encoding and N-MNIST energy vs accuracy Pareto, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_neuro-loihi2-v2_1788309281525_4ff0-0.webp",
+      "ths_neuro-loihi2-v2_1788309281525_4ff0-1.webp",
+      "ths_neuro-loihi2-v2_1788309281525_4ff0-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -161,7 +170,12 @@
       "technical academic diagram, white background, clean vector style, showing Pasta cycle Pallas/Vesta recursion diagram showing field order/base field swap, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Spartan sumcheck with Hyrax PCS layers and proof size vs steps graph, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_pcd-nova-v2_1788309279906_3771-0.webp",
+      "ths_pcd-nova-v2_1788309279906_3771-1.webp",
+      "ths_pcd-nova-v2_1788309279906_3771-2.webp",
+      "ths_pcd-nova-v2_1788309279906_3771-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -231,7 +245,12 @@
       "technical academic diagram, white background, clean vector style, showing Reward hacking length exploitation scatter plot: win rate vs response length, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Bradley-Terry preference graph with intransitive cycles and IPO regularization, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_llm-align-dpo-v2_1788309279175_0534-0.webp",
+      "ths_llm-align-dpo-v2_1788309279175_0534-1.webp",
+      "ths_llm-align-dpo-v2_1788309279175_0534-2.webp",
+      "ths_llm-align-dpo-v2_1788309279175_0534-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -301,7 +320,12 @@
       "technical academic diagram, white background, clean vector style, showing TSN-5G convergence architecture with DS-TT/NW-TT translators mapping to 5QI, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Closed-loop motion control latency histogram under TSN vs best-effort with 99.999% deadline, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_tsn-industrial-v2_1788309278129_0ae0-0.webp",
+      "ths_tsn-industrial-v2_1788309278129_0ae0-1.webp",
+      "ths_tsn-industrial-v2_1788309278129_0ae0-2.webp",
+      "ths_tsn-industrial-v2_1788309278129_0ae0-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -371,7 +395,11 @@
       "technical academic diagram, white background, clean vector style, showing Resource handle linearity own/borrow ownership transfer graph, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Cross-language composition DAG of 12 components with cold start latency bars, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_wasm-component-v2_1788309277109_951b-0.webp",
+      "ths_wasm-component-v2_1788309277109_951b-1.webp",
+      "ths_wasm-component-v2_1788309277109_951b-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -513,7 +541,9 @@
     ],
     "images": [
       "ths_vecdb-mvcc-v2_1788309275210_12d6-0.webp",
-      "ths_vecdb-mvcc-v2_1788309275210_12d6-1.webp"
+      "ths_vecdb-mvcc-v2_1788309275210_12d6-1.webp",
+      "ths_vecdb-mvcc-v2_1788309275210_12d6-2.webp",
+      "ths_vecdb-mvcc-v2_1788309275210_12d6-3.webp"
     ],
     "sources": [
       {
@@ -584,7 +614,12 @@
       "technical academic diagram, white background, clean vector style, showing Logical error rate vs physical error rate scaling with code distance curves, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Overhead estimation for Shor 2048 factoring resource stack with qubit counts, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_qec-surface-v2_1788309273824_f055-0.webp",
+      "ths_qec-surface-v2_1788309273824_f055-1.webp",
+      "ths_qec-surface-v2_1788309273824_f055-2.webp",
+      "ths_qec-surface-v2_1788309273824_f055-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -654,7 +689,12 @@
       "technical academic diagram, white background, clean vector style, showing U280 and Versal ACAP floorplan showing HBM, URAM, DSP allocation for HE acceleration, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Throughput vs security parameter tradeoff Pareto frontier with latency bars, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_he-fpga-ntt-v2_1788309272817_049a-0.webp",
+      "ths_he-fpga-ntt-v2_1788309272817_049a-1.webp",
+      "ths_he-fpga-ntt-v2_1788309272817_049a-2.webp",
+      "ths_he-fpga-ntt-v2_1788309272817_049a-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
