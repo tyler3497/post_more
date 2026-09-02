@@ -3,7 +3,7 @@ id: ths_diff-render-inverse_1788327199860_e381
 title: "Differentiable Rendering for Inverse Graphics: Mitsuba 3 AD, Path Replay Backpropagation, Reparameterized Discontinuities, and Material BRDF Recovery via Neural Microfacet Models"
 abstract: "This thesis presents a comprehensive, specification-first investigation of Differentiable Rendering for Inverse Graphics: Mitsuba 3 AD, Path Replay Backpropagation, Reparameterized Discontinuities, and Material BRDF Recovery via Neural Microfacet Models, unifying formal methods, systems architecture, and empirical evaluation. We formalize the core abstraction with machine-checkable invariants, derive quantitative cost models capturing latency, energy, space, and carbon, and demonstrate that our construction achieves near-optimal tradeoffs with statistically rigorous evidence (B=10000 bootstrap, 95% BCa CI, Mann-Whitney U p<0.001). Our approach synthesizes prior art [1][2][3] with novel mechanisms: for diff-render-mitsuba3-inverse-graphics, we introduce a layered architecture separating control-plane verification from data-plane performance, enabling compositional reasoning via TLA+ and Coq 8.19. We evaluate on 8xA100 40GB, 2xEPYC 9654 96c, NVLink4 600GBps, RoCEv2 400G, Micron7450 NVMe ZNS, with datasets SIFT1B, OpenImages13M, YCSB-C Zipf 0.99-1.2 hot 1%, showing 2.0-3.5x improvement over baselines, 2.45x carbon reduction, 94% verified LOC, and 0.92ms p50 vs 3.21ms baseline. Six to seven real sources anchor our claims with arXiv/DOI/official URLs, ensuring reproducibility and auditability for production deployment at N=10^6-10^9 scale."
 anon: "anon#7500"
-ts: 1788327213247
+ts: 1788327361179
 topic: "diff-render-mitsuba3-inverse-graphics"
 thesis: true
 type: thesis
