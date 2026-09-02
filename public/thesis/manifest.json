@@ -20323,12 +20323,7 @@
       "technical academic diagram, white background, clean vector style, showing rr record-replay deterministic execution tree with syscall interception and memory snapshot, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing QEMU TCG plugin instrumentation for heterogeneous SoC 4GHz cycle-accurate replay bridge, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_deterministic-replay-soc-coresight_1788348961023_ef00-0.webp",
-      "ths_deterministic-replay-soc-coresight_1788348961023_ef00-1.webp",
-      "ths_deterministic-replay-soc-coresight_1788348961023_ef00-2.webp",
-      "ths_deterministic-replay-soc-coresight_1788348961023_ef00-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -20373,7 +20368,7 @@
         "url": "https://arxiv.org/abs/2106.12345"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2128
   },
   {
@@ -20398,12 +20393,7 @@
       "technical academic diagram, white background, clean vector style, showing IPMI power capping control loop 300ms with thermal throttling prediction TFT quantiles, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing PUE optimization via exergy analysis with 100k node data center energy vs latency tradeoff, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_energy-proportional-serverless-carbon_1788348962393_1de2-0.webp",
-      "ths_energy-proportional-serverless-carbon_1788348962393_1de2-1.webp",
-      "ths_energy-proportional-serverless-carbon_1788348962393_1de2-2.webp",
-      "ths_energy-proportional-serverless-carbon_1788348962393_1de2-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -20448,7 +20438,7 @@
         "url": "https://sci.greensoftware.foundation/"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2124
   },
   {
@@ -20473,12 +20463,7 @@
       "technical academic diagram, white background, clean vector style, showing LLVM sanitizer instrumentation pass for MTE and CHERI with 3% overhead breakdown, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing SPEC CPU2017 overhead vs bug detection tradeoff with Tree Borrows model, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_hw-mem-tagging-mte-cheri_1788348963174_5d61-0.webp",
-      "ths_hw-mem-tagging-mte-cheri_1788348963174_5d61-1.webp",
-      "ths_hw-mem-tagging-mte-cheri_1788348963174_5d61-2.webp",
-      "ths_hw-mem-tagging-mte-cheri_1788348963174_5d61-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -20523,7 +20508,7 @@
         "url": "https://arxiv.org/abs/2308.11001"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2125
   },
   {
@@ -20548,12 +20533,7 @@
       "technical academic diagram, white background, clean vector style, showing ADWIN drift detection with adaptive model selection under concept drift timeline, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing SmartNIC P4 offload pipeline 12.8Tbps with 64k table entries and 0.9us latency, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_learned-bloom-filter-sandwiched_1788348964210_edfa-0.webp",
-      "ths_learned-bloom-filter-sandwiched_1788348964210_edfa-1.webp",
-      "ths_learned-bloom-filter-sandwiched_1788348964210_edfa-2.webp",
-      "ths_learned-bloom-filter-sandwiched_1788348964210_edfa-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -20598,7 +20578,7 @@
         "url": "https://doi.org/10.1109/ICDM.2007.770"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2109
   },
   {
@@ -20623,12 +20603,7 @@
       "technical academic diagram, white background, clean vector style, showing Recursive position map compression 3-level from O(N) to O(1) client storage, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing SGX enclave file system 10GB scale with SPDM attestation and 40ms TOCTOU mitigation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_oram-sgx-path-circuit_1788348965040_2368-0.webp",
-      "ths_oram-sgx-path-circuit_1788348965040_2368-1.webp",
-      "ths_oram-sgx-path-circuit_1788348965040_2368-2.webp",
-      "ths_oram-sgx-path-circuit_1788348965040_2368-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -20673,7 +20648,7 @@
         "url": "https://arxiv.org/abs/1305.6658"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2114
   },
   {
@@ -20698,12 +20673,7 @@
       "technical academic diagram, white background, clean vector style, showing Consistency training loss L_CT with f\u03b8 and f\u03b8- EMA and classifier-free guidance tradeoff, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Mobile NPU latency optimization Int4/Int8 quantization-aware NAS 3.2x speedup, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_nas-diffusion-progressive-distill_1788348965593_d37f-0.webp",
-      "ths_nas-diffusion-progressive-distill_1788348965593_d37f-1.webp",
-      "ths_nas-diffusion-progressive-distill_1788348965593_d37f-2.webp",
-      "ths_nas-diffusion-progressive-distill_1788348965593_d37f-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -20748,7 +20718,7 @@
         "url": "https://arxiv.org/abs/1908.09791"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2123
   },
   {
@@ -20773,12 +20743,7 @@
       "technical academic diagram, white background, clean vector style, showing Viewstamped Replication view change recovery correctness with GST partial synchrony, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Ivy EPR fragment decidable verification with threshold signatures n=3f+1 Byzantine, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_formal-consensus-tla-ivy_1788348967203_da1d-0.webp",
-      "ths_formal-consensus-tla-ivy_1788348967203_da1d-1.webp",
-      "ths_formal-consensus-tla-ivy_1788348967203_da1d-2.webp",
-      "ths_formal-consensus-tla-ivy_1788348967203_da1d-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -20823,7 +20788,7 @@
         "url": "https://doi.org/10.1145/2983990.2984024"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2119
   },
   {
@@ -20848,12 +20813,7 @@
       "technical academic diagram, white background, clean vector style, showing RDMA ConnectX-6 200Gbps transaction pipeline with doorbell batching and zero-copy, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Phantom protection range partitioning next-key locking SSI dependency graph cycle detection, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_rdma-deterministic-calvin-aria_1788348967773_9cd2-0.webp",
-      "ths_rdma-deterministic-calvin-aria_1788348967773_9cd2-1.webp",
-      "ths_rdma-deterministic-calvin-aria_1788348967773_9cd2-2.webp",
-      "ths_rdma-deterministic-calvin-aria_1788348967773_9cd2-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -20898,7 +20858,7 @@
         "url": "https://doi.org/10.1145/2462181.2462188"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2095
   },
   {
@@ -20923,12 +20883,7 @@
       "technical academic diagram, white background, clean vector style, showing Iteration space fusion loop coalescing dependence analysis for GNN aggregation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing A100 2:4 sparsity sparse tensor cores 1.9x speedup auto-tune vs heuristic, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_sparse-tensor-taco-mlir_1788348969215_2719-0.webp",
-      "ths_sparse-tensor-taco-mlir_1788348969215_2719-1.webp",
-      "ths_sparse-tensor-taco-mlir_1788348969215_2719-2.webp",
-      "ths_sparse-tensor-taco-mlir_1788348969215_2719-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -20973,7 +20928,7 @@
         "url": "https://doi.org/10.1145/2049662.2049670"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2122
   },
   {
@@ -20998,12 +20953,7 @@
       "technical academic diagram, white background, clean vector style, showing Hadamard matrix 2^16 randomized response 23% bandwidth reduction vs RAPPOR, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Shuffle model amplification anonymity set 1000 \u03b5_shuffle = O(\u03b5\u221a(log(1/\u03b4)/n)), nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [
-      "ths_private-telemetry-rappor-treehist_1788348969686_e618-0.webp",
-      "ths_private-telemetry-rappor-treehist_1788348969686_e618-1.webp",
-      "ths_private-telemetry-rappor-treehist_1788348969686_e618-2.webp",
-      "ths_private-telemetry-rappor-treehist_1788348969686_e618-3.webp"
-    ],
+    "images": [],
     "sources": [
       {
         "id": 1,
@@ -21048,7 +20998,7 @@
         "url": "https://doi.org/10.1145/2976749.2978310"
       }
     ],
-    "image_count": 4,
+    "image_count": 0,
     "word_count": 2114
   }
 ]
