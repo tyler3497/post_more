@@ -39936,7 +39936,9 @@
       "technical academic diagram, white background, clean vector style, showing QoS-aware tiering daemon eBPF hotness detection mapping pages to DDR5 vs CXL pooled tiers, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Performance isolation graph pooled memory QPS vs local vs remote UPI with noisy neighbor contention, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788316303311_5e1d-1.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -39981,7 +39983,7 @@
         "url": "https://doi.org/10.1109/HOTI.2023.00015"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4377
   },
   {
@@ -40006,7 +40008,9 @@
       "technical academic diagram, white background, clean vector style, showing LSM BPF attachment to file_open and socket_connect hooks with container policy enforcement timeline, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing eBPF JIT hardening Spectre-v4 mitigation retpoline and SLH speculative semantics diagram, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788316303687_ec35-1.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -40051,7 +40055,7 @@
         "url": "https://doi.org/10.1145/3385412.3385972"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4378
   },
   {
@@ -40146,7 +40150,10 @@
       "technical academic diagram, white background, clean vector style, showing Soft pneumatic gripper and quadruped Sim2Real transfer domain randomization friction elasticity, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Incremental Potential Contact barrier log(d) preventing interpenetration projected Newton solver, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788316305918_4afc-0.webp",
+      "ths_1788316305918_4afc-1.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -40191,7 +40198,7 @@
         "url": "https://arxiv.org/abs/2207.01559"
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 4379
   },
   {
@@ -40286,7 +40293,9 @@
       "technical academic diagram, white background, clean vector style, showing MoveVM linear type resource conservation preventing double-spend and reentrancy by construction, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing MEV flashloan oracle manipulation Stackelberg game modeling economic exploit profit bound, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788316307729_20f2-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -40331,7 +40340,7 @@
         "url": "https://arxiv.org/abs/2101.05511"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4386
   },
   {
@@ -40356,7 +40365,9 @@
       "technical academic diagram, white background, clean vector style, showing Phase shift optimization on torus manifold gradient maximizing SNR with quantized 2-bit phases, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Mutual coupling impedance matrix Z_self+Z_mutual reducing effective rank at \u03bb/2 spacing, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788316309248_236c-1.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -40401,7 +40412,7 @@
         "url": "https://doi.org/10.1109/TWC.2022.3183948"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4402
   },
   {
