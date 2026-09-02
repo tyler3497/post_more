@@ -3,7 +3,7 @@ id: ths_aqp-streaming_1788327036474_3cf4
 title: "Streaming Approximate Query Processing with SAA: Online Aggregation, Ripple Join, Wander Join, and Learned Error Bounds via Quantile Sketch Merging with t-Digest and KLL"
 abstract: "We present a unified framework for streaming approximate query processing (SAQP) under **sample-average approximation (SAA)**, integrating online aggregation with modern join sampling and mergeable quantile sketches for learned error calibration. Classical online aggregation [1] introduced confidence intervals that shrink as sampling progresses; we extend this principle to *continuous* data streams where data arrival is unbounded and join graphs evolve. Our contribution combines **Ripple Join** [2], **Wander Join** [3] with Horvitz-Thompson correction, and a novel error-bound learning layer that fuses **t-Digest** [4] and **KLL** [5] sketches via quantile merging [6][7] to predict interval tightness without bootstrap. We prove asymptotic consistency of the merged estimator under martingale central limit theorems, analyze space-accuracy tradeoffs of KLL versus t-Digest centroids, and demonstrate 3.8\u201311.2\u00d7 latency reduction on TPC-H 100GB streams while preserving <4% relative error at 95% confidence. The system is implemented as a streaming operator in Rust with Python bindings and supports adaptive rate control for backpressure."
 anon: "anon#4943"
-ts: 1788327359179
+ts: 1788327422129
 topic: "aqp-streaming-ripple-wander"
 thesis: true
 type: thesis

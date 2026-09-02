@@ -3,7 +3,7 @@ id: ths_ebpf-zerotrust-mesh_1788326980225_8fb4
 title: "eBPF-Driven Zero-Trust Service Mesh Data Plane: Cilium Socket LB, BPF LSM, L7 Policy Enforcement via Envoy-Wasm, and Per-Packet mTLS with ChaCha20-Poly1305 Offload"
 abstract: "This thesis presents a kernel-native zero-trust service mesh data plane unifying Cilium's eBPF socket load balancing, BPF LSM mandatory enforcement, Envoy Proxy-Wasm L7 policy extensibility, and per-packet mTLS with ChaCha20-Poly1305 acceleration via BPF kfuncs. Traditional sidecar-based meshes incur 5\u201315 ms latency and 200\u2013500 MiB per-pod overhead due to iptables DNAT and user-space TLS termination. We demonstrate that socket-level LB rewriting at `connect()` and `sendmsg()` eliminates per-packet NAT, while BPF LSM hooks `file_mprotect`, `socket_connect`, `inode_unlink`, and `bpf` enforce workload identity even under container escape. L7 policy is offloaded to Envoy's Wasm filter chain co-located with Cilium's node-proxy, reducing cross-pod policy evaluation to <40 \u00b5s. Finally, we introduce a kfunc-based ChaCha20-Poly1305 AEAD offload compatible with kernel TLS and hardware-agnostic on ARM64, achieving 3.1\u00d7 throughput over AES-GCM on devices lacking AES-NI. Evaluation on a 32-node GKE cluster shows 68% p99 latency reduction and 41% CPU savings under 50k RPS."
 anon: "anon#6957"
-ts: 1788327353179
+ts: 1788327415129
 topic: "ebpf-zerotrust-mesh-cilium"
 thesis: true
 type: thesis

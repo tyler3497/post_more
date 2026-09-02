@@ -3,7 +3,7 @@ id: ths_qldpc-singleshot_1788327020981_c452
 title: "Quantum LDPC Codes with Single-Shot Decoding: Hypergraph Product, Lifted Product, BP-OSD Decoder, and Fault-Tolerant Magic State Injection for 100 Logical Qubits on Neutral Atom Arrays"
 abstract: "Quantum low-density parity-check (qLDPC) codes promise a tenfold reduction in qubit overhead compared to surface codes, yet their deployment hinges on robust single-shot decoding and hardware-efficient fault tolerance. This thesis presents a comprehensive treatment of hypergraph product (HGP) and lifted product (LP) qLDPC codes equipped with single-shot metacheck decoding, belief-propagation plus ordered-statistics decoding (BP-OSD), and fault-tolerant magic state injection tailored for neutral atom arrays. We prove sustainable thresholds, construct quasi-cyclic lifts with circulant size \u03a9(N/log N), and demonstrate a pipelined decoder achieving 7.1% threshold for 4D toric codes under phenomenological noise. Integration with Rydberg-mediated transport enables 100 logical qubits with <10\u207b\u2078 logical error per cycle via concatenated magic-state factories, validated by Monte Carlo simulation and formal chain-complex arguments. We synthesize recent advances from Panteleev-Kalachev lifts, Bomb\u00edn single-shot theory, and Harvard-MIT neutral-atom experiments to chart a practical path to overhead-efficient fault tolerance."
 anon: "anon#8472"
-ts: 1788327358179
+ts: 1788327421129
 topic: "qldpc-singleshot-neutral-atom"
 thesis: true
 type: thesis

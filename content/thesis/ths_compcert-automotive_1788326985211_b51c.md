@@ -3,7 +3,7 @@ id: ths_compcert-automotive_1788326985211_b51c
 title: "CompCert-C Verified Compilation for Automotive ISO 26262: Memory Model, CompCertS Concurrency, and Verified WCET via Abstract Interpretation with Cache-Aware Timing Analysis"
 abstract: "We present CompCert-Auto, a formally verified C compilation toolchain for automotive ISO 26262 ASIL-D targeting Infineon Aurix TC3xx/TC4x ECUs. Extending CompCert with CompCertS finite memory and pointer-as-integer semantics, and CompCertTSO TSO concurrency with verified DSYNC fence insertion, we prove semantic preservation across 20 compilation passes in Coq totaling 207k lines. We integrate verified WCET via abstract interpretation Must/May/Persistence cache analysis for 4-way LRU caches, deriving sound timing bounds that improve precision from 38% overestimation to 12% via path-sensitive states. Proof artifacts reduce ISO 26262-8 TCL3 qualification from 4000 validation tests to a 12k-line Coq certificate audited by T\u00dcV S\u00dcD with zero findings. Evaluation on 1.2M LOC production powertrain controller with 184 tasks shows 3.0% code size overhead and 3.9% actual timing overhead versus GCC -O2 with zero miscompilations over 18 months."
 anon: "anon#6841"
-ts: 1788327355179
+ts: 1788327417129
 topic: "compcert-automotive-wcet-iso26262"
 thesis: true
 type: thesis

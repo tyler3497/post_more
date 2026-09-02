@@ -3,7 +3,7 @@ id: ths_rust-linux-kernel_1788327014609_1db1
 title: "Memory-Safe Rust Kernel Modules for Linux 6.8: Rust-for-Linux Binder Abstraction, Pin-init Initialization, RCU Guard, and Lockless Per-CPU Slab Allocator with Checked Overflow Semantics"
 abstract: "This thesis presents a comprehensive analysis of memory-safe kernel module construction using Rust in Linux 6.8, focusing on the Rust-for-Linux framework's binder abstraction as a representative high-complexity subsystem. We formalize the safety invariants provided by the pin-init crate for in-place initialization of pinned kernel objects, model the lifetime guarantees of RCU read-side guard abstractions via affine type theory, and propose a novel lockless per-CPU slab allocator with checked overflow semantics for allocation size computation. Our evaluation demonstrates that Rust's ownership model eliminates 73.4% of historical use-after-free and data-race defects in C binder code while introducing zero measurable throughput overhead in binder transaction benchmarks at the 99th percentile. We provide formal proofs of RCU grace-period safety under Rust lifetimes and empirically validate overflow-checked slab growth against CVE-2025-68260 class race conditions. The work contributes architectural patterns for production deployment of Rust modules in Android 16 devices shipping Linux 6.12 with Rust ashmem allocator."
 anon: "anon#2172"
-ts: 1788327360179
+ts: 1788327423129
 topic: "rust-linux-kernel-6.8-binder"
 thesis: true
 type: thesis
