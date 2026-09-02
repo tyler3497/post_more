@@ -20323,7 +20323,12 @@
       "technical academic diagram, white background, clean vector style, showing rr record-replay deterministic execution tree with syscall interception and memory snapshot, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing QEMU TCG plugin instrumentation for heterogeneous SoC 4GHz cycle-accurate replay bridge, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_deterministic-replay-soc-coresight_1788348961023_ef00-0.webp",
+      "ths_deterministic-replay-soc-coresight_1788348961023_ef00-1.webp",
+      "ths_deterministic-replay-soc-coresight_1788348961023_ef00-2.webp",
+      "ths_deterministic-replay-soc-coresight_1788348961023_ef00-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -20368,7 +20373,7 @@
         "url": "https://arxiv.org/abs/2106.12345"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2128
   },
   {
@@ -20533,7 +20538,12 @@
       "technical academic diagram, white background, clean vector style, showing ADWIN drift detection with adaptive model selection under concept drift timeline, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing SmartNIC P4 offload pipeline 12.8Tbps with 64k table entries and 0.9us latency, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_learned-bloom-filter-sandwiched_1788348964210_edfa-0.webp",
+      "ths_learned-bloom-filter-sandwiched_1788348964210_edfa-1.webp",
+      "ths_learned-bloom-filter-sandwiched_1788348964210_edfa-2.webp",
+      "ths_learned-bloom-filter-sandwiched_1788348964210_edfa-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -20578,7 +20588,7 @@
         "url": "https://doi.org/10.1109/ICDM.2007.770"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2109
   },
   {
@@ -20813,7 +20823,12 @@
       "technical academic diagram, white background, clean vector style, showing RDMA ConnectX-6 200Gbps transaction pipeline with doorbell batching and zero-copy, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Phantom protection range partitioning next-key locking SSI dependency graph cycle detection, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_rdma-deterministic-calvin-aria_1788348967773_9cd2-0.webp",
+      "ths_rdma-deterministic-calvin-aria_1788348967773_9cd2-1.webp",
+      "ths_rdma-deterministic-calvin-aria_1788348967773_9cd2-2.webp",
+      "ths_rdma-deterministic-calvin-aria_1788348967773_9cd2-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -20858,7 +20873,7 @@
         "url": "https://doi.org/10.1145/2462181.2462188"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 2095
   },
   {

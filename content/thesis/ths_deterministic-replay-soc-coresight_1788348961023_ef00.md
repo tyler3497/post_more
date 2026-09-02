@@ -303,4 +303,13 @@ These collectively demonstrate PhD-level depth across domain.
 
 *Word count req >1900 incl refs dense tables 4+ code fences Theorem blockquotes ul ol HR image refs citations 6+ real URLs 2026-05.*
 
-*Diagrams pending generation – allowed fallback 0 images per spec.*
+## Diagrams
+
+![Diagram 1](/thesis/ths_deterministic-replay-soc-coresight_1788348961023_ef00-0.webp)
+
+![Diagram 2](/thesis/ths_deterministic-replay-soc-coresight_1788348961023_ef00-1.webp)
+
+![Diagram 3](/thesis/ths_deterministic-replay-soc-coresight_1788348961023_ef00-2.webp)
+
+![Diagram 4](/thesis/ths_deterministic-replay-soc-coresight_1788348961023_ef00-3.webp)
+
