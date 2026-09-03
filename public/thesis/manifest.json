@@ -40769,7 +40769,10 @@
       "technical academic diagram, white background, clean vector style, showing NIST ML-KEM 768 NTT polynomial multiplication and Module-LWE hardness core-SVP diagram, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing BoringSSL hybrid handshake latency vs size tradeoff with downgrade attack tree, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788453066733_d47a-0.webp",
+      "ths_1788453066733_d47a-1.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -40814,7 +40817,7 @@
         "url": "https://doi.org/10.1007/978-3-030-52653-6_1"
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 4315
   },
   {
@@ -41049,7 +41052,9 @@
       "technical academic diagram, white background, clean vector style, showing LMAX Disruptor ring buffer single-writer cache-line padding 64B sequence barrier gating 12M ops/s, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing CXL 3.0 mempool 1.8TB/s 89% fairness with tick-to-trade p99 4.8us histogram and OBI formula, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788453070876_1ebd-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -41094,7 +41099,7 @@
         "url": "https://doi.org/10.1145/3341301.3359657"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4360
   },
   {
@@ -41189,7 +41194,9 @@
       "technical academic diagram, white background, clean vector style, showing Rosenbaum Gamma sensitivity bound Gamma=1.8 threshold hidden bias and treatment effect CI, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing MIMIC-IV 40k patients ITE evaluation R^2 0.81 vs OLS with bootstrap BCa CI and overlap diagnostics, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788453073400_4841-1.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -41234,7 +41241,7 @@
         "url": "https://doi.org/10.1038/s41597-023-02223-3"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4302
   },
   {
@@ -41329,7 +41336,9 @@
       "technical academic diagram, white background, clean vector style, showing Hybrid DRAM-SSD query path DRAM centroid graph then SSD posting list fetch 1M QPS 10B vectors, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Recall@10 vs DRAM tradeoff 0.94 vs 0.91 HNSW 12x less DRAM with SSD wear 0.8 DWPD, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788453075396_7627-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -41374,7 +41383,7 @@
         "url": "https://doi.org/10.1109/TBDATA.2017.2779466"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4339
   },
   {
