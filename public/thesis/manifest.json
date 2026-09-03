@@ -21,7 +21,12 @@
       "technical academic diagram, white background, clean vector style, showing Deep learning gRNA design with SHAP interpretability: on-target efficiency vs off-target propensity, secondary structure 23% failure, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Pangenome graph variation: SNP creates novel off-target perfect match, equitable design across populations, therapeutic deployment, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788399095333_3409-0.webp",
+      "ths_1788399095333_3409-1.webp",
+      "ths_1788399095333_3409-2.webp",
+      "ths_1788399095333_3409-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -66,7 +71,7 @@
         "url": "https://doi.org/10.1038/s41587-023-02115-y"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 4603
   },
   {
@@ -91,7 +96,12 @@
       "technical academic diagram, white background, clean vector style, showing Edge replication CDN in LEO: 0.01% content storage reduces bandwidth 93%, PoP selection strategies, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Energy-aware task placement: Jetson Nano 1.38W, radiation SEU mitigation, thermal cycling, handover every 2-3 min at 7.8 km/s, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788399094228_7870-0.webp",
+      "ths_1788399094228_7870-1.webp",
+      "ths_1788399094228_7870-2.webp",
+      "ths_1788399094228_7870-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -136,7 +146,7 @@
         "url": "https://arxiv.org/abs/2307.08530"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 4584
   },
   {
@@ -162,7 +172,10 @@
       "technical academic diagram, white background, clean vector style, showing zkLLM architecture: MobileNet v2 on ImageNet 1M, attention proof, proof size 186KB, latency 2x FL, verification 48 ms, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788399092649_9d7b-0.webp"
+      "ths_1788399092649_9d7b-0.webp",
+      "ths_1788399092649_9d7b-1.webp",
+      "ths_1788399092649_9d7b-2.webp",
+      "ths_1788399092649_9d7b-3.webp"
     ],
     "sources": [
       {
@@ -208,7 +221,7 @@
         "url": "https://eprint.iacr.org/2019/550.pdf"
       }
     ],
-    "image_count": 1,
+    "image_count": 4,
     "word_count": 4550
   },
   {
@@ -234,7 +247,10 @@
       "technical academic diagram, white background, clean vector style, showing JOB benchmark results: time savings ratio, 25% and 75% savings counts for FOSS vs HybridQO vs Balsa vs Bao, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788399092382_5062-0.webp"
+      "ths_1788399092382_5062-0.webp",
+      "ths_1788399092382_5062-1.webp",
+      "ths_1788399092382_5062-2.webp",
+      "ths_1788399092382_5062-3.webp"
     ],
     "sources": [
       {
@@ -280,7 +296,7 @@
         "url": "https://doi.org/10.1145/3514221.3526052"
       }
     ],
-    "image_count": 1,
+    "image_count": 4,
     "word_count": 4550
   },
   {
@@ -305,7 +321,11 @@
       "technical academic diagram, white background, clean vector style, showing Hamilton-Jacobi backward reachable tube for occluded intersection, worst-case acceleration assumption, shielding, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing nuPlan evaluation tradeoff: collision per step vs avg speed vs deceleration, Context-POMDP vs GAMMA vs Roll-out, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788399090749_93a6-0.webp",
+      "ths_1788399090749_93a6-1.webp",
+      "ths_1788399090749_93a6-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -350,7 +370,7 @@
         "url": "https://doi.org/10.1109/TRO.2019.2912508"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 4575
   },
   {
@@ -375,7 +395,12 @@
       "technical academic diagram, white background, clean vector style, showing Prusti separation logic encoding: ownership as permissions, magic wand, Viper backend, borrow checker as logic, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Unsafe encapsulation proof for std: page table traversal valid_nid, TokenBucket verification, harness generation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788399090230_8d41-0.webp",
+      "ths_1788399090230_8d41-1.webp",
+      "ths_1788399090230_8d41-2.webp",
+      "ths_1788399090230_8d41-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -420,7 +445,7 @@
         "url": "https://doi.org/10.1145/3622876"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 4566
   },
   {
@@ -445,7 +470,12 @@
       "technical academic diagram, white background, clean vector style, showing CXL 3.0 tiered cache-coherent acceleration with multi-headed devices, memory pooling, coherence overhead, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Parallel processing techniques for verification kernel: 7 combinations, 20x speedup, LUT/FF/BRAM resource utilization, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788399088754_d8f8-0.webp",
+      "ths_1788399088754_d8f8-1.webp",
+      "ths_1788399088754_d8f8-2.webp",
+      "ths_1788399088754_d8f8-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -490,7 +520,7 @@
         "url": "https://www.cidrdb.org/cidr2021/papers/cidr2021_paper29.pdf"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 4541
   },
   {
@@ -515,7 +545,11 @@
       "technical academic diagram, white background, clean vector style, showing Distributed DP noise addition with R\u00e9nyi accounting, clipping C=7, \u03b5=6.0 \u03b4=1.9e-4, privacy-utility tradeoff, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Personalization Ditto and FedRep under non-IID BloodMNIST: global vs local model regularization, accuracy 87.2% vs 81.4%, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788399088257_9bf5-0.webp",
+      "ths_1788399088257_9bf5-1.webp",
+      "ths_1788399088257_9bf5-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -560,7 +594,7 @@
         "url": "https://doi.org/10.1145/3277208"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 4582
   },
   {
@@ -585,7 +619,12 @@
       "technical academic diagram, white background, clean vector style, showing Electro-optic nonlinearity circuit: photodetector saturation + Mach-Zehnder modulator implementing GELU/ReLU, transfer function, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Energy vs accuracy Pareto for photonic transformer: 0.89 pJ/MAC, 1.8% drop from phase noise, latency breakdown, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788399087374_c2dc-0.webp",
+      "ths_1788399087374_c2dc-1.webp",
+      "ths_1788399087374_c2dc-2.webp",
+      "ths_1788399087374_c2dc-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -630,7 +669,7 @@
         "url": "https://arxiv.org/abs/2406.12345"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 4559
   },
   {
@@ -655,7 +694,9 @@
       "technical academic diagram, white background, clean vector style, showing 1-bit to 3-bit phase quantization loss analysis showing sum-rate vs quantization bits with beam pattern sidelobes, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Joint ISAC Pareto frontier trading off communication sum-rate and sensing CRB, with hardware impairment model, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788399086186_ae3f-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -700,7 +741,7 @@
         "url": "https://doi.org/10.1109/COMST.2023.1234567"
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4560
   },
   {
