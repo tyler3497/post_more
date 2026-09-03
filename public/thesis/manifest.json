@@ -40,7 +40,7 @@
     "topic": "federated-learning-privacy-tee-byzantine-shuffle",
     "ts": 1788420547496,
     "type": "thesis",
-    "word_count": 2743
+    "word_count": 3058
   },
   {
     "id": "ths_1788420546496_d9b6",
@@ -118,7 +118,7 @@
       }
     ],
     "image_count": 4,
-    "word_count": 2684
+    "word_count": 3188
   },
   {
     "id": "ths_1788420545496_7c4e",
@@ -147,7 +147,7 @@
       "https://arxiv.org/pdf/2509.06245",
       "https://arxiv.org/html/2606.03468"
     ],
-    "word_count": 2653,
+    "word_count": 2704,
     "wordcount": 2653,
     "images": [
       "ths_1788420545496_7c4e-0.webp",
@@ -210,7 +210,7 @@
     "topic": "Formal Verification Concurrent Data Structures Iris RefinedC Linearizability Durable Weak Memory Coq",
     "ts": 1788420544496,
     "type": "thesis",
-    "word_count": 2785,
+    "word_count": 2963,
     "wordcount": 2785
   },
   {
@@ -240,7 +240,7 @@
       "https://arxiv.org/abs/2606.00352v1",
       "https://arxiv.org/abs/2003.08934"
     ],
-    "word_count": 2560,
+    "word_count": 2562,
     "image_concepts": [
       "multiresolution hash encoding for Instant-NGP, 16 levels of grids from coarse to fine, hash table with collision arrows, trilinear interpolation",
       "3D Gaussian Splatting pipeline, anisotropic Gaussians with covariance ellipsoids, tile-based rasterization 16x16, depth sorting",
@@ -274,7 +274,8 @@
     ],
     "title": "Distributed Transactional Memory with RDMA and Persistent Memory: One-Sided CAS, Lease-Based Commit Protocols, and Crash Recovery with CXL-Attached PMEM",
     "ts": 1788420542496,
-    "image_count": 4
+    "image_count": 4,
+    "word_count": 2581
   },
   {
     "id": "ths_1788420541496_3917",
@@ -339,7 +340,7 @@
       }
     ],
     "image_count": 4,
-    "word_count": 2997
+    "word_count": 3136
   },
   {
     "abstract": "This thesis presents a compilation stack for trillion-parameter sparse Mixture-of-Experts that unifies MLIR sparse tensor algebra, Triton fused dispatch, and communication-overlapped collective scheduling. We formalize MoE as sparse tensor computation with compressed expert dimensions, lower through MLIR linalg and sparse_tensor dialects to Triton block-scheduled grouped GEMM with fused SwiGLU, achieving 15.4\u00d7 over cuBLAS launches and 2.62\u00d7 persistent kernel speedup, while tile-level all-to-all overlapping hides 47% communication and enables 1.88\u00d7 MFU over Megatron-LM on 352B MoE 1440 Hopper GPUs.",
@@ -395,7 +396,8 @@
     "title": "Sparse Tensor Compilation for Mixture-of-Experts with MLIR and Triton: Kernel Fusion, Load Balancing, and Collective Communication Overlapping at Trillion-Parameter Scale",
     "topic": "Sparse Tensor Compilation for Mixture-of-Experts with MLIR and Triton",
     "ts": 1788420540496,
-    "type": "thesis"
+    "type": "thesis",
+    "word_count": 3011
   },
   {
     "abstract": "Programmable data planes at 800GbE demand composability across heterogeneous substrates \u2014 P4 ASICs, SmartNIC ARM cores, and host eBPF hooks \u2014 without sacrificing line-rate guarantees. This thesis presents a formal framework for pipeline partitioning of P4 programs augmented with eBPF offload stubs, targeting NVIDIA BlueField-class and Netronome NFP-class SmartNICs. We model parser, match-action, and stateful ALU stages as a dataflow graph with resource constraints and solve a minimum-cut partitioning that minimizes PCIe crossings while preserving per-packet semantics. Our contribution unifies verified translation from P4_16 RegisterAction to eBPF maps, a congestion-aware scheduler integrating DCQCN, HPCC++ telemetry, and programmable congestion control pipelines exposed by Thor Ultra-class 800G NICs, and a runtime profile-guided optimizer inspired by Pipeleon for dynamic pipelet migration. We prove isolation theorems for partitioned state and demonstrate analytically that zero-queue HPCC invariants hold across partitions.",
@@ -484,7 +486,7 @@
     "topic": "p4-ebpf-smartnic-800gbe",
     "ts": 1788420539496,
     "type": "thesis",
-    "word_count": 2847,
+    "word_count": 2954,
     "worker": 1,
     "image_count": 4
   },
@@ -516,7 +518,7 @@
       "https://ethresear.ch/t/randao-beacon-exploitability-analysis-round-2/1980",
       "https://hal.science/hal-04518100v1/file/Main.pdf"
     ],
-    "word_count": 2883,
+    "word_count": 2941,
     "images": [
       "ths_1788420538496_b028-0.webp",
       "ths_1788420538496_b028-1.webp",
