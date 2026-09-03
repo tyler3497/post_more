@@ -91,7 +91,11 @@
       "technical academic diagram, white background, clean vector style, showing Infotaxis Bayesian belief update for gas source localization with expected information gain under turbulent k-epsilon plume, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Industrial 12-gas classification confusion matrix with drift compensation 94% accuracy vs 41% baseline, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788449464479_caa2-0.webp",
+      "ths_1788449464479_caa2-1.webp",
+      "ths_1788449464479_caa2-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -136,7 +140,7 @@
         "url": "https://doi.org/10.1109/IROS.2009.5354300"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 4358
   },
   {
@@ -231,7 +235,11 @@
       "technical academic diagram, white background, clean vector style, showing LMAX Disruptor ring buffer with single-writer, cache-line padding, and sequence barrier gating, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Order book imbalance prediction OBI formula with tick-to-trade latency histogram p99 4.8us, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788449462395_092b-0.webp",
+      "ths_1788449462395_092b-1.webp",
+      "ths_1788449462395_092b-2.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -276,7 +284,7 @@
         "url": "https://arxiv.org/abs/1908.09897"
       }
     ],
-    "image_count": 0,
+    "image_count": 3,
     "word_count": 4371
   },
   {
@@ -936,7 +944,9 @@
       "technical academic diagram, white background, clean vector style, showing KV-cache 4-bit quantization KIVI per-channel key and per-token value with residual buffer, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing SLO-aware scheduling timeline with continuous batching, TTFT and TPOT breakdown, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788446096044_d9d4-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -981,7 +991,7 @@
         "url": "https://arxiv.org/abs/2305.09781"
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 4370,
     "wordcount": 4370
   },
@@ -1437,7 +1447,8 @@
     ],
     "images": [
       "ths_1788442207390_1894-0.webp",
-      "ths_1788442207390_1894-1.webp"
+      "ths_1788442207390_1894-1.webp",
+      "ths_1788442207390_1894-2.webp"
     ],
     "sources": [
       {
@@ -1483,7 +1494,7 @@
         "authors": "Sanderson et al."
       }
     ],
-    "image_count": 2,
+    "image_count": 3,
     "word_count": 2774
   },
   {
@@ -1510,7 +1521,9 @@
     ],
     "images": [
       "ths_1788442206390_0a81-0.webp",
-      "ths_1788442206390_0a81-1.webp"
+      "ths_1788442206390_0a81-1.webp",
+      "ths_1788442206390_0a81-2.webp",
+      "ths_1788442206390_0a81-3.webp"
     ],
     "sources": [
       {
@@ -1556,7 +1569,7 @@
         "authors": "Sovrin Foundation"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2730
   },
   {
@@ -1800,7 +1813,8 @@
     ],
     "images": [
       "ths_1788442202390_1da5-0.webp",
-      "ths_1788442202390_1da5-1.webp"
+      "ths_1788442202390_1da5-1.webp",
+      "ths_1788442202390_1da5-2.webp"
     ],
     "sources": [
       {
@@ -1846,7 +1860,7 @@
         "authors": "Shawon Saxena"
       }
     ],
-    "image_count": 2,
+    "image_count": 3,
     "word_count": 2811
   },
   {
@@ -1873,7 +1887,9 @@
     ],
     "images": [
       "ths_1788442201390_141f-0.webp",
-      "ths_1788442201390_141f-1.webp"
+      "ths_1788442201390_141f-1.webp",
+      "ths_1788442201390_141f-2.webp",
+      "ths_1788442201390_141f-3.webp"
     ],
     "sources": [
       {
@@ -1919,7 +1935,7 @@
         "authors": "Wu et al. 2023"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2761
   },
   {
@@ -1947,7 +1963,8 @@
     "images": [
       "ths_1788442200390_0d99-0.webp",
       "ths_1788442200390_0d99-1.webp",
-      "ths_1788442200390_0d99-2.webp"
+      "ths_1788442200390_0d99-2.webp",
+      "ths_1788442200390_0d99-3.webp"
     ],
     "sources": [
       {
@@ -1993,7 +2010,7 @@
         "authors": "Wiesner et al."
       }
     ],
-    "image_count": 3,
+    "image_count": 4,
     "word_count": 2776
   },
   {
@@ -2020,7 +2037,9 @@
     ],
     "images": [
       "ths_1788442199390_1af8-0.webp",
-      "ths_1788442199390_1af8-1.webp"
+      "ths_1788442199390_1af8-1.webp",
+      "ths_1788442199390_1af8-2.webp",
+      "ths_1788442199390_1af8-3.webp"
     ],
     "sources": [
       {
@@ -2066,7 +2085,7 @@
         "authors": "IETF PQUIP WG"
       }
     ],
-    "image_count": 2,
+    "image_count": 4,
     "word_count": 2758
   },
   {
