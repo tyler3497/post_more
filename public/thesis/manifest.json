@@ -39462,7 +39462,9 @@
       "technical academic diagram, white background, clean vector style, showing Dynamic accumulator revocation with membership witness update and non-membership proof, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Pairing-friendly BLS12-381 curve security level vs quantum attack timeline with 128-bit classical, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788446091780_0612-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -39507,7 +39509,7 @@
         "url": "https://eprint.iacr.org/2022/1283.pdf"
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 4342,
     "wordcount": 4342
   },
@@ -39959,7 +39961,9 @@
       "technical academic diagram, white background, clean vector style, showing Twin-field QKD scaling as sqrt(\u03b7) beating PLOB repeaterless bound at 300 km, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Post-processing pipeline: LDPC error correction with 1.12 efficiency and Toeplitz privacy amplification, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788446098501_f9b7-0.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -40004,7 +40008,7 @@
         "url": "https://doi.org/10.1038/s41586-021-03434-3"
       }
     ],
-    "image_count": 4,
+    "image_count": 1,
     "word_count": 4365,
     "wordcount": 4365
   }
