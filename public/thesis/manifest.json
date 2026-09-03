@@ -165,7 +165,10 @@
       "technical academic diagram, white background, clean vector style, showing Data availability sampling with Reed-Solomon 2x erasure coding, 30 random chunks, light client verification, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Fraud proof vs validity proof tradeoff: 7-day challenge window vs 4.2s prover with 280k gas, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788449463914_cb5f-0.webp",
+      "ths_1788449463914_cb5f-1.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -210,7 +213,7 @@
         "url": "https://arxiv.org/abs/2306.12345"
       }
     ],
-    "image_count": 0,
+    "image_count": 2,
     "word_count": 4337
   },
   {
@@ -309,7 +312,12 @@
       "technical academic diagram, white background, clean vector style, showing De novo enzyme design pipeline conditioning on catalytic triad geometry and binding free energy validation, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing CAMEO benchmark TM-score comparison AlphaFold2 vs AlphaFold3 with pLDDT confidence coloring, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788449461458_8501-0.webp",
+      "ths_1788449461458_8501-1.webp",
+      "ths_1788449461458_8501-2.webp",
+      "ths_1788449461458_8501-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -354,7 +362,7 @@
         "url": "https://doi.org/10.1038/s41598-018-30405-3"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 4368
   },
   {
@@ -379,7 +387,12 @@
       "technical academic diagram, white background, clean vector style, showing MAML personalization inner-outer loop for non-IID client distributions with Dirichlet alpha=0.1, nodes, arrows, mathematical notation, highly detailed, educational, high resolution",
       "technical academic diagram, white background, clean vector style, showing Communication overhead vs privacy tradeoff with subsampling rate 0.01 and 1000 clients, nodes, arrows, mathematical notation, highly detailed, educational, high resolution"
     ],
-    "images": [],
+    "images": [
+      "ths_1788449460584_0c6b-0.webp",
+      "ths_1788449460584_0c6b-1.webp",
+      "ths_1788449460584_0c6b-2.webp",
+      "ths_1788449460584_0c6b-3.webp"
+    ],
     "sources": [
       {
         "id": 1,
@@ -424,7 +437,7 @@
         "url": "https://arxiv.org/abs/1806.00582"
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 4342
   },
   {
