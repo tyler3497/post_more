@@ -95,7 +95,8 @@
       "technical academic diagram, white background, clean vector style, showing Decentralized Identity with BBS+ Signatures and AnonCreds v2: Selective Disclosure, Predicate Proofs over CL-Signatures, DIDComm v2 Link Secrets, and Revocation via Cryptographic Accumulators limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788442206390_0a81-0.webp"
+      "ths_1788442206390_0a81-0.webp",
+      "ths_1788442206390_0a81-1.webp"
     ],
     "sources": [
       {
@@ -141,7 +142,7 @@
         "authors": "Sovrin Foundation"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2730
   },
   {
@@ -457,7 +458,8 @@
       "technical academic diagram, white background, clean vector style, showing Learned Cardinality Estimation Deep Inside Query Optimizers: NeuroCard One Model for All Tables, DeepDB Relational Bayes, BayesCard Chow-Liu Tree, and Conservative Q-Error Bounds limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788442201390_141f-0.webp"
+      "ths_1788442201390_141f-0.webp",
+      "ths_1788442201390_141f-1.webp"
     ],
     "sources": [
       {
@@ -503,7 +505,7 @@
         "authors": "Wu et al. 2023"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2761
   },
   {
@@ -603,7 +605,8 @@
       "technical academic diagram, white background, clean vector style, showing Post-Quantum Double Ratchet over ML-KEM: PQXDH Formal Verification with ProVerif and CryptoVerif, Harvest-Now-Decrypt-Later Resilience, and Forward-Secrecy Deniability Compositions limitation and future work roadmap, tradeoffs, design space, radar chart, highly detailed, educational, high resolution"
     ],
     "images": [
-      "ths_1788442199390_1af8-0.webp"
+      "ths_1788442199390_1af8-0.webp",
+      "ths_1788442199390_1af8-1.webp"
     ],
     "sources": [
       {
@@ -649,7 +652,7 @@
         "authors": "IETF PQUIP WG"
       }
     ],
-    "image_count": 1,
+    "image_count": 2,
     "word_count": 2758
   },
   {
