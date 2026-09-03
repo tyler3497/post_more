@@ -97,7 +97,9 @@
       "technical academic diagram, white background, clean vector style, showing DaisyNFS architecture with GoTxn transaction system, Dafny sequential verification layer, NFS server binary, logical atomicity boundary, ghost lock ownership diagram, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, no watermark",
       "technical academic diagram, white background, clean vector style, showing FSCQ logical address spaces layering from disk blocks to inode_rep to dir_rep with zeroing discipline, crash Hoare logic triple with crash condition and recovery, nodes, arrows, mathematical notation, highly detailed, educational, high resolution, no watermark"
     ],
-    "images": [],
+    "images": [
+      "ths_1788413342925_e723-0.webp"
+    ],
     "sources": [
       {
         "title": "Iris from the ground up: A modular foundation for higher-order concurrent separation logic",
@@ -172,7 +174,7 @@
         "year": 2019
       }
     ],
-    "image_count": 0,
+    "image_count": 1,
     "word_count": 4195,
     "timestamp": 1788413342925
   },
@@ -357,9 +359,10 @@
     "topic": "zk-nova-supernova-folding",
     "images": [
       "ths_1788413339925_38ad-0.webp",
-      "ths_1788413339925_38ad-1.webp"
+      "ths_1788413339925_38ad-1.webp",
+      "ths_1788413339925_38ad-2.webp"
     ],
-    "image_count": 2,
+    "image_count": 3,
     "image_concepts": [
       "Nova folding scheme relaxed R1CS cross-term decomposition diagram showing U1 U2 folding into U with commitments and T vector",
       "Cycle of curves Pasta Pallas Vesta and BN254 Grumpkin for recursion showing field matching arrows",
@@ -802,7 +805,12 @@
       "technical academic diagram, white background, clean vector style, showing attestation pipeline from AMD PSP VCEK and Intel TDX Module TDREPORT to TD Quote with zero-knowledge proof binding, cryptographic chain, highly detailed",
       "technical academic diagram, white background, clean vector style, showing confidential LLM inference architecture with encrypted KV-cache inside trust domain, private HKID, ZK proof verification, nodes, arrows, highly detailed"
     ],
-    "images": [],
+    "images": [
+      "ths_1788413334925_a7c2-0.webp",
+      "ths_1788413334925_a7c2-1.webp",
+      "ths_1788413334925_a7c2-2.webp",
+      "ths_1788413334925_a7c2-3.webp"
+    ],
     "sources": [
       {
         "title": "AMD SEV-SNP: A Confidential Computing Primer",
@@ -847,7 +855,7 @@
         "year": 2024
       }
     ],
-    "image_count": 0,
+    "image_count": 4,
     "word_count": 3405
   },
   {
