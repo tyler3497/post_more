@@ -47,6 +47,37 @@ export default async function handler(req, res) {
   }
   out.deleted = deleted
   out.skippedNoTwin = skipped
+  // (orphan migration stats added below)
+  let migrated = 0
+  // re-scan to get the current orphan list
+  let oCursor = 0, oKeys = []
+  try {
+    do {
+      const [next, batch] = await kv.scan(oCursor, { match: 'thesis:post:*', count: 1000 })
+      oCursor = Number(next)
+      if (Array.isArray(batch)) oKeys.push(...batch)
+    } while (oCursor !== 0)
+  } catch (e) { out.orphanScanError = err(e) }
+  for (const k of oKeys) {
+    const id = k.slice('thesis:post:'.length)
+    try {
+      const liveExists = await kv.exists(`post:post:${id}`)
+      if (liveExists) { // healed since last pass: safe to drop legacy
+        await kv.del(k); deleted++
+        continue
+      }
+      const val = await kv.get(k)
+      if (!val) { skipped++; continue }
+      let ts = Date.now()
+      try { const j = typeof val === 'string' ? JSON.parse(val) : val; if (j && j.ts) ts = j.ts } catch {}
+      await kv.set(`post:post:${id}`, typeof val === 'string' ? val : JSON.stringify(val))
+      try { await kv.zadd('post:index', { score: ts, member: id }) } catch { try { await kv.zadd('post:index', ts, id) } catch {} }
+      try { await kv.zadd('post:index:thesis', { score: ts, member: id }) } catch { try { await kv.zadd('post:index:thesis', ts, id) } catch {} }
+      await kv.del(k)
+      migrated++
+    } catch (e) { out.migrateError = err(e); break }
+  }
+  out.migrated = migrated
 
   // 3. drop legacy thesis:index zset (unread duplicate of post:index:thesis)
   try { out.legacyIndexRemoved = await kv.del('thesis:index') } catch (e) { out.legacyIndexError = err(e) }
