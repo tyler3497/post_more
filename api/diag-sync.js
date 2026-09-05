@@ -19,6 +19,23 @@ export default async function handler(req, res) {
       const [live, legacy] = await kv.mget(`post:post:${id}`, `thesis:post:${id}`)
       out.sampleId = id
       out.legacyExists = !!legacy
+      let lj = null, gj = null
+      try { lj = typeof live === 'string' ? JSON.parse(live) : live } catch {}
+      try { gj = typeof legacy === 'string' ? JSON.parse(legacy) : legacy } catch {}
+      out.liveKeys = lj ? Object.keys(lj) : null
+      out.legacyKeys = gj ? Object.keys(gj) : null
+      if (lj && gj) {
+        const diffs = []
+        for (const k of new Set([...Object.keys(lj), ...Object.keys(gj)])) {
+          const a = lj[k], b = gj[k]
+          const sa = typeof a === 'string' ? a.length : JSON.stringify(a)?.length
+          const sb = typeof b === 'string' ? b.length : JSON.stringify(b)?.length
+          if (sa !== sb || a !== b) diffs.push(`${k}: live_len=${sa} legacy_len=${sb} live_trunc=${gj._truncated} legacy_trunc=${gj._truncated}`)
+        }
+        out.fieldDiffs = diffs.slice(0, 10)
+        out.liveTruncated = !!lj._truncated
+        out.legacyTruncated = !!gj._truncated
+      }
       out.isDuplicate = !!live && !!legacy && live === legacy
       if (!out.isDuplicate) return res.status(200).json({ ...out, aborted: 'sample is not an exact duplicate' })
     }
