@@ -133,21 +133,9 @@ export async function savePost(post) {
       try { await kv.zadd(tKey, post.ts, post.id) } catch {}
     }
   } catch {}
-  // backwards-compat: also write to old thesis index if thesis
-  if (post.type === 'thesis') {
-    try {
-      try { await kv.zadd('thesis:index', { score: post.ts, member: post.id }) }
-      catch { try { await kv.zadd('thesis:index', post.ts, post.id) } catch {} }
-      if(stored){
-        try{ await kv.set(`thesis:post:${post.id}`, JSON.stringify(post)) }catch{
-          try{
-            const slim={...post, body: (post.body||'').slice(0,4000), _truncated:true}
-            await kv.set(`thesis:post:${post.id}`, JSON.stringify(slim))
-          }catch{}
-        }
-      }
-    } catch {}
-  }
+  // NOTE: legacy duplicates (thesis:post:<id>, thesis:index) removed 2026-09-05 —
+  // they doubled DB usage and hit the 256MB Upstash quota, freezing all writes.
+  // Live keys: post:post:<id>, post:index, post:index:<type>.
   return true
 }
 
