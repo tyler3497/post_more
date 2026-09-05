@@ -1,45 +1,43 @@
 // TEMPORARY diagnostic endpoint — remove after diagnosing KV sync stall
-import fs from 'fs'
-import path from 'path'
-import { getKV, getPostsTotal, getPostIdsPage, syncUnifiedFromFiles } from './_db.js'
+import { getKV } from './_db.js'
+
+const err = (e) => String((e && e.message) || e).slice(0, 400)
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*')
-  const out = { cwd: process.cwd() }
-  for (const [label, rel] of [['satire', ['public','satire','manifest.json']], ['thesis', ['public','thesis','manifest.json']]]) {
-    const f = path.join(process.cwd(), ...rel)
-    let info = { exists: fs.existsSync(f) }
-    if (info.exists) {
-      try {
-        const raw = fs.readFileSync(f, 'utf8')
-        info.bytes = raw.length
-        const arr = JSON.parse(raw)
-        info.count = Array.isArray(arr) ? arr.length : -1
-        info.newestTs = Array.isArray(arr) && arr.length ? arr[arr.length-1].ts : null
-        info.newestId = Array.isArray(arr) && arr.length ? arr[arr.length-1].id : null
-      } catch (e) { info.error = String(e).slice(0, 200) }
-    }
-    out[label + 'File'] = info
-  }
+  const out = {}
   const kv = await getKV()
   out.hasKV = !!kv
-  try { out.satireTotalBefore = await getPostsTotal('satire') } catch (e) { out.satireTotalBefore = 'err' }
-  try { out.thesisTotalBefore = await getPostsTotal('thesis') } catch (e) { out.thesisTotalBefore = 'err' }
-  // load files and sync
-  let satirePosts = [], thesisPosts = []
+  if (!kv) return res.status(200).json(out)
+
+  // 1. zrange without options (what syncUnifiedFromFiles uses)
   try {
-    const f = path.join(process.cwd(), 'public', 'satire', 'manifest.json')
-    if (fs.existsSync(f)) satirePosts = JSON.parse(fs.readFileSync(f, 'utf8')).map(p => ({...p, type: 'satire'}))
-  } catch {}
+    const r = await kv.zrange('post:index', 0, -1)
+    out.zrangeNoOpts = { ok: true, isArray: Array.isArray(r), len: Array.isArray(r) ? r.length : typeof r, sample: Array.isArray(r) ? r.slice(0, 2) : String(r).slice(0, 100) }
+  } catch (e) { out.zrangeNoOpts = { ok: false, error: err(e) } }
+
+  // 2. zadd write test on scratch key
+  const scratch = 'diag:scratch:' + Date.now()
   try {
-    const f = path.join(process.cwd(), 'public', 'thesis', 'manifest.json')
-    if (fs.existsSync(f)) thesisPosts = JSON.parse(fs.readFileSync(f, 'utf8')).map(p => ({...p, type: 'thesis'}))
-  } catch {}
+    const n = await kv.zadd(scratch, { score: 123, member: 'm1' })
+    out.zaddObj = { ok: true, returned: n }
+  } catch (e) { out.zaddObj = { ok: false, error: err(e) } }
   try {
-    out.added = await syncUnifiedFromFiles({ thesisPosts, satirePosts })
-  } catch (e) { out.syncError = String(e).slice(0, 300) }
-  try { out.satireTotalAfter = await getPostsTotal('satire') } catch {}
-  try { out.thesisTotalAfter = await getPostsTotal('thesis') } catch {}
-  try { out.newestSatireIds = await getPostIdsPage(0, 3, 'satire') } catch {}
+    const c = await kv.zcount(scratch, '-inf', '+inf')
+    out.zcountScratch = { ok: true, count: c }
+  } catch (e) { out.zcountScratch = { ok: false, error: err(e) } }
+  try { await kv.del(scratch) } catch {}
+
+  // 3. set/get test
+  try {
+    await kv.set(scratch + ':v', JSON.stringify({ a: 1 }))
+    const v = await kv.get(scratch + ':v')
+    out.setGet = { ok: true, roundtrip: !!v }
+    await kv.del(scratch + ':v')
+  } catch (e) { out.setGet = { ok: false, error: err(e) } }
+
+  // 4. dbsize / info for quota clues
+  try { out.dbsize = await kv.dbsize() } catch (e) { out.dbsize = err(e) }
+
   return res.status(200).json(out)
 }
