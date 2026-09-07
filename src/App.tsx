@@ -346,7 +346,7 @@ export default function App(){
                     {isThesis && p.abstract && <div style={{background:"#f8fafc", border:"1px solid #eef2f7", padding:"10px 12px", borderRadius:8, marginTop:10, marginBottom:10, color:"#334155", fontSize:13}}><b>Abstract —</b> {p.abstract}</div>}
 
                     {(p as any).images && (p as any).images.length>0 ? (
-                      <div className="pm-thesis-grid">{(p as any).images.slice(0,4).map((img:string,i:number)=>(<img key={i} src={img} style={{width:"100%", borderRadius:8, border:"1px solid #eef"}} alt={`${p.type} img ${i+1}`}/>))}</div>
+                      <div className="pm-thesis-grid">{(p as any).images.slice(0,4).map((img:string,i:number)=>{const src=img.startsWith("/")?img:img.startsWith("public/thesis/")?"/"+img.slice(7):"/thesis/"+img;return (<img key={i} src={src} style={{width:"100%", borderRadius:8, border:"1px solid #eef"}} alt={`${p.type} img ${i+1}`}/>)})}</div>
                     ) : (p as any).image ? <img src={(p as any).image} style={{maxWidth:"100%",borderRadius:8,margin:"10px 0"}} alt={`${p.type} illustration`}/> : null}
 
                     <MD>{p.body}</MD>
