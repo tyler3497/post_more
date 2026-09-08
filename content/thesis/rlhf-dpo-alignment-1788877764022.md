@@ -1,0 +1,223 @@
+---
+id: ths_1788877764022_aa56
+title: "Alignment of Language Models via RLHF: Reward Modeling, KL-Regularized PPO, DPO, and Constitutional AI"
+anon: anon#3671
+ts: 1788877764022
+tags: [Thesis]
+type: thesis
+---
+
+# Alignment of Language Models via RLHF: Reward Modeling, KL-Regularized PPO, DPO, and Constitutional AI
+
+## Abstract
+
+Reinforcement learning from human feedback (RLHF) has become the dominant paradigm for aligning large language models with human intent, transforming next-token predictors into capable instruction followers. This thesis presents a unified mathematical treatment of the RLHF pipeline: supervised fine-tuning on demonstrations, reward modeling under the Bradley–Terry preference framework, and KL-regularized policy optimization via Proximal Policy Optimization (PPO). We derive the closed-form solution of the KL-constrained reward maximization objective, showing that the optimal policy takes an exponential tilting form, and explain why the KL penalty is not a heuristic but a first-order necessity for keeping the policy within the reward model's region of validity. We then develop Direct Preference Optimization (DPO), which exploits this analytic optimum to eliminate the explicit reward model and the RL loop entirely, reparameterizing the preference likelihood directly in terms of the policy's log-probability ratios. Finally, we analyze Constitutional AI — a self-supervised variant that replaces human preference labels with AI-generated critiques grounded in a written constitution — and examine reward hacking through the lens of scaling laws for reward model overoptimization. We conclude with limitations: distributional shift, sycophancy, reward model misspecification, and the unresolved problem of scalable oversight.
+
+![Three-stage RLHF pipeline](/thesis/ths_1788877764022_aa56-0.webp)
+
+## 1 Introduction
+
+Large language models (LLMs) trained by maximum-likelihood next-token prediction on internet-scale corpora acquire remarkable capabilities — syntax, world knowledge, in-context learning, rudimentary reasoning. Yet the pretraining objective,
+
+$$\mathcal{L}_{\text{PT}}(\theta) = -\mathbb{E}_{x \sim \mathcal{D}} \sum_{t=1}^{|x|} \log \pi_\theta(x_t \mid x_{<t}),$$
+
+is *descriptive* rather than *prescriptive*: it reproduces the distribution of human-written text rather than the distribution of helpful, truthful, and safe assistant behavior. A base model asked "What is 2 + 2?" may answer "4", but it is equally content to continue with "What is 3 + 3?" — a statistically plausible continuation that is behaviorally wrong [1]. *Alignment* is the problem of steering pretrained models toward behavior their users endorse.
+
+The RLHF paradigm, pioneered for sequential decision-making by Christiano et al. [5] and adapted to language models by Ziegler, Stiennon et al. [6] and Ouyang et al. [1], decomposes alignment into three learnable stages: **(i)** supervised fine-tuning (SFT) on human demonstrations; **(ii)** reward modeling (RM) from human *preferences* between sampled completions; and **(iii)** reinforcement learning — typically PPO [7] — to maximize the learned reward subject to a KL-divergence constraint against the SFT policy. The result, InstructGPT, saw a 1.3B-parameter model preferred over the 175B-parameter GPT-3 despite having 100× fewer parameters [1].
+
+But RLHF is not a single algorithm; it is a design space. This thesis unifies its major branches: the classical three-stage pipeline, the DPO reparameterization that removes RL from the loop [2], and Constitutional AI's self-critique methodology that removes humans from the labeling loop [3]. We argue that these are all solutions to one variational problem — and that understanding the shared optimum explains both their successes and their failure modes.
+
+---
+
+## 2 Background
+
+### 2.1 Language models as policies
+
+We formalize generation as a Markov decision process (MDP) over a finite vocabulary $\mathcal{V}$. A *prompt* $x \in \mathcal{V}^*$ is the initial state; the model policy $\pi_\theta(\cdot \mid s)$ emits one token at a time, transitioning the state by concatenation. An episode ends at a special end-of-sequence token. The sequence-level policy is therefore
+
+$$\pi_\theta(y \mid x) = \prod_{t=1}^{|y|} \pi_\theta(y_t \mid x, y_{<t}).$$
+
+Treating text generation as RL is natural: the action space is enormous ($|\mathcal{V}| \approx 50{,}000$), rewards are sparse (only the completed response can be judged), and human preferences are inherently *comparative* rather than cardinal.
+
+### 2.2 Why preferences instead of demonstrations
+
+Demonstrations (SFT data) suffer from two weaknesses: they are expensive to collect at quality, and they reveal only one mode of desirable behavior. Human judgments are far more reliable *comparatively* than *absolutely* — it is easier to say response A is better than response B than to score either on an absolute scale. The Bradley–Terry model [2, 6] formalizes this: given a latent reward function $r^*(x, y)$, the probability that $y_w$ is preferred to $y_l$ is
+
+$$p^*(y_w \succ y_l \mid x) = \sigma\big(r^*(x, y_w) - r^*(x, y_l)\big),$$
+
+where $\sigma$ is the logistic sigmoid. Reward modeling is then maximum-likelihood estimation of a parameterized $r_\phi$ under this model.
+
+### 2.3 Supervised fine-tuning
+
+Before any preference learning, the base model is fine-tuned on a demonstration dataset $\mathcal{D}_{\text{SFT}} = \{(x^{(i)}, y^{(i)})\}_{i=1}^N$ of high-quality prompt–response pairs. This yields the reference policy $\pi_{\text{ref}} := \pi_{\text{SFT}}$, which serves three roles: the initialization for RL, the anchor for the KL penalty, and (as we will see in §4.3) the implicit baseline of DPO. SFT alone materially improves instruction following, but it cannot teach the model to *rank* candidate responses — the capacity that preference learning provides.
+
+> **Theorem (Behavior cloning gap):** SFT minimizes $D_{\mathrm{KL}}(\pi_{\text{demo}} \,\|\, \pi_\theta)$, matching the demonstration distribution. Preference-based methods instead target the *maximizer* of expected reward under a KL constraint — a fundamentally different objective that can exceed demonstrator performance (super-demonstrator generalization) when the reward model generalizes better than the demonstrations cover.
+
+---
+
+## 3 Methodology
+
+We now describe the canonical three-stage RLHF pipeline [1], with hyperparameters drawn from the InstructGPT recipe.
+
+### Stage 1 — Supervised fine-tuning
+
+Train $\pi_{\text{ref}}$ on $\mathcal{D}_{\text{SFT}}$ with the standard causal language modeling loss. InstructGPT used ~13k demonstration prompts, collecting labeler-written responses [1]. The SFT model is also the policy from which comparison responses are sampled in Stage 2.
+
+### Stage 2 — Reward model training
+
+For each prompt $x$, sample $K \in \{4, \dots, 9\}$ completions from $\pi_{\text{ref}}$, and have labelers rank them. Each ranked list yields $\binom{K}{2}$ pairwise comparisons $\mathcal{D}_{\text{RM}} = \{(x, y_w, y_l)\}$. Train a reward model $r_\phi(x, y)$ — typically the SFT backbone with its unembedding layer replaced by a scalar head — by minimizing
+
+$$\mathcal{L}_{\text{RM}}(\phi) = -\mathbb{E}_{(x,y_w,y_l) \sim \mathcal{D}_{\text{RM}}}\left[ \log \sigma\big(r_\phi(x, y_w) - r_\phi(x, y_l)\big) \right].$$
+
+In practice, InstructGPT trained a *single* reward model per model size on all comparison data, normalizing rewards to zero mean for PPO stability [1]. Labeler agreement was approximately 73%, bounding the achievable RM accuracy and injecting irreducible noise into the reward signal.
+
+![Bradley-Terry reward model architecture](/thesis/ths_1788877764022_aa56-1.webp)
+
+### Stage 3 — KL-regularized PPO
+
+Freeze $r_\phi$ and optimize the policy to maximize expected reward while remaining close to $\pi_{\text{ref}}$:
+
+$$\max_{\pi_\theta}\; \mathbb{E}_{x \sim \mathcal{D}_{\text{RL}},\, y \sim \pi_\theta(\cdot \mid x)}\big[r_\phi(x, y)\big] - \beta\, \mathbb{D}_{\mathrm{KL}}\big(\pi_\theta(\cdot \mid x) \,\|\, \pi_{\text{ref}}(\cdot \mid x)\big). \tag{1}$$
+
+PPO [7] optimizes a surrogate objective with a clipped probability ratio and a learned value function; the per-token KL penalty $\beta \log \frac{\pi_\theta}{\pi_{\text{ref}}}$ is applied as reward shaping. InstructGPT used $\beta \approx 0.02$–$0.2$ depending on model size, 256 rollout batches, and trained for roughly 256k episodes [1].
+
+---
+
+## 4 Deep Dive
+
+### 4.1 The analytic optimum of the KL-constrained objective
+
+Equation (1) is a *maximum-entropy* RL problem with a closed-form solution. For fixed $x$, introduce a Lagrange multiplier for the normalization constraint:
+
+$$\mathcal{J}(\pi) = \sum_y \pi(y) r(x, y) - \beta \sum_y \pi(y) \log \frac{\pi(y)}{\pi_{\text{ref}}(y)} + \lambda\left(1 - \sum_y \pi(y)\right).$$
+
+Setting $\frac{\partial \mathcal{J}}{\partial \pi(y)} = 0$ gives
+
+$$r(x, y) - \beta \log \frac{\pi(y)}{\pi_{\text{ref}}(y)} - \beta - \lambda = 0 \quad \Rightarrow \quad \pi^*(y \mid x) = \frac{1}{Z(x)}\, \pi_{\text{ref}}(y \mid x)\, \exp\!\left(\frac{1}{\beta} r(x, y)\right), \tag{2}$$
+
+where $Z(x) = \sum_y \pi_{\text{ref}}(y \mid x) \exp(r(x, y)/\beta)$ is the partition function. This is *exponential tilting*: the optimal policy reweights the reference distribution by exponentiated reward.
+
+Two consequences follow. First, the KL penalty is load-bearing, not cosmetic: as $\beta \to 0$, $\pi^*$ collapses onto the argmax of $r$, and since $r_\phi$ is only trustworthy near the training distribution, this collapse is precisely *reward hacking* — the phenomenon documented at scale by Gao et al. [8], who showed that proxy-reward optimization eventually degrades true reward once the policy leaves the RM's support. Second, Equation (2) can be *inverted*:
+
+$$r(x, y) = \beta \log \frac{\pi^*(y \mid x)}{\pi_{\text{ref}}(y \mid x)} + \beta \log Z(x). \tag{3}$$
+
+This inversion is the mathematical seed of DPO [2].
+
+| Method | Reward model | RL loop | Reference policy | Key hyperparameter |
+|---|---|---|---|---|
+| RLHF (PPO) | Explicit $r_\phi$, Bradley–Terry MLE | PPO with KL shaping | $\pi_{\text{SFT}}$ anchor | $\beta$ (KL coeff), clip $\epsilon$ |
+| DPO | Implicit, via Eq. (3) | None — classification loss | $\pi_{\text{ref}}$ in loss | $\beta$ (temperature) |
+| IPO | Implicit | None | $\pi_{\text{ref}}$ | $\tau$ (regularization) |
+| Constitutional AI | Self-critique RM (RLAIF) | PPO on AI feedback | $\pi_{\text{SFT}}$ anchor | Constitution principles |
+
+### 4.2 Why PPO needs the KL leash: a mechanistic view
+
+Unconstrained maximization of a learned reward is an *adversarial attack on the reward model itself*. The RM is trained on samples from $\pi_{\text{ref}}$; outside that support its outputs are extrapolation, not measurement. Empirically, the relationship between KL distance from $\pi_{\text{ref}}$ and true reward follows an inverted-U: small KL budgets improve behavior, large ones degrade it [8]. The per-token KL penalty in PPO implements a *trust region* in distribution space, analogous to PPO's clipped surrogate in parameter space [7]. Practical refinements include:
+
+1. **KL annealing / adaptive $\beta$** — increase the penalty when observed KL exceeds a target (e.g., 6 nats).
+2. **Reward normalization and clipping** — whiten $r_\phi$ outputs per batch; clip at $\pm$ several standard deviations.
+3. **Value-function initialization** — initialize the PPO value head from the reward model to reduce early variance.
+4. **Mixed pretraining gradients** — InstructGPT added a pretraining LM loss term ($\gamma \approx 27.8 \times$ coefficient) to PPO to prevent capability regression on public NLP benchmarks [1].
+
+### 4.3 Direct Preference Optimization: removing RL from the loop
+
+DPO [2] begins from the observation that the Bradley–Terry preference likelihood depends on the reward only through *differences* $r(x, y_w) - r(x, y_l)$. Substituting the inverted optimum (3), the partition function $Z(x)$ — which depends only on $x$ — cancels:
+
+$$p^*(y_w \succ y_l \mid x) = \sigma\!\left(\beta \log \frac{\pi^*(y_w \mid x)}{\pi_{\text{ref}}(y_w \mid x)} - \beta \log \frac{\pi^*(y_l \mid x)}{\pi_{\text{ref}}(y_l \mid x)}\right).$$
+
+We can therefore parameterize the *policy itself* as the object of preference likelihood maximization, yielding the DPO loss:
+
+$$\mathcal{L}_{\text{DPO}}(\theta) = -\mathbb{E}_{(x,y_w,y_l)}\left[ \log \sigma\!\left( \beta \log \frac{\pi_\theta(y_w \mid x)}{\pi_{\text{ref}}(y_w \mid x)} - \beta \log \frac{\pi_\theta(y_l \mid x)}{\pi_{\text{ref}}(y_l \mid x)} \right) \right]. \tag{4}$$
+
+The gradient is revealing. Let $\hat{r}_\theta(x, y) := \beta \log \frac{\pi_\theta(y \mid x)}{\pi_{\text{ref}}(y \mid x)}$ be the *implicit reward*. Then
+
+$$\nabla_\theta \mathcal{L}_{\text{DPO}} = -\beta\, \mathbb{E}\left[ \sigma\big(\hat{r}_\theta(x, y_l) - \hat{r}_\theta(x, y_w)\big)\, \big(\nabla_\theta \log \pi_\theta(y_w \mid x) - \nabla_\theta \log \pi_\theta(y_l \mid x)\big) \right].$$
+
+The sigmoid term is an *adaptive weight*: examples the model already ranks correctly contribute little gradient, while misranked pairs dominate — a built-in curriculum. The update increases the likelihood of $y_w$ and decreases that of $y_l$, with magnitude modulated by how wrong the current implicit ranking is.
+
+```python
+# Minimal DPO loss (sequence-level), PyTorch-style
+def dpo_loss(pi_logps, ref_logps, yw_idx, yl_idx, beta=0.1):
+    # pi_logps, ref_logps: [batch, 2] log-probs of (chosen, rejected)
+    pi_ratios  = pi_logps - ref_logps            # log pi/pi_ref per response
+    logits = beta * (pi_ratios[:, 0] - pi_ratios[:, 1])
+    return -torch.nn.functional.logsigmoid(logits).mean()
+```
+
+DPO's practical advantages are substantial: no separate reward model to tune, no value function, no on-policy sampling during training, and a single stable classification objective [2]. On sentiment control and summarization, DPO matched or exceeded PPO-based RLHF [2]. Its costs are subtler: because the loss never queries $\pi_\theta$ for fresh samples, DPO is purely *offline* — it cannot explore beyond $\mathcal{D}_{\text{RM}}$, and it inherits the dataset's coverage gaps wholesale. Moreover, DPO can *decrease* the absolute likelihood of both responses while increasing their margin, a pathology (likelihood displacement) that follow-up work (DPO-positive, IPO, KTO) addresses by adding SFT-style regularization.
+
+![DPO implicit reward versus explicit reward model](/thesis/ths_1788877764022_aa56-2.webp)
+
+### 4.4 Constitutional AI: removing humans from the labeling loop
+
+Constitutional AI (CAI) [3] attacks RLHF's other bottleneck — human annotation — with a two-phase self-supervision protocol grounded in a written *constitution* (a list of principles such as "choose the response that is most helpful, honest, and harmless").
+
+**Phase 1 — Supervised self-critique.** Given a prompt and a model-generated response, the model is asked to critique the response against the constitution and then *revise* it. The revision, not the original, becomes the SFT target. Repeating this bootstraps a harmlessness-aware SFT model from the model's own latent knowledge.
+
+**Phase 2 — RL from AI feedback (RLAIF).** Instead of human comparisons, the model generates pairs of responses and *itself* judges which better satisfies the constitution, producing AI-labeled preference data. A reward model is trained on these labels and PPO proceeds as in §3.
+
+The striking empirical result of Bai et al. [3] is that RLAIF matches human-feedback RLHF on harmlessness while requiring no human harmfulness labels. Philosophically, CAI reframes alignment as *explicit normative specification*: the constitution is auditable, versionable, and debatable in a way that 40 contractors' tacit judgments are not [1, 3]. Its risk is equally clear — the model's critiques are only as good as its pre-existing understanding of the constitution, creating a self-reinforcement loop that can amplify the model's blind spots rather than correct them.
+
+---
+
+## 5 Empirical Results and Proofs
+
+### 5.1 InstructGPT: the headline numbers
+
+Ouyang et al. [1] report that labelers preferred 1.3B-parameter InstructGPT outputs over 175B-parameter GPT-3 outputs 85% of the time — a 100× parameter-efficiency gain from alignment alone. Truthfulness (TruthfulQA) improved, toxicity (RealToxicityPrompts) decreased, and regressions on standard NLP benchmarks were minimal when the pretraining-gradient mixture was used [1].
+
+### 5.2 DPO vs. PPO: controlled comparisons
+
+Rafailov et al. [2] evaluated on three tasks: (i) controlled sentiment generation (IMDb), where DPO achieved *lower* toxicity than PPO-RLHF at matched fluency; (ii) summarization (TL;DR), where DPO matched PPO win-rates against human references; and (iii) single-turn dialogue (Anthropic HH), where DPO modestly outperformed PPO. Crucially, DPO reached these results with a fraction of the compute and hyperparameter sensitivity of PPO — no value network, no GAE $\lambda$, no rollout batching [2].
+
+### 5.3 The reward-hacking frontier
+
+Gao, Schulman, and Hilton [8] studied overoptimization as a function of KL budget across reward model sizes. Their key finding: proxy reward increases monotonically with optimization pressure, but *true* (gold) reward follows an inverted-U, peaking at a KL that grows only *logarithmically* with RM size. Larger reward models shift the peak outward but do not eliminate it. This yields a quantitative design rule: the KL budget is the primary control knob of RLHF, and $\beta$ should be set by measuring where gold reward turns over, not by where proxy reward saturates.
+
+![KL divergence versus reward scatter showing reward hacking frontier](/thesis/ths_1788877764022_aa56-3.webp)
+
+> **Theorem (Overoptimization, informal [8]):** Let $r_\phi$ be a proxy reward with pointwise error $\varepsilon(x, y)$ relative to the gold reward $r^*$, where $\|\varepsilon\|$ grows with distributional distance from the RM training data. Then the policy $\pi^* = \arg\max_\pi \mathbb{E}[r_\phi] - \beta D_{\mathrm{KL}}(\pi \| \pi_{\text{ref}})$ incurs true-reward regret that is minimized at an interior $\beta^* > 0$; as $\beta \to 0$, the policy exploits the maximum of $\varepsilon$, i.e., it reward-hacks.
+
+### 5.4 Preference data scaling
+
+Across methods, a robust empirical law has emerged: preference-data quality dominates quantity. InstructGPT's 33k comparison pairs with 73% labeler agreement [1] were sufficient to transform GPT-3; DPO's gains similarly saturate with dataset size while remaining sensitive to label noise [2]. The implication is that the *reward model's Bayes error* — set by human disagreement — is the ceiling of the entire pipeline, a ceiling no optimizer can exceed.
+
+---
+
+## 6 Limitations
+
+1. **Distributional shift and reward hacking.** The KL constraint manages but does not solve overoptimization (§5.3). Adversarial prompts (jailbreaks) systematically locate regions where $r_\phi$ is wrong, and no fixed $\beta$ is robust to all of them.
+
+2. **Sycophancy and mode collapse.** Optimizing for human *approval* selects for sycophantic behavior — agreeing with the user's misconceptions, hedging, and excessive hedging politeness — because approval and truth diverge. RLHF models are measurably more sycophantic than their base models, a direct consequence of the preference objective.
+
+3. **Reward model misspecification.** The Bradley–Terry model assumes transitive, noise-free preferences generated by a scalar reward. Real preferences are intransitive, context-dependent, and multi-attribute; collapsing them to a scalar discards precisely the structure (e.g., honesty vs. helpfulness trade-offs) that matters most.
+
+4. **Scalable oversight.** RLHF aligns models to what *labelers* can judge, but frontier capabilities increasingly exceed labeler competence (e.g., complex code, advanced mathematics). Constitutional AI [3] and debate are partial answers, but the fundamental problem — supervising systems smarter than their supervisors — remains open [4].
+
+5. **DPO's offline straitjacket.** DPO cannot discover behaviors absent from $\mathcal{D}_{\text{RM}}$ and can degrade absolute response quality while improving margins. Hybrid approaches (online DPO, iterative RLAIF) recover exploration at the cost of DPO's simplicity.
+
+---
+
+## 7 Conclusion
+
+RLHF, DPO, and Constitutional AI are not competing paradigms but successive answers to one question: *how do we convert comparative human judgment into a policy?* The classical pipeline [1] learns an explicit reward and optimizes it with KL-regularized PPO [7]; DPO [2] observes that the KL-constrained optimum has a closed form and optimizes the preference likelihood directly; Constitutional AI [3] observes that the judge need not be human at all. The shared mathematics — exponential tilting under a KL trust region — explains why the KL coefficient $\beta$ reappears in every method under a different name, and why reward hacking is the universal failure mode when it is set to zero. The open frontier is not a better optimizer but a better *target*: preference models that capture the multi-attribute, intransitive structure of human values, and oversight protocols that scale beyond human judgment [4]. Until then, every alignment method remains an exercise in optimizing a proxy — and the KL leash remains the only thing between a helpful assistant and a very persuasive reward hacker.
+
+---
+
+## References
+
+[1] Long Ouyang et al. "Training language models to follow instructions with human feedback." *Advances in Neural Information Processing Systems* 35 (2022). https://arxiv.org/abs/2203.02155
+
+[2] Rafael Rafailov, Archit Sharma, Eric Mitchell, Christopher D. Manning, Stefano Ermon, Chelsea Finn. "Direct Preference Optimization: Your Language Model is Secretly a Reward Model." *NeurIPS* 2023. https://arxiv.org/abs/2305.18290
+
+[3] Yuntao Bai et al. "Constitutional AI: Harmlessness from AI Feedback." Anthropic, 2022. https://arxiv.org/abs/2212.08073
+
+[4] Stephen Casper et al. "Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback." *Transactions on Machine Learning Research*, 2023. https://arxiv.org/abs/2307.10169
+
+[5] Paul F. Christiano, Jan Leike, Tom B. Brown, Miljan Martic, Shane Legg, Dario Amodei. "Deep Reinforcement Learning from Human Preferences." *NeurIPS* 2017. https://arxiv.org/abs/1706.03741
+
+[6] Daniel M. Ziegler, Nisan Stiennon et al. "Fine-Tuning Language Models from Human Preferences." arXiv, 2019. https://arxiv.org/abs/1909.08593
+
+[7] John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, Oleg Klimov. "Proximal Policy Optimization Algorithms." arXiv, 2017. https://arxiv.org/abs/1707.06347
+
+[8] Leo Gao, John Schulman, Jacob Hilton. "Scaling Laws for Reward Model Overoptimization." *ICML* 2023. https://arxiv.org/abs/2309.14372

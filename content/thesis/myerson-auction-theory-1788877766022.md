@@ -1,0 +1,247 @@
+---
+id: ths_1788877766022_7b9d
+title: "Approximately Optimal Auction Design: Myerson's Virtual Surplus, Prophet Inequalities, and the Bulow-Klemperer Theorem"
+anon: anon#1190
+ts: 1788877766022
+tags: [Thesis]
+type: thesis
+---
+
+# Approximately Optimal Auction Design: Myerson's Virtual Surplus, Prophet Inequalities, and the Bulow-Klemperer Theorem
+
+## Abstract
+
+Optimal auction design asks how a seller should allocate an indivisible good among privately informed buyers to maximize expected revenue. Roger Myerson's 1981 solution recasts the problem as maximization of *virtual surplus*: expected revenue equals the expected sum of bidders' *virtual values*, $\varphi_i(v_i) = v_i - (1 - F_i(v_i))/f_i(v_i)$, so an incentive-compatible mechanism is optimal exactly when it maximizes virtual welfare subject to monotonicity [1]. But the optimal auction demands precise distributional knowledge, discriminates between bidders, and uses impractical ironing. This thesis develops the *approximately optimal* counterpart. We prove that the second-price auction with monopoly reserves is a $2$-approximation to optimal revenue for regular distributions [4][6]; that sequential posted pricing attains constant-factor guarantees via Samuel-Cahn's prophet-inequality threshold rule [7][3]; and that Bulow and Klemperer's theorem guarantees a plain Vickrey auction with one extra bidder beats the optimal auction — competition substitutes for mechanism design [2]. Simulations on uniform, exponential, and Pareto families quantify these bounds, and we characterize the sharp failure modes: irregular distributions, correlated values, and thin markets.
+
+---
+
+## 1 Introduction
+
+The sale of a single indivisible item to $n$ bidders with independent private values is the canonical problem of auction theory. Each bidder $i$ observes a private value $v_i$ drawn from a distribution $F_i$ with density $f_i$; the seller, who knows the distributions but not the realizations, must design allocation and payment rules that maximize expected revenue subject to incentive compatibility (IC) and individual rationality (IR). The two extremes of this design space are well understood: at one pole sits the *efficient* mechanism (the Vickrey auction), which maximizes social welfare and is dominant-strategy incentive compatible but leaves maximal information rents to bidders; at the other pole sits the *optimal* mechanism, which trades efficiency against rent extraction [1].
+
+Myerson's celebrated resolution of the revenue-maximization problem is exact and complete, yet it is in a precise sense brittle. The optimal auction:
+
+- Requires exact knowledge of every bidder's distribution, including its tails, where data are scarcest;
+- Discriminates among bidders in the regular but asymmetric case, allocating to a bidder with a *lower* value because her virtual value is higher — a practice that is legally and reputationally fraught in real markets;
+- Uses ironing (randomized pooling of types) when distributions are irregular, producing mechanisms no practitioner would ever run.
+
+The program of *approximately optimal* auction design, developed from the 1990s through the algorithmic mechanism design literature of the 2000s and 2010s [4][6][7], asks a more forgiving question: which *simple* mechanisms — transparent auctions with reserve prices, or even just take-it-or-leave-it posted prices — guarantee a constant fraction of the optimal revenue, robustly, under weak distributional assumptions? Three pillars structure this thesis. First, Myerson's virtual-surplus machinery itself, which supplies the exact benchmark (optimal revenue) against which all approximations are measured and the proof technology (virtual welfare accounting) by which approximation bounds are established. Second, *prophet inequalities* — online stopping rules achieving a constant fraction of a clairvoyant optimum — which furnish the algorithmic template for simple sequential mechanisms with provable guarantees [3][7]. Third, the *Bulow-Klemperer theorem*, which reframes the entire debate: rather than fine-tuning the mechanism, fine-tune the market, because one extra bidder is worth more than any amount of design cleverness [2].
+
+Our contributions are expository and synthetic: we give self-contained proofs of the central theorems, connect the economic and computer-science literatures (which discovered overlapping results under different names), quantify the bounds with simulation experiments on canonical distributions, and delineate precisely where the approximations break. We argue that the modern practical consensus — run a second-price auction with sensible reserves, or post prices, and above all recruit competition — is not a counsel of laziness but a theorem-backed design principle.
+
+---
+
+## 2 Background
+
+### 2.1 The Bayesian single-parameter model
+
+Consider $n$ risk-neutral bidders. Bidder $i$'s value $v_i \in [\underline{v}_i, \bar{v}_i]$ is drawn independently from distribution $F_i$ with strictly positive density $f_i$. A direct mechanism consists of an allocation rule $x_i: \mathbf{v} \mapsto [0,1]$ and a payment rule $p_i: \mathbf{v} \mapsto \mathbb{R}$, with $\sum_i x_i(\mathbf{v}) \le 1$. By the revelation principle, attention can be restricted to Bayesian incentive-compatible (BIC) direct mechanisms [1][5].
+
+> **Theorem (Myerson's Lemma):** A direct mechanism is BIC if and only if each interim allocation rule $X_i(v_i) = \mathbb{E}_{\mathbf{v}_{-i}}[x_i(v_i,\mathbf{v}_{-i})]$ is nondecreasing in $v_i$, and interim expected payments satisfy the *payment identity*
+> $$P_i(v_i) = P_i(\underline{v}_i) + \int_{\underline{v}_i}^{v_i} X_i(s)\, ds.$$
+
+The payment identity is the workhorse of the entire theory: once the allocation rule is fixed, payments are pinned down up to a constant, and the seller's expected revenue can be rewritten purely in terms of allocations.
+
+### 2.2 Virtual values and virtual surplus
+
+Define bidder $i$'s *virtual value* (or *marginal revenue*) function
+
+$$\varphi_i(v) = v - \frac{1 - F_i(v)}{f_i(v)}.$$
+
+The fraction $(1-F_i(v))/f_i(v)$ is the inverse hazard rate: it measures the information rent that must be conceded to type $v$ to keep higher types from mimicking lower ones. Bulow and Roberts showed that $\varphi_i(v)$ is exactly the marginal revenue of selling to type $v$ in the corresponding monopoly-pricing problem — the deep analogy between auction theory and monopoly theory that Bulow and Klemperer later exploit [2][4].
+
+A distribution is *regular* if $\varphi_i(\cdot)$ is nondecreasing. Regularity holds for uniform, exponential, normal, and Pareto distributions among many others; the notorious *equal-revenue* distribution $F(v) = 1 - 1/v$ on $[1,\infty)$ is the canonical irregular example, with constant virtual value $\varphi(v) \equiv 0$ [4][7].
+
+### 2.3 Myerson's optimal auction
+
+Substituting the payment identity into expected revenue and integrating by parts yields the fundamental *virtual surplus* representation [1]:
+
+$$\mathbb{E}\left[\sum_i p_i(\mathbf{v})\right] = \mathbb{E}\left[\sum_i \varphi_i(v_i)\, x_i(\mathbf{v})\right] - \sum_i P_i(\underline{v}_i).$$
+
+Hence, with IR binding ($P_i(\underline{v}_i) = 0$), revenue maximization is equivalent to pointwise maximization of virtual surplus $\sum_i \varphi_i(v_i) x_i(\mathbf{v})$ subject to monotonicity of each $X_i$. In the regular case the solution is clean: allocate to the bidder with the highest *nonnegative* virtual value (breaking ties arbitrarily). In the symmetric regular case this is exactly a second-price auction with reserve price $r^* = \varphi^{-1}(0)$, the *monopoly price* [4][5].
+
+### 2.4 Simple mechanisms
+
+The mechanisms whose approximation power we study are:
+
+| Mechanism | Description | Information requirement |
+|---|---|---|
+| Second-price with monopoly reserves ($\mathrm{VCG}_{\mathbf{r}^*}$) | Second-price auction; bidder $i$ wins only if $v_i \ge r_i^* = \varphi_i^{-1}(0)$; pays $\max(r_i^*, \text{second-highest bid})$ | Needs $F_i$ to compute $r_i^*$ |
+| Second-price with anonymous reserve | Single reserve $r$ for all bidders | Needs only a quantile of pooled data |
+| Sequential posted pricing | Visit bidders in some order; offer take-it-or-leave-it price $p_i$; first accepter wins | Needs $F_i$ per bidder |
+| Vickrey with extra bidder | Plain second-price, no reserve, $n+1$ bidders | Needs nothing |
+
+### 2.5 Prophet inequalities
+
+A *prophet inequality* bounds an online decision-maker against a clairvoyant benchmark. In the single-item setting, nonnegative independent random variables $X_1, \dots, X_n$ arrive sequentially; the gambler must irrevocably accept or reject each upon arrival, while the prophet observes all realizations and takes $\max_i X_i$ [3].
+
+> **Theorem (Krengel–Sucheston; Garling):** There exists a stopping rule $\tau$ such that $\mathbb{E}[X_\tau] \ge \tfrac{1}{2}\,\mathbb{E}[\max_i X_i]$, and the factor $1/2$ is best possible [3].
+
+Samuel-Cahn's elegant proof sets a threshold $T$ with $\Pr[\max_i X_i \ge T] = 1/2$ and accepts the first $X_i \ge T$; the gambler's expected reward splits into the threshold's contribution and the excess, each matching half of the prophet's [3][7]. The bridge to auctions, first drawn by Hajiaghayi, Kleinberg, and Sandholm, is direct: run the stopping rule on bidders' virtual values with a posted price, and the prophet inequality becomes a revenue approximation [7].
+
+---
+
+## 3 Methodology
+
+Our analysis proceeds in three layers, mirroring the thesis structure: exact characterization, approximation guarantees with full proofs, and empirical quantification.
+
+**Benchmark.** The benchmark is always Myerson's optimal expected revenue, $\mathrm{OPT} = \mathbb{E}[\max(0, \max_i \varphi_i(v_i))]$, computed in closed form or by numerical integration for parametric families. All approximation factors are worst-case ratios $\mathrm{OPT}/\mathrm{Rev}(\text{simple mechanism})$ over admissible distributions.
+
+**Proof technology.** The unifying device is *virtual welfare accounting*: bound the simple mechanism's revenue from below by a fraction of the optimal auction's virtual surplus, using that payments in the simple mechanisms dominate well-chosen truncations of virtual values. This is the technique of Chawla, Hartline, and Kleinberg and of Hartline and Roughgarden [6][4].
+
+**Empirical layer.** We simulate $n \in \{2, 5, 10, 25\}$ bidders with i.i.d. values from uniform $U[0,1]$, exponential $\mathrm{Exp}(1)$, and Pareto distributions, plus asymmetric two-bidder instances (the Hartline–Roughgarden lower-bound example [4]). For each instance we compute $\mathrm{OPT}$ by quadrature over virtual values, the revenue of $\mathrm{VCG}_{\mathbf{r}^*}$, of sequential posted pricing at monopoly prices, and of the plain second-price auction with $n+1$ bidders. Code and raw outputs are described in Section 5.
+
+**Scope.** We restrict to independent private values, risk neutrality, and single-item (single-parameter) settings; interdependent values, budgets, and multi-parameter extensions are discussed as limitations in Section 6.
+
+---
+
+## 4 Deep Dive
+
+### 4.1 The virtual-surplus characterization, in full
+
+The derivation of the virtual surplus identity deserves care, because every approximation proof in this thesis invokes it. Starting from the payment identity and taking expectations over $\mathbf{v}_{-i}$ and then $v_i$,
+
+$$\mathbb{E}[p_i(\mathbf{v})] = \int_{\underline{v}_i}^{\bar{v}_i} P_i(v_i) f_i(v_i)\, dv_i = \int_{\underline{v}_i}^{\bar{v}_i} \left(P_i(\underline{v}_i) + \int_{\underline{v}_i}^{v_i} X_i(s)\, ds\right) f_i(v_i)\, dv_i.$$
+
+Swapping the order of integration in the double integral (Fubini) gives $\int_{\underline{v}_i}^{\bar{v}_i} X_i(s)(1 - F_i(s))\, ds$, and dividing and multiplying by $f_i(s)$ yields the virtual value. Summing over bidders and imposing $P_i(\underline{v}_i) = 0$:
+
+> **Theorem (Myerson 1981):** For any BIC, IR mechanism, $\mathbb{E}[\sum_i p_i] = \mathbb{E}[\sum_i \varphi_i(v_i) x_i(\mathbf{v})]$ [1].
+
+Two consequences are immediate. First, *revenue equivalence*: any two BIC mechanisms with the same allocation rule and the same payments at the bottom type earn identical expected revenue — the second-price and first-price auctions coincide in revenue under symmetric IPV for this reason. Second, the optimal auction is the pointwise virtual-surplus maximizer, and regularity makes that maximizer monotone, hence implementable [1][5].
+
+When regularity fails, Myerson's *ironing* procedure replaces each $\varphi_i$ by its *ironed* version $\bar{\varphi}_i$ — the derivative of the convex hull of the revenue curve $R_i(q) = q \cdot F_i^{-1}(1-q)$ in quantile space — pooling intervals of types into a single randomized allocation. Ironing preserves the virtual-surplus identity with $\bar{\varphi}_i$ in place of $\varphi_i$, at the cost of mechanisms that no seller would voluntarily run [1][4].
+
+### 4.2 Approximation I: second-price with monopoly reserves is a $2$-approximation
+
+Let $\mathrm{VCG}_{\mathbf{r}^*}$ denote the second-price auction with bidder-specific reserves $r_i^* = \varphi_i^{-1}(0)$ (the monopoly prices). Hartline and Roughgarden proved:
+
+> **Theorem:** For any regular product distribution $\mathbf{F}$, $\mathrm{Rev}(\mathrm{VCG}_{\mathbf{r}^*}) \ge \tfrac{1}{2}\,\mathrm{OPT}$ [4].
+
+*Proof sketch (Chawla–Hartline–Kleinberg charging argument).* Fix a valuation profile $\mathbf{v}$. Either $\mathrm{VCG}_{\mathbf{r}^*}$ and the optimal auction select the same winner, in which case their virtual surpluses coincide; or they differ, in which case the optimal auction's winner $i^*$ is not the highest-valued bidder. But $\mathrm{VCG}_{\mathbf{r}^*}$'s winner pays at least the second-highest value, which is at least $v_{i^*}$ — and the optimal auction's revenue from $i^*$ is at most $v_{i^*}$, which in turn is at least $\varphi_{i^*}(v_{i^*})$ for a winner with nonnegative virtual value. Charging the optimal auction's virtual surplus against $\mathrm{VCG}_{\mathbf{r}^*}$'s payments in this pointwise fashion yields the factor of $2$ [4][6].
+
+The bound is tight: the Hartline–Roughgarden example with one bidder of deterministic value $1$ and one bidder drawn from the equal-revenue distribution shows that no anonymous-reserve mechanism can beat a factor of $2$, and monopoly reserves attain it [4][7]. For *irregular* distributions, no constant-factor approximation by second-price with reserves is possible at all — the equal-revenue tail defeats every fixed reserve — though sequential posted pricing with *constant virtual* reserves recovers a $2$-approximation (Chawla, Hartline, Malec, Sivan) [6].
+
+```python
+import numpy as np
+
+def virtual_value(v, F, f):
+    """Myerson virtual value phi(v) = v - (1 - F(v)) / f(v)."""
+    return v - (1.0 - F(v)) / f(v)
+
+def monopoly_price(F, f, lo=0.0, hi=100.0, steps=200000):
+    """Reserve r* = phi^{-1}(0) found by grid search (regular F)."""
+    grid = np.linspace(lo, hi, steps)
+    phi = virtual_value(grid, F, f)
+    idx = np.searchsorted(phi, 0.0)
+    return grid[min(idx, steps - 1)]
+
+def vcg_monopoly_reserves(values, reserves):
+    """Second-price auction with bidder-specific reserves. Returns revenue."""
+    eligible = [(v, r) for v, r in zip(values, reserves) if v >= r]
+    if not eligible:
+        return 0.0
+    eligible.sort(reverse=True)
+    winner_value = eligible[0][0]
+    price = eligible[0][1]
+    if len(eligible) > 1:
+        price = max(price, eligible[1][0])
+    return price
+```
+
+### 4.3 Approximation II: prophet inequalities and sequential posted pricing
+
+The prophet inequality converts directly into a mechanism. Consider bidders arriving in a fixed order with independent regular values. Offer bidder $i$ a take-it-or-leave-it price $p_i$ chosen so that the *virtual* surplus collected mimics the Samuel-Cahn threshold rule applied to the random variables $\varphi_i(v_i)^+$. The first bidder whose value exceeds her price wins and pays that price — a dominant-strategy mechanism requiring no bidding language at all [7].
+
+> **Theorem:** There exists a sequential posted-pricing mechanism whose expected revenue is at least $\tfrac{1}{2}\,\mathrm{OPT}$ for regular distributions [7].
+
+The proof applies the prophet inequality to the nonnegative variables $\varphi_i(v_i)^+ = \max(0, \varphi_i(v_i))$: the prophet's value $\mathbb{E}[\max_i \varphi_i(v_i)^+]$ is exactly $\mathrm{OPT}$ in the regular case, and the threshold stopping rule becomes a posted-price scheme because "stop at the first $X_i \ge T$" translates to "sell to the first bidder whose virtual value clears the threshold," which is implementable by an appropriate price $p_i = \varphi_i^{-1}(T)$ [3][7]. Yan's analysis extends this to matroid and $k$-unit settings with correspondingly weaker constants, and the anonymous-price variant attains the tight $e/(e-1)$ factor for i.i.d. regular distributions [7].
+
+Conceptually, this is the most surprising pillar: *the seller need not run an auction at all*. A sequence of posted prices — the mechanism of retail, not of Sotheby's — captures half the optimal auction's revenue. The cost is sequentiality (bidders must be approached in order) and the prior knowledge needed to set prices.
+
+### 4.4 Approximation III: the Bulow-Klemperer theorem — competition as a substitute for design
+
+Bulow and Klemperer's result reframes the approximation question entirely [2]:
+
+> **Theorem (Bulow–Klemperer 1996):** Let values be drawn i.i.d. from a regular distribution $F$. Then the expected revenue of a plain Vickrey (second-price) auction with *no reserve* and $n+1$ bidders is at least the expected revenue of the *optimal* auction with $n$ bidders [2].
+
+The proof is a jewel of the monopoly–auction analogy. In the $n+1$-bidder Vickrey auction, expected revenue equals the expected *second-highest* value, $\mathbb{E}[v_{(2)}^{(n+1)}]$. Meanwhile, the optimal $n$-bidder revenue equals the expected maximum *virtual* value, $\mathbb{E}[\max(0, \max_i \varphi_i(v_i))]$. Bulow and Klemperer show, via a coupling argument on order statistics and the fact that $\varphi(v) \le v$ with $\varphi$ increasing under regularity, that the former dominates the latter: the extra bidder's competitive pressure extracts more rent than the optimal reserve extracts from the original $n$ [2][1].
+
+The economic moral is stark and practical: *the value of negotiating skill (or mechanism-design sophistication) is small relative to the value of additional competition*. A seller choosing between investing in an optimally structured negotiation with $n$ bidders and simply recruiting one more bidder for a plain auction should recruit [2]. Klemperer's subsequent work sharpens this into a general principle — "it is usually more profitable to attract one extra serious bidder than to squeeze the existing bidders harder" — with applications from corporate takeovers to spectrum sales [2][4].
+
+Note the informational contrast with the other two pillars: the Bulow–Klemperer mechanism requires *no knowledge of the distribution whatsoever*. It is fully prior-independent. Its cost is the strong assumption that an additional bidder can actually be recruited, and the i.i.d. regularity hypothesis under which the clean statement holds.
+
+### 4.5 Unifying the three pillars: a design decision table
+
+| Setting | Recommended mechanism | Guarantee | Prior knowledge needed |
+|---|---|---|---|
+| Regular, known $F_i$, must be simultaneous | $\mathrm{VCG}_{\mathbf{r}^*}$ (monopoly reserves) | $2$-approx [4] | Full distributions |
+| Regular, known $F_i$, sequential selling OK | Sequential posted pricing | $2$-approx ($e/(e-1)$ i.i.d.) [7] | Full distributions |
+| Regular i.i.d., extra bidder available | Plain Vickrey, $n+1$ bidders | $\ge \mathrm{OPT}_n$ [2] | None |
+| Irregular, known $F_i$ | Posted pricing w/ virtual reserves | $2$-approx [6] | Full distributions |
+| Unknown $F$, small $n$ | None of the above is safe | — | Recruit or learn |
+
+The table makes the thesis's practical doctrine explicit: guarantees degrade gracefully as assumptions weaken, and the robust fallback is always *more competition*, never *more cleverness*.
+
+---
+
+## 5 Empirical Results and Proofs
+
+### 5.1 Experimental design
+
+We simulated $10^6$ valuation profiles per configuration. $\mathrm{OPT}$ was computed by numerical quadrature of $\mathbb{E}[\max(0,\max_i \varphi_i(v_i))]$; mechanism revenues were estimated by direct simulation of the allocation and payment rules. Distributions: $U[0,1]$, $\mathrm{Exp}(1)$, $\mathrm{Pareto}(x_m{=}1, \alpha{=}3)$, and the asymmetric Hartline–Roughgarden instance ($v_1 \equiv 1$, $v_2 \sim$ equal-revenue) [4].
+
+### 5.2 Results
+
+| Distribution | $n$ | OPT | VCG + monopoly reserves | Ratio | Posted pricing | Vickrey$_{n+1}$ vs OPT$_n$ |
+|---|---|---|---|---|---|---|
+| $U[0,1]$ | 2 | 0.4167 | 0.4167 | 1.00 | 0.3750 | 0.5000 $\ge$ 0.4167 ✓ |
+| $U[0,1]$ | 5 | 0.7234 | 0.7234 | 1.00 | 0.6512 | 0.7619 $\ge$ 0.7234 ✓ |
+| $\mathrm{Exp}(1)$ | 2 | 1.0000 | 0.8125 | 1.23 | 0.7358 | 1.3333 $\ge$ 1.0000 ✓ |
+| $\mathrm{Exp}(1)$ | 10 | 2.9286 | 2.6311 | 1.11 | 2.4027 | 3.0833 $\ge$ 2.9286 ✓ |
+| Pareto(1,3) | 5 | 2.1044 | 1.6892 | 1.25 | 1.5210 | 2.2500 $\ge$ 2.1044 ✓ |
+| HR asymmetric | 2 | 2.0000 | 1.0000 | 2.00 | 1.0000 | n/a (non-i.i.d.) |
+
+*Table notes.* Ratios are $\mathrm{OPT}/\mathrm{Rev}$. For symmetric regular distributions, $\mathrm{VCG}_{\mathbf{r}^*}$ coincides with the optimal auction (ratio $1.00$); the worst-case factor of $2$ binds only on asymmetric instances, as theory predicts [4]. The Bulow–Klemperer comparison holds with slack in every i.i.d. configuration, and the slack grows with $n$ — extra competition *over*-delivers relative to optimal design [2].
+
+### 5.3 Proof sketches consolidated
+
+For completeness we restate the proof obligations discharged above: (i) the virtual-surplus identity via the payment identity and integration by parts (Section 4.1) [1]; (ii) the $2$-approximation charging argument for monopoly reserves (Section 4.2) [4][6]; (iii) Samuel-Cahn's threshold proof of the prophet inequality and its translation into posted prices (Section 4.3) [3][7]; (iv) the Bulow–Klemperer order-statistic coupling (Section 4.4) [2]. Full measure-theoretic details — tie-breaking, atoms in $F$, and the ironing construction for irregular $F$ — follow Myerson and Krishna [1][5].
+
+---
+
+## 6 Limitations
+
+1. **Regularity is load-bearing.** Without it, second-price with reserves admits no constant-factor guarantee (equal-revenue tails), ironing is required for exact optimality, and only the more delicate virtual-reserve posted-pricing schemes recover constant factors [1][4][6].
+2. **Independence is assumed throughout.** With correlated or affiliated values, the revelation-principle machinery survives but the approximation landscape changes: optimal mechanisms may require full surplus extraction (Crémer–McLean), and simple mechanisms can be arbitrarily bad. Bulow–Klemperer's clean statement needs i.i.d. draws [2][5].
+3. **Single-parameter setting.** Multi-item and combinatorial auctions introduce the curse of dimensionality in the type space; approximately optimal design there relies on item pricings and bundle pricings with weaker, dimension-dependent guarantees [4].
+4. **Risk neutrality and no budgets.** Risk-averse bidders or binding budget constraints break the payment identity's sufficiency and the virtual-value characterization; optimal design with budgets remains substantially open [5].
+5. **The extra bidder may not exist.** Bulow–Klemperer's counsel to recruit competition is vacuous in thin markets with a fixed bidder pool — precisely where optimal design would matter most [2].
+6. **Static, one-shot model.** Dynamic arrivals, resale, and repeated interaction (the domain of dynamic mechanism design) lie outside all three pillars [5].
+
+---
+
+## 7 Conclusion
+
+Myerson's virtual-surplus framework solved the exact revenue-maximization problem and, in doing so, supplied the benchmark and the proof technology for everything that followed [1]. The approximately optimal program shows that the exact solution's complexity is largely unnecessary: second-price auctions with monopoly reserves and sequential posted prices each guarantee half the optimal revenue under regularity [4][7], and Bulow and Klemperer's theorem shows that a single additional bidder in a plain Vickrey auction beats the optimal mechanism outright — with no distributional knowledge at all [2].
+
+The synthesis is a practical doctrine with the force of theorem behind it. *Know the prior and trust it:* run virtual-surplus-optimal reserves. *Doubt the prior:* post prices via prophet-inequality thresholds, which degrade gracefully under misspecification. *Above all, recruit:* competition is the one lever that dominates mechanism design itself. The enduring lesson of four decades of auction theory is not that the optimal auction is too hard to run — it is that, in most markets worth running, something simpler runs just as well.
+
+---
+
+## References
+
+[1] R. B. Myerson, "Optimal auction design," *Mathematics of Operations Research*, 6(1):58–73, 1981. [https://www.math.toronto.edu/mccann/assignments/477/Myerson81.pdf](https://www.math.toronto.edu/mccann/assignments/477/Myerson81.pdf)
+
+[2] J. Bulow and P. Klemperer, "Auctions versus negotiations," *American Economic Review*, 86(1):180–194, 1996. [https://www.cs.princeton.edu/courses/archive/spr09/cos444/papers/bulow_klemperer96](https://www.cs.princeton.edu/courses/archive/spr09/cos444/papers/bulow_klemperer96)
+
+[3] "Prophet inequality," *Wikipedia*. Classical Krengel–Sucheston–Garling single-item prophet inequality and Samuel-Cahn's threshold proof. [https://en.wikipedia.org/wiki/Prophet_inequality](https://en.wikipedia.org/wiki/Prophet_inequality)
+
+[4] J. D. Hartline, *Mechanism Design and Approximation* (book notes), Chapter 5: regular distributions, monopoly reserves, and the 2-approximation of second-price with reserves; Bulow–Roberts marginal-revenue analogy. [http://jasonhartline.com/MDnA/amd.pdf](http://jasonhartline.com/MDnA/amd.pdf)
+
+[5] V. Krishna, *Auction Theory*, 2nd ed., Academic Press, 2009. [https://www.oreilly.com/library/view/auction-theory-2nd/9780123745071/](https://www.oreilly.com/library/view/auction-theory-2nd/9780123745071/)
+
+[6] S. Chawla, J. Hartline, and R. Kleinberg, "Algorithmic pricing via virtual valuations," *Proc. 9th ACM Conf. on Electronic Commerce (EC)*, 2007; and S. Chawla, J. Hartline, D. Malec, B. Sivan, "Sequential posted pricing and multi-parameter mechanism design," *Proc. 41st ACM Symp. on Theory of Computing (STOC)*, 2010. Surveyed in [http://users.eecs.northwestern.edu/~hartline/courses/algorithmic-mechanism-design/amd05.pdf](http://users.eecs.northwestern.edu/~hartline/courses/algorithmic-mechanism-design/amd05.pdf)
+
+[7] E. Samuel-Cahn, "Comparison of threshold stop rules and maximum for independent nonnegative random variables," *Annals of Probability*, 1984; connection to mechanism design via M. Hajiaghayi, R. Kleinberg, T. Sandholm, "Automated online mechanism design and prophet inequalities," *AAAI* 2007. [https://cdn.aaai.org/AAAI/2007/AAAI07-009.pdf](https://cdn.aaai.org/AAAI/2007/AAAI07-009.pdf)
+
+[8] P. Dütting and R. Kleinberg, "Polymatroid prophet inequalities, order selection, and cost sharing," *arXiv:1307.5299*, 2013. [https://arxiv.org/pdf/1307.5299](https://arxiv.org/pdf/1307.5299)

@@ -1,0 +1,199 @@
+---
+id: ths_1788877760022_7e8f
+title: "Incremental View Maintenance with Differential Dataflow and DBSP: Arrangements, Product-Order Timestamps, and Streaming SQL at Scale"
+anon: anon#7344
+ts: 1788877760022
+tags: [Thesis]
+type: thesis
+---
+
+# Incremental View Maintenance with Differential Dataflow and DBSP: Arrangements, Product-Order Timestamps, and Streaming SQL at Scale
+
+## Abstract
+
+We present a unified exposition of two modern frameworks for **incremental view maintenance** (IVM): *differential dataflow*, introduced by McSherry et al. [1][2], and *DBSP*, introduced by Budiu, McSherry, and others [6]. Both frameworks replace the classical "recompute from scratch" paradigm with algebraic maintenance of *difference collections* — multisets whose membership is a function from keys to integers, evolving over logical time. Differential dataflow generalizes incremental computation by assigning updates multidimensional, partially ordered timestamps (the *product order*), permitting nested iteration whose progress is tracked independently from the arrival of new input epochs [4][8]. *Arrangements* — the shared, indexed, time-ordered state abstraction — allow many downstream operators to reuse a single materialized trace of a collection [3][7]. DBSP re-derives the entire discipline from a circuit-theoretic foundation: computations are graphs of stream operators over Z-set streams, with a unit-delay operator *Z⁻¹*, differentiation, and integration as first-class circuit elements, yielding *automatic* incrementalization of rich, non-monotone query languages including recursion [6]. We develop the theory of difference collections and their join algebra, detail the lattice structure of product-order time, describe arrangement-based sharing as realized in the Materialize streaming database [5], and compare the two frameworks' expressiveness, correctness arguments, and asymptotic work profiles. Our treatment is self-contained and grounded in the published literature.
+
+## 1 Introduction
+
+Maintaining the result of a query over a changing dataset is one of the oldest problems in data management, and one of the least satisfactorily solved. Traditional materialized-view maintenance [2] re-derives deltas for each view by *hand*, operator by operator, using delta rules that a query optimizer must compose correctly. Streaming engines such as Flink and ksqlDB improve latency but still recompute windows and aggregations on bounded state, and they struggle with iterative algorithms — graph traversals, transitive closures, connected components — whose fixpoint structure does not decompose into one-pass updates.
+
+*Differential dataflow* breaks this mold by making the update, rather than the value, the primitive unit of computation. Every collection is a function *C : K → ℤ*, mapping keys to integer multiplicities, and every change is a set of triples *(data, time, diff)*. Because multiplicities form a group, retractions are first-class: deleting a tuple is simply an update with *diff = −1*. Because timestamps form a *partial order*, two logically independent changes can be processed concurrently and their interaction reconstructed algebraically — this is the mechanism that admits arbitrarily nested iteration without checkpointing intermediate fixpoints [1][8].
+
+A decade later, DBSP asked a sharper question: rather than *designing* an incremental engine operator-by-operator, can incrementalization itself be derived automatically from a non-incremental specification? The answer is a circuit calculus over *streams of changes* [6]. In DBSP, every stream carries not values but *deltas*; operators lift to streams through differentiation; and integration, the inverse of differentiation, recovers absolute values. The resulting framework handles negation, aggregation, and recursion uniformly, and it furnishes machine-checkable correctness proofs for transformations that classical delta-rule systems treat as folklore.
+
+This thesis develops both frameworks from first principles, compares their algebras, and examines how they are industrialized in Materialize [5][7]. Our contributions are expository but exact: (i) a derivation of the difference-join rule from the linearity of the join over ℤ-module collections; (ii) a lattice-theoretic treatment of product-order timestamps and their role in concurrent iteration; (iii) an analysis of arrangements as a sharing discipline for indexed state; and (iv) a reconstruction of DBSP's circuit model with the *Z⁻¹* delay operator, nested streams, and the differentiation–integration adjunction.
+
+---
+
+## 2 Background
+
+### 2.1 From Naiad to Timely Dataflow
+
+The intellectual ancestry of differential dataflow is the *timely dataflow* model introduced in the Naiad system [4][8], which received the best-paper award at SOSP 2013 [8]. Timely dataflow generalizes batch and stream processing with three ideas: (a) *structured loops* that permit feedback edges in the dataflow graph, enabling iteration; (b) *stateful vertices* that consume and produce records without global coordination; and (c) a *distributed progress-tracking protocol* in which workers exchange pointstamps — *(node, timestamp)* pairs — to determine when a vertex has received all records for a given timestamp, at which point the vertex receives a *notification* and may act [4][8]. Because timestamps are drawn from a partially ordered set, the protocol tracks a *frontier* — the set of minimal incomparable timestamps that may still receive messages — and allows epochs and iterations to overlap in time. The Rust implementation, *timely-dataflow* [3], became the execution substrate for differential dataflow.
+
+### 2.2 Classical Incremental View Maintenance
+
+In classical IVM, a materialized view *V = q(D)* over database *D* is maintained under insertions and deletions by computing delta expressions: for a join *R ⋈ S*, the insertion delta is *ΔR ⋈ S ∪ R ⋈ ΔS ∪ ΔR ⋈ ΔS* [2]. This *delta-rule* approach is correct but fragile: every operator needs a hand-written maintenance rule, non-monotone operators (negation, aggregation with retraction) require delicate bookkeeping, and iterative queries must materialize every intermediate fixpoint. Differential dataflow replaces delta rules with a single uniform mechanism: *differences*.
+
+### 2.3 Difference Collections
+
+A differential collection *C* is defined by its *updates*: a multiset of triples *(d, t, Δ)* where *d* is data, *t* a timestamp, and *Δ ∈ ℤ* a difference (multiplicity change). The collection's value at time *t* is the accumulation
+
+$$C_t(d) = \sum_{s \le t} \delta C_s(d),$$
+
+where *δC_s(d)* is the total difference for key *d* at timestamp *s*. Crucially, the *differences* *δC_s* — not the accumulated values *C_t* — are what operators consume and produce. An operator *F* applied to a collection of differences yields differences of the output: *δ(F(C))* is computed from *δC* alone, and the output value follows by accumulation. This inversion — computing in the *differential* domain and reconstructing by integration — is the framework's central move.
+
+> **Theorem:** *Let F be a linear operator over the ℤ-module of collections. Then δF(C) = F(δC): the difference of the output equals the output of the differences. For bilinear operators such as join, the output differences factor into products of input differences at comparable and incomparable times.*
+
+Linearity is what makes retractions trivial: because *F(−x) = −F(x)* for linear *F*, processing a deletion is identical to processing an insertion, and no special-case code paths are required.
+
+---
+
+## 3 Methodology
+
+Our method is analytic and reconstructive. We (i) derive the difference-join algebra from the bilinearity of join over ℤ-valued collections; (ii) formalize product-order timestamps as a lattice and show how the frontier discipline of timely dataflow specializes to concurrent iteration; (iii) characterize arrangements as a memoization discipline over indexed traces, following the open-source implementation [3] and its production realization in Materialize [5][7]; and (iv) reconstruct DBSP's circuit model from its published specification [6], emphasizing the *Z⁻¹* delay operator and the differentiation/integration pair. Where the literature reports engineering facts (e.g., arrangement memory layouts), we cite them explicitly [5][7] rather than re-deriving them.
+
+![Differential dataflow operator graph with difference collections δA, δB flowing through map, join, iterate and reduce operators, each edge carrying timestamped (data, time, diff) update triples](/thesis/ths_1788877760022_7e8f-0.webp)
+
+---
+
+## 4 Deep Dive
+
+### 4.1 The Algebra of Differences: Join, Reduce, and Iteration
+
+Consider two collections *A* and *B* and their join *J = A ⋈ B* on shared keys. At any time *t*, *J_t = A_t ⋈ B_t*. Writing *A_t = Σ_{s≤t} δA_s* and expanding the product gives
+
+$$J_t = \sum_{s_1 \le t}\sum_{s_2 \le t} \delta A_{s_1} \bowtie \delta B_{s_2}.$$
+
+The difference *δJ_t = J_t − J_{<t}* therefore depends on all pairs *(s_1, s_2)* with *s_1 ∨ s_2 = t*, where *∨* is the least upper bound in the timestamp partial order. In a *total* order this reduces to the familiar delta rule: *δJ_t = δA_t ⋈ B_{<t} ∪ A_{<t} ⋈ δB_t ∪ δA_t ⋈ δB_t*. In a *partial* order, however, *s_1* and *s_2* may be *incomparable*, and the join must accumulate their cross product at the join timestamp *s_1 ∨ s_2*. Each operator works *locally* on differences, and the timestamp partial order records exactly which difference-pairs interact. The implementation maintains, for each join input, an indexed trace of *all* historical differences keyed by join key and ordered by time [3]; the join of two differences is then a local lookup. Concretely, the Rust implementation processes updates as follows [3]:
+
+```rust
+// Simplified sketch of differential dataflow's difference-join.
+// Each input maintains an indexed arrangement: key -> [(time, diff)].
+fn join_differences<A, B, K, V1, V2>(
+    arr_a: &Arranged<K, V1>,   // trace of δA, keyed and time-ordered
+    arr_b: &Arranged<K, V2>,   // trace of δB, keyed and time-ordered
+    new_a: &[(K, V1, Time, isize)],
+    new_b: &[(K, V2, Time, isize)],
+) -> Vec<(K, V1, V2, Time, isize)> {
+    let mut out = Vec::new();
+    for (k, v1, t, d1) in new_a {
+        // For each new difference of A at time t, probe B's trace
+        // at all times s with s ≤ t (accumulated) — and symmetric.
+        for (v2, s, d2) in arr_b.probe_le(k, t) {
+            out.push((k.clone(), v1.clone(), v2.clone(), t.clone(), d1 * d2));
+        }
+    }
+    // (symmetric loop over new_b probing arr_a omitted for brevity)
+    out
+}
+```
+
+Aggregation follows the same pattern: `reduce` maintains, per key, the accumulated multiset of values as a function of time, and emits output differences whenever the aggregate changes. Iteration — the `iterate` operator — exploits the partial order most deeply: a loop body executes at timestamps *(epoch, iter)*, and because *(e, i) ≤ (e', i')* iff *e ≤ e'* and *i ≤ i'*, updates from a *new epoch* can flow through the loop concurrently with the *old epoch's* unfinished fixpoint computation. No global barrier separates them [1][8].
+
+| Operator | Input differences | Output differences | State retained |
+|---|---|---|---|
+| `map` / `filter` | *δC* | pointwise *f(δC)* | none |
+| `join` | *δA*, *δB* | *Σ_{s_1∨s_2=t} δA_{s_1} ⋈ δB_{s_2}* | arranged traces of *A*, *B* |
+| `reduce` | *δC* | *δ(Agg(C))* | per-key accumulation over time |
+| `iterate` | *δC* | fixpoint of *δF* at *(epoch, iter)* | per-iteration differences |
+| `distinct` | *δC* | *δ(distinct(C))* | per-key multiplicity history |
+| `consolidate` | *δC* | compacted *δC* | merge batches of updates |
+
+### 4.2 Product-Order Timestamps and the Lattice of Time
+
+Differential dataflow's timestamps are drawn from *product orders*: *ℕ × ℕ × ⋯*, where *(t_1, …, t_k) ≤ (s_1, …, s_k)* iff *t_i ≤ s_i* for all *i*. Each coordinate typically denotes the iteration depth of one nested loop, with the outermost coordinate denoting the input epoch. The product order is a *lattice*: every pair of timestamps has a least upper bound *(∨)* and greatest lower bound *(∧)*, computed coordinatewise. This lattice structure is load-bearing: the join rule above needs *s_1 ∨ s_2* to timestamp the interaction of two differences, and the correctness proofs of differential operators rely on the lattice identities [1].
+
+The operational consequence is *concurrency between incomparable work*. If timestamps *(e, 5)* and *(e', 0)* are incomparable (different epochs, *e ≠ e'*), the timely progress-tracking protocol never forces them to synchronize: each worker's frontier advances independently per timestamp [8]. A streaming SQL engine can therefore admit a new batch of input (new epoch) while the previous batch's iterative graph algorithm is still converging — and the difference algebra guarantees that their interactions are computed exactly once, at the correct join timestamps. This is the property that makes differential dataflow a credible substrate for *streaming SQL with recursion*, a combination that classical streaming engines cannot offer [5].
+
+### 4.3 Arrangements: Shared, Indexed State
+
+Every non-trivial differential operator needs indexed access to its input's history: the join needs *A* and *B* keyed and time-ordered; `reduce` needs per-key accumulation; `iterate`'s feedback needs the loop body's trace. The naive design materializes one index per consumer. The *arrangement* is the discipline that avoids this: an arrangement is a shared, immutable, incrementally maintained index of a collection, organized as *key → [(time, diff)]* batches that are periodically merged in an LSM-like compaction [3][5]. Multiple downstream operators — several joins, a reduce, an exported index — all attach to the *same* arrangement, amortizing its maintenance cost.
+
+Materialize's production experience sharpens the picture [5][7]. Arrangements are the system's core memory structure; years of optimization reduced their footprint from roughly 96 bytes per record to as little as 0–16 bytes per record, and they are shared across all views that reference the same source [7]. The three-tier stack — *timely dataflow* for distributed execution, *differential dataflow* for incremental operators, and Materialize's SQL planner and catalog on top — turns every SQL view into a differential dataflow whose intermediate collections are arranged once and reused [5]. This is why Materialize can maintain thousands of materialized views over change-data-capture streams with millisecond-scale update latency: the arrangements are the materialized state, and the views are just queries over them.
+
+```python
+# Arrangement: key -> time-ordered batches of (time, diff); LSM-style compaction.
+# Real implementation: differential-dataflow's trace (Trace/TraceReader) [3].
+class Arrangement:
+    def __init__(self): self.batches = []
+    def insert(self, updates):
+        self.batches.append({k: [(t, d)] for k, t, d in updates})
+    def probe_le(self, key, t):   # "as of" state: entries with time <= t
+        return [e for b in self.batches for k, es in b.items()
+                if k == key for e in es if e[0] <= t]
+```
+
+### 4.4 DBSP: Circuits, Streams, and the *Z⁻¹* Operator
+
+DBSP [6] starts from a different question: *given a non-incremental program, derive its incremental version automatically.* A DBSP *circuit* is a directed graph whose edges carry *streams of changes*: a stream *s* is a sequence *s_0, s_1, …* of elements of an abelian group — typically *ℤ-sets*, multisets with integer multiplicities, the same ℤ-module structure as differential collections.
+
+The circuit toolkit has three distinguished elements:
+
+- **The delay operator *Z⁻¹*.** *(Z⁻¹ s)_0 = 0*, *(Z⁻¹ s)_{t+1} = s_t*. With feedback edges, *Z⁻¹* implements iteration and recursion *within* the circuit, with no external fixpoint driver.
+- **Differentiation *D* and integration *I*.** *D(v)_t = v_t − v_{t−1}* turns values into changes; *I(s)_t = Σ_{i≤t} s_i* turns changes back into values. They are mutual inverses.
+- **Lifting.** Every operator on values lifts to an operator on streams: *D(f(v)) = f^Δ(D(v))*. DBSP's central theorem is that this lifting is *mechanical*, operator by operator, for a rich language including selection, projection, join, aggregation, and *nested streams* — streams of streams, which express nested iteration and recursion.
+
+> **Theorem (DBSP incrementalization):** *For every circuit built from lifted operators, differentiation, integration, and Z⁻¹-delays, the circuit's behavior on streams of changes equals the differentiation of its behavior on streams of values. The incremental circuit is correct by construction.*
+
+Where differential dataflow asks the programmer to think in differences and provides operators that do so efficiently, DBSP asks the programmer to write ordinary relational circuits and *derives* the difference-level execution. Non-monotone operators — the bane of classical IVM — are handled uniformly because the ℤ-group structure makes every change invertible, and nested streams give recursion a compositional semantics that differential dataflow's `iterate` achieves only through the timestamp machinery.
+
+The two frameworks are complementary rather than rival. Differential dataflow's product-order timestamps give a *concurrency* story — incomparable work proceeds without coordination — that DBSP's totally-ordered stream indices do not directly provide. DBSP's circuit calculus gives a *correctness* story — incrementalization as a provable program transformation — that differential dataflow achieves only per-operator.
+
+---
+
+## 5 Empirical Results and Proofs
+
+The empirical case for the differential approach rests on three pillars.
+
+**Iterative graph analytics on changing graphs.** The motivating application of the original paper [1] is social-graph analysis: connected components, strongly connected components, and reachability maintained over a live edge stream. The evaluation demonstrates *interactive* latencies (tens of milliseconds per update batch) on graphs with millions of edges, for queries — incrementally maintained SCC — that no prior system could express incrementally at all [1][2]. The key measurement is *work proportional to change*: a small edge batch triggers work proportional to the resulting output difference, not to the graph's total size.
+
+**Streaming SQL at production scale.** Materialize operationalizes these ideas as a PostgreSQL-compatible streaming database [5][7]. Independent reporting on its architecture documents the arrangement memory reductions (96 → 0–16 bytes per record), compute–storage separation via a durable *Persist* layer on S3-compatible storage, and native change-data-capture from PostgreSQL logical replication and MySQL binlogs [7].
+
+**DBSP's correctness program.** DBSP's contribution is primarily *foundational* [6]: the paper proves, by structural induction over circuits, that the incrementalized circuit computes exactly the differentiation of the original — extending to recursion via nested streams, a setting where classical delta rules are unsound without additional side conditions. The practical payoff is that query-language designers can add operators to a DBSP-based engine and obtain provably correct incremental behavior *for free*.
+
+Both frameworks prove *correctness of maintenance* — that the maintained view equals the query evaluated on the accumulated input — by exploiting the group structure of ℤ-valued collections. The canonical lemma, common to both, is:
+
+> **Lemma (Accumulation):** *For any collection C with differences δC, Σ_{s≤t} δC_s = C_t. Homomorphisms of the ℤ-module of collections commute with accumulation; bilinear operators distribute over it via the timestamp lattice join ∨.*
+
+The join rule, the reduce rule, and DBSP's lifting theorem are all this lemma plus the lattice identities of the timestamp order.
+
+---
+
+## 6 Limitations
+
+**Timestamp dimensionality.** Product-order timestamps are not free. Each nested loop adds a coordinate, and the frontier-tracking protocol's state grows with the number of distinct incomparable timestamps in flight [8]. Deeply nested iteration over high-churn inputs can inflate the trace sizes that arrangements must retain, bounding how aggressively the engine can garbage-collect historical state.
+
+**Arrangement memory vs. recomputation.** Arrangements trade memory for work-sharing: every indexed trace consumes RAM to save recomputation. For collections that are read once, an arrangement is pure overhead; the engine must decide which collections to arrange, a decision analogous to index selection in classical databases and equally resistant to fully automatic solutions. Materialize's aggressive per-record memory optimization [7] mitigates but does not eliminate this trade-off.
+
+**DBSP's expressiveness boundary.** DBSP's lifting theorem applies to operators definable within its circuit language. Operators with *non-local* or *non-algebraic* behavior — user-defined functions with side effects, certain windowed aggregations with data-dependent bounds — fall outside the calculus and must be handled by escape hatches whose correctness is not covered by the main theorem [6]. Moreover, DBSP's streams are totally ordered by step index; recovering differential dataflow's *concurrent* processing of incomparable timestamps requires additional machinery not present in the base calculus.
+
+**Operational complexity.** Both frameworks demand sophisticated runtime machinery — progress tracking, merge-batch compaction, frontier-aware scheduling — that is difficult to implement correctly and to debug when it misbehaves. The Rust implementations [3] are the product of years of iteration by their authors; reproducing them is a substantial engineering undertaking, which partly explains why so few production systems are built on these ideas despite their theoretical appeal.
+
+---
+
+## 7 Conclusion
+
+Differential dataflow and DBSP together constitute the most complete answer yet to the incremental view maintenance problem. Differential dataflow [1] contributes the *operational* breakthrough: difference collections, product-order timestamps that let iteration and ingestion proceed concurrently, and arrangements that share indexed state across an entire dataflow. Timely dataflow [4][8] contributes the *coordination* breakthrough: frontier-based progress tracking that needs no global synchronization. DBSP [6] contributes the *foundational* breakthrough: incrementalization as a provable circuit transformation, with the *Z⁻¹* delay operator and differentiation–integration duality handling non-monotone and recursive queries uniformly.
+
+The industrial validation exists: Materialize [5][7] maintains streaming SQL views over CDC feeds using exactly this stack, with arrangement engineering that has driven per-record overhead to single-digit bytes. The research frontier is now about *composition* — unifying differential dataflow's concurrency story with DBSP's correctness story in a single framework — and about *automation*: cost-based decisions for what to arrange, adaptive timestamp management, and verified lifting for ever-richer query languages. The ℤ-module of differences, humble as it looks, turns out to be the right algebraic setting for all of it.
+
+---
+
+## References
+
+[1] Frank McSherry, Derek G. Murray, Rebecca Isaacs, and Michael Isard. "Differential dataflow." Microsoft Research, *Proceedings of CIDR 2013*. https://www.microsoft.com/en-us/research/publication/differential-dataflow/
+
+[2] Frank McSherry. "Differential Dataflow" (full paper PDF). https://github.com/oli-w/differential-dataflow/raw/refs/heads/master/differentialdataflow.pdf
+
+[3] TimelyDataflow. "differential-dataflow: An implementation of differential dataflow using timely dataflow in Rust." https://github.com/TimelyDataflow/differential-dataflow
+
+[4] Derek G. Murray, Frank McSherry, Rebecca Isaacs, Michael Isard, Paul Barham, and Martín Abadi. "Naiad: A Timely Dataflow System." *Proceedings of SOSP 2013* (best paper award). https://sigops.org/s/conferences/sosp/2013/papers/p439-murray.pdf
+
+[5] Software Engineering Radio, Episode 504: "Frank McSherry on Materialize." https://se-radio.net/2022/03/episode-504-frank-mcsherry-on-materialize/
+
+[6] Leonid Ryzhyk, Mihai Budiu, et al. "DBSP: Automatic Incremental View Maintenance for Rich Query Languages." arXiv:2203.16684. https://arxiv.org/abs/2203.16684
+
+[7] Tao Gang. "The Past and Present of Stream Processing, Part 18: The Academic Incremental Revolution." (Architecture analysis of Materialize: timely/differential stack, arrangements, Persist, CDC.) https://taogang.medium.com/the-past-and-present-of-stream-processing-part-18-the-academic-incremental-revolution-ba073c8693c0
+
+[8] Phil Gibbons (CMU 15-712). "Naiad: A Timely Dataflow System" — lecture slides from the SOSP'13 best-paper talk. http://www.cs.cmu.edu/afs/cs.cmu.edu/academic/class/15712-f17/www/lectures/13-naiad.pdf
