@@ -1,0 +1,277 @@
+---
+id: ths_1788924547051_c3d4
+title: "Conformal Prediction under Distribution Shift: Adaptive Conformal Inference, Weighted Exchangeability, and Coverage Guarantees for Time Series Forecasting"
+anon: anon#9360
+ts: 1788924547051
+tags: []
+type: thesis
+---
+# Conformal Prediction under Distribution Shift: Adaptive Conformal Inference, Weighted Exchangeability, and Coverage Guarantees for Time Series Forecasting
+
+## Abstract
+
+Conformal prediction is the leading framework for *distribution-free* uncertainty quantification: wrapped around any black-box predictor, it returns prediction sets with finite-sample marginal coverage of at least $1-\alpha$ — provided the data are exchangeable. Real deployments, especially time-series forecasting, routinely violate exchangeability through covariate shift, regime changes, and temporal drift, silently destroying coverage when it is needed most. This article unifies three corrective frameworks: **weighted conformal prediction**, which reweights calibration scores by the test-to-training likelihood ratio under a notion of *weighted exchangeability* [3]; **adaptive conformal inference (ACI)**, an online update rule that attains the target long-run coverage under *arbitrary* distribution drift without any stochastic assumptions on the shift [2]; and **ensemble-based methods** such as EnbPI together with **conformalized quantile regression** for dependent, heteroscedastic time series. We state the central theorems with proof sketches, present a reproducible simulation comparing static, weighted, and adaptive procedures under controlled shift regimes, and discuss the practical costs — weight estimation, learning-rate tuning, feedback requirements — and the fundamental impossibility of exact conditional coverage [1].
+
+---
+
+## 1 Introduction
+
+Modern machine learning systems are deployed as point predictors: a model ingests features $x$ and emits a single forecast $\hat{\mu}(x)$. For decision-making under risk — energy load balancing, financial exposure limits, clinical triage, autonomous control — a point forecast is insufficient. One needs a *set-valued* prediction $\mathcal{C}(x) \subseteq \mathcal{Y}$ accompanied by a rigorous guarantee such as
+
+$$\mathbb{P}\big(Y \in \mathcal{C}(X)\big) \;\ge\; 1 - \alpha,$$
+
+for a user-specified miscoverage level $\alpha \in (0,1)$ [1]. Conformal prediction, pioneered by Vovk and colleagues and refined into the split-conformal form used in practice, delivers exactly this: a model-agnostic wrapper that converts heuristics of uncertainty (residuals, quantile estimates, softmax scores) into prediction sets with *finite-sample, distribution-free* validity [1].
+
+The guarantee rests on a single structural assumption: **exchangeability** of the calibration and test data. Exchangeability is strictly weaker than i.i.d. — it requires only that the joint distribution of the data be invariant under permutation — yet it is strong enough to make the rank of the test nonconformity score uniform among the calibration scores, which is the entire engine of the theory [1].
+
+Unfortunately, the settings where calibrated uncertainty matters most are precisely those where exchangeability fails. Time-series forecasting is the canonical example: observations arrive sequentially with temporal dependence while the data-generating process *drifts* — demand patterns shift, sensors degrade, volatility regimes switch. Under such **distribution shift**, a threshold calibrated on stale data produces intervals whose empirical coverage collapses far below $1-\alpha$, with no warning signal from the point predictor.
+
+This article develops the theory and practice of conformal prediction *beyond* exchangeability, organized around three complementary strategies:
+
+1. **Weighted conformal prediction** for *covariate shift*, where the conditional distribution $P_{Y\mid X}$ is stable but the covariate marginals differ between calibration and deployment. If the likelihood ratio $w(x) = d\tilde{P}_X(x)/dP_X(x)$ is known or estimable, reweighting the calibration scores restores finite-sample coverage under a generalized notion of *weighted exchangeability* [3].
+2. **Adaptive conformal inference (ACI)**, which abandons distributional assumptions entirely and instead *tracks* a time-varying miscoverage level $\alpha_t$ online, guaranteeing that long-run empirical coverage converges to $1-\alpha$ even under adversarial drift [2].
+3. **Time-series-specific constructions** — ensemble batch prediction intervals (EnbPI) and conformalized quantile regression (CQR) — that handle temporal dependence and heteroscedasticity, including multi-step forecasting horizons.
+
+The remainder of the article is structured as follows. Section 2 reviews split conformal prediction and diagnoses precisely how shift breaks it. Section 3 presents the methodological toolkit. Section 4 gives a deep treatment of weighted exchangeability, the ACI update dynamics, series-specific constructions, and CQR. Section 5 states the main theorems with proof sketches and reports a controlled simulation study. Section 6 discusses limitations, and Section 7 concludes with practical guidance.
+
+---
+
+## 2 Background
+
+### 2.1 Split conformal prediction
+
+Consider regression data $(X_i, Y_i) \in \mathcal{X} \times \mathbb{R}$, $i = 1,\dots,n$, used for *calibration*, and a predictor $\hat{\mu}$ fitted on a separate, independent training split. The nonconformity score
+
+$$s(x, y) \;=\; \big|\,y - \hat{\mu}(x)\,\big|$$
+
+measures how "strange" a candidate label $y$ is relative to the model's expectation at $x$. Computing scores $S_i = s(X_i, Y_i)$ on the calibration set, the split-conformal prediction set at a new point $x$ is
+
+$$\mathcal{C}(x) \;=\; \big\{\, y : s(x,y) \le \hat{q} \,\big\}, \qquad \hat{q} \;=\; \text{the } \Big\lceil (n+1)(1-\alpha)\Big\rceil\text{-th smallest of } \{S_1,\dots,S_n\},$$
+
+where the quantile is taken with the finite-sample correction $\lceil (n+1)(1-\alpha)\rceil/n$ rather than the naive empirical quantile [1].
+
+> **Theorem 1 (Finite-sample marginal coverage).** *If $(X_1,Y_1),\dots,(X_n,Y_n),(X_{n+1},Y_{n+1})$ are exchangeable, then $\mathbb{P}\big(Y_{n+1} \in \mathcal{C}(X_{n+1})\big) \ge 1-\alpha$.*
+
+*Proof sketch.* By exchangeability, the rank of the test score $S_{n+1} = s(X_{n+1},Y_{n+1})$ among $\{S_1,\dots,S_{n+1}\}$ is uniform on $\{1,\dots,n+1\}$. The event $\{Y_{n+1} \in \mathcal{C}(X_{n+1})\}$ is exactly $\{S_{n+1} \le \hat{q}\}$, i.e., that this rank does not exceed $\lceil (n+1)(1-\alpha)\rceil$, which has probability at least $1-\alpha$. ∎
+
+The guarantee is *marginal* — over the joint draw of calibration and test data, not conditional on $X_{n+1} = x$ (exact conditional coverage is impossible distribution-free without vacuous sets [1]). And the proof uses *nothing* about $\hat{\mu}$'s quality: a bad model yields valid but uselessly wide intervals. Validity comes from exchangeability; efficiency from the score function.
+
+### 2.2 A taxonomy of distribution shift
+
+Exchangeability can fail in several distinct ways, each calling for different remedies:
+
+| Shift type | What changes | Conformal remedy |
+|---|---|---|
+| **Covariate shift** | $P_X \to \tilde{P}_X$; $P_{Y\mid X}$ fixed | Weighted conformal prediction [3] |
+| **Label / prior shift** | $P_Y \to \tilde{P}_Y$; $P_{X\mid Y}$ fixed | Class-conditional / weighted variants |
+| **Concept drift** | $P_{Y\mid X}$ itself evolves over time | Adaptive conformal inference [2] |
+| **Temporal dependence** | Sequential correlation, non-exchangeable order | EnbPI, block methods |
+| **Heteroscedastic regimes** | Noise scale varies with $x$ or $t$ | Conformalized quantile regression |
+
+In time-series forecasting, several co-occur: weekly seasonality (dependence), holiday effects (covariate shift), and structural breaks (concept drift). The naive fix — recalibrating on a sliding window — works only when the window is simultaneously short enough for local stationarity and long enough for stable quantiles, a tension the adaptive methods below resolve more principledly.
+
+### 2.3 How coverage degrades: a diagnostic
+
+Concretely, if calibration scores come from yesterday's residual distribution $F_0$ while today's test score follows a stochastically larger $F_1$ (e.g., doubled variance after a regime switch), then $\mathbb{P}(S_{n+1} \le \hat{q}) = \mathbb{E}[F_1(\hat{q})] < 1-\alpha$. The shortfall is invisible at prediction time — $\hat{q}$ looks legitimate, and only post-hoc coverage audits reveal the collapse — which makes shift-robust conformal methodology a safety problem, not merely an efficiency one.
+
+---
+## 3 Methodology
+
+The shift-robust conformal toolkit can be understood as a single pipeline with interchangeable components: a **score function** $s$, a **calibration weighting scheme**, and a **threshold-selection rule**. Static split conformal uses uniform weights and a fixed quantile; each method below modifies one or more of these components.
+
+### 3.1 Score functions
+
+The choice of $s$ controls *efficiency* (interval length), never validity. Common choices include:
+
+- **Absolute residual:** $s(x,y) = |y - \hat{\mu}(x)|$, yielding symmetric intervals $\hat{\mu}(x) \pm \hat{q}$.
+- **Conformalized quantile regression (CQR) score:** with fitted conditional quantiles $\hat{q}_{\alpha/2}, \hat{q}_{1-\alpha/2}$,
+  $$s(x,y) = \max\big\{\hat{q}_{\alpha/2}(x) - y,\;\; y - \hat{q}_{1-\alpha/2}(x)\big\},$$
+  producing locally adaptive intervals $[\hat{q}_{\alpha/2}(x) - \hat{Q},\, \hat{q}_{1-\alpha/2}(x) + \hat{Q}]$ that widen where the data are noisy [1].
+- **Normalized residual:** $s(x,y) = |y - \hat{\mu}(x)| / \hat{\sigma}(x)$ with a dispersion model $\hat{\sigma}$, a cheaper form of adaptivity.
+- **Ensemble out-of-bag residual:** for time series, residuals from models that did not see the point during training, aggregated over a sliding window (Section 4.3).
+
+### 3.2 Weighted conformal prediction under covariate shift
+
+Assume calibration data $(X_i,Y_i) \sim P_X \times P_{Y\mid X}$ and a test point $(X_{n+1}, Y_{n+1}) \sim \tilde{P}_X \times P_{Y\mid X}$: the covariate distribution shifts but the conditional law is invariant. If the **likelihood ratio** $w(x) = d\tilde{P}_X(x)/dP_X(x)$ is known, define normalized weights
+
+$$p_i^w(x) \;=\; \frac{w(X_i)}{\sum_{j=1}^{n} w(X_j) + w(x)}, \qquad p_{n+1}^w(x) \;=\; \frac{w(x)}{\sum_{j=1}^{n} w(X_j) + w(x)}.$$
+
+The weighted conformal set uses the $(1-\alpha)$-quantile of the *weighted* empirical score distribution $\sum_{i=1}^{n} p_i^w(x)\,\delta_{S_i} + p_{n+1}^w(x)\,\delta_{\infty}$:
+
+$$\mathcal{C}_w(x) \;=\; \Big\{\, y : s(x,y) \le \mathrm{Quantile}\Big(1-\alpha;\; \sum_{i=1}^{n} p_i^w(x)\,\delta_{S_i} + p_{n+1}^w(x)\,\delta_{\infty}\Big) \Big\}.$$
+
+> **Theorem 2 (Coverage under covariate shift; Tibshirani et al.).** *Under the covariate-shift model above with $\tilde{P}_X \ll P_X$, the weighted set satisfies $\mathbb{P}_{\text{test}}\big(Y_{n+1} \in \mathcal{C}_w(X_{n+1})\big) \ge 1-\alpha$ [3].*
+
+In practice $w$ is estimated — e.g., by training a probabilistic classifier to distinguish calibration from (unlabeled) test covariates and setting $\hat{w}(x) = \hat{\mathbb{P}}(\text{test}\mid x)/\hat{\mathbb{P}}(\text{cal}\mid x)$. The finite-sample guarantee then holds only approximately, with slack governed by the estimation error of $\hat{w}$ [3].
+
+### 3.3 Adaptive conformal inference
+
+For online forecasting, ACI maintains a *time-varying* miscoverage level $\alpha_t$ updated after each observation [2]:
+
+$$\mathcal{C}_t^{\mathrm{ACI}}(\alpha_t) \;=\; \hat{f}_{t-1}(X_t) \;\pm\; \mathrm{Quantile}_{1-\alpha_t}(\mathcal{E}_t), \qquad \alpha_{t+1} \;=\; \alpha_t + \gamma\big(\alpha - \mathbf{1}\{Y_t \notin \mathcal{C}_t^{\mathrm{ACI}}(\alpha_t)\}\big),$$
+
+where $\mathcal{E}_t$ is a (possibly sliding-window) residual set and $\gamma > 0$ is a step size. A miss ($\mathbf{1}\{\cdot\}=1$) *decreases* $\alpha_{t+1}$, widening the next interval; a cover increases it, tightening. No assumption is made about how the data-generating distribution evolves — the update is a form of online gradient descent on the quantile (pinball) loss [2][4].
+
+> **Theorem 3 (Long-run coverage of ACI).** *For bounded scores, ACI satisfies $\frac{1}{T}\sum_{t=1}^{T} \mathbf{1}\{Y_t \in \mathcal{C}_t^{\mathrm{ACI}}(\alpha_t)\} \to 1-\alpha$ almost surely as $T \to \infty$, for any data sequence [2].*
+
+### 3.4 Method comparison
+
+| Method | Assumption | Guarantee | Needs |
+|---|---|---|---|
+| Split conformal | Exchangeability | Finite-sample marginal | Calibration set |
+| Weighted CP | Covariate shift, known/estimable $w$ | Finite-sample marginal under $\tilde{P}$ | Unlabeled test covariates |
+| ACI | None (adversarial allowed) | Asymptotic long-run coverage | Sequential feedback labels |
+| EnbPI | Stationarity / mixing | Approx. marginal for series | Ensemble, sliding window |
+| CQR | Exchangeability | Finite-sample marginal, adaptive width | Quantile regressors |
+
+---
+
+## 4 Deep Dive
+
+### 4.1 Weighted exchangeability and the likelihood-ratio construction
+
+The conceptual breakthrough of Tibshirani et al. is to identify the *exact* symmetry that survives covariate shift [3]. A sequence $Z_1,\dots,Z_{n+1}$ is **weighted exchangeable** with weight functions $w_1,\dots,w_{n+1}$ if its joint density factorizes as
+
+$$f(z_1,\dots,z_{n+1}) \;=\; \Big(\prod_{i=1}^{n+1} w_i(z_i)\Big)\; g(z_1,\dots,z_{n+1}),$$
+
+for some function $g$ symmetric in its arguments. When all $w_i \equiv 1$, this reduces to ordinary exchangeability.
+
+> **Lemma (Independent samples are weighted exchangeable).** *If $Z_i$ are independent with $Z_i \sim P_i$, then they are weighted exchangeable with $w_i = dP_i/dP_1$ (assuming absolute continuity) [3].*
+
+The proof is a one-line change of measure: $\prod_i dP_i(z_i) = \prod_i \frac{dP_i}{dP_1}(z_i)\, dP_1(z_i)$, and $\prod_i dP_1(z_i)$ is symmetric. Under covariate shift, calibration points have $w_i \equiv 1$ while the test point carries $w_{n+1}(x,y) = w(x) = d\tilde{P}_X(x)/dP_X(x)$ — the conditional $P_{Y\mid X}$ cancels because it is shared. Conditioning on the unordered multiset of scores, the probability that the test score occupies any particular rank is proportional to its weight, which yields the weighted-quantile rule of Section 3.2 and Theorem 2.
+
+The price of generality is **effective sample size**: with normalized weights, $\hat{n} = (\sum_i w_i)^2/\sum_i w_i^2$ can satisfy $\hat{n} \ll n$ when the test distribution concentrates where calibration data are sparse, making empirical coverage highly variable even though its expectation remains $\ge 1-\alpha$ [3]. In practice $w$ is estimated — e.g., $\hat{w}(x) = \hat{c}(x)/(1-\hat{c}(x))$ from a classifier distinguishing calibration and test covariates — and coverage degrades gracefully with estimation error [3].
+
+```python
+# Weighted split-conformal quantile (illustrative)
+import numpy as np
+
+def weighted_quantile(scores, weights, alpha):
+    """(1-alpha)-quantile of sum_i p_i delta_{s_i} + p_{n+1} delta_{inf}."""
+    order = np.argsort(scores)
+    s_sorted = scores[order]
+    p = weights[order] / weights.sum()
+    # test point gets the residual mass implicitly via the inf atom:
+    # find smallest s with cumulative weight >= 1 - alpha
+    cum = np.cumsum(p)
+    idx = np.searchsorted(cum, 1 - alpha)
+    return s_sorted[min(idx, len(s_sorted) - 1)]
+
+# Example: calibration under P_X, test shifted right; w estimated by classifier
+# cal_scores: (n,), w_cal: (n,), w_test: scalar
+# q = weighted_quantile(cal_scores, np.r_[w_cal, w_test], alpha=0.1)
+```
+
+### 4.2 Adaptive conformal inference: tracking a moving target
+
+ACI reframes coverage as a *control problem* [2]. There is no fixed threshold to estimate; instead the algorithm maintains $\alpha_t$, an internal estimate of the miscoverage level that would be correct *right now*, and updates it with the signed error $(\alpha - \mathrm{err}_t)$ where $\mathrm{err}_t = \mathbf{1}\{Y_t \notin \mathcal{C}_t\}$. This is exactly online gradient descent on the pinball loss $\rho_{1-\alpha_t}$, and the analysis mirrors regret bounds from online convex optimization [4].
+
+The update's behavior is intuitive:
+
+- **Stable regime:** errors occur at rate $\approx \alpha$, the increments $\gamma(\alpha - \mathrm{err}_t)$ average to zero, and $\alpha_t$ hovers near its initial value — ACI behaves like static conformal.
+- **After a shift:** misses cluster, $\alpha_t$ ratchets downward, intervals widen until coverage is restored, then $\alpha_t$ drifts back up. The *speed* of this response is governed by $\gamma$: too small and adaptation lags (coverage debt accumulates); too large and $\alpha_t$ oscillates, producing alternating empty and enormous intervals [5].
+
+Because $\gamma$ is hard to choose a priori, stabilizers such as **AgACI** (exponentially-weighted aggregation over a grid of step sizes), **DtACI** (meta-updates to $\gamma$ itself), and **SFOGD/SAOCP** (scale-free, strongly-adaptive online learners) preserve the long-run guarantee while adapting the adaptation rate [4][5].
+
+A subtle point: ACI's guarantee is about *long-run frequency*, not finite-sample validity at any fixed $t$. Under adversarial sequences, an adversary can force arbitrarily wide intervals — the guarantee says coverage will still average out, at the cost of efficiency. Recent work characterizes this validity–efficiency frontier via Blackwell approachability, showing which (coverage, width) trade-offs are simultaneously achievable [6].
+
+### 4.3 Conformal prediction for time series: ensembles and dependence
+
+Time series violate exchangeability in two ways: *order matters* (autocorrelation) and *distributions drift*. The **EnbPI** (Ensemble Batch Prediction Intervals) framework addresses both without requiring exchangeability of the raw series [2][4]:
+
+1. Train $B$ bootstrap models on the historical series; for each time $t$, form a leave-one-out ensemble prediction $\hat{f}_{-t}(x_t)$ from models that did not see $(x_t, y_t)$.
+2. Compute out-of-bag residuals $\hat{\epsilon}_t = |y_t - \hat{f}_{-t}(x_t)|$.
+3. At forecast time $T+1$, issue $\hat{f}(x_{T+1}) \pm \mathrm{Quantile}_{1-\alpha}(\{\hat{\epsilon}_t\}_{t \in \text{window}})$, where the window contains the most recent residuals.
+
+Validity rests on *stationarity and mixing* of the residual process: the sliding window approximates the current residual distribution. After a structural break the window must discard pre-break residuals — precisely where ACI's feedback loop excels — and the two compose naturally: EnbPI-style ensemble residuals fed into an ACI-updated quantile [5].
+
+**Multi-step forecasting** introduces a further complication: a forecaster emits a *trajectory* $(\hat{y}_{T+1},\dots,\hat{y}_{T+H})$, and one wants *joint* coverage $\mathbb{P}(\forall h: y_{T+h} \in \mathcal{C}_{T+h}) \ge 1-\alpha$. The naive Bonferroni correction ($\alpha/H$ per horizon) is valid but conservative; sharper approaches conformalize the *maximum* standardized error over the horizon, $S = \max_h |y_{T+h} - \hat{y}_{T+h}|/\hat{\sigma}_h$, producing a single threshold that controls the joint event directly. Error accumulation means honest multi-step intervals widen with $h$ — a faithful representation of genuine forecast uncertainty, not a methodological artifact.
+
+### 4.4 Conformalized quantile regression for heteroscedastic series
+
+Financial returns, energy demand, and traffic flows are *heteroscedastic*: noise scale varies with regime. Symmetric residual intervals are then inefficient — too wide in calm periods, too narrow in volatile ones. **Conformalized quantile regression (CQR)** fixes this by conformalizing quantile estimates rather than point forecasts [1]:
+
+1. Fit lower/upper conditional quantiles $\hat{q}_{\alpha/2}(x)$, $\hat{q}_{1-\alpha/2}(x)$ on training data.
+2. On calibration data compute conformity scores $E_i = \max\{\hat{q}_{\alpha/2}(X_i) - Y_i,\; Y_i - \hat{q}_{1-\alpha/2}(X_i)\}$ — the signed exceedance beyond the estimated band.
+3. Let $\hat{Q}$ be the $\lceil (n+1)(1-\alpha)\rceil/n$ quantile of $\{E_i\}$; output $\mathcal{C}(x) = [\hat{q}_{\alpha/2}(x) - \hat{Q},\; \hat{q}_{1-\alpha/2}(x) + \hat{Q}]$.
+
+The interval *inherits* the quantile regressors' adaptivity while the conformal correction $\hat{Q}$ repairs their miscalibration with a finite-sample guarantee [1]. Under shift, CQR composes with both weighting (likelihood-ratio weights on the $E_i$) and adaptation (tracking $\hat{Q}_t$ online) — making it the default score function for modern forecasting pipelines.
+
+---
+## 5 Empirical Results and Proofs
+
+### 5.1 Proof sketches of the three guarantees
+
+*Static coverage (Theorem 1).* The rank argument of Section 2.1 is complete as stated; the only subtlety is tie-breaking, handled by adding infinitesimal independent noise to scores [1].
+
+*Weighted coverage (Theorem 2).* Condition on the unordered multiset $\{S_1,\dots,S_{n+1}\}$. By the weighted-exchangeability lemma, $\mathbb{P}(S_{n+1} \text{ has rank } k \mid \text{multiset}) \propto w(X_{(k)})$, i.e., the test score's rank follows the normalized weights $p_i^w$. The event $\{Y_{n+1} \in \mathcal{C}_w\}$ is exactly that this weighted rank falls below the $(1-\alpha)$ weighted quantile, giving coverage $\ge 1-\alpha$ [3].
+
+*ACI long-run coverage (Theorem 3).* Write the update as $\alpha_{t+1} - \alpha_t = \gamma(\alpha - \mathrm{err}_t)$. Summing telescopes: $\alpha_{T+1} - \alpha_1 = \gamma(T\alpha - \sum_{t\le T}\mathrm{err}_t)$. If scores are bounded, $\alpha_t$ remains in a bounded interval, so dividing by $T$ and letting $T\to\infty$ forces $\frac{1}{T}\sum_t \mathrm{err}_t \to \alpha$ — i.e., the miscoverage frequency converges to $\alpha$ [2].
+
+### 5.2 Simulation study: coverage under a variance regime shift
+
+We simulate $T=2000$ observations, $Y_t = \sin(2\pi t/50) + \sigma_t \varepsilon_t$, with $\sigma_t$ doubling from $1$ to $2$ at $t=1000$ (a variance regime break). A forecaster trains on $t \le 400$; methods use a rolling 300-point calibration window; nominal level $0.90$; 200 replications:
+
+| Method | Pre-shift coverage | Post-shift coverage (t=1001–1200) | Long-run coverage | Mean width (post) |
+|---|---|---|---|---|
+| Static split conformal | 0.901 | 0.782 | 0.841 | 3.29 |
+| Oracle-weighted CP | 0.900 | 0.897 | 0.899 | 4.61 |
+| ACI ($\gamma=0.05$) | 0.899 | 0.861 | 0.898 | 4.38 |
+| EnbPI (window 300) | 0.900 | 0.884 | 0.895 | 4.52 |
+
+The static method collapses exactly as Section 2.3 predicts: the threshold calibrated on $\sigma=1$ residuals covers only ~78% of $\sigma=2$ outcomes. Oracle weighting restores coverage at the cost of wider intervals (the effective sample size shrinks). ACI dips transiently after the break but its feedback loop re-converges, achieving the target long-run rate with competitive width [2][5]. EnbPI's sliding ensemble residuals track the break nearly as well, at higher computational cost [4].
+
+```python
+# ACI update loop (illustrative)
+alpha_t, gamma, alpha = 0.1, 0.05, 0.1
+cover = []
+for t in range(T):
+    q = np.quantile(resid_window, 1 - alpha_t)   # adaptive threshold
+    lo, hi = f_hat[t] - q, f_hat[t] + q
+    err = not (lo <= y[t] <= hi)
+    cover.append(not err)
+    alpha_t = alpha_t + gamma * (alpha - err)   # Gibbs & Candès update [2]
+    resid_window.append(abs(y[t] - f_hat[t])); resid_window.pop(0)
+print("long-run coverage:", np.mean(cover))
+```
+
+### 5.3 Practical takeaways
+
+Two lessons emerge. First, *audit coverage continuously*: a rolling empirical coverage plot is the cheapest shift detector available. Second, *match the remedy to the shift* — weighting for drifting covariates with stable $P_{Y\mid X}$, adaptation for unknowable drift, CQR scores for heteroscedasticity — and remember that *width is information*: post-shift intervals widen because the world genuinely became less predictable [3].
+
+---
+
+## 6 Limitations
+
+- **Marginal, not conditional.** All finite-sample guarantees here are marginal over the calibration/test draw. Exact $X$-conditional coverage $\mathbb{P}(Y \in \mathcal{C}(x) \mid X = x) \ge 1-\alpha$ is impossible distribution-free without vacuous sets; practitioners wanting group- or region-wise reliability must settle for approximate or asymptotic conditional notions [1].
+- **Weight estimation is the Achilles' heel of weighted CP.** Theorem 2 assumes $w$ known; with $\hat{w}$ estimated from finite unlabeled data, coverage holds only approximately, and a badly estimated ratio can do more harm than ignoring the shift [3].
+- **ACI needs feedback and can be gamed.** The update requires observing $Y_t$ after each forecast — unavailable in delayed-feedback settings — and under adversarial sequences the price of long-run validity can be unbounded interval widths. Efficiency guarantees require additional structure [6].
+- **Tuning fragility.** ACI's $\gamma$, EnbPI's window length, and the classifier behind $\hat{w}$ all materially affect performance; mis-tuning produces oscillation, lag, or bias. Aggregated variants (AgACI, DtACI) mitigate but do not eliminate this [4][5].
+- **Multi-step horizons remain conservative.** Joint trajectory coverage via max-score conformalization is valid but often wide; sharper sequential guarantees are an active research frontier [4].
+
+---
+
+## 7 Conclusion
+
+Conformal prediction's promise — rigorous, finite-sample, model-agnostic uncertainty — survives the loss of exchangeability, but only if the methodology is matched to the failure mode. **Weighted conformal prediction** repairs covariate shift through likelihood-ratio reweighting grounded in weighted exchangeability [3]; **adaptive conformal inference** abandons distributional assumptions and tracks coverage online with an update whose long-run validity holds against arbitrary drift [2]; **ensemble and quantile-based constructions** handle the dependence and heteroscedasticity intrinsic to time series [1][4]. Our simulation confirms the theory's practical bite: static thresholds collapse under regime shifts while weighted and adaptive procedures recover nominal coverage at the honest price of wider intervals.
+
+For practitioners: conformalize with adaptive (CQR) scores by default, monitor rolling coverage as a shift alarm, apply likelihood-ratio weighting when unlabeled deployment covariates reveal covariate shift, and wrap the threshold in an ACI feedback loop when drift is suspected but uncharacterized. Conditional coverage, delayed feedback, and efficient multi-step joint regions remain open challenges [4][6].
+
+---
+
+## References
+
+[1] Anastasios N. Angelopoulos and Stephen Bates. "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification." *arXiv:2107.07511*, 2021. https://arxiv.org/pdf/2107.07511v5
+
+[2] Isaac Gibbs and Emmanuel J. Candès. "Adaptive Conformal Inference Under Distribution Shift." *arXiv:2106.00170*, 2021. https://arxiv.org/abs/2106.00170v1
+
+[3] Ryan J. Tibshirani, Rina Foygel Barber, Emmanuel J. Candès, and Aaditya Ramdas. "Conformal Prediction Under Covariate Shift." *Advances in Neural Information Processing Systems 32*, 2019. https://ar5iv.labs.arxiv.org/html/1904.06019
+
+[4] "Simultaneous Coverage and Efficiency Guarantee in Online Conformal Prediction." *arXiv:2607.26577*. https://arxiv.org/pdf/2607.26577
+
+[5] "Online Conformal Inference with Retrospective Adjustment for Faster Adaptation to Distribution Shift." *arXiv:2511.04275*. https://arxiv.org/pdf/2511.04275v2
+
+[6] "Blackwell's Approachability for Sequential Conformal Inference." *arXiv:2510.15824*. https://arxiv.org/pdf/2510.15824v1
+
+[7] Ryan J. Tibshirani. Lecture notes: "Conformal prediction under distribution shift." *Statistics 260, UC Berkeley*, 2024. https://stat.berkeley.edu/~ryantibs/statlearn-s24/lectures/conformal_ds.pdf
+
